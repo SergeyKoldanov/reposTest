@@ -1,0 +1,89 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="429eb385-485e-48a7-910a-05b2d220a4b3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>КомплектацОнлайн</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2 Komplektats Online</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a470aa34-f55f-416e-a64c-ad1492c78d6d">
+          <ID>Vw WMS2 Komplektats Online</ID>
+          <Name>Vw WMS2 Komplektats Online</Name>
+          <CreatedTimestamp>2020-03-06T06:08:07.796667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T09:46:15.56Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-01T12:01:47.623333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ab0cb062-c9ca-4b5f-8f97-37d69726e5d9">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2KomplektatsOnline</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="4bc75cec-21ca-4e06-bb1c-d47fe9b51e46">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="f4189b66-43a8-42c5-9be1-8ccfc4e847a8" />
+          </ProactiveCaching>
+          <EstimatedSize>434</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Komplektats Online Dlya Sred</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6c8c73c0-aa83-4f49-8f8c-67e6e34d2c9c">
+          <ID>Vw WMS2 Komplektats Online Dlya Sred</ID>
+          <Name>Vw WMS2 Komplektats Online Dlya Sred</Name>
+          <CreatedTimestamp>2020-03-06T06:18:05.776667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T09:46:15.9Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-01T12:01:47.636667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c526b279-de7b-4678-bc3a-7cf58c4e913b">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2KomplektatsOnline_DlyaSred</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="be6748ab-07ee-49a8-823a-e29bb84ebd79">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="379b9a30-46d8-4845-9925-b5b2753de72e" />
+          </ProactiveCaching>
+          <EstimatedSize>610</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Komplektats Online Count Master OS</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c3e65e3d-de87-477a-a2e1-e5bf1aff4c6c">
+          <ID>Vw WMS2 Komplektats Online Count Master OS</ID>
+          <Name>Vw WMS2 Komplektats Online Count Master OS</Name>
+          <CreatedTimestamp>2020-03-06T06:27:17.526667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T09:46:16.98Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-01T12:01:47.63Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c9bb9e01-aea8-430e-ae70-cc8381923469">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2KomplektatsOnline_CountMasterOS</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="9442d054-7593-46c3-b0c8-510a1085a410">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="0cf76337-b808-4096-afc8-89ed3f6d7d14" />
+          </ProactiveCaching>
+          <EstimatedSize>454</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

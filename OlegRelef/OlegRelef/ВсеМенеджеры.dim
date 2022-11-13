@@ -1,0 +1,2895 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ВсеПользователи</ID>
+  <Name>ВсеМенеджеры</Name>
+  <CreatedTimestamp>2019-05-23T03:16:36.966667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-10-05T14:07:51.766667Z</LastSchemaUpdate>
+  <LastProcessed>2022-01-18T06:01:14.976667Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration>
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission>
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>2019-05-31T09:34:03.43Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.013333Z</LastSchemaUpdate>
+      <RoleID>Role 162</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3773]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 7</ID>
+      <Name>DimensionPermission 7</Name>
+      <CreatedTimestamp>2019-06-01T15:09:17.61Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.023333Z</LastSchemaUpdate>
+      <RoleID>Role 23</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3305]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 8</ID>
+      <Name>DimensionPermission 8</Name>
+      <CreatedTimestamp>2019-06-01T15:12:10.633333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.03Z</LastSchemaUpdate>
+      <RoleID>Role 24</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3754]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 12</ID>
+      <Name>DimensionPermission 12</Name>
+      <CreatedTimestamp>2019-06-01T15:28:28.326667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.05Z</LastSchemaUpdate>
+      <RoleID>Role 28</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3289]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 15</ID>
+      <Name>DimensionPermission 15</Name>
+      <CreatedTimestamp>2019-06-02T07:08:09.62Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.076667Z</LastSchemaUpdate>
+      <RoleID>Role 36</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3154], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[4561]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 16</ID>
+      <Name>DimensionPermission 16</Name>
+      <CreatedTimestamp>2019-06-02T07:11:04.903333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.086667Z</LastSchemaUpdate>
+      <RoleID>Role 40</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3230]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 20</ID>
+      <Name>DimensionPermission 20</Name>
+      <CreatedTimestamp>2019-06-02T07:24:55.16Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.09Z</LastSchemaUpdate>
+      <RoleID>Role 49</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3333]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 22</ID>
+      <Name>DimensionPermission 22</Name>
+      <CreatedTimestamp>2019-06-02T07:35:18.07Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.093333Z</LastSchemaUpdate>
+      <RoleID>Role 52</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4218]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 24</ID>
+      <Name>DimensionPermission 24</Name>
+      <CreatedTimestamp>2019-06-02T07:42:15.833333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.093333Z</LastSchemaUpdate>
+      <RoleID>Role 57</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3155]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 25</ID>
+      <Name>DimensionPermission 25</Name>
+      <CreatedTimestamp>2019-06-02T07:44:57.3Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.096667Z</LastSchemaUpdate>
+      <RoleID>Role 58</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 26</ID>
+      <Name>DimensionPermission 26</Name>
+      <CreatedTimestamp>2019-06-02T07:49:31.213333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.106667Z</LastSchemaUpdate>
+      <RoleID>Role 60</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3299]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 27</ID>
+      <Name>DimensionPermission 27</Name>
+      <CreatedTimestamp>2019-06-02T07:52:22.993333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.11Z</LastSchemaUpdate>
+      <RoleID>Role 61</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3159]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 6</ID>
+      <Name>DimensionPermission 6</Name>
+      <CreatedTimestamp>2019-06-11T07:31:04.83Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.14Z</LastSchemaUpdate>
+      <RoleID>Role 53</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 10</ID>
+      <Name>DimensionPermission 10</Name>
+      <CreatedTimestamp>2019-06-11T08:42:07.666667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.146667Z</LastSchemaUpdate>
+      <RoleID>Role 74</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 11</ID>
+      <Name>DimensionPermission 11</Name>
+      <CreatedTimestamp>2019-06-11T08:57:26.44Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.15Z</LastSchemaUpdate>
+      <RoleID>Role 75</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2814]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 23</ID>
+      <Name>DimensionPermission 23</Name>
+      <CreatedTimestamp>2019-06-11T11:17:03.466667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.156667Z</LastSchemaUpdate>
+      <RoleID>Role 78</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3385]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 30</ID>
+      <Name>DimensionPermission 30</Name>
+      <CreatedTimestamp>2019-06-11T12:13:25.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.16Z</LastSchemaUpdate>
+      <RoleID>Role 83</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3797]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 31</ID>
+      <Name>DimensionPermission 31</Name>
+      <CreatedTimestamp>2019-06-11T12:23:39.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.163333Z</LastSchemaUpdate>
+      <RoleID>Role 85</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 33</ID>
+      <Name>DimensionPermission 33</Name>
+      <CreatedTimestamp>2019-06-13T10:09:11.083333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.163333Z</LastSchemaUpdate>
+      <RoleID>Role 94</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 38</ID>
+      <Name>DimensionPermission 38</Name>
+      <CreatedTimestamp>2019-06-14T07:39:04.66Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.176667Z</LastSchemaUpdate>
+      <RoleID>Role 131</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[789]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 41</ID>
+      <Name>DimensionPermission 41</Name>
+      <CreatedTimestamp>2019-06-14T08:02:55.356667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-14T07:38:36.81Z</LastSchemaUpdate>
+      <RoleID>Role 164</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4050]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 42</ID>
+      <Name>DimensionPermission 42</Name>
+      <CreatedTimestamp>2019-06-14T08:13:36.26Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.183333Z</LastSchemaUpdate>
+      <RoleID>Role 165</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2869]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 43</ID>
+      <Name>DimensionPermission 43</Name>
+      <CreatedTimestamp>2019-06-14T08:23:13.74Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.186667Z</LastSchemaUpdate>
+      <RoleID>Role 166</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[1885]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 44</ID>
+      <Name>DimensionPermission 44</Name>
+      <CreatedTimestamp>2019-06-14T08:28:13.83Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.186667Z</LastSchemaUpdate>
+      <RoleID>Role 167</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 46</ID>
+      <Name>DimensionPermission 46</Name>
+      <CreatedTimestamp>2019-06-14T09:32:13.093333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.19Z</LastSchemaUpdate>
+      <RoleID>Role 170</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2776]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 47</ID>
+      <Name>DimensionPermission 47</Name>
+      <CreatedTimestamp>2019-06-14T09:36:53.636667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.193333Z</LastSchemaUpdate>
+      <RoleID>Role 171</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3543]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 50</ID>
+      <Name>DimensionPermission 50</Name>
+      <CreatedTimestamp>2019-06-17T09:04:32.736667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.196667Z</LastSchemaUpdate>
+      <RoleID>Role 178</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 51</ID>
+      <Name>DimensionPermission 51</Name>
+      <CreatedTimestamp>2019-06-17T09:21:30.433333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.206667Z</LastSchemaUpdate>
+      <RoleID>Role 180</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3576]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 54</ID>
+      <Name>DimensionPermission 54</Name>
+      <CreatedTimestamp>2019-06-17T11:34:03.976667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.206667Z</LastSchemaUpdate>
+      <RoleID>Role 183</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3996]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 56</ID>
+      <Name>DimensionPermission 56</Name>
+      <CreatedTimestamp>2019-06-17T11:50:48.53Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.21Z</LastSchemaUpdate>
+      <RoleID>Role 185</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3575]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 61</ID>
+      <Name>DimensionPermission 61</Name>
+      <CreatedTimestamp>2019-06-17T12:12:45.013333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.213333Z</LastSchemaUpdate>
+      <RoleID>Role 191</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[1289]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 62</ID>
+      <Name>DimensionPermission 62</Name>
+      <CreatedTimestamp>2019-06-17T12:15:37.996667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.213333Z</LastSchemaUpdate>
+      <RoleID>Role 192</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4122]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 66</ID>
+      <Name>DimensionPermission 66</Name>
+      <CreatedTimestamp>2019-06-17T12:25:56.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-06T08:38:20.513333Z</LastSchemaUpdate>
+      <RoleID>Role 196</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 67</ID>
+      <Name>DimensionPermission 67</Name>
+      <CreatedTimestamp>2019-06-17T12:28:27.723333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.216667Z</LastSchemaUpdate>
+      <RoleID>Role 197</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3483]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 69</ID>
+      <Name>DimensionPermission 69</Name>
+      <CreatedTimestamp>2019-06-18T07:41:44.133333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.22Z</LastSchemaUpdate>
+      <RoleID>Role 210</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 73</ID>
+      <Name>DimensionPermission 73</Name>
+      <CreatedTimestamp>2019-06-18T07:54:21.31Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.223333Z</LastSchemaUpdate>
+      <RoleID>Role 214</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2800]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 75</ID>
+      <Name>DimensionPermission 75</Name>
+      <CreatedTimestamp>2019-06-18T07:59:55.946667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.246667Z</LastSchemaUpdate>
+      <RoleID>Role 216</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[1729]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 77</ID>
+      <Name>DimensionPermission 77</Name>
+      <CreatedTimestamp>2019-06-18T08:05:35.276667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.25Z</LastSchemaUpdate>
+      <RoleID>Role 218</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2861]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 79</ID>
+      <Name>DimensionPermission 79</Name>
+      <CreatedTimestamp>2019-06-18T08:09:56.356667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.256667Z</LastSchemaUpdate>
+      <RoleID>Role 220</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2307]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 81</ID>
+      <Name>DimensionPermission 81</Name>
+      <CreatedTimestamp>2019-06-18T08:14:03.723333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.273333Z</LastSchemaUpdate>
+      <RoleID>Role 222</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4179]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 84</ID>
+      <Name>DimensionPermission 84</Name>
+      <CreatedTimestamp>2019-06-18T08:23:35.073333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.276667Z</LastSchemaUpdate>
+      <RoleID>Role 225</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2840]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 90</ID>
+      <Name>DimensionPermission 90</Name>
+      <CreatedTimestamp>2019-06-18T08:37:53.533333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.29Z</LastSchemaUpdate>
+      <RoleID>Role 231</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 120</ID>
+      <Name>DimensionPermission 120</Name>
+      <CreatedTimestamp>2019-06-20T09:37:45.356667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.293333Z</LastSchemaUpdate>
+      <RoleID>Role 267</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3091]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 124</ID>
+      <Name>DimensionPermission 124</Name>
+      <CreatedTimestamp>2019-07-01T13:55:35.133333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.296667Z</LastSchemaUpdate>
+      <RoleID>Role 158</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 125</ID>
+      <Name>DimensionPermission 125</Name>
+      <CreatedTimestamp>2019-07-12T07:38:59.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.3Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3167], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[4002]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 126</ID>
+      <Name>DimensionPermission 126</Name>
+      <CreatedTimestamp>2019-07-16T05:49:05.676667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.3Z</LastSchemaUpdate>
+      <RoleID>Role 130</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4229]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 130</ID>
+      <Name>DimensionPermission 130</Name>
+      <CreatedTimestamp>2019-08-05T12:21:59.026667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.303333Z</LastSchemaUpdate>
+      <RoleID>Role 288</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4301]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 131</ID>
+      <Name>DimensionPermission 131</Name>
+      <CreatedTimestamp>2019-08-08T11:29:13.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.306667Z</LastSchemaUpdate>
+      <RoleID>Role 292</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4266]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 133</ID>
+      <Name>DimensionPermission 133</Name>
+      <CreatedTimestamp>2019-08-14T11:11:30.676667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.306667Z</LastSchemaUpdate>
+      <RoleID>Role 296</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3360]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 135</ID>
+      <Name>DimensionPermission 135</Name>
+      <CreatedTimestamp>2019-08-29T11:03:36Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.316667Z</LastSchemaUpdate>
+      <RoleID>Role 302</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4265]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 37</ID>
+      <Name>DimensionPermission 37</Name>
+      <CreatedTimestamp>2019-09-26T07:33:22.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.32Z</LastSchemaUpdate>
+      <RoleID>Role 47</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4362]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 55</ID>
+      <Name>DimensionPermission 55</Name>
+      <CreatedTimestamp>2019-10-23T12:46:43.86Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.326667Z</LastSchemaUpdate>
+      <RoleID>Role 102</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4328]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 137</ID>
+      <Name>DimensionPermission 137</Name>
+      <CreatedTimestamp>2019-10-23T13:21:27.81Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.33Z</LastSchemaUpdate>
+      <RoleID>Role 105</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4376]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 140</ID>
+      <Name>DimensionPermission 140</Name>
+      <CreatedTimestamp>2019-11-07T10:17:55.84Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.333333Z</LastSchemaUpdate>
+      <RoleID>Role 124</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[1867]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 141</ID>
+      <Name>DimensionPermission 141</Name>
+      <CreatedTimestamp>2019-11-12T07:35:55.246667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.333333Z</LastSchemaUpdate>
+      <RoleID>Role 132</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 143</ID>
+      <Name>DimensionPermission 143</Name>
+      <CreatedTimestamp>2019-11-12T09:35:09.683333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.336667Z</LastSchemaUpdate>
+      <RoleID>Role 126</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4429]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 145</ID>
+      <Name>DimensionPermission 145</Name>
+      <CreatedTimestamp>2019-11-15T11:14:15.966667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.336667Z</LastSchemaUpdate>
+      <RoleID>Role 147</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4167]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 146</ID>
+      <Name>DimensionPermission 146</Name>
+      <CreatedTimestamp>2019-11-19T11:33:31.59Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.34Z</LastSchemaUpdate>
+      <RoleID>Role 153</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4446]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 147</ID>
+      <Name>DimensionPermission 147</Name>
+      <CreatedTimestamp>2019-11-22T07:38:46.616667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.343333Z</LastSchemaUpdate>
+      <RoleID>Role 179</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4438]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 52</ID>
+      <Name>DimensionPermission 52</Name>
+      <CreatedTimestamp>2019-12-02T09:03:41.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.346667Z</LastSchemaUpdate>
+      <RoleID>Role 181</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4435]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 148</ID>
+      <Name>DimensionPermission 148</Name>
+      <CreatedTimestamp>2019-12-05T07:10:54.683333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.35Z</LastSchemaUpdate>
+      <RoleID>Role 202</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4441]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 151</ID>
+      <Name>DimensionPermission 151</Name>
+      <CreatedTimestamp>2019-12-06T08:09:03.496667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.353333Z</LastSchemaUpdate>
+      <RoleID>Role 289</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3588]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 152</ID>
+      <Name>DimensionPermission 152</Name>
+      <CreatedTimestamp>2019-12-06T08:53:43.866667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.356667Z</LastSchemaUpdate>
+      <RoleID>Role 315</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 153</ID>
+      <Name>DimensionPermission 153</Name>
+      <CreatedTimestamp>2019-12-06T09:05:22.466667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.363333Z</LastSchemaUpdate>
+      <RoleID>Role 316</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4431], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[3101]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 155</ID>
+      <Name>DimensionPermission 155</Name>
+      <CreatedTimestamp>2019-12-09T09:01:49.833333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.38Z</LastSchemaUpdate>
+      <RoleID>Role 319</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4451]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 157</ID>
+      <Name>DimensionPermission 157</Name>
+      <CreatedTimestamp>2019-12-10T11:47:02.486667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.396667Z</LastSchemaUpdate>
+      <RoleID>Role 321</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4464]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 158</ID>
+      <Name>DimensionPermission 158</Name>
+      <CreatedTimestamp>2019-12-12T07:41:35.75Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.396667Z</LastSchemaUpdate>
+      <RoleID>Role 324</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4435], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[3796], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[2298], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[3814], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[3101], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[1884]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 68</ID>
+      <Name>DimensionPermission 68</Name>
+      <CreatedTimestamp>2019-12-18T07:04:41.01Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.403333Z</LastSchemaUpdate>
+      <RoleID>Role 328</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4471]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 161</ID>
+      <Name>DimensionPermission 161</Name>
+      <CreatedTimestamp>2019-12-19T08:33:18.863333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.406667Z</LastSchemaUpdate>
+      <RoleID>Role 332</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4424]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 164</ID>
+      <Name>DimensionPermission 164</Name>
+      <CreatedTimestamp>2019-12-20T09:13:40.02Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.41Z</LastSchemaUpdate>
+      <RoleID>Role 8</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4445]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 165</ID>
+      <Name>DimensionPermission 165</Name>
+      <CreatedTimestamp>2019-12-24T07:16:34.63Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.413333Z</LastSchemaUpdate>
+      <RoleID>Role 335</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4486]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 166</ID>
+      <Name>DimensionPermission 166</Name>
+      <CreatedTimestamp>2019-12-26T09:34:11.626667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.416667Z</LastSchemaUpdate>
+      <RoleID>Role 339</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4475]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 167</ID>
+      <Name>DimensionPermission 167</Name>
+      <CreatedTimestamp>2019-12-27T07:12:50.693333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.42Z</LastSchemaUpdate>
+      <RoleID>Role 340</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 168</ID>
+      <Name>DimensionPermission 168</Name>
+      <CreatedTimestamp>2019-12-27T09:16:03.336667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.423333Z</LastSchemaUpdate>
+      <RoleID>Role 341</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4457]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 169</ID>
+      <Name>DimensionPermission 169</Name>
+      <CreatedTimestamp>2019-12-27T11:03:25.863333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.426667Z</LastSchemaUpdate>
+      <RoleID>Role 343</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4493]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>2020-01-14T07:38:15.553333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.426667Z</LastSchemaUpdate>
+      <RoleID>Role 123</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 32</ID>
+      <Name>DimensionPermission 32</Name>
+      <CreatedTimestamp>2020-01-16T12:04:40.13Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.44Z</LastSchemaUpdate>
+      <RoleID>Role 104</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4479]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 87</ID>
+      <Name>DimensionPermission 87</Name>
+      <CreatedTimestamp>2020-01-16T12:13:21.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.443333Z</LastSchemaUpdate>
+      <RoleID>Role 228</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2135]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 138</ID>
+      <Name>DimensionPermission 138</Name>
+      <CreatedTimestamp>2020-01-17T08:45:28.786667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.443333Z</LastSchemaUpdate>
+      <RoleID>Role 31</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4267]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 171</ID>
+      <Name>DimensionPermission 171</Name>
+      <CreatedTimestamp>2020-01-21T12:20:44.366667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.45Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4505]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 14</ID>
+      <Name>DimensionPermission 14</Name>
+      <CreatedTimestamp>2020-01-27T07:58:22.89Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.453333Z</LastSchemaUpdate>
+      <RoleID>Role 63</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4384]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 18</ID>
+      <Name>DimensionPermission 18</Name>
+      <CreatedTimestamp>2020-01-28T12:23:35.243333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.463333Z</LastSchemaUpdate>
+      <RoleID>Role 67</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2377]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 172</ID>
+      <Name>DimensionPermission 172</Name>
+      <CreatedTimestamp>2020-01-29T12:55:18.053333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.473333Z</LastSchemaUpdate>
+      <RoleID>Role 349</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4497]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 178</ID>
+      <Name>DimensionPermission 178</Name>
+      <CreatedTimestamp>2020-02-10T06:30:00.223333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.506667Z</LastSchemaUpdate>
+      <RoleID>Role 359</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2728]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 179</ID>
+      <Name>DimensionPermission 179</Name>
+      <CreatedTimestamp>2020-02-10T12:28:35.913333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.513333Z</LastSchemaUpdate>
+      <RoleID>Role 360</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4533]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 94</ID>
+      <Name>DimensionPermission 94</Name>
+      <CreatedTimestamp>2020-02-18T06:32:58.93Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.516667Z</LastSchemaUpdate>
+      <RoleID>Role 91</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4536], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[3333]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 170</ID>
+      <Name>DimensionPermission 170</Name>
+      <CreatedTimestamp>2020-02-20T06:33:22.566667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.52Z</LastSchemaUpdate>
+      <RoleID>Role 175</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4523]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 183</ID>
+      <Name>DimensionPermission 183</Name>
+      <CreatedTimestamp>2020-03-05T07:16:45.56Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.526667Z</LastSchemaUpdate>
+      <RoleID>Role 286</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4568]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 185</ID>
+      <Name>DimensionPermission 185</Name>
+      <CreatedTimestamp>2020-03-12T09:44:28.76Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.526667Z</LastSchemaUpdate>
+      <RoleID>Role 373</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4573]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 186</ID>
+      <Name>DimensionPermission 186</Name>
+      <CreatedTimestamp>2020-03-16T07:58:08.243333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-22T09:23:12.72Z</LastSchemaUpdate>
+      <RoleID>Role 376</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4507]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 188</ID>
+      <Name>DimensionPermission 188</Name>
+      <CreatedTimestamp>2020-03-18T10:24:44.436667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.533333Z</LastSchemaUpdate>
+      <RoleID>Role 379</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4524]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 189</ID>
+      <Name>DimensionPermission 189</Name>
+      <CreatedTimestamp>2020-03-18T12:15:26.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.536667Z</LastSchemaUpdate>
+      <RoleID>Role 380</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3011]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 190</ID>
+      <Name>DimensionPermission 190</Name>
+      <CreatedTimestamp>2020-03-18T13:39:35.226667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.536667Z</LastSchemaUpdate>
+      <RoleID>Role 381</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4465]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>2020-03-20T12:21:07.683333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.54Z</LastSchemaUpdate>
+      <RoleID>Role 22</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4561]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>2020-03-23T08:35:59.67Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.543333Z</LastSchemaUpdate>
+      <RoleID>Role 71</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 34</ID>
+      <Name>DimensionPermission 34</Name>
+      <CreatedTimestamp>2020-03-23T12:54:03.856667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.553333Z</LastSchemaUpdate>
+      <RoleID>Role 73</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[1604]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 80</ID>
+      <Name>DimensionPermission 80</Name>
+      <CreatedTimestamp>2020-04-30T08:24:52.293333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.586667Z</LastSchemaUpdate>
+      <RoleID>Role 408</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4583]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 89</ID>
+      <Name>DimensionPermission 89</Name>
+      <CreatedTimestamp>2020-05-07T10:46:12.333333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.593333Z</LastSchemaUpdate>
+      <RoleID>Role 409</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4584]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 95</ID>
+      <Name>DimensionPermission 95</Name>
+      <CreatedTimestamp>2020-07-20T13:52:16.883333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.61Z</LastSchemaUpdate>
+      <RoleID>Role 425</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3661]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 104</ID>
+      <Name>DimensionPermission 104</Name>
+      <CreatedTimestamp>2020-09-16T06:17:51.373333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.61Z</LastSchemaUpdate>
+      <RoleID>Role 475</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4628]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 136</ID>
+      <Name>DimensionPermission 136</Name>
+      <CreatedTimestamp>2020-09-29T13:01:49.476667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.613333Z</LastSchemaUpdate>
+      <RoleID>Role 494</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 142</ID>
+      <Name>DimensionPermission 142</Name>
+      <CreatedTimestamp>2020-09-30T09:44:54.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.616667Z</LastSchemaUpdate>
+      <RoleID>Role 495</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4783]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 177</ID>
+      <Name>DimensionPermission 177</Name>
+      <CreatedTimestamp>2020-10-05T14:03:31.653333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.616667Z</LastSchemaUpdate>
+      <RoleID>Role 500</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3211], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[3244]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 184</ID>
+      <Name>DimensionPermission 184</Name>
+      <CreatedTimestamp>2020-10-16T07:33:46.366667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.62Z</LastSchemaUpdate>
+      <RoleID>Role 506</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4768]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 192</ID>
+      <Name>DimensionPermission 192</Name>
+      <CreatedTimestamp>2020-10-16T13:57:17.73Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.623333Z</LastSchemaUpdate>
+      <RoleID>Role 508</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4813]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 193</ID>
+      <Name>DimensionPermission 193</Name>
+      <CreatedTimestamp>2020-10-26T13:13:18.356667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.626667Z</LastSchemaUpdate>
+      <RoleID>Role 477</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4740]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 194</ID>
+      <Name>DimensionPermission 194</Name>
+      <CreatedTimestamp>2020-10-28T06:34:55.483333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.63Z</LastSchemaUpdate>
+      <RoleID>Role 515</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4808]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 195</ID>
+      <Name>DimensionPermission 195</Name>
+      <CreatedTimestamp>2020-10-28T12:44:03.26Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.636667Z</LastSchemaUpdate>
+      <RoleID>Role 518</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4794]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 197</ID>
+      <Name>DimensionPermission 197</Name>
+      <CreatedTimestamp>2020-11-05T11:49:19.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.643333Z</LastSchemaUpdate>
+      <RoleID>Role 521</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4760]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 39</ID>
+      <Name>DimensionPermission 39</Name>
+      <CreatedTimestamp>2020-11-10T06:01:02.606667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.65Z</LastSchemaUpdate>
+      <RoleID>Role 59</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4778]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 173</ID>
+      <Name>DimensionPermission 173</Name>
+      <CreatedTimestamp>2020-11-12T07:18:43.333333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.656667Z</LastSchemaUpdate>
+      <RoleID>Role 386</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 187</ID>
+      <Name>DimensionPermission 187</Name>
+      <CreatedTimestamp>2020-11-13T08:59:16.423333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.676667Z</LastSchemaUpdate>
+      <RoleID>Role 398</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4589], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[4776]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 21</ID>
+      <Name>DimensionPermission 21</Name>
+      <CreatedTimestamp>2020-11-18T08:43:20.583333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-15T13:00:21.166667Z</LastSchemaUpdate>
+      <RoleID>Role 93</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 48</ID>
+      <Name>DimensionPermission 48</Name>
+      <CreatedTimestamp>2020-11-20T08:16:49.006667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.696667Z</LastSchemaUpdate>
+      <RoleID>Role 172</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3949]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 198</ID>
+      <Name>DimensionPermission 198</Name>
+      <CreatedTimestamp>2020-11-24T08:43:10.65Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.7Z</LastSchemaUpdate>
+      <RoleID>Role 525</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4846]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 13</ID>
+      <Name>DimensionPermission 13</Name>
+      <CreatedTimestamp>2020-12-03T09:50:03.25Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.706667Z</LastSchemaUpdate>
+      <RoleID>Role 7</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2525], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[4780]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 60</ID>
+      <Name>DimensionPermission 60</Name>
+      <CreatedTimestamp>2020-12-14T13:43:21.063333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.71Z</LastSchemaUpdate>
+      <RoleID>Role 119</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4118],[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4115]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 63</ID>
+      <Name>DimensionPermission 63</Name>
+      <CreatedTimestamp>2020-12-16T07:37:08.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.713333Z</LastSchemaUpdate>
+      <RoleID>Role 144</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4071]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 71</ID>
+      <Name>DimensionPermission 71</Name>
+      <CreatedTimestamp>2020-12-16T08:01:58.866667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.716667Z</LastSchemaUpdate>
+      <RoleID>Role 190</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4066]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 76</ID>
+      <Name>DimensionPermission 76</Name>
+      <CreatedTimestamp>2020-12-18T09:21:11.743333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.72Z</LastSchemaUpdate>
+      <RoleID>Role 193</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4902]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 100</ID>
+      <Name>DimensionPermission 100</Name>
+      <CreatedTimestamp>2020-12-28T07:06:23.343333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.733333Z</LastSchemaUpdate>
+      <RoleID>Role 431</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 107</ID>
+      <Name>DimensionPermission 107</Name>
+      <CreatedTimestamp>2020-12-28T11:21:56.64Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.736667Z</LastSchemaUpdate>
+      <RoleID>Role 115</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 115</ID>
+      <Name>DimensionPermission 115</Name>
+      <CreatedTimestamp>2020-12-29T11:58:02.06Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.746667Z</LastSchemaUpdate>
+      <RoleID>Role 161</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 162</ID>
+      <Name>DimensionPermission 162</Name>
+      <CreatedTimestamp>2021-01-14T14:49:39.696667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.75Z</LastSchemaUpdate>
+      <RoleID>Role 156</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 200</ID>
+      <Name>DimensionPermission 200</Name>
+      <CreatedTimestamp>2021-01-18T08:14:53.32Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.76Z</LastSchemaUpdate>
+      <RoleID>Role 129</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 201</ID>
+      <Name>DimensionPermission 201</Name>
+      <CreatedTimestamp>2021-01-28T12:46:54.373333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.776667Z</LastSchemaUpdate>
+      <RoleID>Role 481</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4446]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 203</ID>
+      <Name>DimensionPermission 203</Name>
+      <CreatedTimestamp>2021-01-28T12:54:29.776667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.78Z</LastSchemaUpdate>
+      <RoleID>Role 529</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4446]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 204</ID>
+      <Name>DimensionPermission 204</Name>
+      <CreatedTimestamp>2021-01-28T12:57:09.956667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.78Z</LastSchemaUpdate>
+      <RoleID>Role 530</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4446]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 205</ID>
+      <Name>DimensionPermission 205</Name>
+      <CreatedTimestamp>2021-01-28T13:15:20.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.783333Z</LastSchemaUpdate>
+      <RoleID>Role 531</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4446]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 58</ID>
+      <Name>DimensionPermission 58</Name>
+      <CreatedTimestamp>2021-02-12T10:03:11.056667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.79Z</LastSchemaUpdate>
+      <RoleID>Role 545</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 206</ID>
+      <Name>DimensionPermission 206</Name>
+      <CreatedTimestamp>2021-02-17T09:47:52.996667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.8Z</LastSchemaUpdate>
+      <RoleID>Role 487</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>2021-02-20T13:02:37.27Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.813333Z</LastSchemaUpdate>
+      <RoleID>Role 449</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 207</ID>
+      <Name>DimensionPermission 207</Name>
+      <CreatedTimestamp>2021-02-24T10:08:07.763333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.82Z</LastSchemaUpdate>
+      <RoleID>Role 504</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 139</ID>
+      <Name>DimensionPermission 139</Name>
+      <CreatedTimestamp>2021-04-22T08:01:02.636667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.83Z</LastSchemaUpdate>
+      <RoleID>Role 206</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 122</ID>
+      <Name>DimensionPermission 122</Name>
+      <CreatedTimestamp>2021-06-04T10:41:50.14Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.85Z</LastSchemaUpdate>
+      <RoleID>Role 444</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 129</ID>
+      <Name>DimensionPermission 129</Name>
+      <CreatedTimestamp>2021-06-11T18:11:32.996667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.856667Z</LastSchemaUpdate>
+      <RoleID>Role 653</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 9</ID>
+      <Name>DimensionPermission 9</Name>
+      <CreatedTimestamp>2021-06-28T15:20:40.813333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.86Z</LastSchemaUpdate>
+      <RoleID>Role 99</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 36</ID>
+      <Name>DimensionPermission 36</Name>
+      <CreatedTimestamp>2021-07-07T09:32:03.853333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.863333Z</LastSchemaUpdate>
+      <RoleID>Role 127</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 191</ID>
+      <Name>DimensionPermission 191</Name>
+      <CreatedTimestamp>2021-07-19T09:49:24.16Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.863333Z</LastSchemaUpdate>
+      <RoleID>Role 684</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 199</ID>
+      <Name>DimensionPermission 199</Name>
+      <CreatedTimestamp>2021-07-20T08:05:53.683333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-22T08:31:38.153333Z</LastSchemaUpdate>
+      <RoleID>Role 681</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 209</ID>
+      <Name>DimensionPermission 209</Name>
+      <CreatedTimestamp>2021-07-28T14:24:27.79Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.87Z</LastSchemaUpdate>
+      <RoleID>Role 690</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5357]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 210</ID>
+      <Name>DimensionPermission 210</Name>
+      <CreatedTimestamp>2021-07-29T08:26:59.226667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.87Z</LastSchemaUpdate>
+      <RoleID>Role 691</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5353]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 211</ID>
+      <Name>DimensionPermission 211</Name>
+      <CreatedTimestamp>2021-07-29T08:52:53.37Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.873333Z</LastSchemaUpdate>
+      <RoleID>Role 692</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5247]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 212</ID>
+      <Name>DimensionPermission 212</Name>
+      <CreatedTimestamp>2021-07-30T08:30:14.8Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.876667Z</LastSchemaUpdate>
+      <RoleID>Role 217</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4850]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 213</ID>
+      <Name>DimensionPermission 213</Name>
+      <CreatedTimestamp>2021-07-30T14:01:22.893333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.883333Z</LastSchemaUpdate>
+      <RoleID>Role 694</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5255]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 214</ID>
+      <Name>DimensionPermission 214</Name>
+      <CreatedTimestamp>2021-08-02T09:12:46.833333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.886667Z</LastSchemaUpdate>
+      <RoleID>Role 695</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5368]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 215</ID>
+      <Name>DimensionPermission 215</Name>
+      <CreatedTimestamp>2021-08-02T10:09:38.853333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.9Z</LastSchemaUpdate>
+      <RoleID>Role 696</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 216</ID>
+      <Name>DimensionPermission 216</Name>
+      <CreatedTimestamp>2021-08-02T12:31:13.42Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.903333Z</LastSchemaUpdate>
+      <RoleID>Role 622</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 217</ID>
+      <Name>DimensionPermission 217</Name>
+      <CreatedTimestamp>2021-08-03T09:04:32.44Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.913333Z</LastSchemaUpdate>
+      <RoleID>Role 697</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5268]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 218</ID>
+      <Name>DimensionPermission 218</Name>
+      <CreatedTimestamp>2021-08-05T09:29:29.933333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.926667Z</LastSchemaUpdate>
+      <RoleID>Role 698</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5287]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 17</ID>
+      <Name>DimensionPermission 17</Name>
+      <CreatedTimestamp>2021-08-08T17:06:05.28Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.933333Z</LastSchemaUpdate>
+      <RoleID>Role 26</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5344]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 28</ID>
+      <Name>DimensionPermission 28</Name>
+      <CreatedTimestamp>2021-08-12T07:17:11.433333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.936667Z</LastSchemaUpdate>
+      <RoleID>Role 453</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4442]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 29</ID>
+      <Name>DimensionPermission 29</Name>
+      <CreatedTimestamp>2021-08-17T12:32:56.213333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.94Z</LastSchemaUpdate>
+      <RoleID>Role 84</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 35</ID>
+      <Name>DimensionPermission 35</Name>
+      <CreatedTimestamp>2021-08-19T07:49:41.97Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.943333Z</LastSchemaUpdate>
+      <RoleID>Role 97</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5402]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 40</ID>
+      <Name>DimensionPermission 40</Name>
+      <CreatedTimestamp>2021-08-19T08:52:19.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.946667Z</LastSchemaUpdate>
+      <RoleID>Role 100</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5403]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 45</ID>
+      <Name>DimensionPermission 45</Name>
+      <CreatedTimestamp>2021-08-19T09:36:55.82Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.953333Z</LastSchemaUpdate>
+      <RoleID>Role 103</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5313]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 49</ID>
+      <Name>DimensionPermission 49</Name>
+      <CreatedTimestamp>2021-08-19T14:27:36.713333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.963333Z</LastSchemaUpdate>
+      <RoleID>Role 136</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 53</ID>
+      <Name>DimensionPermission 53</Name>
+      <CreatedTimestamp>2021-08-26T08:46:08.14Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.966667Z</LastSchemaUpdate>
+      <RoleID>Role 148</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5351]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 57</ID>
+      <Name>DimensionPermission 57</Name>
+      <CreatedTimestamp>2021-08-30T09:41:20.26Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:52.973333Z</LastSchemaUpdate>
+      <RoleID>Role 152</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5414]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 59</ID>
+      <Name>DimensionPermission 59</Name>
+      <CreatedTimestamp>2021-08-30T10:18:07.503333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53Z</LastSchemaUpdate>
+      <RoleID>Role 155</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5434]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 64</ID>
+      <Name>DimensionPermission 64</Name>
+      <CreatedTimestamp>2021-08-31T09:43:50.193333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.006667Z</LastSchemaUpdate>
+      <RoleID>Role 173</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5433]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 65</ID>
+      <Name>DimensionPermission 65</Name>
+      <CreatedTimestamp>2021-09-06T09:26:54.28Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.013333Z</LastSchemaUpdate>
+      <RoleID>Role 188</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5410]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 70</ID>
+      <Name>DimensionPermission 70</Name>
+      <CreatedTimestamp>2021-09-08T14:34:30.666667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.026667Z</LastSchemaUpdate>
+      <RoleID>Role 199</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5361]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>2021-09-20T10:58:23.586667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.03Z</LastSchemaUpdate>
+      <RoleID>Role 27</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5411]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 19</ID>
+      <Name>DimensionPermission 19</Name>
+      <CreatedTimestamp>2021-09-21T08:02:54.23Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.066667Z</LastSchemaUpdate>
+      <RoleID>Role 44</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5409]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 72</ID>
+      <Name>DimensionPermission 72</Name>
+      <CreatedTimestamp>2021-09-22T09:47:41.13Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.08Z</LastSchemaUpdate>
+      <RoleID>Role 68</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2439]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 74</ID>
+      <Name>DimensionPermission 74</Name>
+      <CreatedTimestamp>2021-09-22T13:51:21.146667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.083333Z</LastSchemaUpdate>
+      <RoleID>Role 80</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5422]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 78</ID>
+      <Name>DimensionPermission 78</Name>
+      <CreatedTimestamp>2021-09-23T09:10:12.93Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.09Z</LastSchemaUpdate>
+      <RoleID>Role 114</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5479], [ВсеМенеджеры].[ВсеМенеджеры].&amp;[5482]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 82</ID>
+      <Name>DimensionPermission 82</Name>
+      <CreatedTimestamp>2021-09-24T07:19:21.826667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.1Z</LastSchemaUpdate>
+      <RoleID>Role 290</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4226]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 83</ID>
+      <Name>DimensionPermission 83</Name>
+      <CreatedTimestamp>2021-09-24T09:00:35.92Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.12Z</LastSchemaUpdate>
+      <RoleID>Role 146</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5490]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 85</ID>
+      <Name>DimensionPermission 85</Name>
+      <CreatedTimestamp>2021-09-29T09:20:34.566667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.126667Z</LastSchemaUpdate>
+      <RoleID>Role 163</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5440]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 86</ID>
+      <Name>DimensionPermission 86</Name>
+      <CreatedTimestamp>2021-10-05T12:19:55.086667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T14:07:53.13Z</LastSchemaUpdate>
+      <RoleID>Role 224</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5462]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 88</ID>
+      <Name>DimensionPermission 88</Name>
+      <CreatedTimestamp>2021-10-07T08:50:11.113333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-14T09:18:49.883333Z</LastSchemaUpdate>
+      <RoleID>Role 226</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5436]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 91</ID>
+      <Name>DimensionPermission 91</Name>
+      <CreatedTimestamp>2021-10-08T08:26:08.863333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-12T12:21:10.846667Z</LastSchemaUpdate>
+      <RoleID>Role 227</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5497]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 92</ID>
+      <Name>DimensionPermission 92</Name>
+      <CreatedTimestamp>2021-10-11T06:34:49.776667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-11T06:34:49.776667Z</LastSchemaUpdate>
+      <RoleID>Role 634</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5089]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 93</ID>
+      <Name>DimensionPermission 93</Name>
+      <CreatedTimestamp>2021-10-12T12:48:04.606667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-12T12:51:02.333333Z</LastSchemaUpdate>
+      <RoleID>Role 232</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5496]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 96</ID>
+      <Name>DimensionPermission 96</Name>
+      <CreatedTimestamp>2021-10-14T14:41:24.393333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-14T14:52:24.793333Z</LastSchemaUpdate>
+      <RoleID>Role 243</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5432]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 97</ID>
+      <Name>DimensionPermission 97</Name>
+      <CreatedTimestamp>2021-10-15T11:51:32.083333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-15T11:51:32.083333Z</LastSchemaUpdate>
+      <RoleID>Role 240</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[2250]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 98</ID>
+      <Name>DimensionPermission 98</Name>
+      <CreatedTimestamp>2021-10-18T14:36:21.43Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-18T14:36:21.43Z</LastSchemaUpdate>
+      <RoleID>Role 245</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5512]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 99</ID>
+      <Name>DimensionPermission 99</Name>
+      <CreatedTimestamp>2021-10-19T12:08:08.533333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-26T08:46:41.086667Z</LastSchemaUpdate>
+      <RoleID>Role 247</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5505]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 101</ID>
+      <Name>DimensionPermission 101</Name>
+      <CreatedTimestamp>2021-10-20T08:04:06.333333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-20T08:04:06.333333Z</LastSchemaUpdate>
+      <RoleID>Role 249</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5385]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 102</ID>
+      <Name>DimensionPermission 102</Name>
+      <CreatedTimestamp>2021-10-21T09:58:11.163333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-21T09:58:11.163333Z</LastSchemaUpdate>
+      <RoleID>Role 250</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5446]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 103</ID>
+      <Name>DimensionPermission 103</Name>
+      <CreatedTimestamp>2021-10-21T14:13:04.116667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-21T14:13:04.116667Z</LastSchemaUpdate>
+      <RoleID>Role 251</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[3996]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 105</ID>
+      <Name>DimensionPermission 105</Name>
+      <CreatedTimestamp>2021-10-22T09:06:12.93Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-22T09:06:12.93Z</LastSchemaUpdate>
+      <RoleID>Role 253</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5337]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 106</ID>
+      <Name>DimensionPermission 106</Name>
+      <CreatedTimestamp>2021-10-27T14:19:26.52Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-27T14:19:26.52Z</LastSchemaUpdate>
+      <RoleID>Role 259</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5484]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 108</ID>
+      <Name>DimensionPermission 108</Name>
+      <CreatedTimestamp>2021-11-08T12:45:31.943333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-08T12:45:31.943333Z</LastSchemaUpdate>
+      <RoleID>Role 263</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5473]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 109</ID>
+      <Name>DimensionPermission 109</Name>
+      <CreatedTimestamp>2021-11-10T08:58:48.01Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-10T09:04:34.086667Z</LastSchemaUpdate>
+      <RoleID>Role 265</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <DeniedSet>{}</DeniedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 110</ID>
+      <Name>DimensionPermission 110</Name>
+      <CreatedTimestamp>2021-11-10T09:09:14.13Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-11T06:37:05.04Z</LastSchemaUpdate>
+      <RoleID>Role 266</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 112</ID>
+      <Name>DimensionPermission 112</Name>
+      <CreatedTimestamp>2021-11-15T10:23:13.07Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-15T10:23:13.07Z</LastSchemaUpdate>
+      <RoleID>Role 271</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5523]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 113</ID>
+      <Name>DimensionPermission 113</Name>
+      <CreatedTimestamp>2021-11-16T08:09:58.876667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-16T08:09:58.876667Z</LastSchemaUpdate>
+      <RoleID>Role 273</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5445]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 116</ID>
+      <Name>DimensionPermission 116</Name>
+      <CreatedTimestamp>2021-11-16T12:08:52.723333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-16T12:08:52.723333Z</LastSchemaUpdate>
+      <RoleID>Role 278</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5507]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 114</ID>
+      <Name>DimensionPermission 114</Name>
+      <CreatedTimestamp>2021-11-17T07:13:33.123333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-17T07:13:33.123333Z</LastSchemaUpdate>
+      <RoleID>Role 276</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5524]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 117</ID>
+      <Name>DimensionPermission 117</Name>
+      <CreatedTimestamp>2021-11-29T10:13:24.023333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-29T10:13:24.023333Z</LastSchemaUpdate>
+      <RoleID>Role 287</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5037]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 118</ID>
+      <Name>DimensionPermission 118</Name>
+      <CreatedTimestamp>2021-12-01T10:52:50.763333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-01T10:52:50.763333Z</LastSchemaUpdate>
+      <RoleID>Role 291</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4587]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 119</ID>
+      <Name>DimensionPermission 119</Name>
+      <CreatedTimestamp>2021-12-27T14:40:14.693333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-27T14:40:14.693333Z</LastSchemaUpdate>
+      <RoleID>Role 330</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[4778]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 121</ID>
+      <Name>DimensionPermission 121</Name>
+      <CreatedTimestamp>2021-12-28T13:07:06.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-28T13:07:06.266667Z</LastSchemaUpdate>
+      <RoleID>Role 331</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5023]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 123</ID>
+      <Name>DimensionPermission 123</Name>
+      <CreatedTimestamp>2021-12-30T08:23:10.383333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-30T08:23:10.383333Z</LastSchemaUpdate>
+      <RoleID>Role 345</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5510]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 111</ID>
+      <Name>DimensionPermission 111</Name>
+      <CreatedTimestamp>2022-01-12T09:43:09.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-12T09:43:09.266667Z</LastSchemaUpdate>
+      <RoleID>Role 554</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 127</ID>
+      <Name>DimensionPermission 127</Name>
+      <CreatedTimestamp>2022-01-13T13:15:57.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T13:32:05.186667Z</LastSchemaUpdate>
+      <RoleID>Role 364</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 128</ID>
+      <Name>DimensionPermission 128</Name>
+      <CreatedTimestamp>2022-01-13T14:39:34.646667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T14:39:34.646667Z</LastSchemaUpdate>
+      <RoleID>Role 365</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5550]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 132</ID>
+      <Name>DimensionPermission 132</Name>
+      <CreatedTimestamp>2022-01-14T12:58:05.13Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-14T12:58:05.13Z</LastSchemaUpdate>
+      <RoleID>Role 372</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Id</AttributeID>
+          <AllowedSet>{[ВсеМенеджеры].[ВсеМенеджеры].&amp;[5493]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>Id</ID>
+      <Name>ВсеМенеджеры</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vwPolzovateli</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_vwPolzovateli</TableID>
+          <ColumnID>Description</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

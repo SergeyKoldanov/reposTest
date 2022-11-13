@@ -1,0 +1,559 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="55a1d0cb-75b4-449c-b0f5-f9d5f5015415" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>БиДжиСРЦ</ID>
+  <Name>БиДжиСРЦ</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="9" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="0" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="19420" y="16166" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwTbData" left="9444" top="7500" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwTbData" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BGWithRC_Sales" left="6661" top="1150" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BGWithRC_Sales" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BGWithRC_Remains" left="3466" top="1137" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BGWithRC_Remains" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGGruppa" left="6000" top="6543" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGGruppa" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGCategoriya" left="6000" top="9451" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGCategoriya" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGClass" left="10500" top="5816" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGClass" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGPodgruppa" left="13500" top="7997" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGPodgruppa" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>3466</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>1137</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="d68f9fdd-8591-433b-9512-847d70862afc">
+      <ID>ГоловнойКлиент</ID>
+      <Name>ГоловнойКлиент</Name>
+      <DimensionID>ГоловнойКлиент</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="15d7421c-e661-4795-ab22-274d46c52242">
+          <AttributeID>Client</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ade5a237-4607-49ce-b936-097f9dfd3561">
+      <ID>Организация</ID>
+      <Name>Организация</Name>
+      <DimensionID>Организация</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="65723ef7-8338-4cef-bed8-62485c23ecc9">
+          <AttributeID>Company</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="772c9cc2-5a20-44d2-a401-51397af79c09">
+      <ID>НаправлениеПродаж</ID>
+      <Name>НаправлениеПродаж</Name>
+      <DimensionID>НаправлениеПродаж</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b607017e-9174-4d35-a451-15bff8dd4c18">
+          <AttributeID>Direction</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="06590874-6ef5-4aad-b3d5-25c672239c12">
+      <ID>Группа</ID>
+      <Name>Группа</Name>
+      <DimensionID>Группа</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1b9524d1-2651-4dc5-8863-ca0d417e3170">
+          <AttributeID>Level 02</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5aa7d3bd-000f-44a4-a8cc-787ab56ff4cd">
+      <ID>Категория</ID>
+      <Name>Категория</Name>
+      <DimensionID>Категория</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="66484ee0-2e55-4c82-bd70-96d9dec53b59">
+          <AttributeID>Cat</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1cb8ec20-8291-45e0-a14e-7bdce67ac22d">
+      <ID>Класс</ID>
+      <Name>Класс</Name>
+      <DimensionID>Класс</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5390b476-be43-46a3-a7bb-19a4d6b1bda1">
+          <AttributeID>Class</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="aa32a16e-1d89-423a-987d-00b4dd82b4a3">
+      <ID>Подгруппа</ID>
+      <Name>Подгруппа</Name>
+      <DimensionID>Подгруппа</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bce54da1-2e37-4945-9c60-93d8e5abbe11">
+          <AttributeID>Level 03</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d98bf202-8f93-40ff-a8bc-8d9634eaee59">
+      <ID>ГодМес</ID>
+      <Name>ГодМес</Name>
+      <DimensionID>ГодМесДень</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="aae03772-0eed-4a6b-b761-6a68b5f401e9">
+          <AttributeID>Data</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="199661b7-8ef4-41fc-8f87-424db59f0e22">
+          <AttributeID>God</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a44e78af-5a4b-43f7-874b-7938a630a224">
+          <AttributeID>Mes</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="08597242-3fdc-4252-8959-e99bdfbbc87b">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="8bf9ac94-595b-4bdc-b48a-a17de8de1726">
+      <ID>BG With RC Sales</ID>
+      <Name>Продажи</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ec9a1532-949c-48b7-91ed-01a50989ee66">
+          <ID>Kol</ID>
+          <Name>ОборотШт</Name>
+          <Source dwd:design-time-name="6adda5ae-6817-4cd0-ae24-c416b7a7a0df">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5e6adf85-1de2-4770-abac-b4b3bb3fad8d">
+              <TableID>dbo_BGWithRC_Sales</TableID>
+              <ColumnID>kol</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fb2cfda9-3d93-4de4-84da-8de5a671c34d">
+          <ID>Oborot</ID>
+          <Name>ОборотРуб</Name>
+          <Source dwd:design-time-name="60da80d8-9062-45ac-87ba-4404f154b40b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8620b44d-6e04-4219-857e-405a01e87139">
+              <TableID>dbo_BGWithRC_Sales</TableID>
+              <ColumnID>oborot</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ab238f39-67db-4fb8-b9db-1423c56380fe">
+          <CubeDimensionID>ГоловнойКлиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f9069c6d-f5f8-43e9-9661-4981da4796af">
+              <AttributeID>Client</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4b887758-825c-4a07-b3f5-3b0606edd1b9">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b34caa16-a175-40f3-bd96-dbf7629e5dc2">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>client</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e1513ca-fce6-4f6e-9e2d-7de4585c7a0f">
+          <CubeDimensionID>Организация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="aa084187-25a6-4609-99b5-1921d93397a4">
+              <AttributeID>Company</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5d56ec79-8e38-4cba-9f9c-feae81a5930d">
+                  <DataType>WChar</DataType>
+                  <DataSize>5</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5edd59b4-d6de-4336-a1c3-827602914d67">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>company</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bb554ead-a0aa-4c77-8e8d-77cb8057760e">
+          <CubeDimensionID>НаправлениеПродаж</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9cbd1249-da3f-4503-874a-6575d43ab4c1">
+              <AttributeID>Direction</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7a1ea220-1428-4ea7-9783-00f05a0342d5">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c21adb37-4363-4414-8ed7-1bf689ed69ff">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>direction</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1c03199e-864a-4203-9712-1cbb0b6d1704">
+          <CubeDimensionID>Группа</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a7933494-db75-40d1-8144-6c8602f900af">
+              <AttributeID>Level 02</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="686cf639-c239-4515-9aae-6a02916498b3">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cf3b0cc7-56ec-4236-acc5-9700cc463b6f">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>level_x0020_02</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4d2b7400-cd58-4bb9-b959-f3e2e9f7a429">
+          <CubeDimensionID>Категория</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="33332828-2c60-4d91-89e9-6aef1806a289">
+              <AttributeID>Cat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2439e2d2-9e12-467c-a52f-16dcf211b48f">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="31d9ada3-636e-4bb3-b6c4-405730184716">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>cat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="af92dcff-2f64-4f22-b2d4-40fa3a586797">
+          <CubeDimensionID>Класс</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6332c4d4-f8a5-4973-8ee0-d721b4976dd3">
+              <AttributeID>Class</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0536d6fc-edee-40f7-a0ac-7eea70cf28b1">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5b9487bb-355e-46f6-aec6-5fa4d619d1cd">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>class</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ef4d3940-f7d8-4663-9240-7fd2ea2e72fd">
+          <CubeDimensionID>Подгруппа</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b101d4bc-e114-4ddd-80c7-a9f645d1a8c6">
+              <AttributeID>Level 03</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="aea1c530-3bf1-47db-92b8-61aaae0ca2e6">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="96adb43d-2528-4026-9e64-2601c4b14064">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>level_x0020_03</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="304e8984-c481-443f-88fd-1fbdf5796109">
+          <CubeDimensionID>ГодМес</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a0f49e6e-25be-48e1-b8d3-ce9814e52017">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c773a852-f13e-46b7-8e01-f50404389104">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4fc98d92-6374-4a79-a211-a8281d21247e">
+                    <TableID>dbo_BGWithRC_Sales</TableID>
+                    <ColumnID>Period</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="5509e77a-1d1d-4ea0-a00b-e1a41d5c652c">
+      <ID>BG With RC Remains</ID>
+      <Name>Остатки</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2fe66012-4c3f-4516-8bf2-b9f9a6771777">
+          <ID>Ost Kol</ID>
+          <Name>ОстаткиШт</Name>
+          <AggregateFunction>LastChild</AggregateFunction>
+          <Source dwd:design-time-name="5818b8e0-ae3f-4cc7-a0d5-fd1e67160ef2">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e056eacf-c997-4bdd-83a3-fa7c0623f57e">
+              <TableID>dbo_BGWithRC_Remains</TableID>
+              <ColumnID>OstKol</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b2da4375-dc80-4959-9ade-1fc61dd61dd0">
+          <ID>Ost Rub</ID>
+          <Name>ОстаткиРуб</Name>
+          <AggregateFunction>LastChild</AggregateFunction>
+          <Source dwd:design-time-name="ba407a04-a084-43ab-a163-456fe78ca6b5">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cae1a324-ed51-4bf3-8d60-c0e0922f23f8">
+              <TableID>dbo_BGWithRC_Remains</TableID>
+              <ColumnID>OstRub</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8c2b55ba-a086-459d-8b8e-6dc524f71725">
+          <CubeDimensionID>Группа</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="41b631bb-46d0-4d0d-84a6-6269845eb64a">
+              <AttributeID>Level 02</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2d9b358f-e5f3-4fa7-81f5-667522be588c">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6e39d8eb-e025-4eb4-8d17-3bf57a37ac10">
+                    <TableID>dbo_BGWithRC_Remains</TableID>
+                    <ColumnID>level_x0020_02</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="32a9cc86-5cb0-48db-8ea3-2ff194fb7745">
+          <CubeDimensionID>Категория</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b1640fa4-8d09-45f7-90b9-e265a0e1c465">
+              <AttributeID>Cat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a86c5cc8-ff04-477f-bdee-87ac1a82439b">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5275eacc-cb85-4dac-a033-bde8c3966dcb">
+                    <TableID>dbo_BGWithRC_Remains</TableID>
+                    <ColumnID>cat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="58e60bee-2c02-4941-a462-5e189bcf741c">
+          <CubeDimensionID>Класс</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="06ef24b1-fe8f-450a-b045-967a103615cb">
+              <AttributeID>Class</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="914be772-2d35-48af-96e5-5144e9cc8bae">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="97ea6021-db38-46cc-9b2b-b84c31702cd8">
+                    <TableID>dbo_BGWithRC_Remains</TableID>
+                    <ColumnID>class</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="901cc2a2-9a2d-48ed-b23a-a9c31c30826d">
+          <CubeDimensionID>Подгруппа</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="066b2820-99d4-4fca-b10c-c6cdec6deb21">
+              <AttributeID>Level 03</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3196961c-41c1-4159-9882-d44c0c613a93">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3dc09b78-4ee9-4d4e-83bf-711aa9a47aaa">
+                    <TableID>dbo_BGWithRC_Remains</TableID>
+                    <ColumnID>level_x0020_03</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="56b66f34-caa8-497e-8aca-46c39b406db5">
+          <CubeDimensionID>ГодМес</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="02e7bea2-fcf5-48a2-813d-81c1a126f3f9">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="203fa142-5b27-475b-9904-0e2b68300e6c">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="51728c41-53d3-4317-9e19-643826ab7994">
+                    <TableID>dbo_BGWithRC_Remains</TableID>
+                    <ColumnID>data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="73f0970b-6024-4c9f-ae92-589071c81ff7">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+</Cube>

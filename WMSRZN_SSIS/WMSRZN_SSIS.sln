@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "WMSRZN_SSIS", "WMSRZN_SSIS\WMSRZN_SSIS.dtproj", "{C4137F56-F1F7-45DE-B550-9698BDFD5A9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4137F56-F1F7-45DE-B550-9698BDFD5A9B}.Development|Default.ActiveCfg = Development
+		{C4137F56-F1F7-45DE-B550-9698BDFD5A9B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF95BE9B-93D5-427E-AA46-08C3631C85A3}
+	EndGlobalSection
+EndGlobal

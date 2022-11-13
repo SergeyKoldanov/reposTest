@@ -1,0 +1,89 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6bf340c0-3427-4fea-a884-7308ac4f5bec" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ГП_ХП_КОМИСС_КЛАД_ПРТ</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2GP</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b4b282e0-2d15-4fc8-870c-5574e4d74482">
+          <ID>Vw WMS2GP</ID>
+          <Name>Vw WMS2GP</Name>
+          <CreatedTimestamp>2019-03-19T05:54:24.926667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.316667Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:45:36.27Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="284a1f6d-dbe6-42e1-aa0b-4e7ac234a466">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2GP</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="0f7f82c8-9e41-4fb1-bbb9-57fc49ef872e">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c84ce80d-2647-459d-9d4a-44aa9cc8f98f" />
+          </ProactiveCaching>
+          <EstimatedSize>121045291</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2GP Dlya Sred</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="346d58c0-cba2-41c1-8b7e-84632df50e1f">
+          <ID>Vw WMS2GP Dlya Sred</ID>
+          <Name>Vw WMS2GP Dlya Sred</Name>
+          <CreatedTimestamp>2019-03-19T05:57:41.746667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.326667Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:43:02.823333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a36e3802-17de-4740-919b-c6dd96488b0e">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2GP_DlyaSred</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="2f4df4e1-0f78-4870-b352-45b77a30026a">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="377deac0-82b4-4f84-b220-1c06db9bb233" />
+          </ProactiveCaching>
+          <EstimatedSize>22948692</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2GP Kol Chasov</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="bfb8c584-7afc-4f4d-8ef3-2bca3db09e8a">
+          <ID>Vw WMS2GP Kol Chasov</ID>
+          <Name>Vw WMS2GP Kol Chasov</Name>
+          <CreatedTimestamp>2019-03-19T06:10:07.383333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.33Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:43:08.11Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="58e98b76-4835-4e52-9266-da1befee7a1a">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2GP_KolChasov</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="946aed87-7b64-4349-8648-772a43fd3e28">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="eacf911d-71ff-4e61-b1bf-776f0e2c5343" />
+          </ProactiveCaching>
+          <EstimatedSize>16180834</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

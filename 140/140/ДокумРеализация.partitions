@@ -1,0 +1,45 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="53a3afca-7314-4ebe-b551-7e930cbe9c12" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ДокумРеализация</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw Doc Realiz Tovarov Summa Kol Nakl NEW</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="dc0c3c4b-e820-4e4a-a846-0a4b76e011ca">
+          <ID>Vw Doc Realiz Tovarov Summa Kol Nakl NEW</ID>
+          <Name>Vw Doc Realiz Tovarov Summa Kol Nakl NEW</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2247116b-d99d-4a00-9ad8-d5bb6f2bb043">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Doc Realiz Tovarov Summa Kol Poz NEW</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="159349ec-3589-4991-9b13-7fdd5873aecc">
+          <ID>Vw Doc Realiz Tovarov Summa Kol Poz NEW</ID>
+          <Name>Vw Doc Realiz Tovarov Summa Kol Poz NEW</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b530ff4a-2c2e-4d71-93d0-e6f74be6749b">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

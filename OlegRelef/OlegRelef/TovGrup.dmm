@@ -1,0 +1,153 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>TovGrup</ID>
+  <Name>TovGrup</Name>
+  <CreatedTimestamp>2016-09-02T12:16:01.526667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:42:15.946667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_vw_ProgrozTovGrup</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2016-09-02T12:23:06.53Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>Klassif Klass Desc</ID>
+      <Name>Klassif Klass Desc</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vw_ProgrozTovGrup</TableID>
+            <ColumnID>KlassifKlassDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>DATA</ID>
+      <Name>DATA</Name>
+      <IsKey>true</IsKey>
+      <Type>Date</Type>
+      <Content>Key Time</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vw_ProgrozTovGrup</TableID>
+            <ColumnID>DATA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>Oborot</ID>
+      <Name>Oborot</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vw_ProgrozTovGrup</TableID>
+            <ColumnID>Oborot</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel>
+      <ID>TovGrup</ID>
+      <Name>TovGrup</Name>
+      <CreatedTimestamp>2016-09-02T12:16:01.83Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:15.946667Z</LastSchemaUpdate>
+      <LastProcessed>2016-09-02T12:23:06.526667Z</LastProcessed>
+      <State>Processed</State>
+      <Algorithm>Microsoft_Time_Series</Algorithm>
+      <AlgorithmParameters>
+        <AlgorithmParameter>
+          <Name>AUTO_DETECT_PERIODICITY</Name>
+          <Value xsi:type="xsd:double">0</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>FORECAST_METHOD</Name>
+          <Value xsi:type="xsd:string">ARTXP</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>MINIMUM_SUPPORT</Name>
+          <Value xsi:type="xsd:int">50</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>MISSING_VALUE_SUBSTITUTION</Name>
+          <Value xsi:type="xsd:string">0</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>PERIODICITY_HINT</Name>
+          <Value xsi:type="xsd:string">{12}</Value>
+        </AlgorithmParameter>
+      </AlgorithmParameters>
+      <Columns>
+        <Column>
+          <ID>DATA</ID>
+          <Name>DATA</Name>
+          <SourceColumnID>DATA</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column>
+          <ID>Oborot</ID>
+          <Name>Oborot</Name>
+          <SourceColumnID>Oborot</SourceColumnID>
+          <Usage>Predict</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column>
+          <ID>Klassif Klass Desc</ID>
+          <Name>Klassif Klass Desc</Name>
+          <SourceColumnID>Klassif Klass Desc</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+      <Language>1033</Language>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </MiningModel>
+  </MiningModels>
+  <MiningStructurePermissions>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission</ID>
+      <Name>MiningStructurePermission</Name>
+      <CreatedTimestamp>2021-01-18T12:09:38.186667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:15.946667Z</LastSchemaUpdate>
+      <RoleID>Role 434</RoleID>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 1</ID>
+      <Name>MiningStructurePermission 1</Name>
+      <CreatedTimestamp>2021-02-12T09:23:11.306667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:15.963333Z</LastSchemaUpdate>
+      <RoleID>Role 56</RoleID>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 4</ID>
+      <Name>MiningStructurePermission 4</Name>
+      <CreatedTimestamp>2021-06-17T07:57:52.27Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:15.963333Z</LastSchemaUpdate>
+      <RoleID>Role 655</RoleID>
+    </MiningStructurePermission>
+  </MiningStructurePermissions>
+</MiningStructure>

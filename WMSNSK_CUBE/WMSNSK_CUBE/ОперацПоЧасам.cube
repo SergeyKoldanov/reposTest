@@ -1,0 +1,808 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ede49764-8879-4b59-87ef-0fa752b0c95e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ОперацПоЧасам</ID>
+  <Name>ОперацПоЧасам</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="290" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="27252" y="13150" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwTbData" left="10899" top="5424" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwTbData" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vw_WMS2OperatsPoChas" left="582" top="6826" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="7038" height="7699" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00007e1b0000131e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vw_WMS2OperatsPoChas" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vw_WMS2OperatsPoChas_SKU" left="4895" top="106" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3122" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000320c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vw_WMS2OperatsPoChas_SKU" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>290</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>582</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>106</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="31e2b87d-0762-4e63-b930-58eefe610815">
+      <ID>ГодМесДень</ID>
+      <Name>ГодМесДень</Name>
+      <DimensionID>ГодМесДень</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1114da28-5d5a-4c04-9c3f-b541d02700ac">
+          <AttributeID>Data</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa9bd408-8469-438c-b362-f906700b561b">
+          <AttributeID>God</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2f1e9f3-f19e-4630-83d4-1edbd7051e39">
+          <AttributeID>Mes Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b04e97e-01da-44d2-8b06-a95a62e0183d">
+          <AttributeID>Den</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="0dd37901-e469-4548-b6a0-4dca36c45024">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="9a501b74-a601-495e-9eca-165318207f9f">
+      <ID>ОперацПоЧасамNameRu</ID>
+      <Name>ОперацПоЧасамNameRu</Name>
+      <DimensionID>ОперацПоЧасамNameRu</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2bc6483a-be48-46ca-b7b6-ec6a6cba0e31">
+          <AttributeID>Name RU</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6b846dc1-88f6-4c94-9748-d5d80364b1f5">
+      <ID>ОперацПоЧасамОперация</ID>
+      <Name>ОперацПоЧасамОперация</Name>
+      <DimensionID>ОперацПоЧасамОперация</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9066d354-657d-4939-96fc-c80b5ec4a269">
+          <AttributeID>Операция</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="97491d3d-cd3d-45d7-aadc-5d9dc2f02f89">
+      <ID>ОперацПоЧасамПользователь</ID>
+      <Name>ОперацПоЧасамПользователь</Name>
+      <DimensionID>Vw WMS2 Operats Po Chas</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c600f403-b7f2-4307-956b-1874618cd4bf">
+          <AttributeID>Пользователь</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="30538949-2566-4855-be96-9e4def9dcba4">
+      <ID>ОперацПоЧасамЕдиница</ID>
+      <Name>ОперацПоЧасамЕдиница</Name>
+      <DimensionID>ОперацПоЧасамЕдиница</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="25b355dc-5de9-4fc5-a46a-9a4ecb269188">
+          <AttributeID>Единица</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9a8b8bc8-d69b-4911-b43c-bd1e544be578">
+      <ID>ОперацПоЧасамWaveName</ID>
+      <Name>ОперацПоЧасамWaveName</Name>
+      <DimensionID>ОперацПоЧасамWaveName</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0831b761-165b-4713-ad05-1c3ff3c7c78e">
+          <AttributeID>Wave Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="48740e31-cc4b-47eb-bccb-942bbbbfe168">
+      <ID>ОперацПоЧасамОтдел</ID>
+      <Name>ОперацПоЧасамОтдел</Name>
+      <DimensionID>ОперацПоЧасамОтдел</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="536b281b-89a9-4ff6-9c33-c38148e90e2e">
+          <AttributeID>Отдел</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a99261de-62b4-4afe-a6bc-53db4bec051a">
+      <ID>ОперацПоЧасамЧас</ID>
+      <Name>ОперацПоЧасамЧас</Name>
+      <DimensionID>ОперацПоЧасамЧас</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dd17db30-83e4-440f-9bc0-5f88c730b194">
+          <AttributeID>Час</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="5dceb1f3-5685-4e8c-92c6-be377da365e0">
+      <ID>Vw WMS2 Operats Po Chas</ID>
+      <Name>Значения</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f6bc338b-bc04-4dc6-be6d-e273ed51a894">
+          <ID>Кол-во Строк</ID>
+          <Name>Кол-во Строк</Name>
+          <Source dwd:design-time-name="37111ab9-9b81-48ef-af7c-de58812a10f3">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f81b8227-d1ed-4e21-ad9a-01ed09f19487">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>кол-во_x0020_строк</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cd9b3566-0e08-4279-98bf-2a2b06c989f2">
+          <ID>Вес</ID>
+          <Name>Вес</Name>
+          <Source dwd:design-time-name="8a9c184a-d36c-4c36-8e2e-1035ea415286">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ba4a1873-6fd6-4930-95f5-43edad316ae1">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>Вес</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ee3fc0a7-1320-4f53-871c-bd85b99d3a79">
+          <ID>Объем</ID>
+          <Name>Объем</Name>
+          <Source dwd:design-time-name="65659d5f-6e4c-4f8a-a78c-1c289549aff6">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6705cb4d-68f6-4ce2-95a1-50d8f34d40d5">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>Объем</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e6c26125-ab50-4ea5-9191-dd900a9354b2">
+          <ID>Кол-во</ID>
+          <Name>Кол-во</Name>
+          <Source dwd:design-time-name="078232a0-19c7-48b2-886e-0bff7ea0cd7c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5c1513c6-83f9-40e2-8ea4-10235e6a3324">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>Кол-во</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="230305f6-bae8-4ab8-a339-265b9d0eddfc">
+          <ID>Кол Упак</ID>
+          <Name>Кол Упак</Name>
+          <Source dwd:design-time-name="65da33d6-586c-495b-b167-b6199ffb2548">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="112ab16a-6852-4ff5-99bd-56e68297cda4">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>КолУпак</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="38c9f067-d340-429b-9e58-a5aab6ea3c68">
+          <ID>Кол Шт</ID>
+          <Name>Кол Шт</Name>
+          <Source dwd:design-time-name="6321c8ce-8137-42c4-be20-4ea753e6a930">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0a66dc45-2b63-4ff1-882a-176bc25ca04d">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>КолШт</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="342ef534-f7f1-4f4f-8861-9d1359ee5b67">
+          <CubeDimensionID>ОперацПоЧасамNameRu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ae5e1b3-c69a-4187-aeb5-18e80e9a6c3c">
+              <AttributeID>Name RU</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0e26e17e-360b-422e-9d4d-ddd35940a1dc">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0d6ea986-c984-48bd-9152-4ace00f5d766">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>NameRU</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c59df66c-5aae-40b9-a3a3-3fe9c53a0205">
+          <CubeDimensionID>ОперацПоЧасамОперация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e546469c-0d1d-4283-baca-274ba765448f">
+              <AttributeID>Операция</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="798629d3-267c-434a-960d-d50d4f93cc4e">
+                  <DataType>WChar</DataType>
+                  <DataSize>33</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="af4fccf2-a3af-475e-a7e0-5ca6dba7d8bf">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Операция</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4b057aa5-1852-4d88-9fce-79ebd380431e">
+          <CubeDimensionID>ОперацПоЧасамПользователь</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="becbb67b-d3b3-4df1-a29c-089f6677d724">
+              <AttributeID>Пользователь</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="08799581-fd2d-4a71-8ada-31d6ba0b87b4">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d46185e3-0822-4859-bae6-2440f8b4a44b">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Пользователь</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1807a145-735c-46cd-81c7-7839c994313b">
+          <CubeDimensionID>ОперацПоЧасамЕдиница</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ff1068e0-d67a-4989-b3e2-bd84b78455ce">
+              <AttributeID>Единица</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="776827a9-1da5-4abe-bbf4-bbc1a823f35c">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="87c0d895-8cec-4a0f-a907-9bf7d04f3e65">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Единица</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fa0ea0d3-f25b-49ec-8478-088b3b44affb">
+          <CubeDimensionID>ОперацПоЧасамWaveName</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6f2a84ce-0162-4374-8dca-a3d38db4108a">
+              <AttributeID>Wave Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cb2af339-62aa-4003-8753-612d8833d91d">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7628a5b4-45d5-4209-a17a-b4b9a1facea2">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>WaveName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a8a433f9-0244-4e3b-95c2-96568e0dd411">
+          <CubeDimensionID>ОперацПоЧасамОтдел</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cb072e9e-2bf8-4cfa-a2dc-02c07f8c3595">
+              <AttributeID>Отдел</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9e7a9218-5b0c-4d6f-8a94-0dfe64d82f41">
+                  <DataType>WChar</DataType>
+                  <DataSize>200</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1c2d8994-51ce-4c33-a7aa-a268746e9a38">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Отдел</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a40188e1-52cf-4872-b26b-b89cdf3dba4e">
+          <CubeDimensionID>ОперацПоЧасамЧас</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ecdd280b-6850-4c3a-90a9-6c4831bb6b7e">
+              <AttributeID>Час</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0a1afa78-9d0b-4ba5-8b38-5f6592917ce8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a7dc45aa-2060-4025-aa26-ce2bf5b0b9ac">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Час</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="37c73524-14fb-4d72-a36d-a42c23e6e4a1">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f8a50ecd-c6ac-420d-8301-af6322fb12dd">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="57c0f732-50f7-49e6-951a-d840daa0dd20">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3266c1ea-5a93-4c4c-ac52-7c1364bf58a0">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Дата</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="601cb97b-8f6b-4614-83e1-819ca016a650">
+      <ID>Значения</ID>
+      <Name>ДляСред</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a42bf536-60ea-475e-84b7-df6dfe28502d">
+          <ID>Число различных объектов Для Сред</ID>
+          <Name>ДляСред</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="110618a1-4f13-42a1-90e2-a2ae391e554f">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="caed12bd-7347-4ce5-aa2e-adc7d4a37410">
+              <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+              <ColumnID>ДляСред</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="77b3c350-2230-4b42-801a-38b1d23b915e">
+          <CubeDimensionID>ОперацПоЧасамNameRu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8851a85a-f130-453e-96c0-e4b78e439ca6">
+              <AttributeID>Name RU</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="83bbeefe-7183-4784-bcb1-bc3f2db31796">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="df780d51-6c4b-4bfc-91c0-b9c52313aae4">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>NameRU</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5bcc815a-e472-4d92-8f3f-41a10e82c20f">
+          <CubeDimensionID>ОперацПоЧасамОперация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bee9f0c5-1f6c-42bc-ace3-70180e5ee8e8">
+              <AttributeID>Операция</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6ee541d9-34f6-4e27-8772-9ca7a36b87c7">
+                  <DataType>WChar</DataType>
+                  <DataSize>33</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6c26a375-bc55-4c72-905f-1c552b8ca985">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Операция</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="69c37c78-1a18-4a15-8c2b-f62380a7c46a">
+          <CubeDimensionID>ОперацПоЧасамПользователь</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6a10ac9a-ba62-4b02-875e-379fc65fc1e0">
+              <AttributeID>Пользователь</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e18b2987-b517-47fa-8c2a-61cf49c8cc0f">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2916407-25ec-4dc4-aa5a-0ab6eba77517">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Пользователь</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3d4ea23c-abff-4972-938b-5bf332e23fc6">
+          <CubeDimensionID>ОперацПоЧасамЕдиница</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24d97951-f2a8-40db-8be6-e8a46d106ea6">
+              <AttributeID>Единица</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="adda9d24-f282-472c-8216-7b5f40c6fd91">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7f4e28b0-1c7d-4d40-90f1-abb60259274b">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Единица</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="02985d61-7bd5-447e-8d17-000ef45ca118">
+          <CubeDimensionID>ОперацПоЧасамWaveName</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a97dbd90-679d-46e2-b33e-4e20fa8a7fd8">
+              <AttributeID>Wave Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="44c75b4f-a153-468b-9e60-fa6dcce39811">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1a69807c-de68-438e-b5bb-477646573e53">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>WaveName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="291b7220-814b-4ba5-ad82-52c8fb9bfcdb">
+          <CubeDimensionID>ОперацПоЧасамОтдел</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7aeaeac0-1352-4761-9ace-acd15d5a9649">
+              <AttributeID>Отдел</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2affa3cf-493d-4db7-ba6b-9c448f295e22">
+                  <DataType>WChar</DataType>
+                  <DataSize>200</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8fe0393d-2be1-43df-b10d-c879f5fb83bf">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Отдел</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7492c54a-3afe-424e-abcf-3cfabefad593">
+          <CubeDimensionID>ОперацПоЧасамЧас</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e4de14a6-e742-432f-8392-f5a486fc5e72">
+              <AttributeID>Час</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="839d237f-6c91-49d8-a713-ae2580a79a89">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ae5bb207-5f2e-4763-8475-a1eac6aeeec7">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Час</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d03aab9e-b6dd-442b-8a98-a0c8181bdb01">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7e5aa7e3-9310-412f-a539-c847ed15c3c0">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ec122b94-d01a-458e-ad02-c6f22db2b520">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d8f699cc-24da-46c7-8948-81302833c688">
+                    <TableID>dbo_vw_WMS2OperatsPoChas</TableID>
+                    <ColumnID>Дата</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="ed7f71d7-ebf3-4c9d-af79-c5edfcba6364">
+      <ID>Vw WMS2 Operats Po Chas SKU 1</ID>
+      <Name>Кол-во SKU</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e14313b6-a471-4fae-a53f-2fdedcdd4aef">
+          <ID>Число различных объектов Кол-во SKU</ID>
+          <Name>Кол-во SKU</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="7c146fee-21f3-4839-8913-cc5eefea2bb0">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="87dd518c-c037-4890-9366-93ca71af79bd">
+              <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+              <ColumnID>Кол-во_x0020_SKU</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1da4b9bf-4c47-4c9f-a318-6cb1bbe29d91">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="33a0b001-5509-4588-bccb-b837183d062a">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bf2ca50f-5d5e-4f59-8e5b-9848b27ba97c">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6e856b7b-46d1-4718-bdfc-5c13d280a9de">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>Дата</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dbb44e07-f241-4f2b-9bff-9d3e476c1c3b">
+          <CubeDimensionID>ОперацПоЧасамNameRu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cea6666f-4aa2-4902-a303-d4352a04c038">
+              <AttributeID>Name RU</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a9007827-48c6-477f-8517-471f16b0d302">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5a4a68d4-1b34-433d-8589-73959fe7c0cf">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>NameRU</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2c2e4554-d7ff-4776-9051-071a0c5eaf66">
+          <CubeDimensionID>ОперацПоЧасамОперация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24f901a5-c3e4-45e2-8eb7-40632ae62334">
+              <AttributeID>Операция</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="372db159-0043-433e-b0f4-efe7edaa565e">
+                  <DataType>WChar</DataType>
+                  <DataSize>33</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5e612a71-4791-42f5-a717-1aed7bc878a1">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>Операция</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a400231b-816c-4746-8911-d266bbc9c90d">
+          <CubeDimensionID>ОперацПоЧасамПользователь</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="52f11dc4-b8f5-4087-8f31-8779c2973dc9">
+              <AttributeID>Пользователь</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9e0bca85-6337-4dbf-85be-f0f512ffac62">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b09f9591-2c37-4d93-8527-50906cdcb5de">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>Пользователь</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="aebf40e3-f131-45df-92a9-afa8bdc2782f">
+          <CubeDimensionID>ОперацПоЧасамЕдиница</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="776fe0d9-bd6c-42e8-91aa-fdde2677ab52">
+              <AttributeID>Единица</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="eee37de2-1249-4859-a6af-123ecbc119c1">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="541fe9a3-3afa-4239-8eb5-0458f8bbff87">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>Единица</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5042cefa-0dcc-4261-bf75-0a08d14732ef">
+          <CubeDimensionID>ОперацПоЧасамWaveName</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e90bbb2c-1b20-4b6a-91a5-53578dbc1d97">
+              <AttributeID>Wave Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0fbc3852-5b31-4fe6-8048-7059d611b932">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="03122ff5-d610-40ae-bc2a-0c76ec537e7f">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>WaveName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e049f2e1-2149-461f-bb37-058ef7c0f64a">
+          <CubeDimensionID>ОперацПоЧасамОтдел</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ff6894f-1f10-437c-9e9a-2bcb041c5fd4">
+              <AttributeID>Отдел</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fa7345a0-1199-4e9c-8e7a-96075993b76e">
+                  <DataType>WChar</DataType>
+                  <DataSize>200</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="43d3d84a-8f62-48b7-9f55-7c1b13bf8fcf">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>Отдел</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="26e1af6d-0536-42f9-a602-ede0d97eb4c7">
+          <CubeDimensionID>ОперацПоЧасамЧас</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b35e880d-89f1-460c-a67d-f67399ffffb8">
+              <AttributeID>Час</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e52ba083-4ed9-4f9f-9874-0331a6913d18">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="901cbb06-e0b5-4e15-bb25-bc27cc3ffce1">
+                    <TableID>dbo_vw_WMS2OperatsPoChas_SKU</TableID>
+                    <ColumnID>Час</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="73d32ffb-874c-49d6-a10e-9a95ecd3ff4e">
+    <DataSourceViewID>WMSNSK</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="1a0e6150-8020-44a1-a7b6-207771247ac7">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+Команда CALCULATE контролирует агрегатное выражение конечных ячеек в кубе.
+Удаление или изменение команды CALCULATE приведет к изменению данных, содержащихся в кубе.
+Эту команду следует изменять только в том случае, если способ статистической обработки куба задается вручную.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[СредКолУпак]
+ AS [Measures].[КолУпак]/[Measures].[ДляСред], 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Кол-во Строк Среднее]
+ AS [Measures].[Кол-во Строк]/[Measures].[ДляСред], 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[СредКолШт]
+ AS [Measures].[КолШт]/[Measures].[ДляСред], 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

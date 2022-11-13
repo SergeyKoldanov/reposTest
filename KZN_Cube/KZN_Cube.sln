@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "KZN_Cube", "KZN_Cube\KZN_Cube.dwproj", "{E3BA753E-363E-4546-BFA1-5D527ACA644E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3BA753E-363E-4546-BFA1-5D527ACA644E}.Development|Default.ActiveCfg = Development
+		{E3BA753E-363E-4546-BFA1-5D527ACA644E}.Development|Default.Build.0 = Development
+		{E3BA753E-363E-4546-BFA1-5D527ACA644E}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E027317A-3945-4DE5-BFD8-C9F0FA91BB8F}
+	EndGlobalSection
+EndGlobal

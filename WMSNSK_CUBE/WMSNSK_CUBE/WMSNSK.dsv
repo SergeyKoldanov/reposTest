@@ -1,0 +1,342 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8a75ede7-271c-4d4f-8593-5e96ffaa8563" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>WMSNSK</ID>
+  <Name>WMSNSK</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="5" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2498" scrolltop="-2381" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="27781" y="14473" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="tbWMS2OperatsPoChas" left="12318" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="7885" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000cd1e000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_tbWMS2OperatsPoChas" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vw_WMS2OperatsPoChas" left="6169" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5318" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000c614000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vw_WMS2OperatsPoChas" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vw_WMS2OperatsPoChas_SKU" left="20" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vw_WMS2OperatsPoChas_SKU" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwTbData" left="9818" top="5489" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vwTbData" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-2498</DiagramViewPortLeft>
+            <DiagramViewPortTop>-2381</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>WMSKZN</DataSourceID>
+  <Schema>
+    <xs:schema id="WMSNSK" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="WMSNSK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="813b9385-dc51-4017-b78d-eecadd0c40de">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_tbWMS2OperatsPoChas" msprop:design-time-name="ef1c937d-8747-4fa7-a489-79fcd52d7146" msprop:FriendlyName="tbWMS2OperatsPoChas" msprop:DbSchemaName="dbo" msprop:DbTableName="tbWMS2OperatsPoChas" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Дата" msprop:design-time-name="6905c571-717b-49b3-a034-f80cb021aa00" msprop:DbColumnName="Дата" msprop:FriendlyName="Дата" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Час" msprop:design-time-name="4b0b2dea-7ad2-4076-a7a0-edee2b6bc230" msprop:DbColumnName="Час" msprop:FriendlyName="Час" type="xs:int" minOccurs="0" />
+                  <xs:element name="Операция" msprop:design-time-name="6f7eb37f-d3a7-49ce-a0f9-746866fd9071" msprop:DbColumnName="Операция" msprop:FriendlyName="Операция" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="33" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Кол-во_x0020_SKU" msprop:design-time-name="886f8fac-8c99-4eaf-8253-8e9c8b0b7d47" msprop:DbColumnName="Кол-во SKU" msprop:FriendlyName="Кол-во SKU" type="xs:int" minOccurs="0" />
+                  <xs:element name="Кол-во" msprop:design-time-name="3fde1d6d-981a-4f6c-8b3a-f4bffcc23c32" msprop:DbColumnName="Кол-во" msprop:FriendlyName="Кол-во" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Отдел" msprop:design-time-name="4b4f639b-e84c-4c7f-9929-0580ddefb22a" msprop:DbColumnName="Отдел" msprop:FriendlyName="Отдел" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Пользователь" msprop:design-time-name="9c8054c6-78fb-469b-a8e1-314be9dd86f5" msprop:DbColumnName="Пользователь" msprop:FriendlyName="Пользователь" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="кол-во_x0020_строк" msprop:design-time-name="cbe7fb50-d34f-4157-b74d-3f7abc654961" msprop:DbColumnName="кол-во строк" msprop:FriendlyName="кол-во строк" type="xs:int" minOccurs="0" />
+                  <xs:element name="Вес" msprop:design-time-name="1a5902b0-0807-4ffa-9bba-a803a22d9935" msprop:DbColumnName="Вес" msprop:FriendlyName="Вес" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Объем" msprop:design-time-name="da99a6c6-11f5-4fab-9584-4cdba5e5868a" msprop:DbColumnName="Объем" msprop:FriendlyName="Объем" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="WaveName" msprop:design-time-name="42626f4f-828a-47ea-ac59-e5a9da09a703" msprop:DbColumnName="WaveName" msprop:FriendlyName="WaveName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NameRU" msprop:design-time-name="adc1bcd0-0ff8-43f0-9feb-1481ad38de48" msprop:DbColumnName="NameRU" msprop:FriendlyName="NameRU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Единица" msprop:design-time-name="c6ad6c52-3932-45e0-af47-9cb42a019896" msprop:DbColumnName="Единица" msprop:FriendlyName="Единица" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vw_WMS2OperatsPoChas" msprop:design-time-name="104c60e5-2d38-4166-a98b-e28c394ad988" msprop:FriendlyName="vw_WMS2OperatsPoChas" msprop:DbSchemaName="dbo" msprop:DbTableName="vw_WMS2OperatsPoChas" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Дата" msprop:design-time-name="44cffd8a-c493-4000-8814-a9f326453a5b" msprop:DbColumnName="Дата" msprop:FriendlyName="Дата" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Час" msprop:design-time-name="d69ca0b7-b8f1-472b-9755-b413d2697047" msprop:DbColumnName="Час" msprop:FriendlyName="Час" type="xs:int" minOccurs="0" />
+                  <xs:element name="Операция" msprop:design-time-name="34ed4392-78f6-4d0c-a92d-24c0275bc108" msprop:DbColumnName="Операция" msprop:FriendlyName="Операция" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="33" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Кол-во_x0020_SKU" msprop:design-time-name="ec8b32ec-6f2a-43ae-baf5-5b3861587a6d" msprop:DbColumnName="Кол-во SKU" msprop:FriendlyName="Кол-во SKU" type="xs:int" minOccurs="0" />
+                  <xs:element name="Кол-во" msprop:design-time-name="9bff38f2-5fc3-4383-b592-7ce48e4b0ffc" msprop:DbColumnName="Кол-во" msprop:FriendlyName="Кол-во" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Отдел" msprop:design-time-name="4b8b2356-a31d-470f-ac07-78a4ade6fcf2" msprop:DbColumnName="Отдел" msprop:FriendlyName="Отдел" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Пользователь" msprop:design-time-name="9397b28b-b089-40eb-b365-ef5104483cd6" msprop:DbColumnName="Пользователь" msprop:FriendlyName="Пользователь" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="кол-во_x0020_строк" msprop:design-time-name="957d485b-1064-4bae-91de-de713b2fa5d6" msprop:DbColumnName="кол-во строк" msprop:FriendlyName="кол-во строк" type="xs:int" minOccurs="0" />
+                  <xs:element name="Вес" msprop:design-time-name="724d37a9-9824-4d6c-bbac-0fe9cc9e07d4" msprop:DbColumnName="Вес" msprop:FriendlyName="Вес" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Объем" msprop:design-time-name="9ab321e3-9881-437b-956f-ae037c09ef0a" msprop:DbColumnName="Объем" msprop:FriendlyName="Объем" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="WaveName" msprop:design-time-name="08721694-28e6-4f91-9ea3-ad5423a48edb" msprop:DbColumnName="WaveName" msprop:FriendlyName="WaveName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NameRU" msprop:design-time-name="977ae94e-ec10-4896-9f61-3227fe32da59" msprop:DbColumnName="NameRU" msprop:FriendlyName="NameRU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Единица" msprop:design-time-name="54a679f9-8ae0-4fcb-944b-5ee94d6a4a93" msprop:DbColumnName="Единица" msprop:FriendlyName="Единица" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="КолУпак" msdata:ReadOnly="true" msprop:design-time-name="91a0048b-3ec1-40ae-8671-542f55d7d09f" msprop:DbColumnName="КолУпак" msprop:FriendlyName="КолУпак" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="КолШт" msdata:ReadOnly="true" msprop:design-time-name="777e97db-727a-429f-95aa-a5507a1a188d" msprop:DbColumnName="КолШт" msprop:FriendlyName="КолШт" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ДляСред" msdata:ReadOnly="true" msprop:Description="" msprop:ComputedColumnExpression="([Пользователь]+[Операция]+convert(char(8),[Дата],112) + cast([Час] as char(2))  ) COLLATE Cyrillic_General_CI_AS" msprop:IsLogical="True" msprop:design-time-name="655ed385-22bc-4911-a3cd-e35477df3d22" msprop:DbColumnName="ДляСред" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="143" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vw_WMS2OperatsPoChas_SKU" msprop:design-time-name="d88078ca-63b3-4a43-926f-30d99ff2775d" msprop:FriendlyName="vw_WMS2OperatsPoChas_SKU" msprop:DbSchemaName="dbo" msprop:DbTableName="vw_WMS2OperatsPoChas_SKU" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Дата" msprop:design-time-name="0112c5ef-4585-44e7-a79b-f331051f5111" msprop:DbColumnName="Дата" msprop:FriendlyName="Дата" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Час" msprop:design-time-name="8b7fefe6-940f-4ed2-9ec8-87a1127fd883" msprop:DbColumnName="Час" msprop:FriendlyName="Час" type="xs:int" minOccurs="0" />
+                  <xs:element name="Операция" msprop:design-time-name="6d8e648e-c24d-46c9-b12f-bae23e51d4e8" msprop:DbColumnName="Операция" msprop:FriendlyName="Операция" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="33" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Кол-во_x0020_SKU" msprop:design-time-name="0fe5421f-ec81-44b6-a655-d35db085ae72" msprop:DbColumnName="Кол-во SKU" msprop:FriendlyName="Кол-во SKU" type="xs:int" minOccurs="0" />
+                  <xs:element name="Кол-во" msprop:design-time-name="223c8775-09b3-471e-8f95-f7fddd5ceb2c" msprop:DbColumnName="Кол-во" msprop:FriendlyName="Кол-во" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Отдел" msprop:design-time-name="19845969-f47b-457f-bb64-5a1a04374acf" msprop:DbColumnName="Отдел" msprop:FriendlyName="Отдел" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Пользователь" msprop:design-time-name="8245e7ff-2c2c-45b8-ac09-d0baf85fe75c" msprop:DbColumnName="Пользователь" msprop:FriendlyName="Пользователь" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="кол-во_x0020_строк" msprop:design-time-name="449b792f-f28b-4c91-a35c-f0f8f1c1e1ff" msprop:DbColumnName="кол-во строк" msprop:FriendlyName="кол-во строк" type="xs:int" minOccurs="0" />
+                  <xs:element name="Вес" msprop:design-time-name="2e71d653-ab5b-4e0f-bee9-cc4f1725fa79" msprop:DbColumnName="Вес" msprop:FriendlyName="Вес" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Объем" msprop:design-time-name="82aead69-2705-4e50-b4a7-8367fc31342f" msprop:DbColumnName="Объем" msprop:FriendlyName="Объем" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="WaveName" msprop:design-time-name="53f08bdd-8dc2-4e4b-8911-58088845b45a" msprop:DbColumnName="WaveName" msprop:FriendlyName="WaveName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NameRU" msprop:design-time-name="b3b8bdbb-2bba-4036-a104-327ca373fb6b" msprop:DbColumnName="NameRU" msprop:FriendlyName="NameRU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Единица" msprop:design-time-name="0ddcd94d-a8e2-4e54-aa70-666eb2715775" msprop:DbColumnName="Единица" msprop:FriendlyName="Единица" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vwTbData" msprop:design-time-name="0df11e24-af36-450b-a707-83baf74f0b85" msprop:FriendlyName="vwTbData" msprop:DbSchemaName="dbo" msprop:DbTableName="vwTbData" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="data" msprop:design-time-name="320895a9-13be-4806-a26e-7fd5a0c39b87" msprop:DbColumnName="data" msprop:FriendlyName="data" type="xs:dateTime" />
+                  <xs:element name="God" msprop:design-time-name="39b68b8d-f09a-4d14-b48e-eef59320f19e" msprop:DbColumnName="God" msprop:FriendlyName="God" type="xs:int" minOccurs="0" />
+                  <xs:element name="Mes" msprop:design-time-name="ef1c56ea-a4ee-4041-a6c1-29507d48a4f5" msprop:DbColumnName="Mes" msprop:FriendlyName="Mes" type="xs:int" minOccurs="0" />
+                  <xs:element name="MesName" msprop:design-time-name="6d7e1b63-a38f-42ce-a1cd-ed1a6e538926" msprop:DbColumnName="MesName" msprop:FriendlyName="MesName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Den" msprop:design-time-name="76b1a139-fb8e-4d64-8954-b2a5b3440b60" msprop:DbColumnName="Den" msprop:FriendlyName="Den" type="xs:int" minOccurs="0" />
+                  <xs:element name="NomNedeli" msdata:ReadOnly="true" msprop:design-time-name="3cb5ffae-d969-4f70-9c5a-0c042d5b4c38" msprop:DbColumnName="NomNedeli" msprop:FriendlyName="NomNedeli" type="xs:int" minOccurs="0" />
+                  <xs:element name="NomDnya" msdata:ReadOnly="true" msprop:design-time-name="e47109b3-9653-496f-95a4-7c293939a649" msprop:DbColumnName="NomDnya" msprop:FriendlyName="NomDnya" type="xs:int" minOccurs="0" />
+                  <xs:element name="DenChar" msdata:ReadOnly="true" msprop:design-time-name="0650a122-1fa0-421d-bd02-05278abfe842" msprop:DbColumnName="DenChar" msprop:FriendlyName="DenChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MesChar" msdata:ReadOnly="true" msprop:design-time-name="4359c589-0f85-4192-b4a8-e5688fc4b023" msprop:DbColumnName="MesChar" msprop:FriendlyName="MesChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GodChar" msdata:ReadOnly="true" msprop:design-time-name="a0f21d5f-813f-4c23-88ae-a9a8892c4029" msprop:DbColumnName="GodChar" msprop:FriendlyName="GodChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NomNedeliChar" msdata:ReadOnly="true" msprop:design-time-name="883066a6-53ee-4839-a841-9c3d0c6374f2" msprop:DbColumnName="NomNedeliChar" msprop:FriendlyName="NomNedeliChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DenNedeli" msdata:ReadOnly="true" msprop:design-time-name="5d387628-6fd2-4b83-aebd-b9a04aeb299b" msprop:DbColumnName="DenNedeli" msprop:FriendlyName="DenNedeli" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_vwTbData" />
+          <xs:field xpath="data" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <WMSNSK xmlns="" />
+  </Schema>
+</DataSourceView>

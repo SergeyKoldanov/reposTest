@@ -1,0 +1,850 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Производитель</ID>
+  <Name>Производитель</Name>
+  <CreatedTimestamp>2010-05-17T07:51:15Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:41:36.163333Z</LastSchemaUpdate>
+  <LastProcessed>2022-01-18T04:15:14.423333Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration>
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission>
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>2015-12-03T12:57:14.293333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.243333Z</LastSchemaUpdate>
+      <RoleID>Role 19</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 13</ID>
+      <Name>DimensionPermission 13</Name>
+      <CreatedTimestamp>2018-10-16T07:13:06.11Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.243333Z</LastSchemaUpdate>
+      <RoleID>Role 9</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 16</ID>
+      <Name>DimensionPermission 16</Name>
+      <CreatedTimestamp>2019-04-09T13:40:31.323333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.243333Z</LastSchemaUpdate>
+      <RoleID>Role 139</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 19</ID>
+      <Name>DimensionPermission 19</Name>
+      <CreatedTimestamp>2019-05-21T03:52:14.686667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-14T09:38:35.14Z</LastSchemaUpdate>
+      <RoleID>Role 149</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Bestar], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Dahle], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 20</ID>
+      <Name>DimensionPermission 20</Name>
+      <CreatedTimestamp>2019-05-24T03:46:52.036667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.243333Z</LastSchemaUpdate>
+      <RoleID>Role 151</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Citizen]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 21</ID>
+      <Name>DimensionPermission 21</Name>
+      <CreatedTimestamp>2019-05-30T09:03:39.876667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.243333Z</LastSchemaUpdate>
+      <RoleID>Role 129</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Мир Рамок], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Гамма]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>2019-06-11T07:28:50.226667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.243333Z</LastSchemaUpdate>
+      <RoleID>Role 53</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>2019-06-11T12:16:53.666667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 85</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>2019-06-13T07:42:44.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 86</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Citizen]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 7</ID>
+      <Name>DimensionPermission 7</Name>
+      <CreatedTimestamp>2019-06-14T06:30:05.496667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 123</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 8</ID>
+      <Name>DimensionPermission 8</Name>
+      <CreatedTimestamp>2019-07-05T10:46:20.706667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 272</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 10</ID>
+      <Name>DimensionPermission 10</Name>
+      <CreatedTimestamp>2019-10-17T06:53:59.006667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 98</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 15</ID>
+      <Name>DimensionPermission 15</Name>
+      <CreatedTimestamp>2019-11-07T07:14:37.97Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 124</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 23</ID>
+      <Name>DimensionPermission 23</Name>
+      <CreatedTimestamp>2019-12-02T08:18:55.14Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 314</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Line Plus]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 24</ID>
+      <Name>DimensionPermission 24</Name>
+      <CreatedTimestamp>2019-12-10T12:53:36.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.256667Z</LastSchemaUpdate>
+      <RoleID>Role 322</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 12</ID>
+      <Name>DimensionPermission 12</Name>
+      <CreatedTimestamp>2020-01-14T09:03:55.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 30</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Citizen], [Производитель].
+
+[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 27</ID>
+      <Name>DimensionPermission 27</Name>
+      <CreatedTimestamp>2020-01-14T09:08:02.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 79</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 28</ID>
+      <Name>DimensionPermission 28</Name>
+      <CreatedTimestamp>2020-01-15T12:10:21.51Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 109</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Crown]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 9</ID>
+      <Name>DimensionPermission 9</Name>
+      <CreatedTimestamp>2020-02-04T07:40:48.573333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 110</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[Экспоприбор]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>2020-02-17T12:34:27.93Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 76</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 14</ID>
+      <Name>DimensionPermission 14</Name>
+      <CreatedTimestamp>2020-03-20T07:34:07.863333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 17</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 31</ID>
+      <Name>DimensionPermission 31</Name>
+      <CreatedTimestamp>2020-07-23T13:57:33.536667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 429</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[Экспоприбор]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 32</ID>
+      <Name>DimensionPermission 32</Name>
+      <CreatedTimestamp>2020-07-27T06:55:07.793333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.273333Z</LastSchemaUpdate>
+      <RoleID>Role 432</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Faber-Castell S], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[Экспоприбор], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Milan]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 33</ID>
+      <Name>DimensionPermission 33</Name>
+      <CreatedTimestamp>2020-07-27T14:43:47.486667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 153</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Faber-Castell S]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 35</ID>
+      <Name>DimensionPermission 35</Name>
+      <CreatedTimestamp>2020-07-29T10:44:01.293333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 435</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[Экспоприбор]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 36</ID>
+      <Name>DimensionPermission 36</Name>
+      <CreatedTimestamp>2020-07-29T12:36:53.833333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 436</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[Экспоприбор]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 37</ID>
+      <Name>DimensionPermission 37</Name>
+      <CreatedTimestamp>2020-08-26T12:59:34.316667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 460</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[Экспоприбор]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 38</ID>
+      <Name>DimensionPermission 38</Name>
+      <CreatedTimestamp>2020-08-31T08:46:42.176667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 465</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Cello]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 39</ID>
+      <Name>DimensionPermission 39</Name>
+      <CreatedTimestamp>2020-09-28T14:01:52.643333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 493</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Bruno Visconti], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[_Erich Krause], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы], [Производитель].[Производитель].&amp;[Экспоприбор]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 41</ID>
+      <Name>DimensionPermission 41</Name>
+      <CreatedTimestamp>2020-10-08T09:35:15.69Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.286667Z</LastSchemaUpdate>
+      <RoleID>Role 504</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Dahle], [Производитель].[Производитель].&amp;[Edding], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Novus], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Kangaro], [Производитель].[Производитель].&amp;[KW-trio], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Fellowes], [Производитель].[Производитель].&amp;[Rexel], [Производитель].[Производитель].&amp;[GBC], [Производитель].[Производитель].&amp;[Гелеос], [Производитель].[Производитель].&amp;[HSM], [Производитель].[Производитель].&amp;[Office Kit]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 42</ID>
+      <Name>DimensionPermission 42</Name>
+      <CreatedTimestamp>2020-10-23T09:16:29.52Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 510</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>ID</AttributeID>
+          <AllowedSet>{}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[BERLINGO_], [Производитель].[Производитель].&amp;[Bic], [Производитель].[Производитель].&amp;[Carioca], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Colop], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Crown_], [Производитель].[Производитель].&amp;[Elmers], [Производитель].[Производитель].&amp;[Erich Krause], [Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[FILA], [Производитель].[Производитель].&amp;[Gamma], [Производитель].[Производитель].&amp;[Greenwich Line], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Koh-I-Noor], [Производитель].[Производитель].&amp;[Colorit], [Производитель].[Производитель].&amp;[LORI], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Maped], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Noris], [Производитель].[Производитель].&amp;[Parker], [Производитель].[Производитель].&amp;[Pentel], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Stabilo], [Производитель].[Производитель].&amp;[Stanger], [Производитель].[Производитель].&amp;[Trodat], [Производитель].[Производитель].&amp;[Алгем], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Луч], [Производитель].[Производитель].&amp;[Мульти-Пульти], [Производитель].[Производитель].&amp;[Сибирская карандашная фабрика], [Производитель].[Производитель].&amp;[Спейс], [Производитель].[Производитель].&amp;[Спектр], [Производитель].[Производитель].&amp;[Стамм], [Производитель].[Производитель].&amp;[Фабрика игрушек], [Производитель].[Производитель].&amp;[Хатбер], [Производитель].[Производитель].&amp;[ХАТБЕР_], [Производитель].[Производитель].&amp;[Художественные материалы]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 43</ID>
+      <Name>DimensionPermission 43</Name>
+      <CreatedTimestamp>2020-11-17T07:04:57.606667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 517</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Гамма_], [Производитель].
+
+[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 45</ID>
+      <Name>DimensionPermission 45</Name>
+      <CreatedTimestamp>2020-12-14T13:43:21.64Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 119</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 47</ID>
+      <Name>DimensionPermission 47</Name>
+      <CreatedTimestamp>2020-12-28T07:05:49.243333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 431</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 48</ID>
+      <Name>DimensionPermission 48</Name>
+      <CreatedTimestamp>2020-12-28T11:21:28.006667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 115</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 49</ID>
+      <Name>DimensionPermission 49</Name>
+      <CreatedTimestamp>2020-12-29T11:57:15.976667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 161</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 50</ID>
+      <Name>DimensionPermission 50</Name>
+      <CreatedTimestamp>2021-01-14T14:48:56.856667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 156</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 51</ID>
+      <Name>DimensionPermission 51</Name>
+      <CreatedTimestamp>2021-01-28T12:46:54.376667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 481</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Koh-I-Noor]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 53</ID>
+      <Name>DimensionPermission 53</Name>
+      <CreatedTimestamp>2021-01-28T12:54:29.78Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 529</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Koh-I-Noor]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 54</ID>
+      <Name>DimensionPermission 54</Name>
+      <CreatedTimestamp>2021-01-28T12:57:09.956667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.303333Z</LastSchemaUpdate>
+      <RoleID>Role 530</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Koh-I-Noor]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 55</ID>
+      <Name>DimensionPermission 55</Name>
+      <CreatedTimestamp>2021-01-28T13:15:20.17Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 531</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Cello], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[Crown], [Производитель].[Производитель].&amp;[Greenwich Line®], [Производитель].[Производитель].&amp;[Horse], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Milan], [Производитель].[Производитель].&amp;[Luxor], [Производитель].[Производитель].&amp;[Schneider], [Производитель].[Производитель].&amp;[MunHwa], [Производитель].[Производитель].&amp;[Полимерупак], [Производитель].[Производитель].&amp;[Werola], [Производитель].[Производитель].&amp;[Line Plus], [Производитель].[Производитель].&amp;[Retype], [Производитель].[Производитель].&amp;[Centropen], [Производитель].[Производитель].&amp;[Koh-I-Noor]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 44</ID>
+      <Name>DimensionPermission 44</Name>
+      <CreatedTimestamp>2021-02-12T10:01:08.196667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 545</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 56</ID>
+      <Name>DimensionPermission 56</Name>
+      <CreatedTimestamp>2021-02-17T09:47:24.12Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 487</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 57</ID>
+      <Name>DimensionPermission 57</Name>
+      <CreatedTimestamp>2021-02-20T13:01:19.69Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 449</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 59</ID>
+      <Name>DimensionPermission 59</Name>
+      <CreatedTimestamp>2021-04-22T07:58:32.613333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 206</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 60</ID>
+      <Name>DimensionPermission 60</Name>
+      <CreatedTimestamp>2021-05-19T14:47:17.023333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 642</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 40</ID>
+      <Name>DimensionPermission 40</Name>
+      <CreatedTimestamp>2021-05-26T09:41:20.25Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 644</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 61</ID>
+      <Name>DimensionPermission 61</Name>
+      <CreatedTimestamp>2021-06-04T10:41:00.963333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 444</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 62</ID>
+      <Name>DimensionPermission 62</Name>
+      <CreatedTimestamp>2021-06-11T18:10:39.896667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 653</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 63</ID>
+      <Name>DimensionPermission 63</Name>
+      <CreatedTimestamp>2021-06-28T15:19:38.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 99</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 64</ID>
+      <Name>DimensionPermission 64</Name>
+      <CreatedTimestamp>2021-07-07T09:25:47.833333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.32Z</LastSchemaUpdate>
+      <RoleID>Role 127</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 65</ID>
+      <Name>DimensionPermission 65</Name>
+      <CreatedTimestamp>2021-07-19T09:48:26.663333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.333333Z</LastSchemaUpdate>
+      <RoleID>Role 684</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 66</ID>
+      <Name>DimensionPermission 66</Name>
+      <CreatedTimestamp>2021-07-29T07:22:39.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.333333Z</LastSchemaUpdate>
+      <RoleID>Role 615</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 67</ID>
+      <Name>DimensionPermission 67</Name>
+      <CreatedTimestamp>2021-08-02T10:08:31.9Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.333333Z</LastSchemaUpdate>
+      <RoleID>Role 696</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 68</ID>
+      <Name>DimensionPermission 68</Name>
+      <CreatedTimestamp>2021-08-02T12:26:36.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:36.333333Z</LastSchemaUpdate>
+      <RoleID>Role 622</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>2021-09-09T10:31:36.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T14:55:12.736667Z</LastSchemaUpdate>
+      <RoleID>Role 200</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 6</ID>
+      <Name>DimensionPermission 6</Name>
+      <CreatedTimestamp>2021-10-04T12:23:37.083333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-04T12:23:37.083333Z</LastSchemaUpdate>
+      <RoleID>Role 223</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Faber-Castell], [Производитель].[Производитель].&amp;[Гамма], [Производитель].[Производитель].&amp;[Citizen], [Производитель].[Производитель].&amp;[JOVI], [Производитель].[Производитель].&amp;[Schneider]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 11</ID>
+      <Name>DimensionPermission 11</Name>
+      <CreatedTimestamp>2021-12-09T07:59:01.72Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-09T07:59:01.72Z</LastSchemaUpdate>
+      <RoleID>Role 313</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[Стамм]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 17</ID>
+      <Name>DimensionPermission 17</Name>
+      <CreatedTimestamp>2021-12-14T13:08:29.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-14T13:08:29.15Z</LastSchemaUpdate>
+      <RoleID>Role 317</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Производитель</AttributeID>
+          <AllowedSet>{[Производитель].[Производитель].&amp;[ЗХК], [Производитель].[Производитель].&amp;[Гамма]}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 18</ID>
+      <Name>DimensionPermission 18</Name>
+      <CreatedTimestamp>2022-01-12T09:39:53.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-12T09:39:53.22Z</LastSchemaUpdate>
+      <RoleID>Role 554</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 22</ID>
+      <Name>DimensionPermission 22</Name>
+      <CreatedTimestamp>2022-01-13T13:32:13.983333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T13:32:13.983333Z</LastSchemaUpdate>
+      <RoleID>Role 364</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>ID</ID>
+      <Name>ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_goods</TableID>
+            <ColumnID>ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_goods</TableID>
+          <ColumnID>Производитель</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship>
+          <AttributeID>Производитель</AttributeID>
+          <Name>Производитель</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute>
+      <ID>Производитель</ID>
+      <Name>Производитель</Name>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_goods</TableID>
+            <ColumnID>Производитель</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_goods</TableID>
+          <ColumnID>Производитель</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

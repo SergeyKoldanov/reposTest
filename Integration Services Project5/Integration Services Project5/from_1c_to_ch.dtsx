@@ -1,0 +1,1577 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/20/2022 3:03:04 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-OLAP2"
+  DTS:CreatorName="MAIN\out-kalinovskiy.bb"
+  DTS:DTSID="{374F1BF2-2B27-4B54-BE09-26D48974BC00}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{88D5AF6C-6136-49F1-AEA8-26C491C18CF8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{985BDD24-DC77-455F-A0B6-1798648AA5F7}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Integrated Security=True;Connect Timeout=30;Application Name=SSIS-Package-{985BDD24-DC77-455F-A0B6-1798648AA5F7}localhost;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.brsRelef02]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0BD64FF1-5DBC-470F-BB85-D6AB31090DBE}"
+      DTS:ObjectName="localhost.brsRelef02">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=brsRelef02;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL-NODE-01.RelefUTWork.connect_analasys]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7028D735-503C-4B5A-AB77-79BEE5999E6D}"
+      DTS:ObjectName="SQL-NODE-01.RelefUTWork.connect_analasys">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL-NODE-01;User ID=connect_analasys;Initial Catalog=RelefUTWork;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzZqS7RiIzUCYH1fTBoH7HQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAxpOTKi/B9J+83UPZhlTl0AAAAAASAAACgAAAAEAAAANIMadsq4mjT+QWA6zQ8zsUwAAAAySXP2M8HxOcQTxWzzUYEsvmI1K0dw0pAgspJZjdcI8AMjaIYiIVCT4uC2HVkbPgtFAAAAN989QjSn/1O1xbZ3WW54MPc2yrp</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Delete 90 days"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Задача &quot;Выполнение инструкции T-SQL&quot;"
+      DTS:DTSID="{D5F5ECE3-6853-45B1-B73E-05672CD51624}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete 90 days"
+      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{985BDD24-DC77-455F-A0B6-1798648AA5F7}"
+          SQLTask:SqlStatementSource="EXEC brsRelef02.dbo.delete_3m"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Items"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{101F6D6E-B83C-43E7-8B16-FEFF8D1DFF30}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Items"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Items\Источник &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="Источник &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+a77._Period  [Period] -- Период
+   ,a77._Fld7744RRef GUIItem -- Гуид товара
+   ,a77._Fld7746_RRRef GUIOrder -- Гуид заказа
+   ,d149._Number NumberOrder -- Номер заказа
+   ,a77._Fld7753 Quantity -- Количество
+   ,a77._Fld7754 Total -- Сумма продажи
+   ,d208._Fld4788RRef GUIBookmark -- Гуид закладки
+   ,case when i641._Fld6412RRef is not null then 'True' else 'False' end as SignLoyalty 
+   ,case when cast(d149._Fld15048 as bit) = 1 then 'True' else 'False' end as SignSite
+   ,r70._Fld11590 NodeRIB --Узел РИБ
+   ,r261._ParentIDRRef GUISiteChapterClassItem1 --Множественный классификатор для сайта - Гуид раздела классификатора 1 ур.
+   ,t1._ParentIDRRef GUISiteChapterGroupItem2 -- Множественный классификатор для сайта - Гуид раздела классификатора 2 ур.
+   ,t1._Fld26110RRef GUISiteChapterCategoryItem3 -- Множественный классификатор для сайта - Гуид раздела классификатора 3 ур.
+   ,r53._Fld12557RRef GUIChapterClassItem1 -- Гуид раздела классификатора 1 ур.
+   ,r53._Fld12558RRef GUIChapterClassItem2 -- Гуид раздела классификатора 2 ур.
+   ,r125._ParentIDRRef GUIChapterClassItem3 -- Гуид раздела классификатора 3 ур.
+   ,r53._Fld12559RRef GUIChapterClassItem4 -- Гуид раздела классификатора 4 ур.
+   ,i217._Fld21723_RRRef GUIOldChapterClassItem1 -- Гуид раздела справочника номенклатуры, 1 ур
+   ,r53._Fld845RRef GUIManufacter -- Производитель
+   ,r53._Fld834RRef GUICountry -- Гуид страны
+   ,r53._Fld12560RRef GUITrademark -- Товарная марка
+   ,r53._Fld12562RRef GUISeries -- Гуид серии
+   ,r53._Fld844RRef GUIMarkItem -- Гуид отметка товара
+   ,r88._Code MarkCode -- Буквенный код отметки
+   ,r53._Fld833RRef GUIVAT -- ГУИД Ставка НДС
+   ,i64.HitSales -- Хит продаж
+   ,i64.TOP150 -- ТОП 150
+   ,i64.UnloadItem918 -- Выгружать товар на сайт 9-18
+   ,r47._IDRRef GUIClient -- ГУИД Контрагента
+   ,r47._Fld638RRef GUIHeadClient -- ГУИД головного контрагента
+   ,r47._Fld11954 GUIClientNode -- Гуид основного узла клиента
+
+FROM [sql-node-01].[RelefUTWork].[dbo]._AccumRg7743 a77 (nolock) 
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Document149 d149 (nolock) ON d149._IDRRef = a77._Fld7746_RRRef -- соединение со спраочником ... для получения номера заказа
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Document208 d208 (nolock) ON d208._IDRRef = a77._Fld7748_RRRef 
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._InfoRg6410 i641 (nolock)  ON i641._Fld6411_RRRef = a77._Fld7746_RRRef and i641._Fld6412RRef = 0x8ECEB97EE6E44FC74DB0D079C9E4297C --признак лояльности
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference70 r70 (nolock) ON r70._IDRRef = a77._Fld10714RRef -- соединение со справочником слкада, откуда берём название склада и его узел
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference53 r53 (nolock) ON a77._Fld7744RRef = r53._IDRRef -- соединение со справочником номенклатуры
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference12528 r125 (nolock) ON r53._Fld12559RRef  = r125._IDRRef 
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference88 r88 (nolock) ON r53._Fld844RRef = r88._IDRRef -- соединение со справочником отметка товара
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference47 r47 (nolock) ON r47._IDRRef = a77._Fld7752RRef -- соединение со справочником контрагентов
+LEFT JOIN (SELECT a._Fld22374_RRRef, a._Fld21723_RRRef FROM [sql-node-01].[RelefUTWork].[dbo]._InfoRg21722  a (nolock) 
+	   WHERE a._Fld21723_RRRef in  (0x8AEA00E098C184C111DDC30A4FF76E7A, 0xB395E4115BD714A811E2146B7D954204, 0xB395E4115BD714A811E2146B7D954205)) i217 ON r53._ParentIDRRef = i217._Fld22374_RRRef
+LEFT JOIN (SELECT ROW_NUMBER() OVER(PARTITION BY i26._Fld26111RRef ORDER BY r26._Fld28675 DESC) AS r, i26._Fld26111RRef, i26._Fld26110RRef, r26._ParentIDRRef, r26._Fld28675 
+	   FROM [sql-node-01].[RelefUTWork].[dbo]._InfoRg26108 i26 (nolock)  
+	   LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference26106  r26 (nolock)  ON i26._Fld26110RRef = r26._IDRRef 
+	   WHERE i26._Fld26109RRef = 0x80C230E1715C531711EAD2FD2FA5C39D) t1 ON t1._Fld26111RRef=r53._IDRRef and r = 1
+LEFT JOIN [sql-node-01].[RelefUTWork].[dbo]._Reference26106  r261 (nolock) ON r261._IDRRef = t1._ParentIDRRef
+LEFT JOIN (SELECT   a._Fld6411_RRRef
+			,MAX(case when a._Fld6412RRef = 0x8DDF461E8BA7E65F424E62672B9FD282 then 'True' else 'False' end) as HitSales -- хит продаж
+			,MAX(case when a._Fld6412RRef = 0x9405ACF1DF3FF64B11E7291E25E101E5 then 'True' else 'False' end) as TOP150 -- топ 150
+			,MAX(case when a._Fld6412RRef = 0x8358F870BD65C12E450B54D7F81D1654 then 'True' else 'False' end) as UnloadItem918 -- 918 )
+           FROM [sql-node-01].[RelefUTWork].[dbo]._InfoRg6410 a (nolock) 
+		   GROUP BY a._Fld6411_RRRef) i64 ON i64._Fld6411_RRRef = a77._Fld7744RRef 
+WHERE a77._Period &gt;= DATEADD(DAY,-90,GETDATE())</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Items\Источник &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL-NODE-01.RelefUTWork.connect_analasys]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL-NODE-01.RelefUTWork.connect_analasys]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Period]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Period]"
+                      name="Period"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIItem]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIItem]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIItem]"
+                      name="GUIItem"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem1]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem1]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem1]"
+                      name="GUIChapterClassItem1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIMarkItem]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIMarkItem]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIMarkItem]"
+                      name="GUIMarkItem"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIClient]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIClient]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIClient]"
+                      name="GUIClient"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HitSales]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[HitSales]"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HitSales]"
+                      name="HitSales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TOP150]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[TOP150]"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TOP150]"
+                      name="TOP150"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[UnloadItem918]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[UnloadItem918]"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[UnloadItem918]"
+                      name="UnloadItem918"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIManufacter]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIManufacter]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIManufacter]"
+                      name="GUIManufacter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUITrademark]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUITrademark]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUITrademark]"
+                      name="GUITrademark"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      name="Quantity"
+                      precision="15"
+                      scale="3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUICountry]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUICountry]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUICountry]"
+                      name="GUICountry"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISeries]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISeries]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISeries]"
+                      name="GUISeries"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIOrder]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIOrder]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIOrder]"
+                      name="GUIOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NodeRIB]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[NodeRIB]"
+                      length="3"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NodeRIB]"
+                      name="NodeRIB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[SignLoyalty]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[SignLoyalty]"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[SignLoyalty]"
+                      name="SignLoyalty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NumberOrder]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[NumberOrder]"
+                      length="11"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NumberOrder]"
+                      name="NumberOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Total]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Total]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Total]"
+                      name="Total"
+                      precision="15"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIBookmark]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIBookmark]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIBookmark]"
+                      name="GUIBookmark"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[SignSite]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[SignSite]"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[SignSite]"
+                      name="SignSite"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterClassItem1]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterClassItem1]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterClassItem1]"
+                      name="GUISiteChapterClassItem1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterGroupItem2]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterGroupItem2]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterGroupItem2]"
+                      name="GUISiteChapterGroupItem2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterCategoryItem3]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterCategoryItem3]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterCategoryItem3]"
+                      name="GUISiteChapterCategoryItem3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem2]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem2]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem2]"
+                      name="GUIChapterClassItem2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem3]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem3]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem3]"
+                      name="GUIChapterClassItem3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem4]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem4]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem4]"
+                      name="GUIChapterClassItem4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIOldChapterClassItem1]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIOldChapterClassItem1]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIOldChapterClassItem1]"
+                      name="GUIOldChapterClassItem1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[MarkCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[MarkCode]"
+                      length="1"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[MarkCode]"
+                      name="MarkCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIVAT]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIVAT]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIVAT]"
+                      name="GUIVAT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIHeadClient]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIHeadClient]"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIHeadClient]"
+                      name="GUIHeadClient"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIClientNode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIClientNode]"
+                      length="3"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIClientNode]"
+                      name="GUIClientNode"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      dataType="dbTimeStamp2"
+                      name="Period" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIItem]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIItem" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem1" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIMarkItem]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIMarkItem" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIClient]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIClient" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[HitSales]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="HitSales" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[TOP150]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="TOP150" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[UnloadItem918]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="UnloadItem918" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIManufacter]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIManufacter" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUITrademark]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUITrademark" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      dataType="numeric"
+                      name="Quantity"
+                      precision="15"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUICountry]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUICountry" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISeries]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISeries" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIOrder]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[NodeRIB]"
+                      dataType="wstr"
+                      length="3"
+                      name="NodeRIB" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[SignLoyalty]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="SignLoyalty" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[NumberOrder]"
+                      dataType="wstr"
+                      length="11"
+                      name="NumberOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Total]"
+                      dataType="numeric"
+                      name="Total"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIBookmark]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIBookmark" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[SignSite]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="SignSite" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISiteChapterClassItem1" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterGroupItem2]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISiteChapterGroupItem2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterCategoryItem3]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISiteChapterCategoryItem3" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem2]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem3]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem3" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem4]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem4" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIOldChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIOldChapterClassItem1" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[MarkCode]"
+                      dataType="wstr"
+                      length="1"
+                      name="MarkCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIVAT]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIVAT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIHeadClient]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIHeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[GUIClientNode]"
+                      dataType="wstr"
+                      length="3"
+                      name="GUIClientNode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Period]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Period]"
+                      name="Period" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIItem]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIItem]"
+                      name="GUIItem" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem1]"
+                      name="GUIChapterClassItem1" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIMarkItem]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIMarkItem]"
+                      name="GUIMarkItem" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIClient]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIClient]"
+                      name="GUIClient" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Total]"
+                      dataType="numeric"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Total]"
+                      name="Total"
+                      precision="15"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIBookmark]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIBookmark]"
+                      name="GUIBookmark" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[HitSales]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[HitSales]"
+                      name="HitSales" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[SignSite]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[SignSite]"
+                      name="SignSite" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[TOP150]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[TOP150]"
+                      name="TOP150" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISiteChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISiteChapterClassItem1]"
+                      name="GUISiteChapterClassItem1" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISiteChapterGroupItem2]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISiteChapterGroupItem2]"
+                      name="GUISiteChapterGroupItem2" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISiteChapterCategoryItem3]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISiteChapterCategoryItem3]"
+                      name="GUISiteChapterCategoryItem3" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[UnloadItem918]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[UnloadItem918]"
+                      name="UnloadItem918" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem2]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem2]"
+                      name="GUIChapterClassItem2" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem3]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem3]"
+                      name="GUIChapterClassItem3" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem4]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem4]"
+                      name="GUIChapterClassItem4" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIOldChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIOldChapterClassItem1]"
+                      name="GUIOldChapterClassItem1" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIManufacter]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIManufacter]"
+                      name="GUIManufacter" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUITrademark]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUITrademark]"
+                      name="GUITrademark" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      dataType="numeric"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      name="Quantity"
+                      precision="15"
+                      scale="3" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUICountry]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUICountry]"
+                      name="GUICountry" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISeries]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUISeries]"
+                      name="GUISeries" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[MarkCode]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[MarkCode]"
+                      name="MarkCode" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIVAT]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIVAT]"
+                      name="GUIVAT" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIOrder]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIOrder]"
+                      name="GUIOrder" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[NodeRIB]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[NodeRIB]"
+                      name="NodeRIB" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[SignLoyalty]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[SignLoyalty]"
+                      name="SignLoyalty" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[NumberOrder]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[NumberOrder]"
+                      name="NumberOrder" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIHeadClient]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIHeadClient]"
+                      name="GUIHeadClient" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIClientNode]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[GUIClientNode]"
+                      name="GUIClientNode" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Items\Назначение &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Назначение &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[BigQueryItems]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.brsRelef02]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.brsRelef02]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Period]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="Period"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Period]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIItem]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIItem"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIItem]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIItem]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIChapterClassItem1]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIChapterClassItem1"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem1]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem1]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIMarkItem]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIMarkItem"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIMarkItem]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIMarkItem]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIClient]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIClient"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIClient]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIClient]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[HitSales]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="HitSales"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HitSales]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HitSales]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[TOP150]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="TOP150"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TOP150]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TOP150]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[UnloadItem918]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="UnloadItem918"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[UnloadItem918]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[UnloadItem918]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIManufacter]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIManufacter"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIManufacter]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIManufacter]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUITrademark]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUITrademark"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUITrademark]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUITrademark]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Quantity]"
+                      cachedDataType="numeric"
+                      cachedName="Quantity"
+                      cachedPrecision="15"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUICountry]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUICountry"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUICountry]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUICountry]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUISeries]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUISeries"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISeries]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISeries]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIOrder]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIOrder"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIOrder]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIOrder]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[NodeRIB]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="NodeRIB"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[NodeRIB]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NodeRIB]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[SignLoyalty]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="SignLoyalty"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[SignLoyalty]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[SignLoyalty]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[NumberOrder]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="NumberOrder"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[NumberOrder]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NumberOrder]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Total]"
+                      cachedDataType="numeric"
+                      cachedName="Total"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Total]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Total]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIBookmark]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIBookmark"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIBookmark]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIBookmark]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[SignSite]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="SignSite"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[SignSite]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[SignSite]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUISiteChapterClassItem1]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUISiteChapterClassItem1"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterClassItem1]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterClassItem1]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUISiteChapterGroupItem2]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUISiteChapterGroupItem2"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterGroupItem2]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterGroupItem2]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUISiteChapterCategoryItem3]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUISiteChapterCategoryItem3"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterCategoryItem3]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUISiteChapterCategoryItem3]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIChapterClassItem2]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIChapterClassItem2"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem2]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem2]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIChapterClassItem3]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIChapterClassItem3"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem3]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem3]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIChapterClassItem4]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIChapterClassItem4"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem4]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIChapterClassItem4]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIOldChapterClassItem1]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIOldChapterClassItem1"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIOldChapterClassItem1]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIOldChapterClassItem1]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[MarkCode]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="MarkCode"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MarkCode]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[MarkCode]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIVAT]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIVAT"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIVAT]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIVAT]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIHeadClient]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="GUIHeadClient"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIHeadClient]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIHeadClient]" />
+                    <inputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[GUIClientNode]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="GUIClientNode"
+                      externalMetadataColumnId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIClientNode]"
+                      lineageId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[GUIClientNode]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIItem]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIItem" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem1" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIMarkItem]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIMarkItem" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HitSales]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="HitSales" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TOP150]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="TOP150" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[UnloadItem918]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="UnloadItem918" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIManufacter]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIManufacter" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUITrademark]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUITrademark" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      dataType="numeric"
+                      name="Quantity"
+                      precision="15"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      dataType="dbTimeStamp2"
+                      name="Period" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIClient]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIClient" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[NodeRIB]"
+                      dataType="wstr"
+                      length="3"
+                      name="NodeRIB" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUICountry]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUICountry" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISeries]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISeries" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIOrder]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[SignLoyalty]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="SignLoyalty" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[NumberOrder]"
+                      dataType="wstr"
+                      length="11"
+                      name="NumberOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Total]"
+                      dataType="numeric"
+                      name="Total"
+                      precision="15"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIBookmark]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIBookmark" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[SignSite]"
+                      codePage="1251"
+                      dataType="str"
+                      length="5"
+                      name="SignSite" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISiteChapterClassItem1" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterGroupItem2]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISiteChapterGroupItem2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUISiteChapterCategoryItem3]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUISiteChapterCategoryItem3" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem2]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem3]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem3" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIChapterClassItem4]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIChapterClassItem4" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIOldChapterClassItem1]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIOldChapterClassItem1" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MarkCode]"
+                      dataType="wstr"
+                      length="1"
+                      name="MarkCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIVAT]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIVAT" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIHeadClient]"
+                      dataType="bytes"
+                      length="16"
+                      name="GUIHeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUIClientNode]"
+                      dataType="wstr"
+                      length="3"
+                      name="GUIClientNode" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Items\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Items\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Items\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Items.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Load Items\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Load Items\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\To ClickHouse"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Задача &quot;Выполнение процесса&quot;"
+      DTS:DTSID="{F018E788-3E8F-484B-9187-292D48E71251}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="To ClickHouse"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\ProgramData\Anaconda3\python.exe"
+          Arguments="C:\brs\python\to_clickhouse.py"
+          WorkingDirectory="C:\brs\python" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{282AB109-2B02-4216-9A58-E9B8DC9A19F8}"
+      DTS:From="Package\Load Items"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\To ClickHouse" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{FFBF02C1-C353-4C2D-90D5-19229DC6F6EB}"
+      DTS:From="Package\Delete 90 days"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Load Items" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Delete 90 days"
+          TopLeft="293,144" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Load Items"
+          TopLeft="304.71428572645,229.764705893078" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\To ClickHouse"
+          TopLeft="294,316" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="368.357142863225,271.764705893078">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.235294106922"
+              Start="0,0"
+              End="0,36.735294106922">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.735294106922" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="368.857142863225,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.764705893078"
+              Start="0,0"
+              End="0,36.264705893078">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.264705893078" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Items">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Load Items\Назначение &quot;OLE DB&quot;"
+          TopLeft="298,228" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Load Items\Источник &quot;OLE DB&quot;"
+          TopLeft="308,102" />
+        <EdgeLayout
+          Id="Package\Load Items.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="392.5,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84"
+              Start="0,0"
+              End="0,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Items\Источник &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Items\Назначение &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

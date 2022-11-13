@@ -1,0 +1,797 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/7/2022 2:49:02 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{9EC1641F-A9A2-4F01-BBE5-FDC014D1EE6D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{EEE9CB37-8DCD-4A41-B424-B4FCF2806975}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2530F80E-BBFE-4A17-BCB4-0E9C8D415A8A}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C486ACC1-63D2-4EC7-9556-F2525AD55725}"
+      DTS:ObjectName="Диспетчер соединений Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\koldanov.sv\Desktop\Рез.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача потока данных"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{5255B2FD-3FE3-442A-BCE4-AB61F476B62B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача потока данных"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="Источник &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[Назначение "OLE DB"]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Файл]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Файл]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Файл]"
+                      name="Файл"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      name="Наименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2021]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, янв# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2021]"
+                      name="Оборот, руб#, янв# 2021"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2021]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, февр# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2021]"
+                      name="Оборот, руб#, февр# 2021"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2021]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, март 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2021]"
+                      name="Оборот, руб#, март 2021"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2022]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, янв# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2022]"
+                      name="Оборот, руб#, янв# 2022"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2022]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, февр# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2022]"
+                      name="Оборот, руб#, февр# 2022"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2022]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, март 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2022]"
+                      name="Оборот, руб#, март 2022"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2021]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, янв# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2021]"
+                      name="Оборот, шт#, янв# 2021"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2021]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, февр# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2021]"
+                      name="Оборот, шт#, февр# 2021"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2021]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, март 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2021]"
+                      name="Оборот, шт#, март 2021"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2022]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, янв# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2022]"
+                      name="Оборот, шт#, янв# 2022"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2022]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, февр# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2022]"
+                      name="Оборот, шт#, февр# 2022"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2022]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, март 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2022]"
+                      name="Оборот, шт#, март 2022"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      length="6"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Файл]"
+                      dataType="wstr"
+                      length="255"
+                      name="Файл" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование]"
+                      dataType="wstr"
+                      length="255"
+                      name="Наименование" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, янв# 2021]"
+                      dataType="r8"
+                      name="Оборот, руб#, янв# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, февр# 2021]"
+                      dataType="r8"
+                      name="Оборот, руб#, февр# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, март 2021]"
+                      dataType="r8"
+                      name="Оборот, руб#, март 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, янв# 2022]"
+                      dataType="r8"
+                      name="Оборот, руб#, янв# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, февр# 2022]"
+                      dataType="r8"
+                      name="Оборот, руб#, февр# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, руб#, март 2022]"
+                      dataType="r8"
+                      name="Оборот, руб#, март 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, янв# 2021]"
+                      dataType="r8"
+                      name="Оборот, шт#, янв# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, февр# 2021]"
+                      dataType="r8"
+                      name="Оборот, шт#, февр# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, март 2021]"
+                      dataType="r8"
+                      name="Оборот, шт#, март 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, янв# 2022]"
+                      dataType="r8"
+                      name="Оборот, шт#, янв# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, февр# 2022]"
+                      dataType="r8"
+                      name="Оборот, шт#, февр# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот, шт#, март 2022]"
+                      dataType="r8"
+                      name="Оборот, шт#, март 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      name="Код" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Файл]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Файл]"
+                      name="Файл" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      name="Наименование" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2021]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2021]"
+                      name="Оборот, руб#, янв# 2021" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2021]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2021]"
+                      name="Оборот, руб#, февр# 2021" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2021]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2021]"
+                      name="Оборот, руб#, март 2021" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2022]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2022]"
+                      name="Оборот, руб#, янв# 2022" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2022]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2022]"
+                      name="Оборот, руб#, февр# 2022" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2022]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2022]"
+                      name="Оборот, руб#, март 2022" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2021]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2021]"
+                      name="Оборот, шт#, янв# 2021" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2021]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2021]"
+                      name="Оборот, шт#, февр# 2021" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2021]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2021]"
+                      name="Оборот, шт#, март 2021" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2022]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2022]"
+                      name="Оборот, шт#, янв# 2022" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2022]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2022]"
+                      name="Оборот, шт#, февр# 2022" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2022]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2022]"
+                      name="Оборот, шт#, март 2022" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Назначение &quot;Excel&quot;"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Назначение &quot;Excel&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Назначение &quot;Excel&quot;"
+              name="Назначение &quot;Excel&quot;"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">Назначение__Excel_$</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Диспетчер соединений Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;Excel&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Файл]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Файл"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Файл]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Файл]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Наименование]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Наименование"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Наименование]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, руб#, янв# 2021]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, руб#, янв# 2021"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, янв# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2021]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, руб#, февр# 2021]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, руб#, февр# 2021"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, февр# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2021]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, руб#, март 2021]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, руб#, март 2021"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, март 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2021]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, руб#, янв# 2022]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, руб#, янв# 2022"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, янв# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, янв# 2022]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, руб#, февр# 2022]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, руб#, февр# 2022"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, февр# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, февр# 2022]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, руб#, март 2022]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, руб#, март 2022"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, март 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, руб#, март 2022]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, шт#, янв# 2021]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, шт#, янв# 2021"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, янв# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2021]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, шт#, февр# 2021]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, шт#, февр# 2021"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, февр# 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2021]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, шт#, март 2021]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, шт#, март 2021"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, март 2021]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2021]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, шт#, янв# 2022]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, шт#, янв# 2022"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, янв# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, янв# 2022]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, шт#, февр# 2022]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, шт#, февр# 2022"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, февр# 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, февр# 2022]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот, шт#, март 2022]"
+                      cachedDataType="r8"
+                      cachedName="Оборот, шт#, март 2022"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, март 2022]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот, шт#, март 2022]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Код]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Файл]"
+                      dataType="wstr"
+                      length="255"
+                      name="Файл" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Наименование]"
+                      dataType="wstr"
+                      length="255"
+                      name="Наименование" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, янв# 2021]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, руб#, янв# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, февр# 2021]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, руб#, февр# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, март 2021]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, руб#, март 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, янв# 2022]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, руб#, янв# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, февр# 2022]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, руб#, февр# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, руб#, март 2022]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, руб#, март 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, янв# 2021]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, шт#, янв# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, февр# 2021]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, шт#, февр# 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, март 2021]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, шт#, март 2021" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, янв# 2022]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, шт#, янв# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, февр# 2022]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, шт#, февр# 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот, шт#, март 2022]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот, шт#, март 2022" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код]"
+                      dataType="wstr"
+                      length="255"
+                      name="Код" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;Excel&quot;"
+                  synchronousInputId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Задача потока данных"
+          TopLeft="278,148" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Задача потока данных">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Задача потока данных\Источник &quot;OLE DB&quot;"
+          TopLeft="103,251" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Задача потока данных\Назначение &quot;Excel&quot;"
+          TopLeft="224,388" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="189.5,293">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121,95"
+              Start="0,0"
+              End="121,87.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="4,47.5" />
+                  <mssgle:LineSegment
+                    End="117,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="117,47.5"
+                    Point2="121,47.5"
+                    Point3="121,51.5" />
+                  <mssgle:LineSegment
+                    End="121,87.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Источник &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Назначение &quot;Excel&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

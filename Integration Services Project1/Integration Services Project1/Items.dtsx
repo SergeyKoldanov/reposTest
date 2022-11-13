@@ -1,0 +1,899 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/25/2021 12:09:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{12DFC8EF-2124-4823-AD61-D233E7399E95}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D6D326F5-6147-42F4-B691-F6E947CBC6AA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.140.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{358C5A30-6FF7-4749-86CD-9AA2D79E3170}"
+      DTS:ObjectName="10.0.0.140.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.140;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6F01A4A8-B3AE-4E38-AEB2-BEE578C3C87C}"
+      DTS:ObjectName="SQL-NODE-02\UT.RelefUTWork.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL-NODE-01;User ID=sa;Initial Catalog=RelefUTWork;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzZqS7RiIzUCYH1fTBoH7HQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACplrhaAUR9vXQMWTaMo+5GAAAAAASAAACgAAAAEAAAAIKuA+fVvoe7+yWxyQ0wvN8YAAAA4t1rfd39Kbf/qnJ4tLb8+66/PuDtzRIUFAAAAA445o10Ll0K+gSdPJVnlpmNAK8O</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение Items"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{6A7B40A0-2D13-4650-8D91-D955B8170F72}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение Items"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение Items\1C"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="1C"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">WITH Nom AS (
+SELECT _IDRRef, _ParentIDRRef, _Code, _Description, _Description as Родитель, _Fld816, _Fld844RRef, _Fld845RRef, _Fld12557RRef, _Fld12558RRef, _Fld12559RRef, _Fld12560RRef, _Fld833RRef
+FROM [RelefUTWork].[dbo].[_Reference53] WITH (NOLOCK)
+WHERE _IDRRef in (0x8AEA00E098C184C111DDC30A4FF76E7A, 0xB395E4115BD714A811E2146B7D954204, 0xB395E4115BD714A811E2146B7D954205)
+
+UNION ALL
+
+SELECT N._IDRRef, N._ParentIDRRef, N._Code, N._Description, Nom.Родитель, N._Fld816, N._Fld844RRef, N._Fld845RRef, N._Fld12557RRef, N._Fld12558RRef, N._Fld12559RRef, N._Fld12560RRef, N._Fld833RRef
+FROM Nom INNER JOIN [RelefUTWork].[dbo].[_Reference53] N (NOLOCK) 
+	ON Nom._IDRRef = N._ParentIDRRef
+)
+
+  SELECT
+	Nom._Code AS [Код],
+	Nom._Description AS [Наименование],
+	Nom._Fld816 AS [Артикул],
+	O._Code AS [Отметка],
+	P._Description AS [Производитель],
+	cast(CASE 
+	WHEN Nom.Родитель = 'Канцелярские товары' THEN 'Канцтовары'
+	WHEN Nom.Родитель = 'Товары офисного назначения (ТОН)' THEN 'ТОН'
+	WHEN Nom.Родитель = 'Бумага для оргтехники' THEN 'Бумага'
+	END as nvarchar) AS Направление,
+	K._Description AS [Класс],
+	G._Description AS [Группа],
+	T.Категория,
+	T.Подкатегория,
+	M._Description AS [Торговая марка],
+	CASE
+	WHEN ND._EnumOrder = 2 THEN 0.1
+	WHEN ND._EnumOrder = 3 THEN 0.1
+	WHEN ND._EnumOrder = 4 THEN 0
+	WHEN ND._EnumOrder = 5 THEN 0
+	WHEN ND._EnumOrder = 6 THEN 0.2
+	ELSE 0
+	END AS NDS,
+	cast(CASE
+	WHEN TT._IDRRef IS NOT NULL THEN 'Да'
+	ELSE 'Нет'
+	END as nvarchar) AS RSL
+FROM Nom
+	LEFT JOIN [RelefUTWork].[dbo].[_Reference88] O WITH (NOLOCK)
+		ON Nom._Fld844RRef = O._IDRRef
+	LEFT JOIN [RelefUTWork].[dbo].[_Reference91] P WITH (NOLOCK)
+		ON Nom._Fld845RRef = P._IDRRef
+	LEFT JOIN [RelefUTWork].[dbo].[_Reference12505] K WITH (NOLOCK)
+		ON Nom._Fld12557RRef = K._IDRRef
+	LEFT JOIN [RelefUTWork].[dbo].[_Reference12527] G WITH (NOLOCK)
+		ON Nom._Fld12558RRef = G._IDRRef
+	LEFT JOIN
+			(SELECT 
+					Cat._IDRRef AS [Ссылка],
+					Cat._Description AS [Подкатегория],
+					Cat1._Description AS [Категория]
+			 FROM [RelefUTWork].[dbo].[_Reference12528] AS Cat WITH (NOLOCK)
+				LEFT JOIN [RelefUTWork].[dbo].[_Reference12528] AS Cat1 WITH (NOLOCK)
+					ON Cat1._IDRRef = Cat._ParentIDRRef) AS T
+		ON Nom._Fld12559RRef = T.Ссылка
+	LEFT JOIN [RelefUTWork].[dbo].[_Reference12504] M WITH (NOLOCK)
+		ON Nom._Fld12560RRef= M._IDRRef
+	LEFT JOIN [RelefUTWork].[dbo].[_Enum368] ND WITH (NOLOCK)
+		ON Nom._Fld833RRef = ND._IDRRef
+	LEFT JOIN 	(SELECT KK._Reference53_IDRRef, KKK._IDRRef
+				 FROM [RelefUTWork].[dbo].[_Reference53_VT12585] KK WITH (NOLOCK) --ТАБЛ КЛАССИФ КАТАЛОГ	
+					LEFT JOIN [RelefUTWork].[dbo].[_Reference12507] KKK WITH (NOLOCK)--СПР КЛАССИФ КАТАЛОГ
+						ON KK._Fld12587RRef = KKK._IDRRef
+				 WHERE KKK._Code like 'РЗН000002') TT
+		ON Nom._IDRRef = TT._Reference53_IDRRef</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Items\1C.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      length="6"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование]"
+                      length="150"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      name="Наименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Артикул]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Артикул]"
+                      length="50"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Артикул]"
+                      name="Артикул"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Отметка]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Отметка]"
+                      length="1"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Отметка]"
+                      name="Отметка"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Производитель]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Производитель]"
+                      length="50"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Производитель]"
+                      name="Производитель"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Класс]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Класс]"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Класс]"
+                      name="Класс"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Группа]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Группа]"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Группа]"
+                      name="Группа"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Категория]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Категория]"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Категория]"
+                      name="Категория"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подкатегория]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Подкатегория]"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подкатегория]"
+                      name="Подкатегория"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Торговая марка]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Торговая марка]"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Торговая марка]"
+                      name="Торговая марка"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NDS]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[NDS]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NDS]"
+                      name="NDS"
+                      precision="2"
+                      scale="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Направление]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Направление]"
+                      length="30"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Направление]"
+                      name="Направление"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[RSL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[RSL]"
+                      length="30"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[RSL]"
+                      name="RSL"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      name="Код" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование]"
+                      dataType="wstr"
+                      length="150"
+                      name="Наименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Артикул]"
+                      dataType="wstr"
+                      length="50"
+                      name="Артикул" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Отметка]"
+                      dataType="wstr"
+                      length="1"
+                      name="Отметка" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Производитель]"
+                      dataType="wstr"
+                      length="50"
+                      name="Производитель" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Класс]"
+                      dataType="wstr"
+                      length="100"
+                      name="Класс" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Группа]"
+                      dataType="wstr"
+                      length="100"
+                      name="Группа" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Категория]"
+                      dataType="wstr"
+                      length="100"
+                      name="Категория" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Подкатегория]"
+                      dataType="wstr"
+                      length="100"
+                      name="Подкатегория" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Торговая марка]"
+                      dataType="wstr"
+                      length="100"
+                      name="Торговая марка" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[NDS]"
+                      dataType="numeric"
+                      name="NDS"
+                      precision="2"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Направление]"
+                      dataType="wstr"
+                      length="30"
+                      name="Направление" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[RSL]"
+                      dataType="wstr"
+                      length="30"
+                      name="RSL" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      name="Наименование" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Артикул]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Артикул]"
+                      name="Артикул" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Отметка]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Отметка]"
+                      name="Отметка" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Производитель]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Производитель]"
+                      name="Производитель" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Класс]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Класс]"
+                      name="Класс" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Группа]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Группа]"
+                      name="Группа" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Категория]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Категория]"
+                      name="Категория" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Подкатегория]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Подкатегория]"
+                      name="Подкатегория" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Торговая марка]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Торговая марка]"
+                      name="Торговая марка" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[NDS]"
+                      dataType="numeric"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[NDS]"
+                      name="NDS"
+                      precision="2"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Направление]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Направление]"
+                      name="Направление" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[RSL]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[RSL]"
+                      name="RSL" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение Items\Items"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Items"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[Items]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Items\Items.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.140.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.140.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[NDS]"
+                      cachedDataType="numeric"
+                      cachedName="NDS"
+                      cachedPrecision="2"
+                      cachedScale="1"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[NDS]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[NDS]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Наименование]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Наименование"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Артикул]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Артикул"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Article]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Артикул]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Отметка]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Отметка"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Mark]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Отметка]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Производитель]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Производитель"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Производитель]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Направление]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Направление"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Direction]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Направление]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Класс]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Класс"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Class]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Класс]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Группа]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Группа"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Group]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Группа]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Категория]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Категория"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Categoty]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Категория]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Подкатегория]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Подкатегория"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[SubCategory]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подкатегория]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Торговая марка]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Торговая марка"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeMark]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Торговая марка]" />
+                    <inputColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[RSL]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="RSL"
+                      externalMetadataColumnId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[RSL]"
+                      lineageId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[RSL]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="10"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="170"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Article]"
+                      dataType="wstr"
+                      length="50"
+                      name="Article" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Mark]"
+                      dataType="wstr"
+                      length="1"
+                      name="Mark" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      dataType="wstr"
+                      length="70"
+                      name="Manufacturer" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Direction]"
+                      dataType="wstr"
+                      length="170"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Class]"
+                      dataType="wstr"
+                      length="100"
+                      name="Class" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Group]"
+                      dataType="wstr"
+                      length="100"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Categoty]"
+                      dataType="wstr"
+                      length="100"
+                      name="Categoty" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[SubCategory]"
+                      dataType="wstr"
+                      length="100"
+                      name="SubCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeMark]"
+                      dataType="wstr"
+                      length="100"
+                      name="TradeMark" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[NDS]"
+                      dataType="r8"
+                      name="NDS" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[RSL]"
+                      dataType="wstr"
+                      length="5"
+                      name="RSL" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Items\Items.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Items\Items.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Items\Items.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Items\Items.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Items\Items.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение Items.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Заполнение Items\Items.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Заполнение Items\1C.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка Items"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{69338B6A-55E3-4296-B612-54B9D4967A33}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка Items"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{358C5A30-6FF7-4749-86CD-9AA2D79E3170}"
+          SQLTask:SqlStatementSource="truncate table Items" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{6E2933F2-7988-43BF-967D-91FAFB6D4CDB}"
+      DTS:From="Package\Очистка Items"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение Items" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Заполнение Items"
+          TopLeft="322,173" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Очистка Items"
+          TopLeft="327,85" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="404.5,127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение Items">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="93,42"
+          Id="Package\Заполнение Items\1C"
+          TopLeft="316,107" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Заполнение Items\Items"
+          TopLeft="310,212" />
+        <EdgeLayout
+          Id="Package\Заполнение Items.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="363.25,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Items\1C">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Items\Items">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

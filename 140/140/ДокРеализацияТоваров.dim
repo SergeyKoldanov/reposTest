@@ -1,0 +1,541 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="18a86d6e-7fc9-4aab-abca-8e0937a5a219" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ДокРеализацияТоваров</ID>
+  <Name>ДокРеализацияТоваров</Name>
+  <CreatedTimestamp>2011-04-15T06:59:24.773333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:41:43.446667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="0" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12488" y="16431" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwDocRealizTovarov_NEW" left="2117" top="3810" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4154" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwDocRealizTovarov_NEW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>2117</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>3810</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-03-11T04:26:33.63Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b117aadd-5802-49b2-8b7f-6a4b57596ad5">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <ErrorConfiguration dwd:design-time-name="13ca1104-2a9d-4d16-ae8f-b90eac0ae66c">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Translations>
+    <Translation dwd:design-time-name="3e305cfd-b1e8-411d-b6b2-2b3ab1a42f0f">
+      <Language>1049</Language>
+      <Caption>ДокРеализацияТоваров</Caption>
+    </Translation>
+  </Translations>
+  <Attributes>
+    <Attribute dwd:design-time-name="f1dfede2-a25c-4912-bfb0-7c44278632d1">
+      <ID>Doc Realiz Tovarov GUID</ID>
+      <Name>Doc Realiz Tovarov GUID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1b5435b7-2633-4641-8158-83bf686e8460">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26870de1-066b-4347-aba8-e49808e14e2f">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>DocRealizTovarovGUID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6cbfd3c3-19ef-4a86-9932-0ca0bc4a32c3">
+          <AttributeID>Data</AttributeID>
+          <Name>Data</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3bb99bb0-bb87-4c2a-923b-4d9a000a1da3">
+          <AttributeID>Number</AttributeID>
+          <Name>Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="72082ba3-a775-4bf1-bdd6-e8433821bafb">
+          <AttributeID>Sklad ID</AttributeID>
+          <Name>Sklad ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38bf763f-4360-4c21-b65b-45be9a947400">
+          <AttributeID>Comment</AttributeID>
+          <Name>Comment</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0c41da1e-b3a7-4c3a-9fec-8a9a09094fc3">
+          <AttributeID>Vid Operatsii</AttributeID>
+          <Name>Vid Operatsii</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="01eac00b-1e4c-4aac-825c-2d5dcecceb61">
+          <AttributeID>Сurrency</AttributeID>
+          <Name>Сurrency</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dc32202b-1de6-4a56-a945-c761ba09141a">
+          <AttributeID>Bonus</AttributeID>
+          <Name>Bonus</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d43f7134-b366-43b2-8449-59c2f8a0398d">
+          <AttributeID>Podrazdelenie Name</AttributeID>
+          <Name>Podrazdelenie Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="60ab2e00-fe88-412d-b867-80cfd639e61b">
+          <AttributeID>Otvetstven Name</AttributeID>
+          <Name>Otvetstven Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a8614537-8409-4a5c-a503-6ac32cea21e4">
+          <AttributeID>Avtor Name</AttributeID>
+          <Name>Avtor Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0ed0c7ae-b629-43c8-a79c-9ccbc8f8dcbd">
+          <AttributeID>Is Partner</AttributeID>
+          <Name>Is Partner</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6dee9c37-8983-44fb-b634-5dff62f9ee9f">
+          <AttributeID>Is Cross</AttributeID>
+          <Name>Is Cross</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4218e56c-6319-4f9b-90a8-ced1c5d88e44">
+          <AttributeID>Is Factura</AttributeID>
+          <Name>Is Factura</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8d644cce-e7b8-4174-bb16-044072bae3ab">
+          <AttributeID>Is Complect</AttributeID>
+          <Name>Is Complect</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ee3070a1-b243-4e42-b06f-e8841a03d4a1">
+          <AttributeID>Is OKK</AttributeID>
+          <Name>Is OKK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="479f7d61-1a03-4bbf-9288-af20b3997f88">
+          <AttributeID>Marked</AttributeID>
+          <Name>Marked</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bbd5b184-e36a-41e1-a5e7-2e1b135a8b07">
+      <ID>Data</ID>
+      <Name>Data</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9bbaeb28-ed3d-4b5b-aa36-123a26d5fb4a">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="504c518b-be86-418e-b683-b7292fae5627">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>Data</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6db6b3cc-3110-432f-ab06-5bcf8affa527">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="924c6998-d41d-4522-9dcd-6c3bfc0958a4">
+          <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+          <ColumnID>DataStr</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="7efb49b7-561e-457b-9152-e0a9f1ec29b8">
+          <Language>1049</Language>
+          <Caption>Дата</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6b1370f8-8403-4e00-bd9d-eeb25340f34a">
+      <ID>Number</ID>
+      <Name>Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5dbeef7e-e474-4df5-a283-1560fb7c43af">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="577b1536-a222-403a-b073-6f9ec5b8c044">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="5f41720e-1fa7-4058-b0c3-2e07a90d2533">
+          <Language>1049</Language>
+          <Caption>Номер</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="49005d0a-1a59-4256-92cc-e7463b833d9e">
+      <ID>Sklad ID</ID>
+      <Name>Sklad ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b28b85e6-6e0b-4179-a6ee-5d62e6f72509">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="23fc1d00-b251-46ba-b6c5-035735df4742">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>SkladID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="97f698d8-2243-4003-9ca4-f6fbf97bb565">
+          <Language>1049</Language>
+          <Caption>Склад</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bfde5d36-e638-4f33-9a93-8aad052be39f">
+      <ID>Comment</ID>
+      <Name>Comment</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="37be6382-e5fe-4ea3-8dbf-859c764c62b0">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be8e906b-6458-4dd0-ae78-7657ede09f9b">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>Comment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="9f5dc8c2-ec73-4ccc-9aed-58e4ec7d283d">
+          <Language>1049</Language>
+          <Caption>Комментарий</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1dd347ee-9742-4a3d-acd8-eceb676d8ef4">
+      <ID>Vid Operatsii</ID>
+      <Name>Vid Operatsii</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0af3be80-3cac-406e-8de1-f25067a957e9">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f3c2e146-7e65-41f2-ba12-421ff1bb58c0">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>VidOperatsii</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="1e4b38c7-dbc1-490b-a484-25412f707f7f">
+          <Language>1049</Language>
+          <Caption>Вид операции</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="402bc25c-22e0-42c4-a7b8-be43db618e1a">
+      <ID>Сurrency</ID>
+      <Name>Сurrency</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2c21a529-b831-4835-9f37-2558624d53d8">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="31f36ee3-6741-4ea1-b298-c56afcebcc3c">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>Сurrency</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="37449e5d-05f9-4b15-8c45-23bcddb910be">
+          <Language>1049</Language>
+          <Caption>Валюта</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6bb04be0-8801-4712-97d0-4f15d53f8a66">
+      <ID>Bonus</ID>
+      <Name>Bonus</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="168f3eff-25c1-4e9a-958b-1a9372eefbfd">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74b5ec81-15cf-48c9-b544-8d8bd8c2ad98">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>Bonus</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="05c68478-4bdd-4873-af18-4a2011b119bb">
+          <Language>1049</Language>
+          <Caption>Бонус</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c5222d7d-9c23-48be-9d35-b873d78c108d">
+      <ID>Podrazdelenie Name</ID>
+      <Name>Podrazdelenie Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3cf904d8-0565-401b-adda-d28931b7896a">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="269c073e-af9c-442c-b50e-862066c95d4f">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>PodrazdelenieName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="30ca1f8d-b4d1-4f0d-8b81-d15262c764af">
+          <Language>1049</Language>
+          <Caption>Подразделение</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="59a2b303-ae0a-4a26-aed6-f88838fc5fce">
+      <ID>Otvetstven Name</ID>
+      <Name>Otvetstven Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5ac13a54-400c-40cf-868b-55ac7a485b11">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9e54ff6-862d-4d82-a6bc-6648f3bbb2fd">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>OtvetstvenName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="87891521-c03f-4ed9-b0c5-0ae6fc3328c5">
+          <Language>1049</Language>
+          <Caption>Ответственный</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f9083ecb-c94b-4010-b1c7-e52f578b5d5d">
+      <ID>Avtor Name</ID>
+      <Name>Avtor Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7c651e8d-6c51-4e42-8336-bb91646eb91f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="66bcef3e-9e2c-49ce-98c5-be78c71211cb">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>AvtorName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="5b3f176a-5443-48fb-b5f2-066287ca0437">
+          <Language>1049</Language>
+          <Caption>Автор</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="870a2b85-0e8f-49ca-9da8-631762f7b55e">
+      <ID>Is Partner</ID>
+      <Name>Is Partner</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15da1b9c-67c0-4918-a322-cfd202b70366">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3475f6cb-1494-4726-a0a3-65289a77080f">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>IsPartner</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="dce101e5-17fd-440e-a00f-eda0d65e359b">
+          <Language>1049</Language>
+          <Caption>Партнер</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3ea2b431-4fab-4bd9-8e81-86004532752b">
+      <ID>Is Cross</ID>
+      <Name>Is Cross</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="922cf7c8-f71b-4d01-8251-99e77faebc50">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8d20094f-9817-4a82-a7ac-2aeec83d1b72">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>IsCross</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="507bfdc0-0399-4161-9ed4-a0fefcaec915">
+          <Language>1049</Language>
+          <Caption>Кроссдок</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c7a4216f-bc1b-4653-bc30-2f51a43b19ae">
+      <ID>Is Factura</ID>
+      <Name>Is Factura</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d6a0e41-81bb-431e-95ff-0c1905846e1e">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1093aab1-f0c8-4210-9967-5ec05d5f3303">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>IsFactura</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="03093c9b-3810-4f5d-8cb3-68f14aa66b79">
+          <Language>1049</Language>
+          <Caption>Счет-фактура</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0a8c1839-286b-4d8e-a898-7b8f0b68855f">
+      <ID>Is Complect</ID>
+      <Name>Is Complect</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="43b524f8-132a-4c6e-accc-c6d0048d832b">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="197f0519-ea63-4ce9-a3de-5b4bcb2f6ad5">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>IsComplect</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="45ccfe07-db80-4706-ab13-667538b075d1">
+          <Language>1049</Language>
+          <Caption>Укомплектован</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e07c84d7-a714-4ed6-867c-13ba30a10868">
+      <ID>Is OKK</ID>
+      <Name>Is OKK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1d39a4bb-d725-4e93-8189-d3295ba6dc97">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d95359b8-ab50-424c-a142-040cfc73be53">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>IsOKK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="18a7d9bc-b91a-4284-b855-e7b07a240574">
+          <Language>1049</Language>
+          <Caption>ОКК</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="54a04b32-1c3b-48a3-952a-e3a7f4db7a92">
+      <ID>Marked</ID>
+      <Name>Marked</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="365b8799-2ba3-4c8d-989d-fd56bec917b8">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4f340ce0-9ac7-4a4d-81c6-7d92dd66c975">
+            <TableID>dbo_vwDocRealizTovarov_NEW</TableID>
+            <ColumnID>Marked</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="010d7cf5-0ce2-4203-88e7-4742e895a506">
+          <Language>1049</Language>
+          <Caption>Пометка удаления</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching dwd:design-time-name="9aea4fb4-6d86-4725-a025-8c8a5ff65f47">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="4bd2df9d-9d5f-466a-a654-25238673f7d4" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

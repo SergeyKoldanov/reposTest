@@ -1,0 +1,326 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b2776b6b-fc6e-4e05-bc89-81b7a197f393" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Принято</ID>
+  <Name>Принято</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2387" scrolltop="-4207" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7911" y="12832" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="GetODO" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3096" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000180c000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_GetODO" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2387</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4207</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="117">
+            <Shape Id="Get ODO" Expanded="false">
+              <Attributes>
+                <Attribute Id="Get ODO" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Get ODO Hour" Expanded="false">
+              <Attributes>
+                <Attribute Id="Get ODO Hour" />
+              </Attributes>
+              <Position x="171" y="20" />
+            </Shape>
+            <Shape Id="Get ODO Day" Expanded="false">
+              <Attributes>
+                <Attribute Id="Get ODO Day" />
+              </Attributes>
+              <Position x="171" y="68" />
+            </Shape>
+            <Shape Id="Get ODO Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Get ODO Month" />
+              </Attributes>
+              <Position x="171" y="116" />
+            </Shape>
+            <Shape Id="Get ODO Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Get ODO Year" />
+              </Attributes>
+              <Position x="171" y="164" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c9b9b2fb-fbf6-4d7b-b0b6-95c74ce07098">
+    <DataSourceViewID>Relef</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="2682e3ea-234c-4db6-bc42-697f32ffb820">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Translations>
+    <Translation dwd:design-time-name="73159150-b049-4d74-8bec-525439f09c41">
+      <Language>1049</Language>
+      <Caption>Принято</Caption>
+    </Translation>
+  </Translations>
+  <Attributes>
+    <Attribute dwd:design-time-name="31fe09df-84c4-4a97-a9e9-90e94cbad087">
+      <ID>Get ODO</ID>
+      <Name>Get ODO</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cbaffdef-74ae-49aa-b8a4-5bcf9b0f4876">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0dbff30e-7ab7-41be-ba27-c7072e6ecd96">
+            <TableID>dbo_GetODO</TableID>
+            <ColumnID>GetODO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="da030d31-8bf8-4d21-9196-91255d8e67b8">
+          <Language>1049</Language>
+          <Caption>Дата</Caption>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f673cd25-a2d1-400e-b807-4822e5d4bd7c">
+          <AttributeID>Get ODO Year</AttributeID>
+          <Name>Get ODO Year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f7fbd0f9-e084-469f-aa1f-2e993a7c2377">
+          <AttributeID>Get ODO Month</AttributeID>
+          <Name>Get ODO Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5898889f-9ba9-4f6e-b147-3da9ed77b143">
+          <AttributeID>Get ODO Day</AttributeID>
+          <Name>Get ODO Day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a4f2e3e6-d616-426e-bd12-813481319f01">
+          <AttributeID>Get ODO Hour</AttributeID>
+          <Name>Get ODO Hour</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d1f2a9c7-38f2-477d-9899-38bcfe194cff">
+      <ID>Get ODO Year</ID>
+      <Name>Get ODO Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="65153f9d-68f4-48d9-b6ad-fdeed0ba5688">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c50cac4a-100b-4701-8b0a-af3e0f977341">
+            <TableID>dbo_GetODO</TableID>
+            <ColumnID>GetODOYear</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="a934add1-0987-4dbf-9af4-0a30826e5484">
+          <Language>1049</Language>
+          <Caption>Год</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f1ce858-1125-4525-8ce5-8319a98d24c3">
+      <ID>Get ODO Month</ID>
+      <Name>Get ODO Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3f023519-b3ec-4d3e-9e0a-12c01f71cf02">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d27b070d-7feb-4e57-9967-04e81a67adf0">
+            <TableID>dbo_GetODO</TableID>
+            <ColumnID>YearMonth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="4de2e4ea-98ed-4db6-851c-776948906673">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0e52beb5-dc33-4609-87f5-1ac5bcab1199">
+          <TableID>dbo_GetODO</TableID>
+          <ColumnID>MonthName</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="1de0a038-e488-47d0-9acb-da78cb88b166">
+          <Language>1049</Language>
+          <Caption>Месяц</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cd97e82f-e425-4981-b7a6-ef93ab4b8d4e">
+      <ID>Get ODO Day</ID>
+      <Name>Get ODO Day</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="83c11ef7-3b0d-42c5-927a-76ecf3745325">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="41f00df2-8c28-4872-9ac3-31576166298f">
+            <TableID>dbo_GetODO</TableID>
+            <ColumnID>YearDay</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f59f6d99-ee99-4102-892c-520e8371cbff">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="8cb69201-770d-42d6-8070-e4f703a6e219">
+          <TableID>dbo_GetODO</TableID>
+          <ColumnID>GetODODay</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="1ae156c3-e69e-427e-af98-5791d4b8d4ad">
+          <Language>1049</Language>
+          <Caption>День</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="063f584e-1c3d-4f64-8e30-86bdcf547beb">
+      <ID>Get ODO Hour</ID>
+      <Name>Get ODO Hour</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f065351b-4cad-4221-a69a-d800e44ec7f1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="51ef309d-136b-4c55-b3a9-c12f52daffea">
+            <TableID>dbo_GetODO</TableID>
+            <ColumnID>GetODOHour</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="054db8af-2a81-4a91-bede-37ddf1133b99">
+          <Language>1049</Language>
+          <Caption>Час</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="00f39d28-6945-4afb-967f-df031a48e8b1">
+      <ID>Иерархия</ID>
+      <Name>ГМД</Name>
+      <Levels>
+        <Level dwd:design-time-name="534bb4d2-3faf-4e00-9eb0-82ddab616216">
+          <ID>Get ODO Year</ID>
+          <Name>Get ODO Year</Name>
+          <SourceAttributeID>Get ODO Year</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="7e9c9810-2d7d-4aff-a35e-5f97beee9721">
+              <Language>1049</Language>
+              <Caption>Год</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="0fb97751-1d26-4fef-8ccc-35128cafb6c3">
+          <ID>Get ODO Month</ID>
+          <Name>Get ODO Month</Name>
+          <SourceAttributeID>Get ODO Month</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="14977beb-22dd-4c3d-820e-9c85105d31ae">
+              <Language>1049</Language>
+              <Caption>Месяц</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="8257d50a-269a-48d9-9d8b-2008f81ac1c3">
+          <ID>Get ODO Day</ID>
+          <Name>Get ODO Day</Name>
+          <SourceAttributeID>Get ODO Day</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="70fbcf5c-ed40-405a-89e0-d9ef22c412ed">
+              <Language>1049</Language>
+              <Caption>День</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="1433cd10-78f0-4b2a-a731-c93b29b3306c">
+          <ID>Get ODO Hour</ID>
+          <Name>Get ODO Hour</Name>
+          <SourceAttributeID>Get ODO Hour</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="24d14abe-fab1-4af3-844e-9c3b4a7a618f">
+              <Language>1049</Language>
+              <Caption>Час</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

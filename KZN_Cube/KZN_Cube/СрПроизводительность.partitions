@@ -1,0 +1,117 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5fbadd96-b032-464c-a677-846ec1246128" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>СрПроизводительность</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2 Sr Proizvoditelnost</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="cc1a2d2e-d60e-415a-bbc5-b1cbc72706a9">
+          <ID>Vw WMS2 Sr Proizvoditelnost</ID>
+          <Name>Vw WMS2 Sr Proizvoditelnost</Name>
+          <CreatedTimestamp>2019-03-14T05:58:50Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.393333Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:11:38.656667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="eed3e104-aa8a-4df0-871a-b7e696580f26">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vwWMS2SrProizvoditelnost</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="128a6ea0-6b07-4255-93a1-ac2999e4f444">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="266e2500-f027-468e-8ceb-5710174b3347" />
+          </ProactiveCaching>
+          <EstimatedSize>20127719</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Sr Proizvoditelnost SKU</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7570ac27-8c88-4f15-9ecc-0dc2c2e71fc9">
+          <ID>Vw WMS2 Sr Proizvoditelnost SKU</ID>
+          <Name>Vw WMS2 Sr Proizvoditelnost SKU</Name>
+          <CreatedTimestamp>2019-03-18T06:22:30.78Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.406667Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:10:29.83Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="21fcc1ab-0c04-44c5-aa31-f6731951944e">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vwWMS2SrProizvoditelnost_SKU</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="858346ba-1d11-40a2-9724-3a8270b08115">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="fe3b0a9b-34f5-4bed-b85b-1b247a706ea6" />
+          </ProactiveCaching>
+          <EstimatedSize>36984988</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Sr Proizvoditelnost Dlya Sred</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="80515849-2539-419e-ac43-4c83d4fba630">
+          <ID>Vw WMS2 Sr Proizvoditelnost Dlya Sred</ID>
+          <Name>Vw WMS2 Sr Proizvoditelnost Dlya Sred</Name>
+          <CreatedTimestamp>2019-03-18T06:29:05.726667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.413333Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:13:46.37Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="941223b9-999b-4933-a1b2-ea380da07254">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vwWMS2SrProizvoditelnost_DlyaSred</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="8615dbab-87ea-46e1-bd64-14108133d960">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="6ed1936d-1ab0-412c-8d7c-632c3fddde28" />
+          </ProactiveCaching>
+          <EstimatedSize>39526942</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Sr Proizvoditelnost Dlya Sred Bez TZ</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="90b1356b-a32c-4209-b81e-b3fc74c70ef0">
+          <ID>Vw WMS2 Sr Proizvoditelnost Dlya Sred Bez TZ</ID>
+          <Name>Vw WMS2 Sr Proizvoditelnost Dlya Sred Bez TZ</Name>
+          <CreatedTimestamp>2019-03-18T06:32:37.756667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.42Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:13:15.293333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d0faf7bb-da04-4790-8634-924bbbbb96f4">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vwWMS2SrProizvoditelnost_DlyaSredBezTZ</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="d5fcc060-2c70-4990-adc5-aeaf8b02e0e9">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c2e07917-d9bd-4a10-a838-a9fa82f13776" />
+          </ProactiveCaching>
+          <EstimatedSize>24830539</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

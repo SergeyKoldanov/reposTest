@@ -1,0 +1,263 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3abbe82b-e7d6-408b-b2bc-5b79c7dba0c7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Приход на склад</ID>
+  <Name>Приход на склад</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1925" scrolltop="-6231" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7911" y="12832" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ComeToWareHouse" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3519" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000bf0d000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ComeToWareHouse" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1925</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6231</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f83904b4-5a96-4ea7-bd6a-10a55550c89f">
+    <DataSourceViewID>Relef</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="0bf50d5d-52f1-472f-ab36-f2b400ea68bc">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Translations>
+    <Translation dwd:design-time-name="44e27683-f1bb-41bf-91fd-3ab93a90a37e">
+      <Language>1049</Language>
+      <Caption>Приход на склад</Caption>
+    </Translation>
+  </Translations>
+  <Attributes>
+    <Attribute dwd:design-time-name="e1334c9e-4cee-4832-8ee6-8f7cf440e005">
+      <ID>Ware House ODO</ID>
+      <Name>Ware House ODO</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8904d8da-d19e-4cfa-a84c-e483722dd374">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79c8f544-85a4-460a-b48c-3b3d0a8a7136">
+            <TableID>dbo_ComeToWareHouse</TableID>
+            <ColumnID>WareHouseODO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="80931c67-fac8-44b7-880e-eb7ddbed0433">
+          <Language>1049</Language>
+          <Caption>Дата</Caption>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1a21dbad-5f2b-491e-8c6a-d8c442ed78b8">
+          <AttributeID>Ware House Year</AttributeID>
+          <Name>Ware House Year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f1918a3f-f205-4b17-8321-830975f9cdb9">
+          <AttributeID>Ware House Month</AttributeID>
+          <Name>Ware House Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c293d1ef-71d3-426f-9a0c-9a107d222cd4">
+          <AttributeID>Ware House Day</AttributeID>
+          <Name>Ware House Day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fd03fb66-0823-436e-a730-b032d0a7f3a1">
+          <AttributeID>Ware House Hour</AttributeID>
+          <Name>Ware House Hour</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="19f54e7a-f431-4625-93eb-2d1ccf8164ad">
+      <ID>Ware House Year</ID>
+      <Name>Ware House Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e90cd87e-f454-4b11-bd13-f66a7e179105">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91e1631e-1c7b-411c-9eac-6b6cdcb373a2">
+            <TableID>dbo_ComeToWareHouse</TableID>
+            <ColumnID>WareHouseYear</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="ed542bd7-bd18-4ede-a4ff-61c15d613e6b">
+          <Language>1049</Language>
+          <Caption>Год</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11c5b559-afde-4516-85ac-0b954ec6547b">
+      <ID>Ware House Month</ID>
+      <Name>Ware House Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0b6cf0bf-a3ab-4956-9921-6002be6f1934">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb921d2b-d3b5-4df4-a257-2b68ca37afe4">
+            <TableID>dbo_ComeToWareHouse</TableID>
+            <ColumnID>YearMonth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3f80c7f9-3b95-49ce-9c04-b8d539eb625d">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ecc4b36f-4ba6-4e25-9d82-670d6ce1213a">
+          <TableID>dbo_ComeToWareHouse</TableID>
+          <ColumnID>MonthName</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="d1a01708-f4d6-47a4-a894-35cd71c80196">
+          <Language>1049</Language>
+          <Caption>Месяц</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3dd875d2-7c20-41cd-b8a8-df03ee4ba994">
+      <ID>Ware House Day</ID>
+      <Name>Ware House Day</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3220b70c-0d52-47af-af03-e147d4d6287e">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7bf091df-964b-46c6-8eb8-85c9ac2be7ac">
+            <TableID>dbo_ComeToWareHouse</TableID>
+            <ColumnID>YearDay</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f9830573-93ae-411b-abdc-a2fad4cb9fcb">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="8665bfb2-891a-4bd7-92e5-d882d3c6e44a">
+          <TableID>dbo_ComeToWareHouse</TableID>
+          <ColumnID>WareHouseDay</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="dfba3f7a-c03a-4905-85c9-58ad18580aca">
+          <Language>1049</Language>
+          <Caption>День</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c411916e-abae-4384-bca5-ebbe8206e760">
+      <ID>Ware House Hour</ID>
+      <Name>Ware House Hour</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6b819ced-1df5-4a24-b83b-228e133ca527">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1799e249-51e8-4618-ae0b-e2e97682db6f">
+            <TableID>dbo_ComeToWareHouse</TableID>
+            <ColumnID>WareHouseHour</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="515ce172-8caa-48f8-a285-621797284fe5">
+          <Language>1049</Language>
+          <Caption>Час</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="380e9fc3-6160-4763-a17f-f202bf939536">
+      <ID>Иерархия</ID>
+      <Name>ГМД</Name>
+      <Levels>
+        <Level dwd:design-time-name="680e321a-f8d4-42bf-a83a-e57952d6db7e">
+          <ID>Ware House Year</ID>
+          <Name>Ware House Year</Name>
+          <SourceAttributeID>Ware House Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c45e1479-7cec-4aa1-b94d-7e874e88662d">
+          <ID>Ware House Month</ID>
+          <Name>Ware House Month</Name>
+          <SourceAttributeID>Ware House Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="de802c68-9ee3-46b0-9bf5-e47258069cf0">
+          <ID>Ware House Day</ID>
+          <Name>Ware House Day</Name>
+          <SourceAttributeID>Ware House Day</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3a609755-8f70-4c79-b601-d73ea808db6d">
+          <ID>Ware House Hour</ID>
+          <Name>Ware House Hour</Name>
+          <SourceAttributeID>Ware House Hour</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

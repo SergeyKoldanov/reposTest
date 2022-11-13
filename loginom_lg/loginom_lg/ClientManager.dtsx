@@ -1,0 +1,2069 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/24/2021 2:10:25 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{5211AC7B-ED28-4288-A9CD-2BCC20746874}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{17FF596A-449D-4AE4-8873-A2E17771D3A7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.140.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D267D57C-9D91-4D02-A71D-E886966AE0DA}"
+      DTS:ObjectName="10.0.0.140.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.140;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4350CF13-D2ED-49B0-B726-4ED0BBB835A6}"
+      DTS:ObjectName="10.50.0.89.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6A0D5A3F-6821-4C47-9310-F8BD7D2EC09D}"
+      DTS:ObjectName="SQL-NODE-02\UT.RelefUTWork.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL-NODE-01;User ID=sa;Initial Catalog=RelefUTWork;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArg9o0zW3Wk6fU7J4prd2+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA+h8aCcoVVLE5AZ4ofdJG0AAAAAASAAACgAAAAEAAAAGPRIEMXUzqcp3I1+52zXmEYAAAAe5ojB9Jsg/YKd1aTFGK+a/zDMsJSs4pvFAAAADpJplzbTDMinKuGP/4ue2S3meVp</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{19627F9E-4220-405D-AA5B-37EDEE89BDB4}"
+      DTS:ObjectName="Диспетчер соединений Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\общая папка\Loginom\LG\Список ключей.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6D42CFAE-12BC-48AD-9859-D818C8AF9E35}"
+      DTS:ObjectName="Диспетчер соединений Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\общая папка\Loginom\LG\Список ключей.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Truncate ClientManager"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{297FBB34-03A6-4E2B-BD08-0A3E6E942884}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate ClientManager"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4350CF13-D2ED-49B0-B726-4ED0BBB835A6}"
+          SQLTask:SqlStatementSource="truncate table ClientManager" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update ClientManager"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{2AFD4BC7-0D57-4839-9C43-6BE8995B0ABC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update ClientManager"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4350CF13-D2ED-49B0-B726-4ED0BBB835A6}"
+          SQLTask:SqlStatementSource="exec UpdateSales" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполение ClientManager"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{CED3B4D3-1197-496F-85A2-D49A63832C7D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполение ClientManager"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполение ClientManager\1С"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="1С"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">with Kontr AS (
+SELECT _IDRRef, _ParentIDRRef, _Code, _Description, _Description as Родитель, _Fld638RRef, _Fld651RRef, _Fld660RRef
+FROM [RelefUTWork].[dbo].[_Reference47] WITH (NOLOCK)
+WHERE _IDRRef in (0x80C330E1715C531711EC1797339B0018--В2В
+, 0x80C330E1715C531711EC17AAECB8A736--Дистрибьюция
+, 0x8AEA00E098C184C111DDC309BC6AC8A8--КД
+, 0x80C330E1715C531711EC17AD6B2D6D86--Сети
+, 0x80C330E1715C531711EC17AB2BD3D3B1--ХД
+, 0x80C330E1715C531711EC17AAF48B5C55--Экспорт
+, 0x8AEA00E098C184C111DDC309C28B91BB--Филиалы
+, 0x80C330E1715C531711EC24F685AE89D0--Ключевые
+, 0x80C430E1715C531711EC6242E2D54251)--Индастри		 
+
+UNION ALL
+
+SELECT K._IDRRef, K._ParentIDRRef, K._Code, K._Description, Kontr.Родитель, K._Fld638RRef, K._Fld651RRef, K._Fld660RRef
+FROM Kontr INNER JOIN [RelefUTWork].[dbo].[_Reference47] K (NOLOCK) 
+	ON Kontr._IDRRef = K._ParentIDRRef
+)
+
+SELECT K._Code			as ГоловнойКонтрагентКод
+	,K._Description		as ГоловнойКонтрагентНаименование
+	,KO._Code			as Код
+	,KO._Description	as Наименование
+	,M._Description		as ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование
+	,F._Description		as ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование
+	,P._Description		as ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование
+	,T._Description		as ЗначениеНаименование
+	,R._Description		as Регион
+	,TT.Del				as Отсрочка
+	,TT.Limit			as Сумма
+FROM [RelefUTWork].[dbo].[_Reference47] KO (NOLOCK)  
+	 INNER JOIN Kontr K (NOLOCK)
+		ON K._IDRRef = KO._Fld638RRef
+	 LEFT JOIN [RelefUTWork].[dbo].[_Reference60] M (NOLOCK)
+		ON K._Fld651RRef = M._IDRRef
+	 LEFT JOIN [RelefUTWork].[dbo].[_Reference83] F (NOLOCK)
+		ON M._Fld910RRef = F._IDRRef
+	 LEFT JOIN [RelefUTWork].[dbo].[_Reference59] P (NOLOCK)
+		ON F._Fld9336RRef = P._IDRRef
+	 LEFT JOIN [RelefUTWork].[dbo].[_Reference66] R (NOLOCK)
+		ON K._Fld660RRef = R._IDRRef
+	 LEFT JOIN (SELECT SS._Description
+					,S._Fld25410RRef
+				FROM [RelefUTWork].[dbo].[_InfoRg25409] S (NOLOCK)
+					JOIN[RelefUTWork].[dbo].[_Reference25400] SS (NOLOCK)
+						ON S._Fld25414_RRRef = SS._IDRRef
+					LEFT JOIN[RelefUTWork].[dbo].[_Chrc25401] C (NOLOCK)
+						ON S._Fld25413RRef = C._IDRRef
+				WHERE C._Code = 000000001) T
+		ON K._IDRRef = T._Fld25410RRef
+	 LEFT JOIN (SELECT I._Fld9187RRef AS Client
+					,I._Fld9189 AS Limit
+					,I._Fld9190 AS Del
+			    FROM [RelefUTWork].[dbo].[_InfoRg9186] I (NOLOCK)
+					LEFT JOIN [RelefUTWork].[dbo].[_Enum370] E (NOLOCK)
+						ON I._Fld9188RRef = E._IDRRef
+			    WHERE E._EnumOrder = 0
+					AND I._Period = (SELECT MAX(L._Period)
+								     FROM [RelefUTWork].[dbo].[_InfoRg9186] L (NOLOCK)
+								     WHERE I._Fld9187RRef = L._Fld9187RRef)) AS TT
+		ON K._IDRRef = TT.Client
+WHERE K._Code = KO._Code</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполение ClientManager\1С.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентКод]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентКод]"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентКод]"
+                      name="ГоловнойКонтрагентКод"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентНаименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентНаименование]"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентНаименование]"
+                      name="ГоловнойКонтрагентНаименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование]"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      name="Наименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ЗначениеНаименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ЗначениеНаименование]"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ЗначениеНаименование]"
+                      name="ЗначениеНаименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Отсрочка]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Отсрочка]"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Отсрочка]"
+                      name="Отсрочка"
+                      precision="4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Сумма]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Сумма]"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Сумма]"
+                      name="Сумма"
+                      precision="15"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентКод]"
+                      dataType="wstr"
+                      length="6"
+                      name="ГоловнойКонтрагентКод" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      name="ГоловнойКонтрагентНаименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      name="Код" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование]"
+                      dataType="wstr"
+                      length="100"
+                      name="Наименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ЗначениеНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      name="ЗначениеНаименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      name="Регион" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Отсрочка]"
+                      dataType="numeric"
+                      name="Отсрочка"
+                      precision="4" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Сумма]"
+                      dataType="numeric"
+                      name="Сумма"
+                      precision="15"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентКод]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентКод]"
+                      name="ГоловнойКонтрагентКод" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентНаименование]"
+                      name="ГоловнойКонтрагентНаименование" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование]"
+                      name="Наименование" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ЗначениеНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ЗначениеНаименование]"
+                      name="ЗначениеНаименование" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Отсрочка]"
+                      dataType="numeric"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Отсрочка]"
+                      name="Отсрочка"
+                      precision="4" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Сумма]"
+                      dataType="numeric"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Сумма]"
+                      name="Сумма"
+                      precision="15"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполение ClientManager\KeyClients"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="KeyClients"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[KeyClients]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполение ClientManager\KeyClients.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      name="HeadClient"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      length="10"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Code]"
+                      name="Code"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      dataType="wstr"
+                      length="150"
+                      name="HeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="10"
+                      name="Code" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      name="HeadClient" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Code]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Code]"
+                      name="Code" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполение ClientManager\Соединение слиянием"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Соединение слиянием;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Объедините два отсортированных потока данных в один с помощью соединения FULL, LEFT или INNER. Это преобразование рекомендуется использовать в случаях, когда потоки данных могут быть отсортированы по источникам."
+              name="Соединение слиянием"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает тип выполняемого соединения."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает количество столбцов в ключе упорядочивания."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, считаются ли значения NULL эквивалентными значениями."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает запрошенное максимальное число буферов на вход перед блокированием."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием]"
+                  hasSideEffects="true"
+                  name="Левый вход соединения слиянием">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентКод]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ГоловнойКонтрагентКод"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентКод]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКонтрагентНаименование"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Код]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Код]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Наименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Наименование"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Наименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ЗначениеНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ЗначениеНаименование"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ЗначениеНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Регион]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Регион"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Регион]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Отсрочка]"
+                      cachedDataType="numeric"
+                      cachedName="Отсрочка"
+                      cachedPrecision="4"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Отсрочка]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Сумма]"
+                      cachedDataType="numeric"
+                      cachedName="Сумма"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Сумма]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Правый вход соединения слиянием]"
+                  hasSideEffects="true"
+                  name="Правый вход соединения слиянием">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Правый вход соединения слиянием].Columns[Code]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Code"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки].Columns[Code]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Правый вход соединения слиянием].Columns[HeadClient]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="HeadClient"
+                      lineageId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки].Columns[HeadClient]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием]"
+                  isSorted="true"
+                  name="Выход соединения слиянием">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентКод]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентКод]"
+                      name="ГоловнойКонтрагентКод"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентКод]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Code]"
+                      name="Code">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Правый вход соединения слиянием].Columns[Code]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[HeadClient]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[HeadClient]"
+                      name="HeadClient">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Правый вход соединения слиянием].Columns[HeadClient]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентНаименование]"
+                      name="ГоловнойКонтрагентНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код]"
+                      name="Код">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Код]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Наименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Наименование]"
+                      name="Наименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Наименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ЗначениеНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ЗначениеНаименование]"
+                      name="ЗначениеНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ЗначениеНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Регион]"
+                      name="Регион">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Регион]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Отсрочка]"
+                      dataType="numeric"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Отсрочка]"
+                      name="Отсрочка"
+                      precision="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Отсрочка]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Сумма]"
+                      dataType="numeric"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Сумма]"
+                      name="Сумма"
+                      precision="15"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Сумма]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполение ClientManager\Сортировка"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Сортировка;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Сортирует входные данные по возрастанию или убыванию, если выполнить сортировку в источнике нельзя. Пример: сортировка данных продаж по полю &quot;customer id&quot; перед записью в неструктурированный файл и передачей в другой отдел. Примечание. Это преобразование не рекомендуется применять к большим потокам данных."
+              name="Сортировка"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, удаляет ли преобразование &quot;Сортировка&quot; строки с повторяющимися значениями сортировки."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает максимальное число потоков, используемых для сортировки."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки]"
+                  name="Вход сортировки">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[ГоловнойКонтрагентКод]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ГоловнойКонтрагентКод"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентКод]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[ГоловнойКонтрагентНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКонтрагентНаименование"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентНаименование]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[Код]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[Наименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Наименование"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[ЗначениеНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ЗначениеНаименование"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ЗначениеНаименование]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[Регион]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Регион"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[Отсрочка]"
+                      cachedDataType="numeric"
+                      cachedName="Отсрочка"
+                      cachedPrecision="4"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Отсрочка]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки].Columns[Сумма]"
+                      cachedDataType="numeric"
+                      cachedName="Сумма"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      lineageId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Сумма]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки]"
+                  isSorted="true"
+                  name="Выход сортировки">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентКод]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентКод]"
+                      name="ГоловнойКонтрагентКод"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[ГоловнойКонтрагентКод]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентНаименование]"
+                      name="ГоловнойКонтрагентНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[ГоловнойКонтрагентНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Код]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Код]"
+                      name="Код">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[Код]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Наименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Наименование]"
+                      name="Наименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[Наименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      name="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ЗначениеНаименование]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[ЗначениеНаименование]"
+                      name="ЗначениеНаименование">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[ЗначениеНаименование]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Регион]"
+                      name="Регион">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[Регион]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Отсрочка]"
+                      dataType="numeric"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Отсрочка]"
+                      name="Отсрочка"
+                      precision="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[Отсрочка]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Сумма]"
+                      dataType="numeric"
+                      lineageId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки].Columns[Сумма]"
+                      name="Сумма"
+                      precision="15"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\1С.Outputs[Выход источника "OLE DB"].Columns[Сумма]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполение ClientManager\Сортировка 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Сортировка;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Сортирует входные данные по возрастанию или убыванию, если выполнить сортировку в источнике нельзя. Пример: сортировка данных продаж по полю &quot;customer id&quot; перед записью в неструктурированный файл и передачей в другой отдел. Примечание. Это преобразование не рекомендуется применять к большим потокам данных."
+              name="Сортировка 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, удаляет ли преобразование &quot;Сортировка&quot; строки с повторяющимися значениями сортировки."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает максимальное число потоков, используемых для сортировки."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Заполение ClientManager\Сортировка 1.Inputs[Вход сортировки]"
+                  name="Вход сортировки">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка 1.Inputs[Вход сортировки].Columns[HeadClient]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="HeadClient"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HeadClient]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Сортировка 1.Inputs[Вход сортировки].Columns[Code]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Code"
+                      lineageId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Code]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки]"
+                  isSorted="true"
+                  name="Выход сортировки">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки].Columns[HeadClient]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки].Columns[HeadClient]"
+                      name="HeadClient">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\KeyClients.Outputs[Выход источника "OLE DB"].Columns[HeadClient]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки].Columns[Code]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки].Columns[Code]"
+                      name="Code"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Заполение ClientManager\KeyClients.Outputs[Выход источника "OLE DB"].Columns[Code]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполение ClientManager\Таблица ClientManager"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Таблица ClientManager"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[ClientManager]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполение ClientManager\Таблица ClientManager.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Наименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Наименование"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Client]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Наименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКонтрагентНаименование"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manager]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ManagerFullName]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицоНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентОсновнойМенеджерПокупателяФизЛицорцЦФОНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ЗначениеНаименование]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ЗначениеНаименование"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ЗначениеНаименование]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Регион]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Регион"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Регион]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКонтрагентКод]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ГоловнойКонтрагентКод"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientCode]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГоловнойКонтрагентКод]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Сумма]"
+                      cachedDataType="numeric"
+                      cachedName="Сумма"
+                      cachedPrecision="15"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Limit]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Сумма]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Отсрочка]"
+                      cachedDataType="numeric"
+                      cachedName="Отсрочка"
+                      cachedPrecision="4"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Delay]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Отсрочка]" />
+                    <inputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[HeadClient]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="HeadClient"
+                      externalMetadataColumnId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[KeyClient]"
+                      lineageId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[HeadClient]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Client]"
+                      dataType="wstr"
+                      length="120"
+                      name="Client" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      dataType="wstr"
+                      length="120"
+                      name="HeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="HeadClientCode" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manager]"
+                      dataType="wstr"
+                      length="255"
+                      name="Manager" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ManagerFullName]"
+                      dataType="wstr"
+                      length="255"
+                      name="ManagerFullName" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="255"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      dataType="wstr"
+                      length="255"
+                      name="TradeDirection" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[KeyClient]"
+                      dataType="wstr"
+                      length="255"
+                      name="KeyClient" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Limit]"
+                      dataType="i4"
+                      name="Limit" />
+                    <externalMetadataColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Delay]"
+                      dataType="i4"
+                      name="Delay" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполение ClientManager\Таблица ClientManager.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполение ClientManager\Таблица ClientManager.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполение ClientManager\Таблица ClientManager.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполение ClientManager\Таблица ClientManager.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполение ClientManager.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Заполение ClientManager\Сортировка.Inputs[Вход сортировки]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Заполение ClientManager\1С.Outputs[Выход источника &quot;OLE DB&quot;]" />
+            <path
+              refId="Package\Заполение ClientManager.Paths[Выход источника &quot;OLE DB&quot;1]"
+              endId="Package\Заполение ClientManager\Сортировка 1.Inputs[Вход сортировки]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Заполение ClientManager\KeyClients.Outputs[Выход источника &quot;OLE DB&quot;]" />
+            <path
+              refId="Package\Заполение ClientManager.Paths[Выход соединения слиянием]"
+              endId="Package\Заполение ClientManager\Таблица ClientManager.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход соединения слиянием"
+              startId="Package\Заполение ClientManager\Соединение слиянием.Outputs[Выход соединения слиянием]" />
+            <path
+              refId="Package\Заполение ClientManager.Paths[Выход сортировки]"
+              endId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Левый вход соединения слиянием]"
+              name="Выход сортировки"
+              startId="Package\Заполение ClientManager\Сортировка.Outputs[Выход сортировки]" />
+            <path
+              refId="Package\Заполение ClientManager.Paths[Выход сортировки1]"
+              endId="Package\Заполение ClientManager\Соединение слиянием.Inputs[Правый вход соединения слиянием]"
+              name="Выход сортировки"
+              startId="Package\Заполение ClientManager\Сортировка 1.Outputs[Выход сортировки]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{4F2EAD55-5769-49F5-A711-7227C2E1ED51}"
+      DTS:From="Package\Truncate ClientManager"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполение ClientManager" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CB375961-9B78-4216-B289-1616F1D27359}"
+      DTS:From="Package\Заполение ClientManager"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Update ClientManager" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Truncate ClientManager"
+          TopLeft="282,49" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Update ClientManager"
+          TopLeft="322,223" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Заполение ClientManager"
+          TopLeft="298,138" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="378.5,91">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.5,47"
+              Start="0,0"
+              End="21.5,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="17.5,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.5,23.5"
+                    Point2="21.5,23.5"
+                    Point3="21.5,27.5" />
+                  <mssgle:LineSegment
+                    End="21.5,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="400,180">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.5,43"
+              Start="0,0"
+              End="14.5,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="4,21.5" />
+                  <mssgle:LineSegment
+                    End="10.5,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,21.5"
+                    Point2="14.5,21.5"
+                    Point3="14.5,25.5" />
+                  <mssgle:LineSegment
+                    End="14.5,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполение ClientManager">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Заполение ClientManager\KeyClients"
+          TopLeft="491,72" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Заполение ClientManager\Сортировка"
+          TopLeft="262,207" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Заполение ClientManager\Сортировка 1"
+          TopLeft="545,212" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Заполение ClientManager\Таблица ClientManager"
+          TopLeft="450,445" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Заполение ClientManager\Соединение слиянием"
+          TopLeft="459,337" />
+        <NodeLayout
+          Size="93,42"
+          Id="Package\Заполение ClientManager\1С"
+          TopLeft="270,78" />
+        <EdgeLayout
+          Id="Package\Заполение ClientManager.Paths[Выход сортировки]"
+          TopLeft="331,249">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="223,88"
+              Start="0,0"
+              End="223,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="219,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="219,44"
+                    Point2="223,44"
+                    Point3="223,48" />
+                  <mssgle:LineSegment
+                    End="223,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Заполение ClientManager.Paths[Выход соединения слиянием]"
+          TopLeft="550.25,379">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Заполение ClientManager.Paths[Выход источника &quot;OLE DB&quot;1]"
+          TopLeft="555.5,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63,98"
+              Start="0,0"
+              End="63,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45"
+                    Point2="0,49"
+                    Point3="4,49" />
+                  <mssgle:LineSegment
+                    End="59,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59,49"
+                    Point2="63,49"
+                    Point3="63,53" />
+                  <mssgle:LineSegment
+                    End="63,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Заполение ClientManager.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="316.5,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.5,87"
+              Start="0,0"
+              End="14.5,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.5"
+                    Point2="0,43.5"
+                    Point3="4,43.5" />
+                  <mssgle:LineSegment
+                    End="10.5,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,43.5"
+                    Point2="14.5,43.5"
+                    Point3="14.5,47.5" />
+                  <mssgle:LineSegment
+                    End="14.5,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Заполение ClientManager.Paths[Выход сортировки1]"
+          TopLeft="618.5,254">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-34.1666666666666,83"
+              Start="0,0"
+              End="-34.1666666666666,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.384133611691" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.384133611691"
+                    Point2="0,49.384133611691"
+                    Point3="-4,49.384133611691" />
+                  <mssgle:LineSegment
+                    End="-30.1666666666666,49.384133611691" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.1666666666666,49.384133611691"
+                    Point2="-34.1666666666666,49.384133611691"
+                    Point3="-34.1666666666666,53.384133611691" />
+                  <mssgle:LineSegment
+                    End="-34.1666666666666,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполение ClientManager\KeyClients">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполение ClientManager\Таблица ClientManager">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполение ClientManager\1С">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

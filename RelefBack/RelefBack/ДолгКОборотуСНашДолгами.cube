@@ -1,0 +1,1140 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5b1a47b8-12d5-43c0-bed0-462e5c79597c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ДолгКОборотуСНашДолгами</ID>
+  <Name>ДолгКОборотуСНашДолгами</Name>
+  <CreatedTimestamp>2013-04-03T06:56:19.106667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T10:08:17.26Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1585" scrolltop="2164" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="10054" y="7990" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwRSOgranDostupa" left="7029" top="7651" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwRSOgranDostupa" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="6327" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwB2B" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="firms" left="12429" top="6302" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4101" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000510000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_firms" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwProdazhiKlientZaMesSUND" left="20" top="13702" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3598" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000e0e0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwProdazhiKlientZaMesSUND" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwOMNaDatu" left="20" top="0" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3307" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000eb0c0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwOMNaDatu" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwTbData" left="231" top="6302" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3175" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000670c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwTbData" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwPolzovateli" left="6616" top="12353" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3413" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000550d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwPolzovateli" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwOrganizatsiya" left="12327" top="0" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwOrganizatsiya" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7923" top="9653" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="906" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[vwRSOgranDostupa-vwPolzovateli]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8322" y="12353" />
+              <point x="8322" y="11153" />
+              <point x="8529" y="11153" />
+              <point x="8529" y="9953" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9729" top="8403" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[vwRSOgranDostupa-firms]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="22" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12429" y="8802" />
+              <point x="10029" y="8802" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1419" top="10803" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[vwProdazhiKlientZaMesSUND-vwTbData]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1818" y="11302" />
+              <point x="1818" y="12502" />
+              <point x="1819" y="12502" />
+              <point x="1819" y="13702" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1585</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>2164</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-06-30T06:07:19.253333Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="da166bd9-943c-48c8-9f6e-2ce2bd21c58d">
+      <ID>ГодМесяц</ID>
+      <Name>ГодМесяц</Name>
+      <DimensionID>ГодМесяц</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9ff67b14-e9d9-47cc-ba8f-9a8a51516bb7">
+          <AttributeID>Data</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="aca63795-3638-43ea-b395-701edfe15671">
+          <AttributeID>God</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="581291f0-ea9c-45af-ade8-1c8100b19b47">
+          <AttributeID>Mes</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="bce67f3a-36fb-4722-bb52-ce0f7bd27d76">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="0f0909f1-8f55-444f-aada-7f5007fe9e40">
+      <ID>Клиент</ID>
+      <Name>Клиент</Name>
+      <DimensionID>Клиент</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="77f73963-97c3-499b-8019-5eb50496b806">
+          <AttributeID>Id</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="048709d0-791b-45ee-8493-5fc16e56ac18">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="00addc07-5fe6-40b9-94d0-3234c1419485">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="f89af635-63f2-41e9-bbf2-098f716e261e">
+          <AttributeID>Golovnoj Kontrag ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="632dfdc2-c9ee-453d-a7ed-5153034cec8c">
+          <AttributeID>Uzel</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0b2e494-38b0-4a76-a015-7f1f06f21968">
+          <AttributeID>INN</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="abcea904-1e72-4ba7-8474-bbc1c47bd71c">
+      <ID>КлиентСписком</ID>
+      <Name>КлиентСписком</Name>
+      <DimensionID>Firms 2</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6a0b1953-0d63-4d2a-8235-02de81639785">
+          <AttributeID>Id</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="55082db4-ff9b-409e-938e-ac18d2d5df76">
+          <AttributeID>Фирма</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5b865c9-8372-412c-927a-309db2eec6ee">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a406cfd-0875-4e7a-9174-882f82506f7a">
+          <AttributeID>INN</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f6e6eb05-ed21-4bbc-8b02-90374ff2a208">
+      <ID>Организация</ID>
+      <Name>Организация</Name>
+      <DimensionID>Организация</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0e4162d5-fc07-494d-b297-8e33a8b037e5">
+          <AttributeID>ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b2f2049-5834-4117-bc5e-ea5fe656c242">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a4a6ba86-665d-468b-83e3-e0f704e688bf">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="84aa7606-fb79-458c-a559-acc49bc743da">
+      <ID>МенеджерКлиента</ID>
+      <Name>МенеджерКлиента</Name>
+      <DimensionID>Firms 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cbe4a879-393f-4cbb-a3b6-3f5dc31a3c9f">
+          <AttributeID>Id</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd36e649-6f2b-4a8b-90dc-29e6b5ed2855">
+          <AttributeID>Manager</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="096c6f1c-2f6b-456a-9e96-ea970e57a090">
+      <ID>B2B</ID>
+      <Name>B2B</Name>
+      <DimensionID>B2B</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d2dbf444-0161-426e-8d60-811c57e9c22c">
+          <AttributeID>Kontragent ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="f07fb492-ed02-403a-9db8-051a6481c8a7">
+          <AttributeID>B2B</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a283b2d5-47bf-45bf-befb-e84fa9b16f9b">
+      <ID>Регион</ID>
+      <Name>Регион</Name>
+      <DimensionID>Регион</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7db42bbf-5a2b-45b3-b20b-26576a43644b">
+          <AttributeID>Id</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="37a251bc-3900-4a49-b9e6-3156d1c0c42a">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69735c83-e53a-4ab1-8ac7-3216a2112bc3">
+          <AttributeID>Naselenie</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b17a27d-f9fb-49d1-a132-ec1d8500d9b5">
+          <AttributeID>Dolya Rynka</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="7ade6963-243a-45e7-9363-40d915f772d5">
+          <AttributeID>Sred ZP</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e0a8d00-a22a-4202-8065-88bed4b746e0">
+          <AttributeID>Emkost Kan Rynka</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="d634fc26-b2d9-4178-a956-6b0ac5c04bf5">
+          <AttributeID>Emkost Of Bumagi</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="19d6de5a-c725-42f4-8d8e-909eef67ae33">
+      <ID>ВсеМенеджеры</ID>
+      <Name>ВсеМенеджеры</Name>
+      <DimensionID>ВсеПользователи</DimensionID>
+      <Visible>false</Visible>
+      <Attributes>
+        <Attribute dwd:design-time-name="1859bd22-a1a3-4ffb-8ace-0e51a6e22fa3">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5c6fad3f-7db3-4b15-bba6-24c45427c19e">
+      <ID>ОтветстМенеджер</ID>
+      <Name>ОтветстМенеджер</Name>
+      <DimensionID>ОтветстМенеджер 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="20bac8d1-d377-4fc2-8b6f-72d05804bd92">
+          <AttributeID>Data</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="a9eec95b-266f-4e30-9e55-5c554c722be1">
+          <AttributeID>Otvet Menedzher</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="76881f99-683f-4fc6-81d1-7c372e8d7e9e">
+      <ID>ГоловнойКлиент</ID>
+      <Name>ГоловнойКлиент</Name>
+      <DimensionID>ГоловнойКлиент</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dba373cb-8141-4e42-a541-28a836fdf49c">
+          <AttributeID>Id</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb0f90ac-a215-4171-ac95-e4d77f337a97">
+          <AttributeID>Golovnoj Kontrag Desc</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8a5527df-473d-4be1-ae1b-cca714cdb783">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff44cfbb-0dba-4243-b01d-3478358213ab">
+          <AttributeID>Torg Toch</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="547f889f-863b-425e-9572-3aed75c07171">
+      <ID>Vw Prodazhi Klient Za Mes SUND</ID>
+      <Name>Значения</Name>
+      <CreatedTimestamp>2013-04-03T06:56:19.11Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:08:17.556667Z</LastSchemaUpdate>
+      <LastProcessed>2022-06-30T06:01:56.006667Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2bcff520-d115-45ed-bdd2-c6ce3e0e955d">
+          <ID>SUMMA</ID>
+          <Name>Оборот</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="38accc09-dd51-4d39-a7e7-75fbe7cb3887">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="83c8827c-bde6-4536-82b3-96e61ed1b4cf">
+              <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+              <ColumnID>SUMMA</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="46c955e0-7c3d-4b41-8128-798c7b9dd05a">
+          <ID>SREDDOLG</ID>
+          <Name>Долг</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="9683d86d-330b-4d0a-805a-4b7e8aaa5c81">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f3f4fc83-f9d0-40b1-940e-f20a59c760a6">
+              <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+              <ColumnID>SREDDOLG</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1c6351b1-d6fe-4e2f-b92f-392b7dd3921f">
+          <ID>SREDPROSDOLG</ID>
+          <Name>ПросрДолг</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="72a864f9-b1a8-4147-ac6b-def5222c81cf">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8453df7f-6e08-4b57-ad59-cbdb462a36cc">
+              <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+              <ColumnID>SREDPROSDOLG</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="273e0120-ff1d-4417-aed3-59977a23548a">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <EstimatedSize>29479881</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ed8e182d-2fcd-4bfe-a651-268a5baf6ef2">
+          <CubeDimensionID>ГодМесяц</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9abad153-691c-4825-ac25-1d06b39e8c06">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="20b127a8-2c2a-465f-a7eb-9d6b9d55b8f9">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f147019f-e71f-4b31-b0b1-2a88de3d37f0">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="d43b3154-1ec0-49e9-9054-4a027bb6b0e6">
+              <AttributeID>God</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1de077a8-ff95-4f64-8172-dc2faee5e633">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f96d0b62-fd21-4b8d-a870-04db8122948b">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>God</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c7531d54-3a62-444c-820d-ffec8c19d6cc">
+              <AttributeID>Mes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8c38febf-a0a9-4210-b8f6-f4b93634a99f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3334f7cd-6d4d-4d63-b32d-e83d36037b95">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>Mes</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e0375b6-1a6d-430f-8a0c-d6fe30c1ae0c">
+          <CubeDimensionID>Клиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c7615a32-1317-4682-bfa9-998ca63158c1">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3c5d7ddf-95d8-4f5d-b56d-ffb3f857d5f4">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9a3e53fd-6cad-4e9b-9007-96301018d797">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="e0a8d70b-f70d-4e2f-9d1d-e75b6f22d0a9">
+              <AttributeID>Parent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="81f6ef5b-f9ed-492f-8c53-749286a003d7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ca2cc5b9-5ee9-485a-8741-3a17a6f66e7d">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>ParentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="a61adb43-1aca-46a7-b356-1c72ca40795f">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f119b733-76f3-4c5e-848f-6292decce633">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="85a11ea0-a281-4a7c-b324-641329a3f3cb">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="7aa1b391-b4cf-4ce7-b857-1e31b7c4497f">
+              <AttributeID>Golovnoj Kontrag ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="07adc826-add9-407d-b8ba-d687148972dc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ab594683-0235-4b7f-804e-41baa8245336">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>GolovnojKontragID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="6f1bdcc9-9e99-45b5-a5f4-2776c55f2c8d">
+              <AttributeID>Uzel</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9934e7cd-34d0-4393-8916-aba0266c0d6c">
+                  <DataType>WChar</DataType>
+                  <DataSize>3</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="082c2e23-d427-4b56-be9b-474a11a66e25">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>UzelFirm</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="0bc7c9e9-ea74-4c3f-a971-c07327b02391">
+              <AttributeID>INN</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5fc3c20f-6426-4f6b-8ac7-560eb2f1d656">
+                  <DataType>WChar</DataType>
+                  <DataSize>17</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="17c29b97-7fa8-476c-a7e8-29de2db0845c">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>INN</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="78f659b0-91b4-4de0-9105-1495afdca908">
+          <CubeDimensionID>КлиентСписком</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b2f849d9-c59b-4695-b7df-e2cfd2a24b8b">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1d1fb4f2-af7b-4921-944a-5b40146d1848">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="775a5508-cb85-43da-a0e7-d72cce74527b">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="fb61d4b9-f91b-40d1-971e-1c480d84558b">
+              <AttributeID>Фирма</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ef0ffb95-9cfa-4e0e-a66a-ba6a06a38319">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e4311b70-71f3-4b13-aa26-bf5b5c2d64b0">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Фирма</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="7e5059fe-aff6-49df-9c04-0e61513e8a6b">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f9eefdf8-29a0-46e7-9126-e12b468d95a3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="044b5cbc-d55a-410d-b94c-cacaa2b6540d">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="684929bb-e4f0-4b53-b7d5-e5e7074d8eb1">
+              <AttributeID>INN</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f42b8ea8-68ec-44e8-b747-1f6ad2f46668">
+                  <DataType>WChar</DataType>
+                  <DataSize>17</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1db58b91-9e5d-4d47-9070-bf23930d8724">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>INN</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="46328a12-ae70-4408-9875-bf3b7ff4e615">
+          <CubeDimensionID>Организация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="386948ef-3178-4f2d-ab8f-1f995d46fe20">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f0881b9d-450b-4ee8-8d60-e0170257f616">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f283bda2-fab6-4aa4-bde0-2ff6c3b3d51e">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>OrganizatsiyaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="5a856550-1e2a-40a7-9e2d-7a39b2fbec16">
+              <AttributeID>Parent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7ec8e0f0-fd66-4343-85e6-ad584804aff3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="76967362-c341-4089-8c81-27ed6200b3b4">
+                    <TableID>dbo_vwOrganizatsiya</TableID>
+                    <ColumnID>ParentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b13bfea2-9a61-4e12-8196-51555dc181dc">
+          <CubeDimensionID>МенеджерКлиента</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3316b7dc-035a-44ba-a8b3-61ea28b7ce6d">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0cf11156-8ddd-449a-b1bd-9c787c7b6c7c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="80cacd10-e64d-40f4-8233-326f2b3a8a60">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="046c14ea-34a8-414e-90e8-63196bf313fb">
+              <AttributeID>Manager</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="52dbfcf6-ba63-4ce4-a7f5-80e3cc90aa5e">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c75d768a-b8d1-4ad1-b2a9-1523c00b784e">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Manager</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="22bc5674-0825-47f5-9b0a-d9325195b59c">
+          <CubeDimensionID>B2B</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2c5bbdb4-3e38-4ea5-bfdf-6c5c082faadb">
+              <AttributeID>Kontragent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4fe51f3f-f156-45fc-871f-90acda48497e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0b7dd1f0-e25a-4f5c-8e84-961d7fc6ecda">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="09ba382f-f716-4c14-9bf9-eb57fe0eb72b">
+              <AttributeID>B2B</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5da8ccd0-0f9a-47d3-8118-ad467d1d3579">
+                  <DataType>WChar</DataType>
+                  <DataSize>3</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e620f773-42c5-4933-b71b-7485f37910a4">
+                    <TableID>dbo_vwB2B</TableID>
+                    <ColumnID>B2B</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a6d41d17-9236-495a-81fd-cbafed24d8f5">
+          <CubeDimensionID>Регион</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ee84084b-f0e8-44ba-b4e4-4f443b84f6bb">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2e331453-d401-48b2-a4b4-8a13ff28635b">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="54e0f302-b6fb-4073-a40f-d050a7946208">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="a84c2a47-5efa-4511-89f4-138d6411a01f">
+              <AttributeID>Region</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="18cdd8ad-8165-4874-8912-767c4a84e995">
+                  <DataType>WChar</DataType>
+                  <DataSize>150</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6c29426d-cecb-4fff-9886-65d758dbec92">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Region</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="809326b1-2815-4c1e-915c-35ddbf9cbea1">
+              <AttributeID>Naselenie</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fc61b49d-e8ae-4428-a863-5b04cd8df8f8">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c364597e-af4f-478c-bf2c-7525c8020d9a">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Naselenie</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="abdd983d-b519-4f8d-812c-4d1cc5f09ba3">
+              <AttributeID>Dolya Rynka</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2bcc6af0-1f2e-459b-937d-88271f88bb4f">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fdab2a35-f06c-4e22-816a-46fcd3927ba8">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>DolyaRynka</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="8b3cb431-d3b5-4307-a16a-1687ef6f0157">
+              <AttributeID>Sred ZP</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9ad1548a-ed30-4e58-817f-7c5eddc2fb5e">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d885dd6-c972-43f5-9021-d691ab75ec23">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>SredZP</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="13b79a18-3753-4f56-af5f-8f264f37422d">
+              <AttributeID>Emkost Kan Rynka</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7c52c42a-9e55-4ebf-ace4-3fb881aefbaf">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7fffe092-90fc-4b77-a4a0-4c1bb7918c80">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>EmkostKanRynka</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="43222a59-e6b4-45fa-834b-29d8dc499a97">
+              <AttributeID>Emkost Of Bumagi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="92fba684-ab49-48b2-916a-cb620004ae8f">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="21f5c6c5-a7bd-4218-bda4-aaf6f2bdc50d">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>EmkostOfBumagi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="286674f3-3b59-4e6e-add5-98dc4067eb5b">
+          <CubeDimensionID>ВсеМенеджеры</CubeDimensionID>
+          <MeasureGroupID>Vw RS Ogran Dostupa</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="edb6ec0b-cbc1-47d2-8def-fb3b6a433c8d">
+          <CubeDimensionID>ОтветстМенеджер</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8ac2d304-0e6d-495b-a641-a70013441657">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fccaa669-2ef2-4d85-ba3c-d55eebbf2ddf">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9dd9b013-98ba-472c-93b5-37e585706af2">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="b2f11061-c026-4988-82dc-999719766cdf">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e4ea144d-aef9-415e-82ec-2dbceac5f7e3">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="5d51c5ac-3a5f-45e0-998c-b3e1f084ea2f">
+              <AttributeID>Otvet Menedzher</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bc7d21d9-f07e-4626-a6af-037f8802414d">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2b52b4ee-143d-4219-996b-1d8a2861b777">
+                    <TableID>dbo_vwOMNaDatu</TableID>
+                    <ColumnID>OtvetMenedzher</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5f4f21f7-e81d-4769-b27b-54057e8d193d">
+          <CubeDimensionID>ГоловнойКлиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0f3e45af-c0a3-4940-8c67-1afdcff1586d">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e41ec1c4-e901-4859-85a8-273a15e66ffe">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2a1c8267-0e43-4fd7-b237-666ed56eb998">
+                    <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+                    <ColumnID>KLIENT</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="f4fa3404-f2e6-4f54-9d97-8cd4803975b2">
+              <AttributeID>Golovnoj Kontrag Desc</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f82280b5-9155-44a7-b1f9-cd2e398f2bba">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="00d265d0-1c70-45f3-9c6e-7e8594cfa0d4">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>GolovnojKontragDesc</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="f8ef546d-1fc2-4cb2-9351-189da05d5697">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="baeea80c-813a-4b6d-aca2-fb84b0b19b1e">
+                  <DataType>Integer</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d49c5789-74de-489f-8ac1-b7e1259c77af">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>GolovnojKontragCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="2f337228-5a34-462a-a576-4ae1b2263ffe">
+              <AttributeID>Torg Toch</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a67b1f26-75fb-4609-903e-faf3624817de">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="77890d14-30f2-4ee6-9ca5-8e2c8984f8c6">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>TorgToch</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="9e9839e5-3bc4-435b-b972-373baf5e75a0">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="8809be35-8a6d-4e11-bce3-f27eaebe4d9c" />
+      </ProactiveCaching>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="131d0384-c7fc-48f5-9113-8a320b995e15">
+      <ID>Vw RS Ogran Dostupa</ID>
+      <Name>КолКлиентов</Name>
+      <CreatedTimestamp>2019-05-30T08:08:28.483333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:08:17.573333Z</LastSchemaUpdate>
+      <LastProcessed>2022-06-30T06:07:15Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="97873f0b-907e-4cae-8a3f-f2a8935c5030">
+          <ID>Kontragent ID</ID>
+          <Name>КолКлиентов</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="2d403945-4e62-4a5b-b789-7dbba230448d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2afeff19-8814-4ed8-bafb-590eefc4492b">
+              <TableID>dbo_vwRSOgranDostupa</TableID>
+              <ColumnID>KontragentID</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="316fe17a-8256-4888-a4db-a7f459090ad2">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <EstimatedSize>3370922</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0c7a5454-739a-4dd7-b986-161e0334af98">
+          <CubeDimensionID>Клиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dbca4f44-bad2-4065-a218-77d5f7dd0d93">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4fb9b3d0-1730-4203-bbb3-94d37970bc98">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="08072b95-e7b1-4f09-ac12-03377bcd8b3b">
+                    <TableID>dbo_vwRSOgranDostupa</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="b5d5dec2-0e29-4ff7-bff2-6fadb7d4489b">
+              <AttributeID>Parent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="902aed4b-26be-4b5f-8d8e-ea16a6e54cef">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e32ba32f-8f81-4c1e-ad78-7edebe2ca84e">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>ParentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c0688ef7-9d04-483c-8407-7133c1b4f875">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d35082be-f4c1-482a-9ef2-6d89d62c356b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="09be187d-0c3b-4762-baec-043e93298d28">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="db0b2bba-a400-4832-9e1f-75bf7218f931">
+              <AttributeID>Golovnoj Kontrag ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4a9470e9-b41a-44ac-801f-73a6b912745f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ad4e62e8-a201-4bbd-980a-ccc166b5d5f3">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>GolovnojKontragID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c1e10dd6-d4a4-47d3-b5ee-decf01e4a7a3">
+              <AttributeID>Uzel</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9b5fba50-3f1c-4086-aeaf-7a6e052b68a3">
+                  <DataType>WChar</DataType>
+                  <DataSize>3</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f83c0fca-f23b-4850-8427-712549e85484">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>UzelFirm</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="3ba0f44b-122d-4c86-9277-f5792c792c05">
+              <AttributeID>INN</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8074a79d-7c23-4344-bbf5-f65733869553">
+                  <DataType>WChar</DataType>
+                  <DataSize>17</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c9e3e9b7-ff7c-4166-a2cb-dd26b6d65d5d">
+                    <TableID>dbo_firms</TableID>
+                    <ColumnID>INN</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dc6ec69b-4c29-454f-adc8-54d0762ec5c8">
+          <CubeDimensionID>ВсеМенеджеры</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="69812f6c-2647-4606-95ea-df98c3a84782">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2e38f259-dc8b-4b9e-aa83-5400bbc66f26">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a04b7c22-1d9b-4ac2-b501-711a42f5a824">
+                    <TableID>dbo_vwRSOgranDostupa</TableID>
+                    <ColumnID>PolzovatelID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="94b4e0df-ad39-4ac1-bb1d-72985193068e">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="b0f2b648-f0df-48af-8264-7a61507c6155" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="c719b0ab-2ba5-467a-8424-ee97a0461dc4">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="468617db-b4c7-42f2-8612-e1f0974d0ff3">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>2013-04-03T06:59:07.693333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:08:17.573333Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+Команда CALCULATE управляет статистическими выражениями над листовыми ячейками в кубе.
+Удаление или изменение команды CALCULATE приведет к изменению данных, содержащихся в кубе.
+Эту команду следует изменять только в том случае, если способ статистической обработки куба задается вручную.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[КоэфДолг]
+ AS [Measures].[Долг]/[Measures].[Оборот], 
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[КоэфПросрДолг]
+ AS [Measures].[ПросрДолг]/[Measures].[Оборот], 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <ErrorConfiguration dwd:design-time-name="89ef1f8a-0dec-4e4e-a444-c28dc490b570">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+  </ErrorConfiguration>
+  <ProactiveCaching dwd:design-time-name="7abd13e7-37c6-4266-b551-392b75380c65">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="4ee9a038-1d0d-4ecc-92cf-af4dd5e20005" />
+  </ProactiveCaching>
+</Cube>

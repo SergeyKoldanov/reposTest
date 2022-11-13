@@ -1,0 +1,89 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="66beeeb7-befa-40fb-ad99-bab529af0d22" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Приемка</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2 Priemka</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="bca42dd7-eaba-454c-aa57-eae204f765d5">
+          <ID>Vw WMS2 Priemka</ID>
+          <Name>Vw WMS2 Priemka</Name>
+          <CreatedTimestamp>2019-03-18T07:03:04.4Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T09:38:25.286667Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-01T09:02:02.436667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="497ff44b-1704-4edc-a388-8f1455cbaf52">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2Priemka</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="77febd7a-20a2-4488-a758-5c5a443ec0d4">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="b4cef04c-f542-492a-9a61-2e821da1671a" />
+          </ProactiveCaching>
+          <EstimatedSize>2185176</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Priemka SKU</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ee7692f1-6c62-45c3-9e8a-3770379b7ce4">
+          <ID>Vw WMS2 Priemka SKU</ID>
+          <Name>Vw WMS2 Priemka SKU</Name>
+          <CreatedTimestamp>2019-03-18T07:07:37.336667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T09:38:25.303333Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-01T09:02:01.426667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7c97b423-1537-4022-a103-2f2bd22a4f11">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2Priemka_SKU</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="49a348b8-800d-4f45-bf15-c20951fb93d2">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d4b105b6-5573-4750-a399-e2825ea0ef0b" />
+          </ProactiveCaching>
+          <EstimatedSize>773004</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Priemka OC</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4bfc7909-9fb1-4224-9dcb-c8e193a72bf9">
+          <ID>Vw WMS2 Priemka OC</ID>
+          <Name>Vw WMS2 Priemka OC</Name>
+          <CreatedTimestamp>2019-03-18T07:10:27.026667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T09:38:25.32Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-01T09:02:01.496667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="bf57ac8d-51bb-4a20-806d-4dd34d59d98f">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2Priemka_OC</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="da2b052e-0171-43ed-9316-03b8766a1f89">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="f7b32029-ec6d-4501-9d84-908ef6481640" />
+          </ProactiveCaching>
+          <EstimatedSize>774753</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

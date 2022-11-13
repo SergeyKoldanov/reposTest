@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/8/2021 3:37:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{333390B6-07C0-4BFF-A1A0-E6EF3A4324ED}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:MaxErrorCount="5"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{533E6552-718F-4F3A-ABD1-4B1BCC404D68}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A91BB61A-B67E-491D-B2EC-A7CA506C1CD2}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{7FF53EA4-3A55-4D88-8C69-069743486559}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;database=918ok;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArg9o0zW3Wk6fU7J4prd2+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACTrnRIo/7FHc9uRcRFSiZCAAAAAASAAACgAAAAEAAAAIH+Di7Io5UBS7iB7l9pWMZIAAAAo24xZd4QAGXNHiB0x+eZ/ix1mp+KrfjB1A05vuwhSJwm0RFswL/iLxNRcrbhKMM+Ds4+fCz0qQY64p0j0zTfWm9JEW/n//hMFAAAABUKOqoZMblWcZLErsQWi/nxtW6E</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{15FF9D10-B2C2-4F77-8226-DBB44F3484AA}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;database=918ok;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArg9o0zW3Wk6fU7J4prd2+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACxAwSjGRrF8bcINJCIdWMdAAAAAASAAACgAAAAEAAAAI1byKfZfQjVuqzKgplzN9BIAAAAlf7Vmy4dpHHRZGOqA/UuIDnNWFDD4fsOxVk7D2qIlFm3DmUYKzc7PozOvA0GkqccfaTsv7mh11KuyTkmrUIdbqKk8BQpaIasFAAAAJ7oOICN4sGE2KdpeA62wMY4n2Hd</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер SMTP-сеансов]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{C2F8395E-8CEB-47E2-B2EF-B73C69B3228B}"
+      DTS:ObjectName="Диспетчер SMTP-сеансов">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=post.relef.ru;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\9-18"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{2AF8177C-2C20-452A-B277-71E0CE36F349}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:MaxErrorCount="5"
+      DTS:ObjectName="9-18"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\9-18\9-18"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server.Корпорация Майкрософт (Microsoft Corporation). Microsoft SQL Server © Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support4"
+              description="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server."
+              name="9-18"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, используемую компонентом для извлечения данных."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT
+ok_order_products.ID AS ID,
+	ok_order.ID  as OrderID,
+    ok_order.UF_CLIENT AS ClientID,
+    ok_order.UF_CREATE_DATE AS DateOrder,
+    ok_order.UF_SHOP_ID AS ShopID,
+    cast(ok_order_products.UF_PRODUCT_XML_ID as char(50)) AS ItemGUID,
+    ok_order_products.UF_QUANTITY AS Amount,
+    ok_order_products.UF_PRICE AS Price,
+    b_user_field_enum.VALUE AS Status
+    
+FROM ok_order_products LEFT JOIN ok_order
+							ON ok_order_products.UF_ORDER = ok_order.ID
+                       LEFT JOIN b_user_field_enum
+                       		ON ok_order.UF_SHOP_STATUS = b_user_field_enum.ID
+WHERE ok_order.UF_CREATE_DATE &gt;= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Значение 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли внешние столбцы с типом, отличным от строкового, в выходных столбцах неявно преобразовываться в строки."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Имя таблицы базы данных-источника."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Укажите режим получения данных о внешних столбцах"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\9-18\9-18.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+                  description="Диспетчер управляемых соединений"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET]"
+                  name="Вывод источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ID]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ID]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[OrderID]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[OrderID]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ClientID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ClientID]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ClientID]"
+                      name="ClientID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[DateOrder]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[DateOrder]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[DateOrder]"
+                      name="DateOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ShopID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ShopID]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ShopID]"
+                      name="ShopID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ItemGUID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ItemGUID]"
+                      length="50"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ItemGUID]"
+                      name="ItemGUID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Amount]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Amount]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Amount]"
+                      name="Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Price]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Status]"
+                      length="255"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ID]"
+                      dataType="ui4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[OrderID]"
+                      dataType="ui4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ClientID]"
+                      dataType="i4"
+                      name="ClientID" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[DateOrder]"
+                      dataType="dbTimeStamp"
+                      name="DateOrder" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ShopID]"
+                      dataType="i4"
+                      name="ShopID" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ItemGUID]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGUID" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Amount]"
+                      dataType="i4"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Status" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ID]"
+                      dataType="ui4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[OrderID]"
+                      dataType="ui4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[OrderID]"
+                      name="OrderID" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ClientID]"
+                      dataType="i4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ClientID]"
+                      name="ClientID" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[DateOrder]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[DateOrder]"
+                      name="DateOrder" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ShopID]"
+                      dataType="i4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ShopID]"
+                      name="ShopID" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ItemGUID]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ItemGUID]"
+                      name="ItemGUID" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Amount]"
+                      dataType="i4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Amount]"
+                      name="Amount" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Price]"
+                      name="Price" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\9-18\Таблица TemporaryOrders918"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Таблица TemporaryOrders918"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[TemporaryOrders918]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\9-18\Таблица TemporaryOrders918.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ID]"
+                      cachedDataType="ui4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Id]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ClientID]"
+                      cachedDataType="i4"
+                      cachedName="ClientID"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientId]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ClientID]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ShopID]"
+                      cachedDataType="i4"
+                      cachedName="ShopID"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ShopId]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ShopID]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ItemGUID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ItemGUID"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGuid]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[ItemGUID]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Amount]"
+                      cachedDataType="i4"
+                      cachedName="Amount"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Amount]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[DateOrder]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DateOrder"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CreateDate]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[DateOrder]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[OrderID]"
+                      cachedDataType="ui4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[OrderId]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Status]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Status]"
+                      lineageId="Package\9-18\9-18.Outputs[Вывод источника ADO NET].Columns[Status]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientId]"
+                      dataType="i4"
+                      name="ClientId" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CreateDate]"
+                      dataType="dbDate"
+                      name="CreateDate" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ShopId]"
+                      dataType="i4"
+                      name="ShopId" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Amount]"
+                      dataType="i4"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGuid]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGuid" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[OrderId]"
+                      dataType="i4"
+                      name="OrderId" />
+                    <externalMetadataColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="260"
+                      name="Status" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\9-18\Таблица TemporaryOrders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\9-18\Таблица TemporaryOrders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\9-18\Таблица TemporaryOrders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\9-18\Таблица TemporaryOrders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\9-18.Paths[Вывод источника ADO NET]"
+              endId="Package\9-18\Таблица TemporaryOrders918.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Вывод источника ADO NET"
+              startId="Package\9-18\9-18.Outputs[Вывод источника ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Задача &quot;Отправка почты&quot;"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Задача &quot;Отправка почты&quot;"
+      DTS:DTSID="{0C768A3D-46D9-40CC-8A55-F3C8CA02716F}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача &quot;Отправка почты&quot;"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{C2F8395E-8CEB-47E2-B2EF-B73C69B3228B}"
+          SendMailTask:From="KoldanovSV.it@relef.ru"
+          SendMailTask:To="KoldanovSV.it@relef.ru"
+          SendMailTask:Subject="Обновление 9-18"
+          SendMailTask:MessageSource="При обновлении таблицы Orders918 произошел сбой." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение Orders918"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{6D13F17F-3C7E-47A0-BC98-AF79FF861333}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение Orders918"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A91BB61A-B67E-491D-B2EC-A7CA506C1CD2}"
+          SQLTask:SqlStatementSource="exec UpdateOrders918" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка TemporaryOrders918"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{21E71732-3041-4B18-9154-4908BF69CA2E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка TemporaryOrders918"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A91BB61A-B67E-491D-B2EC-A7CA506C1CD2}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE TemporaryOrders918" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{9CD808DB-A23A-44E9-B7BB-EED520887DB3}"
+      DTS:From="Package\9-18"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение Orders918" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5660D528-0DB5-43AF-A17E-4C53BB67E336}"
+      DTS:From="Package\Заполнение Orders918"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Очистка TemporaryOrders918" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{2498C75A-D6F0-45E6-81D5-1C90DAC76E54}"
+      DTS:From="Package\Очистка TemporaryOrders918"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 2"
+      DTS:To="Package\Задача &quot;Отправка почты&quot;"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="102,42"
+          Id="Package\9-18"
+          TopLeft="370,103" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Задача &quot;Отправка почты&quot;"
+          TopLeft="398,454" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Заполнение Orders918"
+          TopLeft="327,227" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Очистка TemporaryOrders918"
+          TopLeft="308,335" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="422,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="421.75,269">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 2]"
+          TopLeft="420.5,377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,77"
+              Start="0,0"
+              End="81,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
+                  <mssgle:LineSegment
+                    End="77,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77,38.5"
+                    Point2="81,38.5"
+                    Point3="81,42.5" />
+                  <mssgle:LineSegment
+                    End="81,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="28.70578125,43.5,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\9-18">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="226,42"
+          Id="Package\9-18\Таблица TemporaryOrders918"
+          TopLeft="136,244" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\9-18\9-18"
+          TopLeft="192,120" />
+        <EdgeLayout
+          Id="Package\9-18.Paths[Вывод источника ADO NET]"
+          TopLeft="246,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\9-18\9-18">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\9-18\Таблица TemporaryOrders918">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

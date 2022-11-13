@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "relef_my", "relef_my\relef_my.dwproj", "{CA378690-00B2-40EE-9461-5FB29B51B5EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA378690-00B2-40EE-9461-5FB29B51B5EA}.Development|Default.ActiveCfg = Development
+		{CA378690-00B2-40EE-9461-5FB29B51B5EA}.Development|Default.Build.0 = Development
+		{CA378690-00B2-40EE-9461-5FB29B51B5EA}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9236EF6-53F9-43F8-9625-B7996494789A}
+	EndGlobalSection
+EndGlobal

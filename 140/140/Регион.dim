@@ -1,0 +1,264 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="082242ba-384b-4738-b558-a6b854d90cd4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Регион</ID>
+  <Name>Регион</Name>
+  <CreatedTimestamp>2010-04-06T12:35:41Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:41:36.083333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-03-11T04:22:39.606667Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="7c9a8326-ad1a-4619-b7c4-b24e6d8e6888">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="b62faa84-df8b-4dee-9111-eb8c1dbb2e14">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="d1c60516-c0ae-45ee-a46b-61cfd31f1b28">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="abd34851-c669-40ed-9397-2f50de3c523c">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5e0efdfa-b216-439e-ae1c-5151cf049088">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1f779463-d4fc-46ca-8632-4dc8b3d70986">
+        <DataType>WChar</DataType>
+        <DataSize>150</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5d12e3ac-a380-4045-bfd9-536f793f94b3">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>Region</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ec16f708-4e0c-4f0c-bd4d-04ccf902e81b">
+          <AttributeID>Region</AttributeID>
+          <Name>Регион</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="950fa31e-d091-45b9-a19f-3cb5aea35592">
+      <ID>Region</ID>
+      <Name>Регион</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8dcc3302-9acf-4231-8f17-94805ed75086">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36472a5d-fb60-45f0-8913-7d95e602e994">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>Region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7b7edc18-2adf-4c11-8a80-d00db3e4911d">
+        <DataType>WChar</DataType>
+        <DataSize>150</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e2a9406b-f845-4886-8946-268f329b83a2">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>Region</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7af33eb7-7e6f-4363-b571-a85a652c5f3c">
+          <AttributeID>Dolya Rynka</AttributeID>
+          <Name>ДоляРынка</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="64d202e7-1096-4b7c-8108-b8b8d40d9d2d">
+          <AttributeID>Naselenie</AttributeID>
+          <Name>Население</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="10016a7c-7b1f-41dc-9514-f6d17774dd95">
+          <AttributeID>Emkost Kan Rynka</AttributeID>
+          <Name>ЕмкостьКанцРынка</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="09bc80f1-2ee4-4f4f-bb15-2033c5f4697b">
+          <AttributeID>Emkost Of Bumagi</AttributeID>
+          <Name>ЕмкостьОфисБумаги</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d0da6535-01fb-4db7-b51b-abe6de9adc75">
+          <AttributeID>Sred ZP</AttributeID>
+          <Name>СредЗП</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4fe620a5-9341-42bf-9e2a-101b553c8798">
+      <ID>Naselenie</ID>
+      <Name>Население</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89344c89-ad9b-4310-b919-84801233ae8a">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2a0843f5-17f8-48f6-b808-c2698d634caa">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>Naselenie</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0926623d-aecb-41a8-b931-31e6f144dec4">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="15429308-b49e-481f-8d02-333161b5ca9d">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>Naselenie</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a873f007-edff-4b9b-9f13-fac608c10e6b">
+      <ID>Dolya Rynka</ID>
+      <Name>ДоляРынка</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f89957cc-f4bf-4574-aaee-c142f8aa13b4">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59500f58-a1b5-43d1-8778-856e6be68f44">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>DolyaRynka</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="717d5b89-e52f-4854-9c07-996a43559585">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="10fb2d8d-d4dc-45c0-94b5-e9c47bf1e4d6">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>DolyaRynka</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1049aa5-302e-43d7-8b3e-119dc951ff74">
+      <ID>Sred ZP</ID>
+      <Name>СредЗП</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf25e1a7-ec13-4d74-993d-8779f02c867f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d3de27b3-538e-4586-aa6e-2496215361cf">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>SredZP</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c40f24e5-e05b-4a04-9574-70d11b191860">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="27280eb4-cdca-42d6-ba4b-de5eb74e8c0a">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>SredZP</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5a39a271-dfda-4e51-9535-525738b4bb4f">
+      <ID>Emkost Kan Rynka</ID>
+      <Name>ЕмкостьКанцРынка</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dd054f3b-268e-40b1-b83f-89cabf215c3c">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83bcdf68-c869-4f78-9945-9e2676551c48">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>EmkostKanRynka</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="86bd858c-f31b-4f08-990a-658ad56839cb">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="2899bfd9-0acd-47f5-8591-23ced87fb309">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>EmkostKanRynka</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5a7de16a-ae0f-4a10-b2c9-b41513855fb8">
+      <ID>Emkost Of Bumagi</ID>
+      <Name>ЕмкостьОфисБумаги</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="acfb2fe1-da45-4748-9ec8-9bc34967751f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed27a41a-1bc5-4a12-b4fc-b8ce9593b4ad">
+            <TableID>dbo_firms</TableID>
+            <ColumnID>EmkostOfBumagi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d4fe963f-18d2-4c4e-88bd-adc398723f83">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="12ce85ab-c2c2-428a-9428-56341491d81f">
+          <TableID>dbo_firms</TableID>
+          <ColumnID>EmkostOfBumagi</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching dwd:design-time-name="9b18aa80-2b84-4253-b132-e863a76133ef">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="15f294e4-01b5-4282-9d8c-edd55926b6b0" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

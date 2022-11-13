@@ -1,0 +1,946 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/26/2022 2:16:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40005004"
+  DTS:CreatorName="MAIN\reyfshneyder.ea"
+  DTS:DTSID="{170FBDB5-48C0-48B0-ABB7-49BE5D210915}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="FactStammBG"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{B608401E-51EA-41FA-BD5A-ECBD7E15CA50}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AC090BA0-43B4-44FF-94D4-D7C645B55483}"
+      DTS:ObjectName="10.50.0.89.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5E226F65-151F-4580-8067-E8193B719E54}"
+      DTS:ObjectName="Диспетчер соединений Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\bi\ТОП\ФАКТ.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Дополнение ведущими нулями HeadClientCode"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{2B8405D2-A65F-48B0-ACFF-CD0A62ADB99E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Дополнение ведущими нулями HeadClientCode"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{AC090BA0-43B4-44FF-94D4-D7C645B55483}"
+          SQLTask:SqlStatementSource="UPDATE FactStammBG&#xA;SET HeadClientCode =  REPLACE(STR(HeadClientCode,6),' ','0')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{36EAD1CF-E6E5-456C-A78D-B2D4C1E7622B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Источник &quot;Excel&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Источник &quot;Excel&quot;"
+              name="Источник &quot;Excel&quot;"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">'Преобразованная таблица$'</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставление между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Диспетчер соединений Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;]"
+                  name="Выход источника &quot;Excel&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Код]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Код]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Код]"
+                      name="Код"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[ГоловнойКлиент]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[ГоловнойКлиент]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[ГоловнойКлиент]"
+                      name="ГоловнойКлиент"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Показатель]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Показатель]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Показатель]"
+                      name="Показатель"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Производитель]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Производитель]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Производитель]"
+                      name="Производитель"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Организация]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Организация]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Организация]"
+                      name="Организация"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Значение]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Значение]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Значение]"
+                      name="Значение"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[ДеньМесГод]"
+                      dataType="date"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[ДеньМесГод]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[ДеньМесГод]"
+                      name="ДеньМесГод"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Столбец1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Столбец1]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Столбец1]"
+                      name="Столбец1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column24]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column24]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column24]"
+                      name="Column24"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column25]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column25]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column25]"
+                      name="Column25"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column26]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column26]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column26]"
+                      name="Column26"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column27]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column27]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column27]"
+                      name="Column27"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column28]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column28]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column28]"
+                      name="Column28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column29]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column29]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column29]"
+                      name="Column29"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column30]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column30]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column30]"
+                      name="Column30"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column31]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column31]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column31]"
+                      name="Column31"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column32]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column32]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column32]"
+                      name="Column32"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column33]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column33]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column33]"
+                      name="Column33"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column34]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column34]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column34]"
+                      name="Column34"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column35]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column35]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column35]"
+                      name="Column35"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column36]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column36]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column36]"
+                      name="Column36"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column37]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column37]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column37]"
+                      name="Column37"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column38]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column38]"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Column38]"
+                      name="Column38"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Код]"
+                      dataType="r8"
+                      name="Код" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[ГоловнойКлиент]"
+                      dataType="wstr"
+                      length="255"
+                      name="ГоловнойКлиент" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Показатель]"
+                      dataType="wstr"
+                      length="255"
+                      name="Показатель" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Производитель]"
+                      dataType="wstr"
+                      length="255"
+                      name="Производитель" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Организация]"
+                      dataType="wstr"
+                      length="255"
+                      name="Организация" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Значение]"
+                      dataType="r8"
+                      name="Значение" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[ДеньМесГод]"
+                      dataType="date"
+                      name="ДеньМесГод" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Столбец1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Столбец1" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column24]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column24" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column25]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column25" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column26]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column26" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column27]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column27" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column28]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column28" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column29]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column29" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column30]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column30" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column31]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column31" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column32]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column32" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column33]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column33" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column34]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column34" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column35]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column35" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column36]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column36" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column37]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column37" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].ExternalColumns[Column38]"
+                      dataType="wstr"
+                      length="255"
+                      name="Column38" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;Excel&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Код]"
+                      dataType="r8"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Код]"
+                      name="Код" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ГоловнойКлиент]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ГоловнойКлиент]"
+                      name="ГоловнойКлиент" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Показатель]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Показатель]"
+                      name="Показатель" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Производитель]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Производитель]"
+                      name="Производитель" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Организация]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Организация]"
+                      name="Организация" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Значение]"
+                      dataType="r8"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Значение]"
+                      name="Значение" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ДеньМесГод]"
+                      dataType="date"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ДеньМесГод]"
+                      name="ДеньМесГод" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Столбец1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Столбец1]"
+                      name="Столбец1" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column24]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column24]"
+                      name="Column24" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column25]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column25]"
+                      name="Column25" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column26]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column26]"
+                      name="Column26" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column27]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column27]"
+                      name="Column27" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column28]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column28]"
+                      name="Column28" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column29]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column29]"
+                      name="Column29" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column30]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column30]"
+                      name="Column30" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column31]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column31]"
+                      name="Column31" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column32]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column32]"
+                      name="Column32" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column33]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column33]"
+                      name="Column33" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column34]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column34]"
+                      name="Column34" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column35]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column35]"
+                      name="Column35" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column36]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column36]"
+                      name="Column36" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column37]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column37]"
+                      name="Column37" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column38]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[Column38]"
+                      name="Column38" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Вывод ошибок источника &quot;Excel&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Назначение &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[FactStammBG]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код]"
+                      cachedDataType="r8"
+                      cachedName="Код"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientCode]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Код]" />
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКлиент]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ГоловнойКлиент"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[ГоловнойКлиент]" />
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Показатель]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Показатель"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Mark]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Показатель]" />
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Производитель]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Производитель"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Производитель]" />
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Организация]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Организация"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Organization]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Организация]" />
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Значение]"
+                      cachedDataType="r8"
+                      cachedName="Значение"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[Значение]" />
+                    <inputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ДеньМесГод]"
+                      cachedDataType="date"
+                      cachedName="ДеньМесГод"
+                      externalMetadataColumnId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;].Columns[ДеньМесГод]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientCode]"
+                      dataType="wstr"
+                      length="6"
+                      name="HeadClientCode" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      dataType="wstr"
+                      length="120"
+                      name="HeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Mark]"
+                      dataType="wstr"
+                      length="50"
+                      name="Mark" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      dataType="wstr"
+                      length="50"
+                      name="Manufacturer" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Organization]"
+                      dataType="wstr"
+                      length="50"
+                      name="Organization" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      dataType="dbDate"
+                      name="Period" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт.Paths[Выход источника &quot;Excel&quot;]"
+              endId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;Excel&quot;"
+              startId="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;.Outputs[Выход источника &quot;Excel&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка таблицы FactStammBG"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{FD273CC5-CCC2-417A-B369-EE9854386BE4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка таблицы FactStammBG"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{AC090BA0-43B4-44FF-94D4-D7C645B55483}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE FactStammBG" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Очистка таблицы FactStammBG"
+          TopLeft="107,87" />
+        <NodeLayout
+          Size="436,42"
+          Id="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт"
+          TopLeft="284,195" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\Дополнение ведущими нулями HeadClientCode"
+          TopLeft="482,322" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;"
+          TopLeft="176,57" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;"
+          TopLeft="278,198" />
+        <EdgeLayout
+          Id="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт.Paths[Выход источника &quot;Excel&quot;]"
+          TopLeft="256.5,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114,99"
+              Start="0,0"
+              End="114,91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="4,49.5" />
+                  <mssgle:LineSegment
+                    End="110,49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="110,49.5"
+                    Point2="114,49.5"
+                    Point3="114,53.5" />
+                  <mssgle:LineSegment
+                    End="114,91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Источник &quot;Excel&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение таблицы FactStammBG из файла 10_50_0_100_bi_ТОП Факт\Назначение &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

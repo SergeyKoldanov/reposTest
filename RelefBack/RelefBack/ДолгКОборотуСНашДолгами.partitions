@@ -1,0 +1,61 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="15b217a6-776e-4168-8457-f20f970c2fa3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ДолгКОборотуСНашДолгами</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw Prodazhi Klient Za Mes SUND</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0c490ccb-4183-43d4-b01e-961a4cee896c">
+          <ID>Vw Prodazhi Klient Za Mes SUND</ID>
+          <Name>Vw Prodazhi Klient Za Mes SUND</Name>
+          <CreatedTimestamp>2013-04-03T06:56:19.113333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-19T10:08:17.556667Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T00:23:26.49Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ffe820ca-d272-4899-b7f3-a7b4bb50c6ab">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwProdazhiKlientZaMesSUND</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="ecac613f-aa51-478c-8114-f569c84ce7ba">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="0df7b92d-42a7-4c66-b1fc-a1d007cebcb8" />
+          </ProactiveCaching>
+          <EstimatedSize>29479881</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw RS Ogran Dostupa</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="efd23f27-20f8-47e9-bfca-7359c8e57802">
+          <ID>Vw RS Ogran Dostupa</ID>
+          <Name>Vw RS Ogran Dostupa</Name>
+          <CreatedTimestamp>2019-05-30T08:08:28.486667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-19T10:08:17.573333Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T06:07:11.22Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c6e81b44-d3bc-4f36-bf77-baaa25cc3fe8">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwRSOgranDostupa</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="8be14a57-9bc7-483c-beb6-1250d7927cd6">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="5853d7d9-88a2-42d3-b880-f3024055111b" />
+          </ProactiveCaching>
+          <EstimatedSize>3370922</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

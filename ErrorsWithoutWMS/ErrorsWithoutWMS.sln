@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "ErrorsWithoutWMS", "ErrorsWithoutWMS\ErrorsWithoutWMS.dwproj", "{59129BEE-9BA6-4DC7-9C60-1BD0CEB55D32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59129BEE-9BA6-4DC7-9C60-1BD0CEB55D32}.Development|Default.ActiveCfg = Development
+		{59129BEE-9BA6-4DC7-9C60-1BD0CEB55D32}.Development|Default.Build.0 = Development
+		{59129BEE-9BA6-4DC7-9C60-1BD0CEB55D32}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F21E471A-D5BB-4480-94D2-81F233DC951C}
+	EndGlobalSection
+EndGlobal

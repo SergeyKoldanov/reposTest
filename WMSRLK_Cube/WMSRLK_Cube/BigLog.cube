@@ -1,0 +1,385 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="83177d6f-18ff-4abd-bea2-a39927e1738d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>BigLog</ID>
+  <Name>BigLog</Name>
+  <CreatedTimestamp>2019-03-20T05:29:55.806667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-07-22T09:38:46.516667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-03-01T12:01:10.053333Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1049</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="0324f8fb-6e7f-4019-897c-31105f9687f2">
+      <ID>ГодМесДень</ID>
+      <Name>ГодМесДень</Name>
+      <DimensionID>ГодМесДень</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e9d2fc79-6bd2-4a65-9ec1-19b72fea4e7d">
+          <AttributeID>Data</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="6caeeb77-d984-46cf-bda9-b42b0c1ded2b">
+          <AttributeID>God</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="44182235-8132-4c2c-a803-26b59a97c05d">
+          <AttributeID>Mes Name</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="14a20ff6-caae-4977-ac24-6494f8b15d53">
+          <AttributeID>Den</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="41c74e69-28a9-42af-82c5-7fbb53f15218">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="6eceda51-3a4b-4560-a76a-37a0e03f2963">
+      <ID>BigLogДопДанные</ID>
+      <Name>BigLogДопДанные</Name>
+      <DimensionID>BigLogДопДанные</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2f436dde-ae76-422c-96a3-4bbc8e6971b4">
+          <AttributeID>Допданные</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="585bbb3e-6565-411f-9a2b-4dfb4b17f474">
+      <ID>BigLogОперация</ID>
+      <Name>BigLogОперация</Name>
+      <DimensionID>BigLogОперация</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="192c35ba-8fc3-4fbd-905b-9971df10f126">
+          <AttributeID>Операция</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c30bdf3b-ee8f-4d74-bdc0-0f83dc229130">
+      <ID>BigLogОтдел</ID>
+      <Name>BigLogОтдел</Name>
+      <DimensionID>BigLogОтдел</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="91f78688-a59c-491a-9cc2-32bb9a5096fc">
+          <AttributeID>Отдел</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c5b4ad97-4430-469a-b182-b7f85b9f316b">
+      <ID>BigLogСотрудник</ID>
+      <Name>BigLogСотрудник</Name>
+      <DimensionID>BigLogСотрудник</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d79b3e23-fceb-4dc6-a454-33f965dd52a1">
+          <AttributeID>Сотрудник</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6f7414f3-81c3-4390-9748-1bccca38dcbe">
+      <ID>BigLogСущностьГруппировки</ID>
+      <Name>BigLogСущностьГруппировки</Name>
+      <DimensionID>BigLogСущностьГруппировки</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3b44b14c-9042-405a-a864-c638263c35c9">
+          <AttributeID>Сущность Группировки</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9578cc0f-c20d-42fa-ac8b-a5b426a1eb33">
+      <ID>Час</ID>
+      <Name>Час</Name>
+      <DimensionID>Час</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d48506e1-a344-4434-aa8d-2b47cdfa4b96">
+          <AttributeID>Час</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <CubePermissions>
+    <CubePermission dwd:design-time-name="2de08426-9909-4a99-bdb2-12bb10c8c040">
+      <ID>CubePermission 9</ID>
+      <Name>CubePermission 9</Name>
+      <CreatedTimestamp>2021-08-16T09:56:55.253333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-08-16T09:56:55.253333Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+  </CubePermissions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="4842874b-2b9b-4f00-a4b9-6d03736de706">
+      <ID>Vw WMS2 Big Logfinall</ID>
+      <Name>Значения</Name>
+      <CreatedTimestamp>2019-03-20T05:29:55.81Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-07-22T09:38:49.143333Z</LastSchemaUpdate>
+      <LastProcessed>2022-03-01T12:01:10.05Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="78a35421-b297-4bd6-a55b-dfc6717207fd">
+          <ID>c3</ID>
+          <Name>ДлитОперацийМинуты</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="3da4cac3-24ae-4012-acbd-6df70611ccca">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="df5acc11-08e9-46b3-9c5d-b3b259238d44">
+              <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+              <ColumnID>c3</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b74a3631-b973-408e-9ee8-d1a381a467cd">
+          <ID>Кол-во Операций</ID>
+          <Name>Кол-во Операций</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="39c0639a-b331-446e-aff7-ae89bdbbeb06">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="754fb58e-1871-4519-8421-7e9c14ea66e2">
+              <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+              <ColumnID>Кол-во_x0020_операций</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>6826</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2cca827b-392a-4530-ac81-ebe9259e277b">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3f8f6bdf-0b3a-4ea9-9b2a-12ae11fb1737">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="17ace762-9f36-4fea-b52a-c88581e2789d">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a4167a15-5da2-4262-8296-6f9bbbf42c16">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>ДатаОпер</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="b25c78c4-cb04-4e3d-977f-a5eef298c1a4">
+              <AttributeID>God</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e1e5883d-dae7-41c4-b14a-90ebe6dbf51a">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="811472d8-28ab-459e-92df-4d991aaf17c3">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>GodChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="7fcb7e8f-30fe-4516-8e5a-47933e21591a">
+              <AttributeID>Mes Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8a09d79e-e937-4438-8085-f019e8b41e7e">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="85546e1d-e54b-48c4-9d2e-ffab8cf19ae2">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>MesChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="f3a9ec09-fb09-48eb-855a-47c076dd435f">
+              <AttributeID>Den</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ed04b512-039a-4c87-8a78-b58621cec8c1">
+                  <DataType>WChar</DataType>
+                  <DataSize>8</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e277cad6-92df-4bd3-bf93-e2fb59b17efe">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>DenChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="872f9b39-2714-4027-beba-a0e67b27dd09">
+          <CubeDimensionID>BigLogДопДанные</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="49653b44-f608-4e1d-b005-c5a74bbd4587">
+              <AttributeID>Допданные</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1f681fd3-3d76-40d8-9d06-bfa7663ee1ba">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2a72e6f9-60e4-41b2-a1c2-041a583215bb">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>Доп.данные</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ab70d1ab-a320-4996-8594-a0e9bb64bad6">
+          <CubeDimensionID>BigLogОперация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fb6828e5-db97-44ca-8c66-85bcbdbf4f8d">
+              <AttributeID>Операция</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cd4b0d07-369e-4c58-a25c-1a4b2b608248">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3fd3b892-b024-40c4-8985-ca2f37229d51">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>Операция</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f6db0864-7d09-468d-a223-99182b1a6816">
+          <CubeDimensionID>BigLogОтдел</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="34b0cb2e-e8c3-48b4-9859-b44174c5dcbb">
+              <AttributeID>Отдел</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2b5661f5-e3d0-4d3a-9d70-9086606d4112">
+                  <DataType>WChar</DataType>
+                  <DataSize>200</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="80c16164-5ff8-493f-b1c0-cb020121b909">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>Отдел</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bd746a14-a7d2-4bfe-8cc6-033c6f3c4c7c">
+          <CubeDimensionID>BigLogСотрудник</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="99dfaec1-a7d7-422c-87ad-7f0c04b98032">
+              <AttributeID>Сотрудник</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2c843516-b72e-4135-8c95-12dc88e3a63e">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e0a107dc-58f1-4e0e-9a75-7b3bff78e06f">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>Сотрудник</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d630b40f-fa2d-425c-9b0a-ec63bd3cfae4">
+          <CubeDimensionID>BigLogСущностьГруппировки</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3ec70c12-6684-40a9-a970-b937c26515cd">
+              <AttributeID>Сущность Группировки</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d59dab59-e41d-46f8-9349-41e2e8fa1a85">
+                  <DataType>WChar</DataType>
+                  <DataSize>200</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="65da57d3-a75f-413f-a090-74ff04c42082">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>Сущность_x0020_группировки</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="01c1b766-4426-407c-a142-d0d2707a53ed">
+          <CubeDimensionID>Час</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5d03dac0-70f4-444a-aa07-de817bd59f9c">
+              <AttributeID>Час</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1237474e-504e-4629-bada-0b289789c4da">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b85c2b03-4915-4dba-992e-fb21522c15bc">
+                    <TableID>dbo_vw_WMS2BigLogfinall</TableID>
+                    <ColumnID>ЧасОпер</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="c6dfd8e2-46f0-4a46-bbfd-2f4703f42f1c">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="db44e574-4006-4f2e-895e-8a7945923466" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="167d35d4-ab93-4506-aacc-c502f9167d3e">
+    <DataSourceViewID>WMSKZN</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="30bad8c0-6421-473c-a2ca-6c2801f3deb1">
+    <KeyNotFound>IgnoreError</KeyNotFound>
+  </ErrorConfiguration>
+  <ProactiveCaching dwd:design-time-name="0ed7f922-b681-4023-bdb8-e0f1cec1143d">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="0fc129f8-a76f-4586-bfc5-91a4ea8c1c78" />
+  </ProactiveCaching>
+</Cube>

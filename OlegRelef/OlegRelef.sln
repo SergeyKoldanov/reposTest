@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "OlegRelef", "OlegRelef\OlegRelef.dwproj", "{F0F53A18-3CB0-4B7B-BF58-9518D47CB2F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0F53A18-3CB0-4B7B-BF58-9518D47CB2F9}.Development|Default.ActiveCfg = Development
+		{F0F53A18-3CB0-4B7B-BF58-9518D47CB2F9}.Development|Default.Build.0 = Development
+		{F0F53A18-3CB0-4B7B-BF58-9518D47CB2F9}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5913C74B-F199-4115-AA8C-9A40B924A0D0}
+	EndGlobalSection
+EndGlobal

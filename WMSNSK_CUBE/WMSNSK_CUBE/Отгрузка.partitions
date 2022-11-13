@@ -1,0 +1,61 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4621b242-792f-4fdd-9ef9-8f733729ed49" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Отгрузка</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2 Otgruzka</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ecf72fc8-cc31-474f-a713-b1daf8c7df7a">
+          <ID>Vw WMS2 Otgruzka</ID>
+          <Name>Vw WMS2 Otgruzka</Name>
+          <CreatedTimestamp>2021-02-17T11:48:43.883333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-21T07:36:08.206667Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-19T13:03:28.46Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="96df5cfa-c0b0-4402-9331-a71bf683574a">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2Otgruzka</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="53bf74c0-8a98-40bf-a539-4df29d4f3088">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="2713455e-6d15-488d-8a27-e7cafdcbdf94" />
+          </ProactiveCaching>
+          <EstimatedSize>1975619</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw WMS2 Otgruzka Kol Zakazov</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="eefc77c8-1df8-4aae-9001-d82edf46d040">
+          <ID>Vw WMS2 Otgruzka Kol Zakazov</ID>
+          <Name>Vw WMS2 Otgruzka Kol Zakazov</Name>
+          <CreatedTimestamp>2021-02-17T12:13:07.166667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-21T07:36:08.22Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-19T13:03:27.76Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="84b49fbc-7798-4003-9054-4bfee5ffb9e4">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2Otgruzka_KolZakazov</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="700dd0d2-19bd-41e9-bd07-7adb5bae4691">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9608b993-5d64-4d9c-be9b-2b201ce39fba" />
+          </ProactiveCaching>
+          <EstimatedSize>3946290</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

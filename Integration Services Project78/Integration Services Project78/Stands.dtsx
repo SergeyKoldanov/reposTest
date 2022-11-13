@@ -1,0 +1,826 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/23/2021 4:22:44 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{1CD54140-413F-4B82-93B7-7CCE7A02C164}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{A1B5AD22-7687-4AA9-A7AA-0154DB36F333}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.140.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{59F3901D-CB27-4E26-A1F6-3A953B2396BC}"
+      DTS:ObjectName="10.0.0.140.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.140;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9C5A2677-88B2-4E79-918E-9511D6EAA672}"
+      DTS:ObjectName="10.50.0.89.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9A4738B4-BA46-4999-A2A1-FA47EB9A24C8}"
+      DTS:ObjectName="SQL-NODE-02\UT.RelefUTWork.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL-NODE-02\UT;User ID=sa;Initial Catalog=RelefUTWork;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clear Logs"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{29D053B6-64C9-4EA4-B21F-39B428BECB33}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clear Logs"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9C5A2677-88B2-4E79-918E-9511D6EAA672}"
+          SQLTask:SqlStatementSource=" DBCC SHRINKFILE ('LG_log' , 0, TRUNCATEONLY)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Stands"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{4D343B4A-E119-4B58-BD1A-7B418ED7A4C9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Stands"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Stands\1C"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="1C"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT P.Manager, P.Direction, P.Manufacturer, sum(P.Value) as Result
+FROM (SELECT 
+			 N._Code as Code
+			,KK._Code as Client
+			,P._Description AS Manager
+			,N._Description AS Item
+			,PP._Description AS Manufacturer
+			,T.TradeDirection AS Direction
+			,CAST (SUM(T1._Fld7924) AS int) AS Value
+		FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_AccumRg7918] AS T1 WITH (NOLOCK) -- рн товары на складах
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Document208] as R WITH (NOLOCK) -- док реклизация товаров и услуг
+				ON T1._RecorderRRef = R._IDRRef
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Enum301] as E WITH (NOLOCK) -- перечисление
+				ON R._Fld4753RRef = E._IDRRef AND E._EnumOrder = 0
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference53] as N WITH (NOLOCK) -- номенклатура
+				ON T1._Fld7920RRef = N._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as K WITH (NOLOCK) -- контрагент 
+				ON R._Fld4764RRef = K._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as KK WITH (NOLOCK) -- контрагент 
+				ON KK._IDRRef = K._Fld638RRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] as P WITH (NOLOCK) -- менеджер
+				ON K._Fld651RRef = P._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference91] as PP WITH (NOLOCK) -- производитель
+				ON N._Fld845RRef = PP._IDRRef
+			LEFT JOIN ClientManager T 
+				ON KK._Code = T.Code
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference70] as S WITH (NOLOCK) -- SKLAD
+				ON S._IDRRef = T1._Fld7919RRef
+		WHERE T1._Period BETWEEN DATEADD(DAY,1,EOMONTH(GETDATE(),-1)) AND GETDATE()
+			AND  N._Code IN ('251998', '314473', '321552', '315140', '315458', '320247', '317325',
+							 '267761', '268727', '276831', '280256', '280257', '288004', '288830',
+						     '301542', '301712', '306660', '310408', '313102', '318124', '320184',
+							 '320340', '324577', '326012', '252330', '288545', '310407', '313101')
+			AND T1._RecordKind = 1
+			AND E._EnumOrder = 0
+			AND TradeDirection in ('Дистрибьюция', 'Экспорт')
+		GROUP BY N._Description, 
+		 P._Description
+		, N._Code
+		,pp._Description, T.TradeDirection, KK._Code
+		
+	UNION ALL 
+		
+		SELECT 
+			 N._Code as Code
+			,KK._Code as Client
+			,P._Description AS Manager
+			,N._Description AS Item
+			,PP._Description AS Manufacturer
+			,T.TradeDirection AS Direction
+			,CAST (SUM(T1._Fld7924) AS int) AS Value
+		FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_AccumRg7918] AS T1 WITH (NOLOCK) -- рн товары на складах
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Document208] as R WITH (NOLOCK) -- док реклизация товаров и услуг
+				ON T1._RecorderRRef = R._IDRRef
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Enum301] as E WITH (NOLOCK) -- перечисление
+				ON R._Fld4753RRef = E._IDRRef AND E._EnumOrder = 0
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference53] as N WITH (NOLOCK) -- номенклатура
+				ON T1._Fld7920RRef = N._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as K WITH (NOLOCK) -- контрагент 
+				ON R._Fld4764RRef = K._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as KK WITH (NOLOCK) -- контрагент 
+				ON KK._IDRRef = K._Fld638RRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] as P WITH (NOLOCK) -- менеджер
+				ON K._Fld651RRef = P._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference91] as PP WITH (NOLOCK) -- производитель
+				ON N._Fld845RRef = PP._IDRRef
+			LEFT JOIN ClientManager T 
+				ON KK._Code = T.Code
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference70] as S WITH (NOLOCK) -- SKLAD
+				ON S._IDRRef = T1._Fld7919RRef
+		WHERE T1._Period BETWEEN DATEADD(DAY,1,EOMONTH(GETDATE(),-1)) AND getdate()
+			AND  N._Code IN ('306119', '306120', '310595', '287007',  '289047',
+							 '301013', '301015', '302485', '302486', '302487', '302488', '302490',
+							 '302491', '302493', '302494', '303045', '307395', '302488', '302489',
+							 '280256', '280257', '284032', '284033', '301712', '306869', '306870',
+							 '306888', '308187', '310408', '313102', '313244', '314475', '318124',
+							 '320184', '323703', '324577', '326012')
+			AND T1._RecordKind = 1
+			AND E._EnumOrder = 0
+			AND TradeDirection in ('Художественный')
+		GROUP BY N._Description, 
+		 P._Description
+		, N._Code
+		,pp._Description, T.TradeDirection, KK._Code
+		
+	UNION ALL
+
+		SELECT 
+			 cast('111111' as nvarchar) as Code
+			,KK._Code as Client
+			,P._Description AS Manager
+			,'Малая базовая стойка Berlingo' as Item
+			,PP._Description AS Manufacturer
+			,T.TradeDirection AS Direction
+			,CAST (floor(sum(T1._Fld7924)/5) AS int) AS Value
+		FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_AccumRg7918] AS T1 WITH (NOLOCK) -- рн товары на складах
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Document208] as R WITH (NOLOCK) -- док реклизация товаров и услуг
+				ON T1._RecorderRRef = R._IDRRef
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Enum301] as E WITH (NOLOCK) -- перечисление
+				ON R._Fld4753RRef = E._IDRRef AND E._EnumOrder = 0
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference53] as N WITH (NOLOCK) -- номенклатура
+				ON T1._Fld7920RRef = N._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as K WITH (NOLOCK) -- контрагент 
+				ON R._Fld4764RRef = K._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as KK WITH (NOLOCK) -- контрагент 
+				ON KK._IDRRef = K._Fld638RRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] as P WITH (NOLOCK) -- менеджер
+				ON K._Fld651RRef = P._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference91] as PP WITH (NOLOCK) -- производитель
+				ON N._Fld845RRef = PP._IDRRef
+			LEFT JOIN ClientManager T 
+				ON KK._Code = T.Code
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference70] as S WITH (NOLOCK) -- SKLAD
+				ON S._IDRRef = T1._Fld7919RRef
+		WHERE T1._Period BETWEEN DATEADD(DAY,1,EOMONTH(GETDATE(),-1)) AND GETDATE()
+			AND  N._Code IN ('319073', '319069', '319070', '319071', '319072')
+			AND T1._RecordKind = 1
+			AND E._EnumOrder = 0
+			AND TradeDirection in ('Дистрибьюция',  'Экспорт')
+		GROUP BY 
+		 P._Description
+		,pp._Description, T.TradeDirection, KK._Code
+		HAVING COUNT(DISTINCT N._Code) = 5
+
+	UNION ALL
+
+		SELECT 
+			 cast('222222' as nvarchar) as Code
+			,KK._Code as Client
+			,P._Description AS Manager
+			,'Базовая стойка Berlingo' as Item
+			,PP._Description AS Manufacturer
+			,T.TradeDirection AS Direction
+			,CAST (floor(sum(T1._Fld7924)/5) AS int) AS Value
+		FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_AccumRg7918] AS T1 WITH (NOLOCK) -- рн товары на складах
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Document208] as R WITH (NOLOCK) -- док реклизация товаров и услуг
+				ON T1._RecorderRRef = R._IDRRef
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Enum301] as E WITH (NOLOCK) -- перечисление
+				ON R._Fld4753RRef = E._IDRRef AND E._EnumOrder = 0
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference53] as N WITH (NOLOCK) -- номенклатура
+				ON T1._Fld7920RRef = N._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as K WITH (NOLOCK) -- контрагент 
+				ON R._Fld4764RRef = K._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as KK WITH (NOLOCK) -- контрагент 
+				ON KK._IDRRef = K._Fld638RRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] as P WITH (NOLOCK) -- менеджер
+				ON K._Fld651RRef = P._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference91] as PP WITH (NOLOCK) -- производитель
+				ON N._Fld845RRef = PP._IDRRef
+			LEFT JOIN ClientManager T 
+				ON KK._Code = T.Code
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference70] as S WITH (NOLOCK) -- SKLAD
+				ON S._IDRRef = T1._Fld7919RRef
+		WHERE T1._Period BETWEEN DATEADD(DAY,1,EOMONTH(GETDATE(),-1)) AND GETDATE()
+			AND  N._Code IN ('313624','314124','314125','314126','314127')
+			AND T1._RecordKind = 1
+			AND E._EnumOrder = 0
+			AND TradeDirection in ('Дистрибьюция', 'Экспорт')
+		GROUP BY P._Description
+		,pp._Description, T.TradeDirection, KK._Code
+		HAVING COUNT(DISTINCT N._Code) = 5
+
+	UNION ALL
+
+		SELECT 
+			 N._Code as Code
+			,KK._Code as Client
+			,P._Description AS Manager
+			,N._Description AS Item
+			,PP._Description AS Manufacturer
+			,T.TradeDirection AS Direction
+			,CAST (floor(sum(T1._Fld7924)/288) AS int) AS Value
+		FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_AccumRg7918] AS T1 WITH (NOLOCK) -- рн товары на складах
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Document208] as R WITH (NOLOCK) -- док реклизация товаров и услуг
+				ON T1._RecorderRRef = R._IDRRef
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Enum301] as E WITH (NOLOCK) -- перечисление
+				ON R._Fld4753RRef = E._IDRRef AND E._EnumOrder = 0
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference53] as N WITH (NOLOCK) -- номенклатура
+				ON T1._Fld7920RRef = N._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as K WITH (NOLOCK) -- контрагент 
+				ON R._Fld4764RRef = K._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as KK WITH (NOLOCK) -- контрагент 
+				ON KK._IDRRef = K._Fld638RRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] as P WITH (NOLOCK) -- менеджер
+				ON K._Fld651RRef = P._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference91] as PP WITH (NOLOCK) -- производитель
+				ON N._Fld845RRef = PP._IDRRef
+			LEFT JOIN ClientManager T 
+				ON KK._Code = T.Code
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference70] as S WITH (NOLOCK) -- SKLAD
+				ON S._IDRRef = T1._Fld7919RRef
+		WHERE T1._Period BETWEEN DATEADD(DAY,1,EOMONTH(GETDATE(),-1)) AND getdate()
+			AND  N._Code IN ('286712')
+			AND T1._RecordKind = 1
+			AND E._EnumOrder = 0
+			AND TradeDirection in ('Художественный')
+		GROUP BY N._Description, 
+		 P._Description
+		, N._Code
+		,pp._Description, T.TradeDirection, KK._Code
+
+	UNION ALL
+
+		SELECT 
+			 N._Code as Code
+			,KK._Code as Client
+			,P._Description AS Manager
+			,N._Description AS Item
+			,PP._Description AS Manufacturer
+			,T.TradeDirection AS Direction
+			,CAST (floor(sum(T1._Fld7924)/252) AS int) AS Value
+		FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_AccumRg7918] AS T1 WITH (NOLOCK) -- рн товары на складах
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Document208] as R WITH (NOLOCK) -- док реклизация товаров и услуг
+				ON T1._RecorderRRef = R._IDRRef
+			JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Enum301] as E WITH (NOLOCK) -- перечисление
+				ON R._Fld4753RRef = E._IDRRef AND E._EnumOrder = 0
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference53] as N WITH (NOLOCK) -- номенклатура
+				ON T1._Fld7920RRef = N._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as K WITH (NOLOCK) -- контрагент 
+				ON R._Fld4764RRef = K._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] as KK WITH (NOLOCK) -- контрагент 
+				ON KK._IDRRef = K._Fld638RRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] as P WITH (NOLOCK) -- менеджер
+				ON K._Fld651RRef = P._IDRRef
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference91] as PP WITH (NOLOCK) -- производитель
+				ON N._Fld845RRef = PP._IDRRef
+			LEFT JOIN ClientManager T 
+				ON KK._Code = T.Code
+			LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference70] as S WITH (NOLOCK) -- SKLAD
+				ON S._IDRRef = T1._Fld7919RRef
+		WHERE T1._Period BETWEEN DATEADD(DAY,1,EOMONTH(GETDATE(),-1)) AND getdate()
+			AND  N._Code IN ('286727')
+			AND T1._RecordKind = 1
+			AND E._EnumOrder = 0
+			AND TradeDirection in ('Художественный')
+		GROUP BY N._Description, 
+		 P._Description
+		, N._Code
+		,pp._Description, T.TradeDirection, KK._Code
+
+		) P
+GROUP BY P.Manager, P.Direction, P.Manufacturer</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Stands\1C.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Manager]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Manager]"
+                      length="100"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Manager]"
+                      name="Manager"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Direction]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Direction]"
+                      length="255"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Direction]"
+                      name="Direction"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Manufacturer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      length="50"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Manufacturer]"
+                      name="Manufacturer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Result]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Result]"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Result]"
+                      name="Result"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Manager]"
+                      dataType="wstr"
+                      length="100"
+                      name="Manager" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Direction]"
+                      dataType="wstr"
+                      length="255"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      dataType="wstr"
+                      length="50"
+                      name="Manufacturer" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Result]"
+                      dataType="i4"
+                      name="Result" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Manager]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Manager]"
+                      name="Manager" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Direction]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Direction]"
+                      name="Direction" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Manufacturer]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Manufacturer]"
+                      name="Manufacturer" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Result]"
+                      dataType="i4"
+                      lineageId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Result]"
+                      name="Result" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Stands\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Stands\Stands"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Stands"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[Stand]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Stands\Stands.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Manager]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Manager"
+                      externalMetadataColumnId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manager]"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Manager]" />
+                    <inputColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Direction]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Direction"
+                      externalMetadataColumnId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Direction]"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Direction]" />
+                    <inputColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Manufacturer]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Manufacturer"
+                      externalMetadataColumnId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Manufacturer]" />
+                    <inputColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Result]"
+                      cachedDataType="i4"
+                      cachedName="Result"
+                      externalMetadataColumnId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      lineageId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Result]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manager]"
+                      dataType="wstr"
+                      length="100"
+                      name="Manager" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Direction]"
+                      dataType="wstr"
+                      length="50"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Manufacturer]"
+                      dataType="wstr"
+                      length="50"
+                      name="Manufacturer" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      dataType="i4"
+                      name="Value" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Stands\Stands.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Stands\Stands.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Stands\Stands.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Stands\Stands.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Stands\Stands.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Stands.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Load Stands\Stands.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Load Stands\1C.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate Stands"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{3864606D-1AC5-4AEA-AAA1-5CF908FA7091}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate Stands"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9C5A2677-88B2-4E79-918E-9511D6EAA672}"
+          SQLTask:SqlStatementSource="truncate table Stand" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{72692F75-6A1A-410A-A381-1CB048475730}"
+      DTS:From="Package\truncate Stands"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Load Stands" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D1013F98-776C-4278-8976-BE915032F749}"
+      DTS:From="Package\Load Stands"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Clear Logs" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Clear Logs"
+          TopLeft="448,278" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Stands"
+          TopLeft="441,182" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\truncate Stands"
+          TopLeft="432,76" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="510,118">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="511.75,224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Stands">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="93,42"
+          Id="Package\Load Stands\1C"
+          TopLeft="375,110" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Load Stands\Stands"
+          TopLeft="358,226" />
+        <EdgeLayout
+          Id="Package\Load Stands.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="418,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Stands\1C">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Stands\Stands">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

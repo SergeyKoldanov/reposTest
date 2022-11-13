@@ -1,0 +1,804 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/10/2022 11:26:24 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{DEFE3FAE-666C-44A7-BA3C-F0C6B0A2A56D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{3BBC7C2E-A402-4FB0-BD0D-DD34790CCC01}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A8921411-E17F-4607-800F-BD419D7629E6}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{2AD9FD9F-0D8F-41C9-849C-A8F2D83BEFA2}"
+      DTS:ObjectName="Диспетчер соединений Excel">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[User::ExcelFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\koldanov.sv\Desktop\test918\test.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8EB53F04-A6E4-4A73-974B-5C6E6E6C7097}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExcelFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\koldanov.sv\Desktop\test918\test.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F45756C4-4F31-4C81-82BA-FACFF7F2C160}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;CREATE TABLE `&quot;+ @[User::strExcelListName] +&quot;` (&#xA;    `Статус` NVARCHAR(255),&#xA;    `Глоссарий` NVARCHAR(255),&#xA;    `Подразделение` NVARCHAR(255),&#xA;    `Менеджер` NVARCHAR(255),&#xA;    `Регион` NVARCHAR(255),&#xA;    `Код` NVARCHAR(255),&#xA;    `Контрагент` NVARCHAR(255),&#xA;    `Оборот Канц+ТОН/СТМ` INT,&#xA;    `Заказы 9-18/SKU` INT,&#xA;    `Конечники 9-18/Ранжирование + баннеры` NVARCHAR(255),&#xA;    `Адрес сайта` NVARCHAR(255)&#xA;)&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="sqlCreateExcelSheet">
+      <DTS:VariableValue
+        DTS:DataType="8">CREATE TABLE `ВИП-дилеры` (
+    `Статус` NVARCHAR(255),
+    `Глоссарий` NVARCHAR(255),
+    `Подразделение` NVARCHAR(255),
+    `Менеджер` NVARCHAR(255),
+    `Регион` NVARCHAR(255),
+    `Код` NVARCHAR(255),
+    `Контрагент` NVARCHAR(255),
+    `Оборот Канц+ТОН/СТМ` INT,
+    `Заказы 9-18/SKU` INT,
+    `Конечники 9-18/Ранжирование + баннеры` NVARCHAR(255),
+    `Адрес сайта` NVARCHAR(255)
+)</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{31A4254E-CBB7-47C8-A0D6-1BED42C7FE72}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="strExcelListName">
+      <DTS:VariableValue
+        DTS:DataType="8">ВИП-дилеры</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача &quot;Выполнение SQL&quot;"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{939EE71E-E244-40BF-B56B-EE457AA869A3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача &quot;Выполнение SQL&quot;"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ED78AACE-301E-48E1-B13A-645F0CB0971D}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::sqlCreateExcelSheet" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Задача потока данных"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{381F48DA-6114-4602-BFBE-CC9559A36B4E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача потока данных"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="Источник &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[918Auto]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Статус]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Статус]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Статус]"
+                      name="Статус"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Глоссарий]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Глоссарий]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Глоссарий]"
+                      name="Глоссарий"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Подразделение]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      name="Подразделение"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Менеджер]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Менеджер]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Менеджер]"
+                      name="Менеджер"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Контрагент]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Контрагент]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Контрагент]"
+                      name="Контрагент"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот Канц+ТОН/СТМ]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот Канц+ТОН/СТМ]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот Канц+ТОН/СТМ]"
+                      name="Оборот Канц+ТОН/СТМ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Заказы 9-18/SKU]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Заказы 9-18/SKU]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Заказы 9-18/SKU]"
+                      name="Заказы 9-18/SKU"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Конечники 9-18/Ранжирование + баннеры]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Конечники 9-18/Ранжирование + баннеры]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Конечники 9-18/Ранжирование + баннеры]"
+                      name="Конечники 9-18/Ранжирование + баннеры"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Адрес сайта]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Адрес сайта]"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Адрес сайта]"
+                      name="Адрес сайта"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Статус]"
+                      dataType="wstr"
+                      length="255"
+                      name="Статус" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Глоссарий]"
+                      dataType="wstr"
+                      length="255"
+                      name="Глоссарий" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Подразделение]"
+                      dataType="wstr"
+                      length="255"
+                      name="Подразделение" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Менеджер]"
+                      dataType="wstr"
+                      length="255"
+                      name="Менеджер" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      dataType="wstr"
+                      length="255"
+                      name="Регион" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код]"
+                      dataType="wstr"
+                      length="255"
+                      name="Код" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Контрагент]"
+                      dataType="wstr"
+                      length="255"
+                      name="Контрагент" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Оборот Канц+ТОН/СТМ]"
+                      dataType="i4"
+                      name="Оборот Канц+ТОН/СТМ" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Заказы 9-18/SKU]"
+                      dataType="i4"
+                      name="Заказы 9-18/SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Конечники 9-18/Ранжирование + баннеры]"
+                      dataType="wstr"
+                      length="255"
+                      name="Конечники 9-18/Ранжирование + баннеры" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Адрес сайта]"
+                      dataType="wstr"
+                      length="255"
+                      name="Адрес сайта" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Статус]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Статус]"
+                      name="Статус" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Глоссарий]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Глоссарий]"
+                      name="Глоссарий" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      name="Подразделение" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Менеджер]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Менеджер]"
+                      name="Менеджер" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код]"
+                      name="Код" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Контрагент]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Контрагент]"
+                      name="Контрагент" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот Канц+ТОН/СТМ]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Оборот Канц+ТОН/СТМ]"
+                      name="Оборот Канц+ТОН/СТМ" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Заказы 9-18/SKU]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Заказы 9-18/SKU]"
+                      name="Заказы 9-18/SKU" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Конечники 9-18/Ранжирование + баннеры]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Конечники 9-18/Ранжирование + баннеры]"
+                      name="Конечники 9-18/Ранжирование + баннеры" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Адрес сайта]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Адрес сайта]"
+                      name="Адрес сайта" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\Назначение &quot;Excel&quot;"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Назначение &quot;Excel&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Назначение &quot;Excel&quot;"
+              name="Назначение &quot;Excel&quot;"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">ВИП_дилеры$</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable">User::ExcelFilePath</property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Диспетчер соединений Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;Excel&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Статус]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Статус"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Статус]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Статус]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Глоссарий]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Глоссарий"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Глоссарий]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Глоссарий]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Подразделение]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Подразделение"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Подразделение]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подразделение]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Менеджер]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Менеджер"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Менеджер]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Менеджер]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Регион]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Регион"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Регион]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Код]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Код"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Контрагент]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Контрагент"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Контрагент]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Контрагент]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Оборот Канц+ТОН/СТМ]"
+                      cachedDataType="i4"
+                      cachedName="Оборот Канц+ТОН/СТМ"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот Канц+ТОН/СТМ]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Оборот Канц+ТОН/СТМ]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Заказы 9-18/SKU]"
+                      cachedDataType="i4"
+                      cachedName="Заказы 9-18/SKU"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Заказы 9-18/SKU]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Заказы 9-18/SKU]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Конечники 9-18/Ранжирование + баннеры]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Конечники 9-18/Ранжирование + баннеры"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Конечники 9-18/Ранжирование + баннеры]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Конечники 9-18/Ранжирование + баннеры]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Адрес сайта]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Адрес сайта"
+                      externalMetadataColumnId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Адрес сайта]"
+                      lineageId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Адрес сайта]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Статус]"
+                      dataType="wstr"
+                      length="255"
+                      name="Статус" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Глоссарий]"
+                      dataType="wstr"
+                      length="255"
+                      name="Глоссарий" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Подразделение]"
+                      dataType="wstr"
+                      length="255"
+                      name="Подразделение" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Менеджер]"
+                      dataType="wstr"
+                      length="255"
+                      name="Менеджер" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Регион]"
+                      dataType="wstr"
+                      length="255"
+                      name="Регион" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код]"
+                      dataType="wstr"
+                      length="255"
+                      name="Код" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Контрагент]"
+                      dataType="wstr"
+                      length="255"
+                      name="Контрагент" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Оборот Канц+ТОН/СТМ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Оборот Канц+ТОН/СТМ" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Заказы 9-18/SKU]"
+                      dataType="wstr"
+                      length="255"
+                      name="Заказы 9-18/SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Конечники 9-18/Ранжирование + баннеры]"
+                      dataType="wstr"
+                      length="255"
+                      name="Конечники 9-18/Ранжирование + баннеры" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Адрес сайта]"
+                      dataType="wstr"
+                      length="255"
+                      name="Адрес сайта" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;Excel&quot;"
+                  synchronousInputId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Задача потока данных\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Задача потока данных\Источник &quot;OLE DB&quot;.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{FFD10D9B-F87D-4535-903B-B2E685AFFF4D}"
+      DTS:From="Package\Задача &quot;Выполнение SQL&quot;"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Задача потока данных" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Задача &quot;Выполнение SQL&quot;"
+          TopLeft="400,177" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Задача потока данных"
+          TopLeft="413,267" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="506,219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Задача потока данных">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Задача потока данных\Источник &quot;OLE DB&quot;"
+          TopLeft="351,158" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Задача потока данных\Назначение &quot;Excel&quot;"
+          TopLeft="398,286" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="437.5,200">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47,86"
+              Start="0,0"
+              End="47,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
+                  <mssgle:LineSegment
+                    End="43,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43,43"
+                    Point2="47,43"
+                    Point3="47,47" />
+                  <mssgle:LineSegment
+                    End="47,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Источник &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\Назначение &quot;Excel&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

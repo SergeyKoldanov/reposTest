@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/6/2021 4:15:16 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{AC93721C-0873-4D7F-805E-45CCAA00B8D4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{3305A772-0E83-41D3-A1B0-6DB4A8D50E22}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.140.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FAAD5F19-937E-476B-ACA2-D936ABC95318}"
+      DTS:ObjectName="10.0.0.140.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.140;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\delete 1 month"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{D1166280-8DE0-459A-A546-DEC021D4FDAA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="delete 1 month"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FAAD5F19-937E-476B-ACA2-D936ABC95318}"
+          SQLTask:SqlStatementSource="delete from [dbo].[NK]&#xA;where [Period] = [dbo].[MinusMonth]([dbo].[FirstOfMonth](getdate()), 12) &#xA;or [Period] = [dbo].[FirstOfMonth](getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\insert nk"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{D5AA9550-1AED-451A-8D92-770B264C9F56}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="insert nk"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FAAD5F19-937E-476B-ACA2-D936ABC95318}"
+          SQLTask:SqlStatementSource="&#xA;---&#xA;WITH Month26 AS (&#xA;SELECT &#xA;&#x9;   Code           AS [Код1с]&#xA;      ,[Description]  AS [ГоловнойКлиент]&#xA;      ,Summa        AS [Оборот]&#xA;&#x9;  ,P.Period&#x9; &#xA;FROM   (&#xA;           SELECT k.Code --Головной контрагент&#xA;                 ,k.IDRRef --id&#xA;                 ,k.[Description]&#xA;                 ,isnull(SUM(p.Oborot),  0)  Summa&#xA;&#x9;&#x9;&#x9;&#x9; ,DATEADD(DAY,1,EOMONTH(p.Period, -1)) as Period&#xA;           FROM   dw.dbo.hrProdazhiTek p(NOLOCK)&#xA;                  JOIN dw.dbo.hrSprKontragent ko(NOLOCK)&#xA;                       ON  ko.id = p.KontragentID&#xA;                  JOIN dw.dbo.hrSprKontragent k(NOLOCK)&#xA;                       ON  k.IDRRef = ko.GolovnojKontrag&#xA;                  JOIN WORK.dbo.tbKlientVGruppe kvg(NOLOCK)&#xA;                       ON  kvg.KontragentID = k.ID&#xA;                  JOIN WORK.dbo.tbTovarVGruppe AS tvg(NOLOCK)&#xA;                       ON  tvg.NomenklaturaID = p.NomenklaturaID&#xA;                           AND tvg.GruppaID IN (127071 -- Канцелярские товары&#xA;                                               ,127072 -- Товары офисного назначения (ТОН)&#xA;                                                )&#xA;           WHERE  cast(p.Period as date) &gt;= DATEADD(DAY,1, EOMONTH(getdate(),-27)) AND  cast(p.Period as date) &lt;=  dateadd(MONTH, -12, cast(getdate() as date))&#xA;&#x9;&#x9;   --15 месяцев с учетом текущего для предыдущего года&#xA;                  AND kvg.GruppaID IN ( 117267 -- B2B&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118905 -- Дистрибьюция&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118910 -- Сетевой отдел&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118908 -- Художественная дистрибьюция&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118906 -- Экспорт&#xA;                                       )&#x9;&#x9;&#x9;&#x9;&#xA;           GROUP BY&#xA;                  k.code&#xA;                 ,k.IDRRef&#xA;                 ,k.[Description]&#xA;&#x9;&#x9;&#x9;&#x9; ,DATEADD(DAY,1,EOMONTH(p.Period, -1))&#xA;&#x9;) P&#xA;),&#xA;&#xA;ObschetPred AS (&#xA;SELECT &#xA;&#x9;Код1с&#xA;   ,ГоловнойКлиент&#xA;   ,C.Manager&#xA;   ,C.Department&#xA;   ,C.Region&#xA;   ,C.TradeDirection&#xA;   ,(&#xA;     SELECT isnull(SUM(T.Оборот), 0)&#xA;     FROM Month26 T&#xA;     WHERE T.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-13)) and Period &lt;= dateadd(MONTH, -12, cast(getdate() as date))&#xA;     ) tec--текущий месяц предыдущего года&#xA;   ,(&#xA;     SELECT isnull(SUM(H.Оборот), 0)&#xA;     FROM Month26 H&#xA;     WHERE H.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-25)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-14))&#xA;     ) mec12--период 12 месяцев от текущего, не включая его&#xA;   ,(&#xA;     SELECT isnull(SUM(G.Оборот), 0)&#xA;     FROM Month26 G&#xA;     WHERE G.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-14)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-14))&#xA;     ) pred--предыдущий месяц предыдущего года&#xA;   ,(&#xA;     SELECT isnull(SUM(F.Оборот), 0)&#xA;     FROM Month26 F&#xA;     WHERE F.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-26)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-15))&#xA;     ) pred12--период 12 месяцев от предыдущего месяца, не включая его&#xA;   ,(&#xA;     SELECT isnull(SUM(C.Оборот), 0)&#xA;     FROM Month26 C&#xA;     WHERE C.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-15)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-15))&#xA;     ) predpred--предпредыдущий месяц предыдущего года&#xA;   ,(&#xA;     SELECT isnull(SUM(J.Оборот), 0)&#xA;     FROM Month26 J&#xA;     WHERE J.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-27)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -3)),EOMONTH(getdate(),-16))&#xA;     ) predpred12--период 12 месяцев от предпредыдущего месяца, не включая его&#xA;FROM Month26 M left join ClientManager C ON M.Код1с = C.HeadClientCode&#xA;group by &#x9;Код1с&#xA;   ,ГоловнойКлиент&#xA;   ,C.Manager&#xA;   ,C.Department&#xA;   ,C.Region&#xA;   ,C.TradeDirection&#xA;)&#xA;--аналогично двум верхним with, только для текущего года&#xA;,Month14 AS (&#xA;SELECT &#xA;&#x9;   Code           AS [Код1с]&#xA;      ,[Description]  AS [ГоловнойКлиент]&#xA;      ,Summa        AS [Оборот]&#xA;&#x9;  ,P.Period&#xA;FROM   (&#xA;           SELECT k.Code&#xA;                 ,k.IDRRef&#xA;                 ,k.[Description]&#xA;                 ,isnull(SUM(p.Oborot),  0)  Summa&#xA;&#x9;&#x9;&#x9;&#x9; ,DATEADD(DAY,1,EOMONTH(p.Period, -1)) as Period&#xA;           FROM   dw.dbo.hrProdazhiTek p(NOLOCK)&#xA;                  JOIN dw.dbo.hrSprKontragent ko(NOLOCK)&#xA;                       ON  ko.id = p.KontragentID&#xA;                  JOIN dw.dbo.hrSprKontragent k(NOLOCK)&#xA;                       ON  k.IDRRef = ko.GolovnojKontrag&#xA;                  JOIN WORK.dbo.tbKlientVGruppe kvg(NOLOCK)&#xA;                       ON  kvg.KontragentID = k.ID&#xA;                  JOIN WORK.dbo.tbTovarVGruppe AS tvg(NOLOCK)&#xA;                       ON  tvg.NomenklaturaID = p.NomenklaturaID&#xA;                           AND tvg.GruppaID IN (127071 -- Канцелярские товары&#xA;                                               ,127072 -- Товары офисного назначения (ТОН)&#xA;                                                )&#xA;           WHERE cast(p.Period as date) &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-15)) AND cast(p.Period as date) &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE())),EOMONTH(getdate(),-1))&#xA;                  AND kvg.GruppaID IN ( 117267 -- B2B&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118905 -- Дистрибьюция&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118910 -- Сетевой отдел&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118908 -- Художественная дистрибьюция&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  ,118906 -- Экспорт&#xA;                                       )&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;           GROUP BY&#xA;                  k.code&#xA;                 ,k.IDRRef&#xA;                 ,k.[Description]&#xA;&#x9;&#x9;&#x9;&#x9; ,DATEADD(DAY,1,EOMONTH(p.Period, -1))&#xA;&#x9;) P&#xA;),&#xA;&#xA;ObschetTec AS (&#xA;SELECT &#xA;&#x9;Код1с&#xA;   ,ГоловнойКлиент&#xA;   ,C.Manager&#xA;   ,C.Department&#xA;   ,C.Region&#xA;   ,C.TradeDirection&#xA;   ,(&#xA;     SELECT isnull(SUM(T.Оборот), 0)&#xA;     FROM Month14 T&#xA;     WHERE T.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-1)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE())),EOMONTH(getdate(),-1))&#xA;     ) tec&#xA;   ,(&#xA;     SELECT isnull(SUM(H.Оборот), 0)&#xA;     FROM Month14 H&#xA;     WHERE H.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-13)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-2))&#xA;     ) mec12&#xA;   ,(&#xA;     SELECT isnull(SUM(G.Оборот), 0)&#xA;     FROM Month14 G&#xA;     WHERE G.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-2)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-2))&#xA;     ) pred&#xA;   ,(&#xA;     SELECT isnull(SUM(F.Оборот), 0)&#xA;     FROM Month14 F&#xA;     WHERE F.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-14)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-3))&#xA;     ) pred12&#xA;   ,(&#xA;     SELECT isnull(SUM(C.Оборот), 0)&#xA;     FROM Month14 C&#xA;     WHERE C.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-3)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-3))&#xA;     ) predpred&#xA;   ,(&#xA;     SELECT isnull(SUM(J.Оборот), 0)&#xA;     FROM Month14 J&#xA;     WHERE J.Код1с = M.Код1с&#xA;&#x9;&#x9;AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-15)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -3)),EOMONTH(getdate(),-4))&#xA;     ) predpred12&#xA;FROM Month14 M left join ClientManager C ON M.Код1с = C.HeadClientCode&#xA;group by &#x9;Код1с&#xA;   ,ГоловнойКлиент&#xA;   ,C.Manager&#xA;   ,C.Department&#xA;   ,C.Region&#xA;   ,C.TradeDirection&#xA;)&#xA;&#xA;insert into NK&#xA;--проверка трех условий для предыдущего года&#xA;SELECT cast('ФактПредыдущийГод' as nvarchar) as Тип, O.Код1с, O.ГоловнойКлиент, O.tec, O.Manager&#xA;   ,O.Department&#xA;   ,O.Region,  O.TradeDirection, [dbo].[MinusMonth]([dbo].[FirstOfMonth](getdate()), 12) as da&#xA;FROM ObschetPred O&#xA;WHERE tec &gt;= [dbo].[TradeDirectionCost](O.TradeDirection)&#xA;&#x9; and (&#xA;&#x9; mec12 = 0 &#xA;&#x9; or (pred &lt; [dbo].[TradeDirectionCost](O.TradeDirection) and pred &gt; 0 and pred12 = 0) &#xA;&#x9; or (predpred &lt; [dbo].[TradeDirectionCost](O.TradeDirection) and predpred &gt; 0 and predpred12 = 0)&#xA;&#x9;)&#xA;&#xA;&#x9;UNION ALL&#xA;--проверка трех условий для текущего года&#xA;SELECT cast('ФактТекущийГод' as nvarchar) as Тип, O.Код1с, O.ГоловнойКлиент,O.tec, O.Manager&#xA;   ,O.Department&#xA;   ,O.Region, O.TradeDirection, [dbo].[FirstOfMonth](getdate()) as da&#xA;FROM ObschetTec O&#xA;WHERE tec &gt;= [dbo].[TradeDirectionCost](O.TradeDirection) and (&#xA;&#x9; mec12 = 0 &#xA;&#x9; or (pred &lt; [dbo].[TradeDirectionCost](O.TradeDirection) and pred &gt; 0 and pred12 = 0) &#xA;&#x9; or (predpred &lt; [dbo].[TradeDirectionCost](O.TradeDirection) and predpred &gt; 0 and predpred12 = 0)&#xA;&#x9;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{AA5F7F52-9422-4ABE-95C3-86806E156D3E}"
+      DTS:From="Package\delete 1 month"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\insert nk" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\delete 1 month"
+          TopLeft="314,91" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\insert nk"
+          TopLeft="268,192" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="389,133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-61,59"
+              Start="0,0"
+              End="-61,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="-4,29.5" />
+                  <mssgle:LineSegment
+                    End="-57,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-57,29.5"
+                    Point2="-61,29.5"
+                    Point3="-61,33.5" />
+                  <mssgle:LineSegment
+                    End="-61,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

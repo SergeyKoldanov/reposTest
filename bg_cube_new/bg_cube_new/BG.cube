@@ -1,0 +1,826 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="78de87ad-d568-4dc8-bb7a-760e02c90239" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Relef</ID>
+  <Name>BG</Name>
+  <CreatedTimestamp>2021-07-13T09:11:06.38Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-12-25T17:15:23.043333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2090" scrolltop="-470" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="19420" y="16166" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGDimClients" left="11365" top="8242" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGDimClients" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGDimItems" left="3811" top="4471" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="3096" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000180c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGDimItems" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwCalendar" left="15106" top="2646" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwCalendar" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGFact" left="9551" top="846" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="3387" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003b0d0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwBGFact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10944" top="5388" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="1221" height="3354" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[vwBGFact-vwBGDimClients]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11765" y="8242" />
+              <point x="11765" y="6780" />
+              <point x="11244" y="6780" />
+              <point x="11244" y="5688" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6607" top="4372" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="3244" height="845" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[vwBGFact-vwBGDimItems]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="11" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6907" y="4771" />
+              <point x="7700" y="4771" />
+              <point x="7700" y="4917" />
+              <point x="9551" y="4917" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12638" top="2417" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="2768" height="929" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[vwBGFact-vwCalendar]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="10" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15106" y="2946" />
+              <point x="13493" y="2946" />
+              <point x="13493" y="2717" />
+              <point x="12938" y="2717" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2090</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-470</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>3811</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>846</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-01-17T07:08:55.89Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1049</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="9899b8fc-26e1-4d7a-92d6-ca96e9d182ff">
+      <ID>Vw BG Dim Clients</ID>
+      <Name>Vw BG Dim Clients</Name>
+      <Translations>
+        <Translation dwd:design-time-name="53f9cebc-e311-42a9-9e65-257b4403d29a">
+          <Language>1049</Language>
+          <Caption>Клиенты</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw BG Dim Clients</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2ecdc14e-8622-4dfa-a0ab-905d02382cb9">
+          <AttributeID>Client</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d16f962a-a4bf-4e9d-8d5c-eab3cd67211b">
+          <AttributeID>Main Client</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07d76f3a-cec3-46be-9e64-77e35f204402">
+          <AttributeID>Region</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="84ab18cc-9962-4a1f-81af-662604314467">
+          <AttributeID>City</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd74f21b-fd5c-4adf-8940-e31262961957">
+          <AttributeID>Manager</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b9c5d65-53cf-46d0-a149-8d5db1651647">
+          <AttributeID>Main Client Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="784e482e-07ec-491d-a1e4-e774ad07404d">
+          <AttributeID>Client Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca9a1fbf-0c39-4e91-9c19-c59dacfb19f8">
+          <AttributeID>Main Client Code</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="d264f52e-eaa7-404a-ac22-54578094d253">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3d1cf741-3918-4762-aef2-9e255669003d">
+      <ID>Vw BG Dim Items</ID>
+      <Name>Vw BG Dim Items</Name>
+      <Translations>
+        <Translation dwd:design-time-name="cf47b89e-e5c0-43db-a210-b5badc0bcdc2">
+          <Language>1049</Language>
+          <Caption>Товары</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw BG Dim Items</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="08061847-8d2b-42a2-baee-b9ce33897937">
+          <AttributeID>Item</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="14186ff9-c571-4e5a-b84e-89f519f9d1d5">
+          <AttributeID>Group 1</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="0d319ab9-3b2f-4f47-a369-0dafd70b4457">
+          <AttributeID>Group 2</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="8df8c46d-4672-408f-88e5-0da6534db552">
+          <AttributeID>Group 3</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="43cd8a1f-9dcd-487a-895c-fe32d15a7416">
+          <AttributeID>Group 4</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="03bdefd1-54a4-47c3-b80a-ca828907cca0">
+          <AttributeID>Pre Archive</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85270cad-0c18-4545-a90a-a50f07f5a0fa">
+          <AttributeID>Archive</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f4278f17-6c65-4499-8a12-e7ad9cf33c44">
+          <AttributeID>Class</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="2816f5b8-d830-46d5-9c34-67d6aad13889">
+          <AttributeID>Level 02</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="67145080-9ab1-44cb-956b-aa1c5a108568">
+          <AttributeID>Level 03</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="c144f560-8b0f-4416-b737-c12e0482b684">
+          <AttributeID>Item Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6c4e551-bdbe-46e0-9f72-e75df6f4e786">
+          <AttributeID>Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7219a177-36da-4555-a2ab-15e85e50731c">
+          <AttributeID>Price Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c3c0c84-f131-4b9f-abbb-5541285d70de">
+          <AttributeID>TM</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="42ce4a24-ddcc-42f6-aa87-933b0f166c99">
+          <AttributeID>Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="78c8ff34-9d44-4272-be89-dd90e71de26e">
+          <AttributeID>Article</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3d3dd560-43f3-48b1-894f-15e73555200e">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="f1426a93-1ab1-4e29-9ff0-c65702774ba0">
+          <HierarchyID>Иерархия 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="aa8f2feb-de91-4830-b92d-650794f5e139">
+      <ID>Vw Calendar</ID>
+      <Name>Vw Calendar</Name>
+      <Translations>
+        <Translation dwd:design-time-name="f7bd6943-9814-4b13-b2ed-7de37d020704">
+          <Language>1049</Language>
+          <Caption>Календарь</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Calendar</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5d90d887-57b5-4913-a9e1-f9fd35a5c835">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d1d30b7-9d8f-44f6-8f40-d4bfd84b84bb">
+          <AttributeID>Year</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="c6b61d15-0063-448b-a761-9074087e6354">
+          <AttributeID>Month</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="171e75ba-4265-4a6f-90e7-bc34f99fb41a">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <CubePermissions>
+    <CubePermission dwd:design-time-name="ee3110f6-c0c9-4b49-9b0f-bd5a43196120">
+      <ID>CubePermission</ID>
+      <Name>CubePermission</Name>
+      <CreatedTimestamp>2021-07-13T09:43:57.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-25T17:15:23.06Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+  </CubePermissions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="d035083a-5624-4c9e-ad64-a3720cd3f086">
+      <ID>Vw BG Fact</ID>
+      <Name>Продажи</Name>
+      <CreatedTimestamp>2021-07-13T09:11:06.383333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-25T17:15:23.053333Z</LastSchemaUpdate>
+      <LastProcessed>2022-01-17T07:08:55.89Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="975b4bc3-55ea-4cf2-95af-e97b56ef93b2">
+          <ID>Count</ID>
+          <Name>Количество</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="b11f8846-6639-483f-a749-109775a1178b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8d5b65ce-3600-4920-a888-daebaa2ea0cd">
+              <TableID>dbo_vwBGFact</TableID>
+              <ColumnID>Count</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c562b637-c4cf-4b36-bdbd-c5f1a599d128">
+          <ID>Sum Without NDS</ID>
+          <Name>Сумма без НДС</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="48d622f0-a345-40cc-85d8-c11398c94281">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b1ea57e6-3410-4b11-9f1f-8737d42f212f">
+              <TableID>dbo_vwBGFact</TableID>
+              <ColumnID>Sum_x0020_without_x0020_NDS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6a37bcb1-795d-445e-8412-56c73c77a521">
+          <ID>Sum With NDS</ID>
+          <Name>Сумма с НДС</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="23c5505e-1fde-4960-860f-4c26ee0810a2">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c24f0bae-c1e6-4b08-a0c5-16fc0fef17c8">
+              <TableID>dbo_vwBGFact</TableID>
+              <ColumnID>Sum_x0020_with_x0020_NDS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cf99a0b9-8c87-4dce-a92c-68cbe0718ef2">
+          <ID>Margin</ID>
+          <Name>Маржа без НДС</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="89ae26e4-b3b5-44bf-a48c-78f8b9434b27">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cee0ede9-0f41-471d-8eee-2510d1e790ba">
+              <TableID>dbo_vwBGFact</TableID>
+              <ColumnID>Margin</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>15723941</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ca055a1e-b9e4-4f87-8a21-aac5096e5011">
+          <CubeDimensionID>Vw BG Dim Clients</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="08d7ff37-055f-4374-95c3-4f3ad263a7e7">
+              <AttributeID>Client</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7c2b9e1a-2fe4-4b7e-a7ba-52eca01e36c4">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1c92430f-2744-4abd-b367-92ce2150c6aa">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Client</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="aa837f01-564a-4564-af64-f5b5afab32d5">
+              <AttributeID>Main Client</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f89c5537-37d2-4cbb-88ad-7a23888af11e">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4dd492d0-e1aa-48b8-ad42-5a8b40039284">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>Main_x0020_Client</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="2d46290c-2775-476f-be6c-06507575bd7a">
+              <AttributeID>Region</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4af05c97-d831-439b-a1a2-825c615f331f">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="187f808d-00d2-450c-94ee-9d3eff91bc3b">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>Region</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="e9841aaf-e92c-44d6-887e-1c71f8da98c7">
+              <AttributeID>City</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ee6ee4f9-36d8-42be-b960-632206417bae">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ddaf1c05-0a4b-4b53-837b-d14910eac9cb">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>City</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="1e076838-e342-4ad9-8375-484618b2221c">
+              <AttributeID>Manager</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5c8ced58-9b19-4115-863f-c86693a0292a">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a56cc185-9342-4880-9e83-0208fdf5ee15">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>Manager</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="684b39d9-5ecb-47c3-806c-cb880c35a8b8">
+              <AttributeID>Main Client Type</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7d6f86b9-d78f-4e98-a0c6-4dde7c19abf0">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="88a8ffa7-fb3b-438c-901f-ad153b326d49">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>Main_x0020_Client_x0020_Type</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="72ac47f4-8899-4c53-b67d-b63c88e578c9">
+              <AttributeID>Client Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4ba07fff-e297-4827-a789-9ae27544a334">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b28a1a97-0f2b-4fc8-b56c-b7566dceadd5">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>Client_x0020_Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="fafc4989-f022-4edd-bfb5-fed84091d556">
+              <AttributeID>Main Client Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7c7fc039-f4f4-4b12-9eb5-51c653825e24">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d3675717-7581-4ee2-a3a6-91366c53a05a">
+                    <TableID>dbo_vwBGDimClients</TableID>
+                    <ColumnID>Main_x0020_Client_x0020_Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9242ba82-5883-4fc2-8aec-a781eaf86a17">
+          <CubeDimensionID>Vw Calendar</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="47893396-f78b-4f53-9e21-bfc3a1dc7ef8">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3e0821ee-b856-423e-a218-9e880a9d3659">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f6b237a7-51da-4e23-8881-eee8170582b2">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="487d2014-3fab-48a4-9d18-7e7cc97154ca">
+              <AttributeID>Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6f21d0e5-0fc2-4603-8169-0bd198f7b736">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6e51fff6-3bbc-4309-a6ce-47dc34013661">
+                    <TableID>dbo_vwCalendar</TableID>
+                    <ColumnID>Year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b7d22cf0-9dc0-4e82-9632-2bb5f5d8aa28">
+              <AttributeID>Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8fdd3280-963a-42cd-95d4-57abb77840c2">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ebf5712b-ddfb-40eb-94a0-c27a50fdcfad">
+                    <TableID>dbo_vwCalendar</TableID>
+                    <ColumnID>YearMonth</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7ede6a91-957b-4103-bd35-7d6d56caeb43">
+          <CubeDimensionID>Vw BG Dim Items</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fa52f264-1317-47c1-8270-88526884d307">
+              <AttributeID>Item</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ba59d5fb-a70d-412d-b253-6b67d0ba810a">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e53174ec-fc07-437e-a5bb-126171e1909b">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Item</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="2a79b3d2-6656-48f7-aead-99413dcbcfc9">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ae6c759b-4208-4182-b330-e158ca45909e">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Item_x0020_type</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="053f86b1-aefd-4ba6-9449-b763b3008e42">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e94edd14-6518-40f0-b8a4-e0302e1c5fd9">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>PreArchive</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="3e0ede5a-79d9-43da-acdd-b6d90b14d8f1">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="39526726-8718-4804-ab45-452316bed029">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Group_x0020_1</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="03a6435e-b178-4894-97f0-0f10e990e2ce">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bcff71ff-6f28-4b2c-b3d7-3adc34a369b9">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Group_x0020_2</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="047d4a20-1d15-49a1-88e0-0ec893d09692">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="485b7baa-1492-49e9-9493-041205741ba3">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Group_x0020_3</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="c96d8188-2a80-4306-ad63-fa84d1783b61">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dfd99789-7b56-409c-80f5-9076a484ed08">
+                    <TableID>dbo_vwBGFact</TableID>
+                    <ColumnID>Group_x0020_4</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="6652f9dd-0eb9-4299-ad65-81f3faed0f9d">
+              <AttributeID>Group 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0b2fb758-26e3-49ce-9dfd-e5900b2e4cd4">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="752be418-7537-43a7-91df-cdb506bc7529">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Group_x0020_1</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="810f45dc-540d-4ba5-aed8-a130a5b6ae4e">
+              <AttributeID>Group 2</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7ccc9e39-6892-4ef1-a052-0e72b74be9cd">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1e8f20f5-e89f-45c3-829d-c49da414b2da">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Group_x0020_2</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="5c5b55cd-dbd8-4d72-91ca-9aa8ded04be5">
+              <AttributeID>Group 3</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ccbd97c8-d2f3-4363-891b-7910beb52753">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="90a75092-da70-48df-96c4-32ba15ea2a4c">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Group_x0020_3</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="37420d34-3ee8-484c-90d4-da0d96ba778a">
+              <AttributeID>Group 4</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3f062236-2a81-409b-9348-ba075f37bd82">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="22392b19-ec3e-4fad-b88f-0d5a48a50a0f">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Group_x0020_4</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="e75da62d-8044-45bd-bf26-118f1ef90c5c">
+              <AttributeID>Pre Archive</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d645e6ea-2553-4180-8c4c-11a6bbec378f">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d98f1bd0-1e0c-4ae2-a07c-8550faaf37a6">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>PreArchive</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="8200fb97-b725-4675-b69a-f8bc910d6ec4">
+              <AttributeID>Archive</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a3acfea1-d2ea-42ad-adc5-cc90bf9f3787">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="011f3372-acca-4abf-bcdd-980c10de98c2">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Archive</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="6d58fa41-ddbf-4ec8-8330-343f15d46518">
+              <AttributeID>Class</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="27eecaff-eac4-479b-9c02-e387bbfb34e9">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a258b14e-3c6f-48ff-9206-1589a97d6fc5">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Class</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="eb7e7962-9f53-4c90-b25f-a25f7c42d720">
+              <AttributeID>Level 02</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5e718952-21e6-4a8b-a373-7f3c4745f254">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="887fea34-e63f-4b33-8e72-d904a854855b">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Level_x0020_02</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="2be61a6e-cfbd-4cbf-a163-0cfe3aedacb2">
+              <AttributeID>Level 03</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6a5d82e0-a311-435e-bad5-6765c02adbbb">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d05eac30-e2bd-4339-a9ad-1a9f44ea2c34">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Level_x0020_03</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="5efe6dbb-42a6-423a-bf1f-1b241dc44bba">
+              <AttributeID>Item Type</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="85daff3e-94e0-4de7-991f-b5d5fc14c276">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8471a9ab-e255-40cd-af94-c6b44753334c">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Item_x0020_type</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="a13457df-31ae-4ff2-bb1c-445c76fdedab">
+              <AttributeID>Category</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8eb7ccb7-d935-4524-ad2a-b23f238d3ba7">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="277d145a-4a45-49e4-b223-7ef9c5ddf179">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Category</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b3fcc935-bbad-4a2e-bfc2-ca3b04516fca">
+              <AttributeID>Price Category</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="91d2e87a-77c6-450a-b883-fdac85003148">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="27ba00fa-2511-4aca-84e1-7f18cbdb945f">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Price_x0020_Category</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="9c4b4996-00c5-4efc-941a-8ff6b5ec0828">
+              <AttributeID>TM</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="862c0c66-f335-4650-b8e1-b4231a89264d">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d43b6ed-00fb-437e-9649-d3577a31dbb6">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>TM</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="e6f5ddc2-44f2-48b3-a699-b0133110355b">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2773c6e6-cd5d-42a9-9589-ef70b3d65585">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c66e6b70-d3f7-452a-a2c3-4b1934af210c">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c3eca85b-544f-4536-9240-13a3279ea4e5">
+              <AttributeID>Article</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8e3b2265-a8f6-4c30-8d0d-b2503e9dbf80">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="513c7feb-f64b-42a1-b08f-300b9269814d">
+                    <TableID>dbo_vwBGDimItems</TableID>
+                    <ColumnID>Article</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="2178d894-74c5-4304-b778-dea7dce527c3">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="1f497e84-32e7-4cfc-a4e4-f6e710b11c26" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="cb584bd5-1ba9-49f8-bc13-35ed69a0a9a3">
+    <DataSourceViewID>Relef</DataSourceViewID>
+  </Source>
+  <ProactiveCaching dwd:design-time-name="e9934592-e55d-4f4a-893a-9a59e5e52ace">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="6fd817b0-986b-4d05-a572-ef7315617801" />
+  </ProactiveCaching>
+</Cube>

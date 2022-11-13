@@ -1,0 +1,145 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ec33310e-5a1e-4507-b97b-c9e66ff2065c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ПродажиИсторияОтметок</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw Prodazhi Istoriya Otmetok</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7e6d465d-d019-46f7-adcb-1774630d3113">
+          <ID>Vw Prodazhi Istoriya Otmetok</ID>
+          <Name>Vw Prodazhi Istoriya Otmetok</Name>
+          <CreatedTimestamp>2010-10-29T06:35:08.536667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2022-05-25T09:58:28.953333Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T04:57:42.886667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a73b22f5-4ed8-4a88-acca-76dc244ff0b4">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwProdazhiIstoriyaOtmetok</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="f367cb57-2204-4e4f-8ef9-ddd2cd5b8d15">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d2fbccc9-e4e0-429c-bdf8-867d75e9064b" />
+          </ProactiveCaching>
+          <EstimatedSize>1997356375</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Prodazhi Istoriya Otmetok Ostatki</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ace71cf5-91b1-49c6-993b-ecf6bdcc0e9c">
+          <ID>Vw Prodazhi Istoriya Otmetok Ostatki</ID>
+          <Name>Vw Prodazhi Istoriya Otmetok Ostatki</Name>
+          <CreatedTimestamp>2016-01-19T12:05:35.356667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2022-05-25T09:58:28.97Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T04:57:35.99Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4d0f7fd0-a308-4cce-a37a-9b04d18fc589">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vw_ProdazhiIstoriyaOtmetok_Ostatki</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="9399aedc-6261-4791-bbc3-fd702071b382">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="b211f579-772f-4689-9eab-07346a6d5df2" />
+          </ProactiveCaching>
+          <EstimatedSize>3054668643</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Prodazhi Istoriya Otmetok Ostatki Kol Unik Poz</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0227b146-aaea-4695-a81b-34f5a8877b9f">
+          <ID>Vw Prodazhi Istoriya Otmetok Ostatki Kol Unik Poz</ID>
+          <Name>Vw Prodazhi Istoriya Otmetok Ostatki Kol Unik Poz</Name>
+          <CreatedTimestamp>2016-01-20T11:08:32.183333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2022-05-25T09:58:28.976667Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T04:57:17.89Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="70770a7c-048a-4d42-8615-b071b93fab63">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vw_ProdazhiIstoriyaOtmetok_OstatkiKolUnikPoz</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="4abf49ca-9925-4925-b782-d535751570c8">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="57b438cb-5a41-4d2b-8d37-b6a8c1274b67" />
+          </ProactiveCaching>
+          <EstimatedSize>1188917293</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Prodazhi Istoriya Otmetok Kol Unik Klientov</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1cd04fc2-1afa-42eb-aef2-d542c7c7fa8d">
+          <ID>Vw Prodazhi Istoriya Otmetok Kol Unik Klientov</ID>
+          <Name>Vw Prodazhi Istoriya Otmetok Kol Unik Klientov</Name>
+          <CreatedTimestamp>2018-02-16T12:15:20.743333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2022-05-25T09:58:28.986667Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T04:57:30.316667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="aa2a049a-ad97-44b1-95db-02cab404d3e2">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vw_ProdazhiIstoriyaOtmetok_KolUnikKlientov</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="1006a68c-9b58-4351-a18f-31e8ae8c5d0c">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="ebc3a9aa-6192-4414-8da0-688b88df96b7" />
+          </ProactiveCaching>
+          <EstimatedSize>1364111598</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw RS Ogran Dostupa</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8b9a811c-0ffe-42a5-ace7-87a6a75a1cee">
+          <ID>Vw RS Ogran Dostupa</ID>
+          <Name>Vw RS Ogran Dostupa</Name>
+          <CreatedTimestamp>2019-12-23T07:55:43.066667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2022-05-25T09:58:28.993333Z</LastSchemaUpdate>
+          <LastProcessed>2022-06-30T00:24:54.696667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d0defc67-7fc8-425b-a956-0cab4d752fca">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwRSOgranDostupa</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="36a592f4-b3ce-4f67-8024-ba4a002ba48b">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="01b85a21-5abb-43f6-93c6-8e38ca375034" />
+          </ProactiveCaching>
+          <EstimatedSize>2465856</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

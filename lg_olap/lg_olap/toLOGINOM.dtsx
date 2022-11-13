@@ -1,0 +1,1563 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/15/2021 1:18:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{A2C05600-2D9C-4803-A07A-C9D23ED3CA38}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{69CB3114-734B-41A7-9DE7-B8AC7A66CB4C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.140.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E69FC278-4E4A-4915-B3C1-19609850205D}"
+      DTS:ObjectName="10.0.0.140.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.140;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7388EFBA-523E-45E0-96D5-60B49251FE30}"
+      DTS:ObjectName="10.50.0.89.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\truncate NK"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{EC9690D0-BA6D-45FC-8E19-B416F4ABEB99}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate NK"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7388EFBA-523E-45E0-96D5-60B49251FE30}"
+          SQLTask:SqlStatementSource="truncate table NK" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\truncate Stroki"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{72F7ABF1-F40B-4F73-AD15-F140142B6082}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="truncate Stroki"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7388EFBA-523E-45E0-96D5-60B49251FE30}"
+          SQLTask:SqlStatementSource="truncate table StrokaPlanFact;&#xA;truncate table StrokaDinamic" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Задача потока данных"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{954CD014-D24A-4B95-B916-A29B69759242}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача потока данных"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Задача потока данных\LG NK"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="LG NK"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[NK]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\LG NK.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Type]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Code]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Code"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Code]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[HeadClient]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="HeadClient"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HeadClient]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Sale]"
+                      cachedDataType="numeric"
+                      cachedName="Sale"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Sale]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Sale]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ClientManager]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ClientManager"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientManager]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ClientManager]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Department]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Department"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TradeDirection"
+                      externalMetadataColumnId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TradeDirection]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="8"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      dataType="wstr"
+                      length="100"
+                      name="HeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Sale]"
+                      dataType="numeric"
+                      name="Sale"
+                      precision="38"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientManager]"
+                      dataType="wstr"
+                      length="100"
+                      name="ClientManager" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="150"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      dataType="wstr"
+                      length="50"
+                      name="TradeDirection" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\LG NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\LG NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\LG NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\LG NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\LG NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\LG STROKAD"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="LG STROKAD"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[StrokaDinamic]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\LG STROKAD.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Department]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Department"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ItemGroup"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ItemGroup]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Value]"
+                      cachedDataType="r8"
+                      cachedName="Value"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Value]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Measure]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Measure"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Measure]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Period]"
+                      cachedDataType="dbDate"
+                      cachedName="Period"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Period]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      dataType="wstr"
+                      length="20"
+                      name="ItemGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      dataType="wstr"
+                      length="30"
+                      name="Measure" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      dataType="dbDate"
+                      name="Period" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\LG STROKAD.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\LG STROKAD.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\LG STROKAD.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\LG STROKAD.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\LG STROKAP"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="LG STROKAP"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[StrokaPlanFact]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\LG STROKAP.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Type]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Department]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Department"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ItemGroup"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ItemGroup]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Value]"
+                      cachedDataType="r8"
+                      cachedName="Value"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Value]" />
+                    <inputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Measure]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Measure"
+                      externalMetadataColumnId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Measure]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      dataType="wstr"
+                      length="50"
+                      name="Measure" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\LG STROKAP.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\LG STROKAP.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\LG STROKAP.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\LG STROKAP.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\OLEG NK"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="OLEG NK"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[NK]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\OLEG NK.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.140.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.140.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      length="20"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      length="8"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Code]"
+                      name="Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      length="100"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      name="HeadClient"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Sale]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Sale]"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Sale]"
+                      name="Sale"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ClientManager]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ClientManager]"
+                      length="100"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ClientManager]"
+                      name="ClientManager"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]"
+                      name="Department"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      length="150"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      name="TradeDirection"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="8"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      dataType="wstr"
+                      length="100"
+                      name="HeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Sale]"
+                      dataType="numeric"
+                      name="Sale"
+                      precision="38"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ClientManager]"
+                      dataType="wstr"
+                      length="100"
+                      name="ClientManager" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="150"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      dataType="wstr"
+                      length="50"
+                      name="TradeDirection" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Type]"
+                      name="Type" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Code]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Code]"
+                      name="Code" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[HeadClient]"
+                      name="HeadClient" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Sale]"
+                      dataType="numeric"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Sale]"
+                      name="Sale"
+                      precision="38"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ClientManager]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ClientManager]"
+                      name="ClientManager" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Department]"
+                      name="Department" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Region]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      name="TradeDirection" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\OLEG NK.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\OLEG STROKAD"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="OLEG STROKAD"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[StrokaDinamic]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\OLEG STROKAD.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.140.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.140.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]"
+                      name="Department"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      length="20"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      name="ItemGroup"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Value]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Value]"
+                      name="Value"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Measure]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      length="30"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Measure]"
+                      name="Measure"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Period]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Period]"
+                      name="Period"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      dataType="wstr"
+                      length="20"
+                      name="ItemGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      dataType="wstr"
+                      length="30"
+                      name="Measure" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Period]"
+                      dataType="dbDate"
+                      name="Period" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Department]"
+                      name="Department" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      name="ItemGroup" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Value]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Value]"
+                      name="Value" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Measure]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Measure]"
+                      name="Measure" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Period]"
+                      dataType="dbDate"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Period]"
+                      name="Period" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\OLEG STROKAD.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Задача потока данных\OLEG STROKAP"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="OLEG STROKAP"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[StrokaPlanFact]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Задача потока данных\OLEG STROKAP.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.140.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.140.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      length="20"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Department]"
+                      name="Department"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      name="ItemGroup"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Value]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Value]"
+                      name="Value"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Measure]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Measure]"
+                      name="Measure"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ItemGroup]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Value]"
+                      dataType="r8"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Measure]"
+                      dataType="wstr"
+                      length="50"
+                      name="Measure" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Type]"
+                      name="Type" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Department]"
+                      name="Department" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ItemGroup]"
+                      name="ItemGroup" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Value]"
+                      dataType="r8"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Value]"
+                      name="Value" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Measure]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Measure]"
+                      name="Measure" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Задача потока данных\OLEG STROKAP.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Задача потока данных\LG NK.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Задача потока данных\OLEG NK.Outputs[Выход источника &quot;OLE DB&quot;]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;1]"
+              endId="Package\Задача потока данных\LG STROKAD.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Задача потока данных\OLEG STROKAD.Outputs[Выход источника &quot;OLE DB&quot;]" />
+            <path
+              refId="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;2]"
+              endId="Package\Задача потока данных\LG STROKAP.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Задача потока данных\OLEG STROKAP.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{A48694DA-EA39-4819-AE7C-9F603D6D26FE}"
+      DTS:From="Package\truncate NK"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Задача потока данных" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{709E05FB-C546-4267-B285-E231AA69281C}"
+      DTS:From="Package\truncate Stroki"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Задача потока данных" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137,42"
+          Id="Package\truncate NK"
+          TopLeft="285,118" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\truncate Stroki"
+          TopLeft="482,126" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Задача потока данных"
+          TopLeft="386,257" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="353.5,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="128.5,97"
+              Start="0,0"
+              End="128.5,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.5"
+                    Point2="0,48.5"
+                    Point3="4,48.5" />
+                  <mssgle:LineSegment
+                    End="124.5,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="124.5,48.5"
+                    Point2="128.5,48.5"
+                    Point3="128.5,52.5" />
+                  <mssgle:LineSegment
+                    End="128.5,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="557,168">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-44.3333333333334,89"
+              Start="0,0"
+              End="-44.3333333333334,81.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.9586776859504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.9586776859504"
+                    Point2="0,52.9586776859504"
+                    Point3="-4,52.9586776859504" />
+                  <mssgle:LineSegment
+                    End="-40.3333333333334,52.9586776859504" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40.3333333333334,52.9586776859504"
+                    Point2="-44.3333333333334,52.9586776859504"
+                    Point3="-44.3333333333334,56.9586776859504" />
+                  <mssgle:LineSegment
+                    End="-44.3333333333334,81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Задача потока данных">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Задача потока данных\LG STROKAP"
+          TopLeft="663,198" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Задача потока данных\OLEG STROKAD"
+          TopLeft="399,101" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Задача потока данных\OLEG STROKAP"
+          TopLeft="653,98" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Задача потока данных\OLEG NK"
+          TopLeft="219,104" />
+        <NodeLayout
+          Size="110,42"
+          Id="Package\Задача потока данных\LG NK"
+          TopLeft="226,204" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Задача потока данных\LG STROKAD"
+          TopLeft="409,202" />
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="281,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;2]"
+          TopLeft="731.75,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Задача потока данных.Paths[Выход источника &quot;OLE DB&quot;1]"
+          TopLeft="479,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\LG STROKAP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\OLEG STROKAD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\OLEG STROKAP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\OLEG NK">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\LG NK">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Задача потока данных\LG STROKAD">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

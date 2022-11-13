@@ -1,0 +1,33 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c992bb71-3bad-42cc-a398-d0adea0eabed" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ПриемкаМ</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2 Priemka M</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="307fd0cb-7ee2-4a90-ac92-83c9900253cd">
+          <ID>Vw WMS2 Priemka M</ID>
+          <Name>Vw WMS2 Priemka M</Name>
+          <CreatedTimestamp>2020-03-11T09:48:26.463333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-21T07:36:05.143333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-19T13:03:29.28Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="02c977b6-fe77-43d2-952c-eafcdba83d61">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2PriemkaM</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="9efc424a-5fce-4b42-97e7-0c604aef7386">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="71b5c85a-2f2d-49e1-ad13-40f3c8af1b50" />
+          </ProactiveCaching>
+          <EstimatedSize>3974269</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

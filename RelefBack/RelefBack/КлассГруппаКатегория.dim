@@ -1,0 +1,329 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="896dac6c-4acf-4746-aa91-794ca388f607" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>КлассГруппаКатегория</ID>
+  <Name>КлассГруппаКатегория</Name>
+  <CreatedTimestamp>2017-11-16T10:13:55.606667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:41:41.743333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2057" scrolltop="-1998" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7990" y="15822" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwKlassGruppaKategoriya" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b60c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwKlassGruppaKategoriya" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2057</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1998</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2019-07-01T05:44:48.513333Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c198d65d-ae34-4a94-989f-545629830785">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="8efcb0d7-5c82-4f8b-a9ee-39e7577e61a7">
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+    <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="652242cb-e738-4f18-84f5-3c34d8164866">
+      <ID>Nomenklatura ID</ID>
+      <Name>Nomenklatura ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10f278eb-d25b-4e9d-977c-f2d411569215">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="459480d4-dee9-42b3-95ed-b39fbdea9c33">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>NomenklaturaID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c44b904d-8ac3-42b4-89c2-8878b26409b6">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="60272f0a-2879-416d-a63c-5cd23cd363b5">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>NomenklaturaID</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a66fb39e-3d11-4526-a3da-b1a01dcb34a2">
+          <AttributeID>Klass</AttributeID>
+          <Name>Класс</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="03729206-4591-4e81-8cbe-271799c1071d">
+          <AttributeID>Gruppa</AttributeID>
+          <Name>Группа</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="073caa05-f61e-4aca-9b51-24a28c11c2aa">
+          <AttributeID>Kategoriya</AttributeID>
+          <Name>Категория</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b9da6d07-bed3-454c-8be5-887fb5cd90d3">
+          <AttributeID>Podkategoriya</AttributeID>
+          <Name>Подкатегория</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8ea88863-7863-48da-82c3-16d33e153225">
+          <AttributeID>Товар</AttributeID>
+          <Name>Товар</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="39e04bf3-4aec-4425-a24f-e7941161520b">
+      <ID>Klass</ID>
+      <Name>Класс</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4c7e2d9e-91ac-4c07-9923-86856448def6">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b9a59569-c6c2-4498-ae37-f34c2edebadd">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>Klass</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="87e0e618-b242-46e8-ade4-aa0b43ecf029">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7f4c30ad-dfb4-4b9b-a5fb-669b0aa716cd">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>Klass</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3ae527d6-c22f-4043-b831-73658a0b17ec">
+      <ID>Gruppa</ID>
+      <Name>Группа</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3aac588b-20e2-4797-915f-e8ed55ad493c">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="66f5c4b0-7b41-47f1-ada7-b1621abe6446">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>Gruppa</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="13908044-1ab2-4aba-abbb-ac3ac12eb5dd">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="430928fe-c193-4b14-b11a-795da9fbdf8d">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>Gruppa</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9d9112c8-32ae-4154-8db4-b0c549ddd55a">
+      <ID>Kategoriya</ID>
+      <Name>Категория</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="822af9da-65b9-4645-a2de-695405adbd74">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c7e687d-d87f-4f6c-9bec-53620cf0f15c">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>Kategoriya</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="fa3fea22-16b7-4c39-ad0b-77077cc872df">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="8e0b9e77-70ba-4d3e-8f69-0c51864781d2">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>Kategoriya</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c2575812-9fe0-4471-83a7-246dcbd92fe7">
+      <ID>Podkategoriya</ID>
+      <Name>Подкатегория</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c63c0aa-82b3-428d-9017-d9477bceebdb">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc2e0174-9843-4c21-885e-a474fa81fb06">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>Podkategoriya</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d5a8f118-d92f-4a01-8f53-89e7ec82837d">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a01713f4-2ccc-4ee7-bbaf-f64e76a32ddc">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>Podkategoriya</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="830be2f2-302a-4946-b962-3b4324436c08">
+      <ID>Товар</ID>
+      <Name>Товар</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c34fc38d-b99b-4e18-83b0-f7f1bae8a697">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8b86ca67-e849-4196-aa40-59d35830f671">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>Товар</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="41b921bc-d9f3-4a8e-9d84-dd0e213d959e">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5a141de4-efab-4ce7-8df7-2c42ff4ea5d0">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>Товар</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ce726189-a510-45c9-ae94-aac7a2c37f55">
+          <AttributeID>Code</AttributeID>
+          <Name>Код</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="301344f9-2e0e-4504-b85e-aa815ab2408a">
+      <ID>Code</ID>
+      <Name>Код</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa961bc5-6a0f-4550-9268-982afcf54141">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e2b37385-29ba-4775-a786-492c8bc3ccec">
+            <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+            <ColumnID>Code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8949b35e-2396-44cc-b1c9-89847db02533">
+        <DataType>WChar</DataType>
+        <DataSize>6</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="85617c65-f472-468c-b837-d125fcb5bf31">
+          <TableID>dbo_vwKlassGruppaKategoriya</TableID>
+          <ColumnID>Code</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="03b98426-f316-4c7c-9f60-d33b8fab1578">
+      <ID>Иерархия</ID>
+      <Name>КлассГруппаКатегория</Name>
+      <Levels>
+        <Level dwd:design-time-name="e02dcd78-083e-4c49-9a72-f4ae395099e1">
+          <ID>Класс</ID>
+          <Name>Класс</Name>
+          <SourceAttributeID>Klass</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="ca5c9db0-820e-42b0-b0af-43ee747880c5">
+          <ID>Группа</ID>
+          <Name>Группа</Name>
+          <SourceAttributeID>Gruppa</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e4e296dd-2d20-4b42-b516-06aa5133ad49">
+          <ID>Категория</ID>
+          <Name>Категория</Name>
+          <SourceAttributeID>Kategoriya</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="13074138-a185-4958-bc23-115c098a9575">
+          <ID>Подкатегория</ID>
+          <Name>Подкатегория</Name>
+          <SourceAttributeID>Podkategoriya</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching dwd:design-time-name="d767e133-f254-4761-b06d-ba985b58b51d">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="984971b8-4370-4735-9bca-4112618b4d79" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,803 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="67a94ace-eba4-477e-87cb-db8c8aea3ebd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>WB</ID>
+  <Name>WB</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="-10906" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23310" y="16828" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwCalendar" left="11574" top="-1152" logicalid="14" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwCalendar" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="WBWarehouse" left="4881" top="1770" logicalid="15" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_WBWarehouse" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwRCNomenclature" left="15493" top="-3229" logicalid="16" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwRCNomenclature" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwWBNomenclature" left="19144" top="-5572" logicalid="17" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwWBNomenclature" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwSebest" left="1403" top="-1456" logicalid="22" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwSebest" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwWBWarehouse" left="14760" top="-5906" logicalid="23" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwWBWarehouse" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwWBOperName" left="6986" top="-6752" logicalid="24" controlid="11" masterid="0" hint1="0" hint2="0" width="3784" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000c80e0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwWBOperName" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwWBDocType" left="11640" top="-3656" logicalid="25" controlid="12" masterid="0" hint1="0" hint2="0" width="3254" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b60c0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwWBDocType" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwWBAllSales" left="5397" top="-4100" logicalid="26" controlid="13" masterid="0" hint1="0" hint2="0" width="4366" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000e11000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwWBAllSales" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-10906</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>1403</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-6752</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Translations>
+    <Translation dwd:design-time-name="bacf8454-aba5-4045-ab6b-c09d0b7b154d">
+      <Language>1049</Language>
+      <Caption>Продажи ВБ</Caption>
+    </Translation>
+  </Translations>
+  <Dimensions>
+    <Dimension dwd:design-time-name="36726e46-b81b-498c-a848-2a043e4b0147">
+      <ID>Vw Calendar</ID>
+      <Name>Vw Calendar</Name>
+      <Translations>
+        <Translation dwd:design-time-name="4147881e-7a7b-4295-8ac7-644fb6449373">
+          <Language>1049</Language>
+          <Caption>Календарь</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Calendar</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ee5b5beb-b867-414b-a481-92e3845ba8db">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee37a7c3-d4c0-4fb1-bece-bfc959033f75">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="37cc6623-40a4-4eb6-b8d5-b4ee8cd56e81">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a84fc480-313b-469a-a3ce-765a4d6219ac">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05341d2c-05d6-472a-9b1e-751f20933a07">
+          <AttributeID>Day Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a2aecc6e-18a4-403e-872a-308b6d3b0cea">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="937d320b-23e2-49f7-96c0-e1293e346e8d">
+      <ID>Vw RC Nomenclature</ID>
+      <Name>Vw RC Nomenclature</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2686863c-75c4-461c-b275-890206af3cde">
+          <Language>1049</Language>
+          <Caption>Товар РЦ</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw RC Nomenclature</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4061c62c-cd3f-438b-813f-5eb953b75c61">
+          <AttributeID>RC Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="49cf02c2-71f1-4cc7-8df5-3870a5820624">
+          <AttributeID>RC Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="683cec92-84d2-420e-98a1-c840498c80ae">
+          <AttributeID>Manufacturer</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f6094f8-ea16-4fc4-a8e1-4aebd1e2e7a3">
+          <AttributeID>TM</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01e801c1-8776-41aa-8836-1d439dcb6f8e">
+          <AttributeID>Class</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8d2c6e8f-a25f-43ce-87f6-2a2d6b94c007">
+          <AttributeID>Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6bf3b7e7-e823-4370-9bae-dcf77db197b9">
+          <AttributeID>Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e8b2b9f7-1bdc-4204-8308-f0ac30bb33c3">
+          <AttributeID>Sub Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26e0e15c-3cdf-4707-9fc6-20217cab9137">
+          <AttributeID>Parent Code</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a07cefa7-5699-4477-b166-1496deb416b2">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="31c3179a-cf15-4739-b07b-3ec33291f515">
+      <ID>Vw WB Nomenclature</ID>
+      <Name>Vw WB Nomenclature</Name>
+      <Translations>
+        <Translation dwd:design-time-name="0cf1873f-5a53-4bec-8a67-30b6c52a539d">
+          <Language>1049</Language>
+          <Caption>Товар ВБ</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw WB Nomenclature</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b4e1a380-c1ed-431f-9816-d87821e69534">
+          <AttributeID>WB Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ec153b4-90cd-40de-be08-b9f67a1c760a">
+          <AttributeID>WB Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2227f2d1-523c-4752-a9a0-07c4ad281cd8">
+          <AttributeID>RC Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59b43d87-b691-4f31-a911-47d5baf4e790">
+          <AttributeID>Article</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="353ef566-8691-4680-86dd-47cd770a062a">
+          <AttributeID>Brand</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e568bff7-6c4e-4ad1-93db-e2849f5a14bc">
+          <AttributeID>Subject</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="968f91f1-a2a5-4969-9fe6-c874f66d204d">
+          <AttributeID>Barcode</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3042a996-f184-4e1f-a881-1a3f13e249d9">
+      <ID>Vw WB Warehouse</ID>
+      <Name>Vw WB Warehouse</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2480983d-3977-4cf0-af9a-82d3179473d3">
+          <Language>1049</Language>
+          <Caption>Склад</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw WB Warehouse</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="716ca7f2-562a-4a6f-8a25-aac5ba9e9d2d">
+          <AttributeID>Office Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9c31eaa0-91a4-4274-88e3-ebc54cac097e">
+      <ID>Vw WB Oper Name</ID>
+      <Name>Vw WB Oper Name</Name>
+      <Translations>
+        <Translation dwd:design-time-name="87a956c3-3e42-448b-9c43-afb1801f0165">
+          <Language>1049</Language>
+          <Caption>Обоснование документа</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw WB Oper Name</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2919cfe9-58b3-4097-a79c-f19e161cfc17">
+          <AttributeID>Supplier Oper Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d2157ee2-1a26-4655-be20-6c3c88010a8c">
+      <ID>Vw WB Doc Type</ID>
+      <Name>Vw WB Doc Type</Name>
+      <Translations>
+        <Translation dwd:design-time-name="12199d4d-81e4-4201-883e-f8853f69cab9">
+          <Language>1049</Language>
+          <Caption>Тип документа</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw WB Doc Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4e036fca-db9b-4fa7-9106-4536ff7a74b9">
+          <AttributeID>Doc Type Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="e1fd698c-4117-4e1d-8025-aa7568643325">
+      <ID>Vw WB All Sales</ID>
+      <Name>Vw WB All Sales</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Translations>
+        <Translation dwd:design-time-name="0b0e87e4-6a87-4fa5-8bd5-4c5faeb4b513">
+          <Language>1049</Language>
+          <Caption>Продажи ВБ</Caption>
+        </Translation>
+      </Translations>
+      <Measures>
+        <Measure dwd:design-time-name="23580014-6024-417d-b3e4-deef530871aa">
+          <ID>Sales - Vw WB All Sales</ID>
+          <Name>Sales - Vw WB All Sales</Name>
+          <Source dwd:design-time-name="8e2695bb-80a1-4a5a-bce6-c6e0e9194d1e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2cbb3478-6ff9-4d10-8538-f7f146c30139">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>Sales</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="021e6416-3044-41c6-bb7a-4eef4266ff52">
+              <Language>1049</Language>
+              <Caption>ВБ реализовал товар</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="bc085a3d-b51d-40fc-bf24-e68240db2794">
+          <ID>Price - Vw WB All Sales</ID>
+          <Name>Price - Vw WB All Sales</Name>
+          <Source dwd:design-time-name="eac5cafb-1445-4314-856d-8dfb02174059">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bb38949e-0672-465c-9222-31600cd3ca68">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>Price</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="1ad7ab73-638a-4a55-bc83-2d09f8d010b0">
+              <Language>1049</Language>
+              <Caption>Цена розничная</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="89ce6aec-d17e-4d8e-a745-c0569742dbda">
+          <ID>Quantity - Vw WB All Sales</ID>
+          <Name>Quantity - Vw WB All Sales</Name>
+          <Source dwd:design-time-name="6850b246-2b3e-4f8c-a6f5-ba58ec9a753b">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6855404b-a340-41be-b1ac-e5c6fc8dab80">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>Quantity</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="01fb0204-2ecc-4379-a36c-84a49f23f5fe">
+              <Language>1049</Language>
+              <Caption>Количество</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="1868fbb4-b173-438f-b1dc-9c2748f7886f">
+          <ID>Ppvz Sales Commission</ID>
+          <Name>Ppvz Sales Commission</Name>
+          <Source dwd:design-time-name="7b9ca78d-5623-49bc-8942-a74833b9948b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="07c0c177-a142-456d-8640-affc6d65e218">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>ppvz_sales_commission</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="accc08ff-2548-40dc-b393-dc3fb60e6304">
+              <Language>1049</Language>
+              <Caption>Вознаграждение до вычета</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="2639bd8d-d213-415d-99e4-5def5b63024b">
+          <ID>Ppvz Reward</ID>
+          <Name>Ppvz Reward</Name>
+          <Source dwd:design-time-name="a3743a48-8bfc-435b-b69a-3d213247e1cc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c784dd96-9fa4-4668-99c8-7fb63b5cb7ac">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>ppvz_reward</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="5da8b090-9a72-45b3-8155-47cc1cce5b3c">
+              <Language>1049</Language>
+              <Caption>Возмещение расходов</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="f129cd24-71e2-4b37-b92d-4dff6d693727">
+          <ID>Ppvz Vw</ID>
+          <Name>Ppvz Vw</Name>
+          <Source dwd:design-time-name="56018296-9fb2-42e8-85e5-fda503dce317">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="35cd6f58-5aa5-4fb2-9ec7-fe2efabc389a">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>ppvz_vw</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="56d53369-3645-4f29-ac7f-f78ed520d6ac">
+              <Language>1049</Language>
+              <Caption>Вознаграждение без НДС</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="697b974e-819e-4dce-9391-e15fbcfcf38c">
+          <ID>Ppvz Vw Nds</ID>
+          <Name>Ppvz Vw Nds</Name>
+          <Source dwd:design-time-name="986871d2-5207-45fb-9cda-ea4d02a4a300">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2ab8ba82-c10e-4aa6-9aad-323a7a0a2dca">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>ppvz_vw_nds</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="4427dfd6-fb8f-4b99-bd2b-29af33d92cbb">
+              <Language>1049</Language>
+              <Caption>НДС с вознаграждения</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="1bde1a41-a69a-4e0b-b89f-29d991f2d8f9">
+          <ID>Retail Price Withdisc Rub</ID>
+          <Name>Retail Price Withdisc Rub</Name>
+          <Source dwd:design-time-name="6ba281a6-8d82-4295-8f29-28ea677dca0a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c90115c1-ddbf-4e5c-888e-bda326596d05">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>retail_price_withdisc_rub</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="c062e923-2e64-46bc-8e67-e1398290e593">
+              <Language>1049</Language>
+              <Caption>Цена со скидкой</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="527238f4-5750-4128-8c97-c018cadc10c6">
+          <ID>Ppvz For Pay</ID>
+          <Name>Ppvz For Pay</Name>
+          <Source dwd:design-time-name="be1feff9-81c5-4854-a93b-0c81fdc9024a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4a5b52c5-0e21-4d0b-80a5-b284ed40273d">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>ppvz_for_pay</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="16a78a82-937e-422c-895e-4a521509bf5a">
+              <Language>1049</Language>
+              <Caption>Продавцу за товар</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="d0ea62f2-a803-42f4-b3da-aa057dd4c3e7">
+          <ID>Delivery Amount</ID>
+          <Name>Delivery Amount</Name>
+          <Source dwd:design-time-name="86a0725f-d446-4e83-852d-fd84acc3efdd">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b2f71792-25c2-46db-b8fe-2a1390c902d6">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>delivery_amount</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="89ce28c9-1acf-4d9f-8aea-822a1bb5dc2f">
+              <Language>1049</Language>
+              <Caption>Кол-во доставок</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="f853c392-3a76-4675-9178-de61fe6424cc">
+          <ID>Return Amount</ID>
+          <Name>Return Amount</Name>
+          <Source dwd:design-time-name="822f6ba1-c2c0-4225-aefa-8c2b9c43c860">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e7fa923a-7ec7-4591-9ba1-bd9eccf0e92a">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>return_amount</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="8d07d473-6703-4018-b057-c38f8c045256">
+              <Language>1049</Language>
+              <Caption>Кол-во возвратов</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="98e85e77-e62b-4a72-8b0b-a1f42c51c528">
+          <ID>Delivery Rub</ID>
+          <Name>Delivery Rub</Name>
+          <Source dwd:design-time-name="fbcb141b-61ec-42a7-a567-9bc6a16b6c71">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3187125e-fa9f-41f5-9e3c-fb4aabe8fa97">
+              <TableID>dbo_vwWBAllSales</TableID>
+              <ColumnID>delivery_rub</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="99ba6f8d-93a5-4e22-b772-2bc8bca66775">
+              <Language>1049</Language>
+              <Caption>Стоимость логистики</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="166a6395-752a-422d-87b6-9db007b00e20">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c2b2129b-eeee-45e3-9a76-ce0e75f5b3ba">
+          <CubeDimensionID>Vw Calendar</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="052dec15-feff-4bf9-8162-2585b73b3bad">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3d434115-8161-4229-adfa-05814645327e">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="35165868-a081-4377-8f13-c7108f2dcd0a">
+                    <TableID>dbo_vwWBAllSales</TableID>
+                    <ColumnID>Period</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0fb8b5a4-58ad-4e64-82de-74afefca3bd2">
+          <CubeDimensionID>Vw RC Nomenclature</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="48d436f2-551b-4dda-aa1d-044bf89d55ae">
+              <AttributeID>RC Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f05c6593-2d81-4f6b-91ed-7219c8d09fc3">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cafe65df-2911-4c20-a1d6-b62cd6f15039">
+                    <TableID>dbo_vwWBAllSales</TableID>
+                    <ColumnID>RCCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6507d4bc-37bc-4719-b25f-325fdcd476b4">
+          <CubeDimensionID>Vw WB Nomenclature</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fb6f18f3-d092-4ca3-a084-5d7de6f2c330">
+              <AttributeID>WB Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="31a0d9f5-1486-46ff-9a0c-79ac40471b36">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="550c6c33-f987-4e62-89e0-0c53dc8745ab">
+                    <TableID>dbo_vwWBAllSales</TableID>
+                    <ColumnID>WBCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6e02f6ab-93d5-4cff-be56-a9874bd35f29">
+          <CubeDimensionID>Vw WB Warehouse</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d811424b-cec5-4563-b6f2-1c4b6815c0ae">
+              <AttributeID>Office Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="41c88d60-80cd-46e5-8c7d-4be7f0923750">
+                  <DataType>WChar</DataType>
+                  <DataSize>1024</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8ec0d108-3d71-45ce-8b4f-9d40e7426277">
+                    <TableID>dbo_vwWBAllSales</TableID>
+                    <ColumnID>Warehouse</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cc274656-d93c-48fd-ae8e-ab43031d7731">
+          <CubeDimensionID>Vw WB Oper Name</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="67105173-cf70-4947-865c-0861869ee44e">
+              <AttributeID>Supplier Oper Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dca842ba-8e46-4b5c-998b-e48c4bde67d2">
+                  <DataType>WChar</DataType>
+                  <DataSize>1024</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="acea26f1-4818-4553-b90c-3d0c58e72ca3">
+                    <TableID>dbo_vwWBAllSales</TableID>
+                    <ColumnID>supplier_oper_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="12c42961-c693-4cf5-81a1-db392262d498">
+          <CubeDimensionID>Vw WB Doc Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="89d42f1c-da64-4a9c-b5a8-fec18ecdc85f">
+              <AttributeID>Doc Type Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ecb0431e-8bc1-43cb-9af2-ab23a0bfa6cc">
+                  <DataType>WChar</DataType>
+                  <DataSize>1024</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d64d47e5-ff1a-4e7f-9e4a-77bad7460a3a">
+                    <TableID>dbo_vwWBAllSales</TableID>
+                    <ColumnID>doc_type_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="4a8363bf-ea4f-4d19-a718-830910824e67">
+      <ID>Vw Sebest</ID>
+      <Name>Vw Sebest</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Translations>
+        <Translation dwd:design-time-name="3ea2f776-af5b-4d1a-b594-c19cd1ec8dd2">
+          <Language>1049</Language>
+          <Caption>Себестоимость</Caption>
+        </Translation>
+      </Translations>
+      <Measures>
+        <Measure dwd:design-time-name="99aa7ec8-c501-481c-95e7-c03b11a598d3">
+          <ID>Последний Sebest</ID>
+          <Name>Последний Sebest</Name>
+          <AggregateFunction>LastNonEmpty</AggregateFunction>
+          <Source dwd:design-time-name="090ba209-c522-4961-81dc-66ad48637335">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c20db510-51bf-4c70-ae77-ba7c60f2d5dd">
+              <TableID>dbo_vwSebest</TableID>
+              <ColumnID>Sebest</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="7221ac7f-d19b-4adf-a98b-a3f9a0de93cf">
+              <Language>1049</Language>
+              <Caption>Себестоимость РЦ</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="86c505b4-1c87-4a1e-8a72-073c0d5433c7">
+          <CubeDimensionID>Vw Calendar</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="13e6616c-277b-45d7-bc4e-84dc280b26dc">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d154ed1a-8dfc-4475-8e31-58f947600cd7">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7502a60b-4c4d-40f2-b1af-c829bd38ab75">
+                    <TableID>dbo_vwSebest</TableID>
+                    <ColumnID>Period</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d69c89d4-872c-4457-a640-2b3f501791c6">
+          <CubeDimensionID>Vw RC Nomenclature</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="909206cb-ff7d-4c61-a4db-d4aaee93f40d">
+              <AttributeID>RC Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bf2502e6-773e-4fcf-977e-428d2e2d9628">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="db2b1f78-df3c-430b-9a1f-76ab14143551">
+                    <TableID>dbo_vwSebest</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="14678ed8-ccae-45c7-a592-cb6bec3e73f4">
+          <CubeDimensionID>Vw WB Nomenclature</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="67ae92c8-5277-4607-9efb-dcd730f3dc36">
+              <AttributeID>WB Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d7b927de-ad34-4201-b633-698328d7eef1">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9dd954a0-475d-4bff-8034-bb3e0200a313">
+                    <TableID>dbo_vwSebest</TableID>
+                    <ColumnID>WBCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="e1ac9de7-04a6-4d2e-858f-11d4ad959ff1">
+    <DataSourceViewID>WB</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="bfcaf89e-65da-4812-a584-f787f2f66353">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+Команда CALCULATE контролирует агрегатное выражение конечных ячеек в кубе.
+Удаление или изменение команды CALCULATE приведет к изменению данных, содержащихся в кубе.
+Эту команду следует изменять только в том случае, если способ статистической обработки куба задается вручную.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Себестоимость оборот]
+ AS [Measures].[Последний Sebest] * [Measures].[Quantity - Vw WB All Sales], 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+      <CalculationProperties>
+        <CalculationProperty dwd:design-time-name="34be522c-32f4-4c46-95a9-9fb322e06a8f">
+          <CalculationReference>[Measures].[Себестоимость]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <Translations>
+            <Translation dwd:design-time-name="bbcecca5-d4dd-40c7-bac2-ab1250bf19e1">
+              <Language>1049</Language>
+              <Caption>Себестоимость РЦ оборот</Caption>
+            </Translation>
+          </Translations>
+        </CalculationProperty>
+      </CalculationProperties>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

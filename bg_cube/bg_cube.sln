@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "bg_cube", "bg_cube\bg_cube.dwproj", "{20DEC405-32CA-4F33-A4EE-468ECD880363}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20DEC405-32CA-4F33-A4EE-468ECD880363}.Development|Default.ActiveCfg = Development
+		{20DEC405-32CA-4F33-A4EE-468ECD880363}.Development|Default.Build.0 = Development
+		{20DEC405-32CA-4F33-A4EE-468ECD880363}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B563F9B-65F1-4742-B5B0-0AC950C8F5FD}
+	EndGlobalSection
+EndGlobal

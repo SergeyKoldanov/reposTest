@@ -1,0 +1,782 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2021 9:54:31 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{C2B71F7B-2A50-4B5B-A875-D41930E2C030}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{6AA8B1EB-34BB-4697-8C1D-97CBDCE477A5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2473DB49-B888-4E9B-B4B2-E6BD572CC9A1}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{E6370F9F-449B-4CD3-BC78-3AD8125E4719}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;database=918ok;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{ED7C20D9-0F24-4953-9A32-351A91B11523}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;persistsecurityinfo=True;database=918ok;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzZqS7RiIzUCYH1fTBoH7HQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD/LEebgbm9koDKMoSF+tstAAAAAASAAACgAAAAEAAAAGEeTiJ/XHLqhTQh1M6j6GNIAAAAHmBPuo1AksxbSwfPHBU8vqYGzgchpSBDfNHFdHh6+e4ZCwkOigEa8t83CLgGzYrZ8XMgV6gYHw8bxvRmXRHpMKKB+OqfGYxxFAAAAC7Wrig65z1pe+rsfrUG1q4OL+cX</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер SMTP-сеансов]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{78FBFC57-7431-41AA-9FC8-7188C8471DDE}"
+      DTS:ObjectName="Диспетчер SMTP-сеансов">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=post.relef.ru;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача &quot;Отправка почты&quot;"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Задача &quot;Отправка почты&quot;"
+      DTS:DTSID="{6EABA90A-5FB1-4BDF-87BD-D422DAF06E65}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача &quot;Отправка почты&quot;"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{78FBFC57-7431-41AA-9FC8-7188C8471DDE}"
+          SendMailTask:From="KoldanovSV.it@relef.ru"
+          SendMailTask:To="KoldanovSV.it@relef.ru"
+          SendMailTask:Subject="Обновление 9-18"
+          SendMailTask:MessageSource="При обновлении таблицы FullUpdateOrders918 произошел сбой." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение Orders918"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{43C5D6EC-BD85-49F2-A3C9-4D9AFE70E8A1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение Orders918"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение Orders918\9-18"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server.Корпорация Майкрософт (Microsoft Corporation). Microsoft SQL Server © Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support4"
+              description="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server."
+              name="9-18"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, используемую компонентом для извлечения данных."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT
+ok_order_products.ID AS ID,
+	ok_order.ID  as OrderID,
+    UF_SHOP_CLIENT AS ClientID,
+    ok_order.UF_CREATE_DATE AS DateOrder,
+    ok_order.UF_SHOP_ID AS ShopID,
+    cast(ok_order_products.UF_PRODUCT_XML_ID as char(50)) AS ItemGUID,
+    ok_order_products.UF_QUANTITY AS Amount,
+    ok_order_products.UF_PRICE AS Price,
+    b_user_field_enum.VALUE AS Status,
+case
+when ok_order.UF_CREATE_DATE &lt; '20220401' then null
+else ok_order_products.uf_buying_price 
+end as Sebest
+    
+FROM ok_order_products LEFT JOIN ok_order
+							ON ok_order_products.UF_ORDER = ok_order.ID
+                       LEFT JOIN b_user_field_enum
+                       		ON ok_order.UF_SHOP_STATUS = b_user_field_enum.ID;
+SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Значение 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">60</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли внешние столбцы с типом, отличным от строкового, в выходных столбцах неявно преобразовываться в строки."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Имя таблицы базы данных-источника."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Укажите режим получения данных о внешних столбцах"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Orders918\9-18.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+                  description="Диспетчер управляемых соединений"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET]"
+                  name="Вывод источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ID]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ID]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[OrderID]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[OrderID]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ClientID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ClientID]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ClientID]"
+                      name="ClientID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[DateOrder]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[DateOrder]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[DateOrder]"
+                      name="DateOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ShopID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ShopID]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ShopID]"
+                      name="ShopID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ItemGUID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ItemGUID]"
+                      length="50"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ItemGUID]"
+                      name="ItemGUID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Amount]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Amount]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Amount]"
+                      name="Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Price]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Status]"
+                      length="255"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Sebest]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Sebest]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Sebest]"
+                      name="Sebest"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ID]"
+                      dataType="ui4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[OrderID]"
+                      dataType="ui4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ClientID]"
+                      dataType="i4"
+                      name="ClientID" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[DateOrder]"
+                      dataType="dbTimeStamp"
+                      name="DateOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ShopID]"
+                      dataType="i4"
+                      name="ShopID" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ItemGUID]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGUID" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Amount]"
+                      dataType="i4"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Sebest]"
+                      dataType="r8"
+                      name="Sebest" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ID]"
+                      dataType="ui4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[OrderID]"
+                      dataType="ui4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[OrderID]"
+                      name="OrderID" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ClientID]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ClientID]"
+                      name="ClientID" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[DateOrder]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[DateOrder]"
+                      name="DateOrder" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ShopID]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ShopID]"
+                      name="ShopID" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ItemGUID]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ItemGUID]"
+                      name="ItemGUID" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Amount]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Amount]"
+                      name="Amount" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Price]"
+                      name="Price" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Sebest]"
+                      dataType="r8"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Sebest]"
+                      name="Sebest" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение Orders918\Таблица Orders918"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Таблица Orders918"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[Orders918]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Orders918\Таблица Orders918.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ID]"
+                      cachedDataType="ui4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Id]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[OrderID]"
+                      cachedDataType="ui4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[OrderId]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ClientID]"
+                      cachedDataType="i4"
+                      cachedName="ClientID"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientId]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ClientID]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ShopID]"
+                      cachedDataType="i4"
+                      cachedName="ShopID"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ShopId]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ShopID]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ItemGUID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ItemGUID"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGuid]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[ItemGUID]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Amount]"
+                      cachedDataType="i4"
+                      cachedName="Amount"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Amount]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Status]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Status]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[DateOrder]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DateOrder"
+                      externalMetadataColumnId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CreateDate]"
+                      lineageId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET].Columns[DateOrder]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[OrderId]"
+                      dataType="i4"
+                      name="OrderId" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientId]"
+                      dataType="i4"
+                      name="ClientId" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CreateDate]"
+                      dataType="dbDate"
+                      name="CreateDate" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ShopId]"
+                      dataType="i4"
+                      name="ShopId" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Amount]"
+                      dataType="i4"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ItemGuid]"
+                      dataType="wstr"
+                      length="50"
+                      name="ItemGuid" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="260"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Sebest]"
+                      dataType="r8"
+                      name="Sebest" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Orders918\Таблица Orders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\Таблица Orders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Orders918\Таблица Orders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Orders918\Таблица Orders918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение Orders918.Paths[Вывод источника ADO NET]"
+              endId="Package\Заполнение Orders918\Таблица Orders918.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Вывод источника ADO NET"
+              startId="Package\Заполнение Orders918\9-18.Outputs[Вывод источника ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка таблицы Orders918"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{E94B6010-E42B-49BF-9934-FB7436C37A96}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка таблицы Orders918"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2473DB49-B888-4E9B-B4B2-E6BD572CC9A1}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Orders918" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{2D6D0DEF-594A-4849-AD65-922CBEF104D2}"
+      DTS:From="Package\Очистка таблицы Orders918"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение Orders918" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{8A6ADF7D-4B76-41C8-8D87-48BC933352A7}"
+      DTS:From="Package\Заполнение Orders918"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Задача &quot;Отправка почты&quot;"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Задача &quot;Отправка почты&quot;"
+          TopLeft="424,311" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Заполнение Orders918"
+          TopLeft="407,200" />
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Очистка таблицы Orders918"
+          TopLeft="398,90" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="505.25,132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="503,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.5,69"
+              Start="0,0"
+              End="24.5,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="20.5,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.5,34.5"
+                    Point2="24.5,34.5"
+                    Point3="24.5,38.5" />
+                  <mssgle:LineSegment
+                    End="24.5,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0.455781249999999,39.5,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение Orders918">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Заполнение Orders918\Таблица Orders918"
+          TopLeft="354,195" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Заполнение Orders918\9-18"
+          TopLeft="387,79" />
+        <EdgeLayout
+          Id="Package\Заполнение Orders918.Paths[Вывод источника ADO NET]"
+          TopLeft="439.75,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Orders918\9-18">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Orders918\Таблица Orders918">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

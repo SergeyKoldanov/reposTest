@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "RelefBack", "RelefBack\RelefBack.dwproj", "{C33F801D-2C9E-4145-9F43-4223E94CD6DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C33F801D-2C9E-4145-9F43-4223E94CD6DB}.Development|Default.ActiveCfg = Development
+		{C33F801D-2C9E-4145-9F43-4223E94CD6DB}.Development|Default.Build.0 = Development
+		{C33F801D-2C9E-4145-9F43-4223E94CD6DB}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D57C404-6ACC-4B46-BAEF-7B14A8D82704}
+	EndGlobalSection
+EndGlobal

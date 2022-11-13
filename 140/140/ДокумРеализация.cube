@@ -1,0 +1,1366 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9b848850-53d1-4a7e-b895-2aa5443702fd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ДокумРеализация</ID>
+  <Name>ДокумРеализация</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="0" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="22728" y="16431" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwB2B" left="10500" top="7512" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwB2B" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwTbData" left="12592" top="10000" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwTbData" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="firms" left="8148" top="10000" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4075" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000eb0f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_firms" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwDocRealizTovarov_NEW" left="6231" top="2500" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4154" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwDocRealizTovarov_NEW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwSprZakladki" left="10500" top="4695" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwSprZakladki" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwKontragentVidDostavki_SP" left="15000" top="4695" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwKontragentVidDostavki_SP" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwKlassifProduktTovar" left="10500" top="0" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwKlassifProduktTovar" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwKlassifKategoriya" left="16500" top="7870" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwKlassifKategoriya" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwOrganizatsiya" left="16500" top="11510" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwOrganizatsiya" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="goods" left="18693" top="0" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="4154" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_goods" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwSklady" left="4500" top="12500" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwSklady" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwDocRealizTovarovSummaKolNakl_NEW" left="0" top="0" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="4498" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000921100009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwDocRealizTovarovSummaKolNakl_NEW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwDocRealizTovarovSummaKolPoz_NEW" left="767" top="6218" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="4154" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwDocRealizTovarovSummaKolPoz_NEW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="601aea1b-63c7-44a6-8133-e55fcf8f2cd4">
+      <ID>B2B</ID>
+      <Name>B2B</Name>
+      <DimensionID>B2B</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5b6f5476-2566-45eb-bfe0-760ec339874b">
+          <AttributeID>Kontragent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07918b08-0aa2-47b1-b555-7ab5ff894f93">
+          <AttributeID>B2B</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="eb994218-ea3b-4b2a-80e7-9b61e4f4d829">
+      <ID>ГодМесДень</ID>
+      <Name>ГодМесДень</Name>
+      <DimensionID>Vw Tb Data</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a9cd8dfa-d80b-4df3-9aae-3aaa3028c757">
+          <AttributeID>Data</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="82faedca-89dc-461c-90ab-f30eff9a9a55">
+          <AttributeID>God</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e686615f-af66-4fde-8bec-659dd59adb95">
+          <AttributeID>Mes Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15673524-c32f-4997-90a1-a47c49b16883">
+          <AttributeID>Den</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e545fbf5-04a8-4b8d-b96b-c2e97334640e">
+          <AttributeID>Nom Nedeli</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="58bf9a88-bc2c-499e-aab8-8240801c7f61">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="371328c6-78d2-4eb4-bf6b-6f5982744411">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="fc045b91-4c4b-4b4e-bbb4-7234eff8b984">
+      <ID>ГодНомНедели</ID>
+      <Name>ГодНомНедели</Name>
+      <DimensionID>ГодНомНедели</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3318ed82-e708-45c6-8b6f-1d93cabd926d">
+          <AttributeID>Data</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="088fe0a8-a7ac-467e-abec-d4e42b6b86c6">
+          <AttributeID>God</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5504c866-962d-4bdd-a97e-4ad57cbd210e">
+          <AttributeID>Nom Nedeli</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="88579a01-1231-438f-acfe-43f323ccb70e">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="1434b165-1b75-44f5-a21b-732fe05e7170">
+      <ID>ГоловнойКлиент</ID>
+      <Name>ГоловнойКлиент</Name>
+      <DimensionID>ГоловнойКлиент</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eada4547-4ce4-4949-9cf4-df0edb8caec7">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55b2afb0-d18c-494f-a515-f219dbe64f11">
+          <AttributeID>Golovnoj Kontrag Desc</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bbcb94e8-20cd-474c-8153-79bb810ed195">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="97e3dbcc-59fe-4a46-bb94-763e58918a47">
+          <AttributeID>Torg Toch</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="281bca79-a1ba-426f-bd06-c1ebbc03ca78">
+      <ID>ДокРеализацияТоваров</ID>
+      <Name>ДокРеализацияТоваров</Name>
+      <Translations>
+        <Translation dwd:design-time-name="ec58cb0f-37cf-4635-85c8-e2a4164ef7e0">
+          <Language>1049</Language>
+          <Caption>ДокРеализацияТоваров</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>ДокРеализацияТоваров</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cbbb24a4-5b6c-457a-a3f1-c0b5bf725299">
+          <AttributeID>Doc Realiz Tovarov GUID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b108a4ad-ae47-4676-969c-7685e68964bb">
+          <AttributeID>Data</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc69a549-b2bc-4f1e-8a74-f35fd866a0a3">
+          <AttributeID>Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="274196db-5286-4f2f-827b-1ea9de6217cb">
+          <AttributeID>Sklad ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="adcce474-ca5f-4580-8ea3-f47a4987d788">
+          <AttributeID>Comment</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fcb01af8-1c1e-4f2d-b891-c1072a9773cd">
+          <AttributeID>Vid Operatsii</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81a95635-4e60-4c40-be3d-79df89bcccf5">
+          <AttributeID>Сurrency</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bcebf649-63ba-4a71-85bc-180be12095e3">
+          <AttributeID>Bonus</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1bca7a34-7261-4a00-a50b-9f7a5490a311">
+          <AttributeID>Podrazdelenie Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6197cc82-6a62-43d1-a6e6-94a727a9e643">
+          <AttributeID>Otvetstven Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ded6f269-8c76-4941-be9d-0783119a9071">
+          <AttributeID>Avtor Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="72abecde-b058-42dc-a8b4-63929a88f68c">
+          <AttributeID>Is Partner</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cae88c48-f8db-4994-9fe6-8edb86611f84">
+          <AttributeID>Is Cross</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aeede5d6-43d4-410e-8a03-ce3dd7d8c04d">
+          <AttributeID>Is Factura</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="98a9fb51-ec2b-4ed5-a735-0d91fc7ef0fc">
+          <AttributeID>Is Complect</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a87cce21-8e76-49cb-aee3-f4c282a3714f">
+          <AttributeID>Is OKK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35370c7d-af59-4f0f-824c-c45e5897cadd">
+          <AttributeID>Marked</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="299d5f7c-9a99-449e-9bd8-a0bc5a982e54">
+      <ID>Закладка</ID>
+      <Name>Закладка</Name>
+      <DimensionID>Закладка</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e7ef8c27-d66e-4eb8-851c-6ce4500ea593">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="28cc6950-47c5-46fb-b56f-53e8ef52c2d5">
+      <ID>КатегорияДоставки</ID>
+      <Name>КатегорияДоставки</Name>
+      <DimensionID>КатегорияДоставки</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="90f037a4-d1be-418c-aa03-d2715f6c5590">
+          <AttributeID>Kontragent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c8e1dd0a-6996-4f36-ba88-7f5c4a329bd2">
+          <AttributeID>Vid Dostavki</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ce26f3df-0dfc-4371-93f7-cc6bd64e361c">
+      <ID>КлассифГруппы</ID>
+      <Name>КлассифГруппы</Name>
+      <DimensionID>КлассифПродукт</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="833f8523-dacc-42b7-af39-8d9c7385064c">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58a25dba-7826-4103-98ea-866f9cb01bdf">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="9d783c65-5e9d-49f5-b688-ba20af09c7c1">
+      <ID>КлассифКатегория</ID>
+      <Name>КлассифКатегория</Name>
+      <DimensionID>КлассифКатегория</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="725e61ab-d4d4-4e73-b6fd-2d6ade36c3dd">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d16ead92-bf72-4ee2-b165-d7fa0777b7c9">
+      <ID>Клиент</ID>
+      <Name>Клиент</Name>
+      <DimensionID>Клиент</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0fa3f3d5-c58d-49f0-9149-e592607696ec">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="94e73cb4-a3aa-4bb0-8998-9b280c050cad">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0d63b89f-d349-4272-aff3-573b1b6eccf5">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9d36cb6-945c-4a0b-b52b-5fc62967e914">
+          <AttributeID>Golovnoj Kontrag ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85de8900-4d3f-49b0-9c24-3fda7dd9f676">
+          <AttributeID>Uzel</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d1e7990-1df2-4ece-891c-7835d17b8f90">
+          <AttributeID>INN</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8eea6c76-c069-4d92-9f28-2b51ddbcd30c">
+      <ID>КлиентСписком</ID>
+      <Name>КлиентСписком</Name>
+      <DimensionID>Firms 2</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="57c7f819-38e3-452f-89cf-ad7c508985ef">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6a48400-bd8b-4098-a268-10a98948101d">
+          <AttributeID>Фирма</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="914be99c-e524-438b-9225-09377eec6e5a">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="955b0fc1-7992-4e92-8473-aacf86782f15">
+          <AttributeID>INN</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="49d5d3be-4fff-4fdf-9a1e-63b850143046">
+      <ID>Организация</ID>
+      <Name>Организация</Name>
+      <DimensionID>Организация</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9557df63-3487-4724-8cd2-edce78f7f53f">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c875ac5c-67b7-436f-820f-16eaf21dcfb9">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="4843d3ef-320c-4bad-86a3-af71aad3382e">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="70b3335c-d76a-40cd-9541-0b901137bd29">
+      <ID>Отметка2</ID>
+      <Name>Отметка2</Name>
+      <DimensionID>Отметка2</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a7145a6b-6f2b-482b-9739-04b9460d886d">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc8c83e0-96c2-4251-a846-b4c8a08f1462">
+          <AttributeID>Отметка2</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="386083a8-6b62-494c-b276-3fc86fcaaff7">
+      <ID>Производитель</ID>
+      <Name>Производитель</Name>
+      <DimensionID>Производитель</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d5873b26-65f2-4099-b5c8-e791be39718a">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d5e4d89a-8454-4505-99f6-ac5c431f18e2">
+          <AttributeID>Производитель</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="fd40e23a-b280-4dbe-9d38-b2616879893b">
+      <ID>Регион</ID>
+      <Name>Регион</Name>
+      <DimensionID>Регион</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="48fe0063-077e-4851-8d47-f120820222c9">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7643f2f-cdb0-43f3-b0e9-1268eca879f7">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9278c716-6857-448f-a0ff-b22280ea0240">
+          <AttributeID>Naselenie</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="0fa656dc-05a3-4c0d-90b8-bac5644747f4">
+          <AttributeID>Dolya Rynka</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a798e25-1e13-4692-bbca-00702c4d93c6">
+          <AttributeID>Sred ZP</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6e44c69-ae2e-4b8a-b477-89f976d71f98">
+          <AttributeID>Emkost Kan Rynka</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2894dfc-c1da-44ec-8276-81da45cdabc2">
+          <AttributeID>Emkost Of Bumagi</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2094c31a-ba1e-4468-ad05-828ec1c9c85c">
+      <ID>Склад</ID>
+      <Name>Склад</Name>
+      <DimensionID>Склады</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9fad7d2e-9dcf-49ca-a87a-523661099007">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f7ce7b31-3955-41e9-bdaf-420498fe21bc">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="dfd9f60a-c25c-44fd-b3a8-ae8c43122dee">
+      <ID>Товар</ID>
+      <Name>Товар</Name>
+      <DimensionID>Товар</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2747d401-7d69-4b88-b65e-64eb8026898c">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b2f22f3-3268-4108-802f-100cac847bc8">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="df2dae84-32ed-450e-812f-509d2e16b26e">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="ac96d7be-5a0e-4158-a682-ccb0f763a51a">
+          <AttributeID>Klassif Klass ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="06edddd2-9ff4-4d3a-90e3-6065c82ddaed">
+          <AttributeID>Klassif Kategoriya ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b35069ee-7dc6-4cd5-97e5-24194839be91">
+          <AttributeID>Klassif Produkt Tovar ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3fb0cc08-6f6b-41bc-a73a-94273484a3b1">
+          <AttributeID>Артикул</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f05a267-f608-469c-96b4-0b64b1750463">
+          <AttributeID>Производитель</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6ff3f7a-07dc-4e97-ab71-c2788712f42b">
+          <AttributeID>Kol V Min Upak</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="a3209ec2-a639-4567-86c6-3d1ac50765b4">
+          <AttributeID>Kol V Sred Upak</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="2afe54e4-98b4-4d09-9622-f431961d879b">
+          <AttributeID>Kol V Maks Upak</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="44e29b00-6ec2-4756-951d-4f4ac38ceea1">
+          <AttributeID>Zena Zakup</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d27c14d-c0c0-4b8b-8459-bf0931d204d2">
+          <AttributeID>Klassif Torg Marka ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0bf4db0-4ed1-492d-b930-b5c1614d1b18">
+          <AttributeID>Ispol Srokov Godn</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7865eee6-e5c7-4abe-bdd9-3378f1ad6560">
+      <ID>ТоварСписком</ID>
+      <Name>ТоварСписком</Name>
+      <DimensionID>ТоварСписком</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4beb1e0c-9325-4e91-82c9-50015fe69ab3">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47815072-80a6-49af-9462-5dd7cd46b981">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="3eb4a60e-d16c-4c05-afab-97e554ebcff1">
+          <AttributeID>Отметка2</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="97a69749-aacc-416b-9296-7a7471217b9a">
+          <AttributeID>V Matritse</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1e07d70-4f0b-4c01-8bca-8b4e02be1c2c">
+          <AttributeID>Производитель</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="85b3494b-a104-4391-b7e7-8f7109527e2c">
+          <AttributeID>Артикул</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="118dd599-1139-400c-b96e-6ba45bdc223e">
+      <ID>Vw Doc Realiz Tovarov Summa Kol Nakl NEW</ID>
+      <Name>КолНакл</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7d8ccabb-b82a-4a0e-a158-58ba217cbe5d">
+          <ID>Число различных объектов Doc Realiz Tovarov GUI Dstr</ID>
+          <Name>КолНакл</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="58d29239-ccd9-4030-9939-e6f40bd02fd3">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="65741c84-6082-443b-bba9-73487de6787d">
+              <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+              <ColumnID>DocRealizTovarovGUIDstr</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="bfe10849-b67d-46a9-a498-9a877a74fda0">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2c79e06f-37f5-45e6-9480-059cdd56f77b">
+          <CubeDimensionID>ТоварСписком</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1b113bbe-8baf-4ea0-b087-0ca547a352d4">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d612c199-c3c8-443b-9c8f-4704eb5a435d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="461a969d-8986-48f5-a970-26f2b55cecfe">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="82ab7dc9-8d2e-4d6f-a986-0aadf69bd567">
+          <CubeDimensionID>Товар</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="90b5eb65-4aeb-4eb6-8aef-57028951013d">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="84ce4e50-269b-4e32-b604-8f0332c380d1">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c49040d3-d630-47b2-ba26-29f9ca5858d1">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e7dd6960-fe0c-4e1f-87c3-eacfa73dfa5b">
+          <CubeDimensionID>ДокРеализацияТоваров</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="988241f9-c524-4998-ab19-9b606adf25e0">
+              <AttributeID>Doc Realiz Tovarov GUID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="90352fcf-6b2c-471d-ad70-0371e0057e1c">
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="96efc9cf-a290-4e71-b510-13b9d075b007">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>DocRealizTovarovGUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d053ac57-8a7f-42df-be47-2a68a945eeff">
+          <CubeDimensionID>Регион</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ca9ae3fb-e783-40f8-afc6-4a11ebe52853">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e854e801-3479-4ba9-ad35-94d56f500030">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5dca42f4-44cb-4ebd-a518-55665037f9f7">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ca3e169e-d59e-4432-82ef-ad1e296917a1">
+          <CubeDimensionID>Производитель</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1a864946-d97f-4994-9fd0-ca43c27eb563">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3fc37def-7c07-4d00-bd77-4265164eeaaf">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f7393a45-c3db-4008-a46a-ac2ed3433c67">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="797c3406-ddaa-497f-bc19-b23d3814826a">
+          <CubeDimensionID>Отметка2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1f0419df-4217-4915-8c8f-ffb6d0b50c9a">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="499419cc-8ce0-4373-a3ac-139bf09abeac">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="009e7766-1597-4d16-b788-7cf977633a7c">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2650fe67-51a6-4a39-8b93-e2705a851b06">
+          <CubeDimensionID>Организация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4b075540-de95-4285-8013-9dee94ed12ff">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6a4c7254-3a6d-4baf-bb27-d592fcaec289">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dccce6c1-59d7-4717-b86a-48d94f9ae549">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>OrganizatsiyaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a2bbbb17-612e-4031-ba0d-62893140aa96">
+          <CubeDimensionID>КлиентСписком</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="06ada873-846a-42f1-b71e-4b168fdf74c9">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9e961d88-d33d-4cd1-b681-f695ece6dfee">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="10efc59d-dc15-4850-ad2b-786f9290caa0">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c6977ce6-8c19-41de-a0f9-1d51285e201f">
+          <CubeDimensionID>Клиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="69616558-8c33-4ff1-ac0e-ca811b41a41e">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2f300076-652d-4ef7-a1ee-503c8ce9422a">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7e3967f5-8a94-46f6-8f22-4e51126a52ee">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="334a2da9-9ecd-45df-9dbc-beb39aba7812">
+          <CubeDimensionID>КатегорияДоставки</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f888b1ce-d7b0-4c0d-b08e-b07c93999660">
+              <AttributeID>Kontragent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="92a336bc-dbb7-4af3-b361-66219e440134">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d828ba78-f5ea-4622-866b-3c54dd3c1a3d">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d0881941-97d9-4a69-ac3e-f290724c88e2">
+          <CubeDimensionID>Закладка</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7bfa22c2-8d56-4ba2-ab0c-3b638347ba9f">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="624cff68-8ec9-4025-b678-8ac80017abc2">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="64bad71f-91bc-47c4-8ecf-d4fac3fbafd0">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>ZakladkaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="97968454-c2f0-4c59-8711-ea2a62436970">
+          <CubeDimensionID>ГоловнойКлиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="288a123c-6a1a-4c95-aedd-c5269512a13a">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a7eb63e9-40da-4be3-aa90-9ff4543d5338">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c51601d6-21d5-4b53-9661-b64bbec81d81">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="26e0c6dc-999a-4e00-8dd4-fba7ade83d01">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="40f16c0f-4fa8-41c0-a09a-eda982fbe22d">
+              <AttributeID>Data</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ДокРеализацияТоваров</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Data</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="373b7d2b-e3b8-46e1-8c82-ef6ab2b03439">
+          <CubeDimensionID>Склад</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ca2ba25e-e318-420d-8ec6-81151e796d88">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ДокРеализацияТоваров</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Sklad ID</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b0332902-aafa-4c31-bd1b-73a86452606b">
+          <CubeDimensionID>КлассифКатегория</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="78ad065a-151b-49c7-814d-674963da3f95">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Товар</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Klassif Kategoriya ID</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="2ff516e5-5740-4505-b4c5-db4ed6feb57d">
+          <CubeDimensionID>КлассифГруппы</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="12c09215-6da0-4a95-b4c6-7620a8f4dd54">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Товар</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Klassif Produkt Tovar ID</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="72e0a51c-f3e0-41f4-b22d-0a3ba9de88ac">
+          <CubeDimensionID>ГодНомНедели</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cc9dbb7e-d5ac-4747-adda-d1a3cff00ea6">
+              <AttributeID>Data</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ДокРеализацияТоваров</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Data</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5325cb1d-7d11-4286-a438-67aa9bf377e6">
+          <CubeDimensionID>B2B</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9c5d529c-34b6-48c5-93da-cf033e5cba59">
+              <AttributeID>Kontragent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b2d414c8-8b61-4d85-a758-19dabfd47f3e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0924e1e5-11a0-40c9-88a8-bd76fc9b3ad3">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolNakl_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="68827683-eb28-47ca-9436-a4107386e837">
+      <ID>Vw Doc Realiz Tovarov Summa Kol Poz NEW</ID>
+      <Name>Реализация</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ef587e39-ce9a-4319-9b54-07095b194dc0">
+          <ID>Summa Doc</ID>
+          <Name>СуммаДок</Name>
+          <Source dwd:design-time-name="eaedd1f7-b030-4b68-af96-e28cdf1da1ee">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="55692a6b-bfbb-4bca-a66d-ccb133217f09">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>SummaDoc</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="83d0a8be-89dd-4dd4-ba51-5535dac12e4e">
+          <ID>Kol Poz</ID>
+          <Name>КолПозиций</Name>
+          <Source dwd:design-time-name="6e7e6df8-ec54-4d61-94c0-9318f1e9fc1a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="70e3c6ec-150b-4fb3-b476-4671e63815cb">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>KolPoz</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4ea43265-04dc-4697-91ad-f8e25a14adbb">
+          <ID>Mest</ID>
+          <Name>Мест</Name>
+          <Source dwd:design-time-name="4b988aaa-5f83-4076-a9a6-39f8091abed6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="af53630a-01ae-407b-9b1d-25fe947ab355">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>Mest</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e01c484f-af00-4337-a039-09df7863ce64">
+          <ID>Ob</ID>
+          <Name>Объем</Name>
+          <Source dwd:design-time-name="afdbcd43-4aac-41ed-a01b-38a69e373a51">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="56e79bfc-26a8-4f9b-a0c6-498a13bcb3e8">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>Ob</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8f5a6f51-eb5c-438b-bf8e-cd8f68970645">
+          <ID>Kol</ID>
+          <Name>Количество</Name>
+          <Source dwd:design-time-name="b36bbb00-6a69-4a4a-a632-c11f25d80c48">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="93f40ed5-20af-48df-a40f-cf28749248a8">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>Kol</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e311c988-9149-4b3d-a3a6-9660486198dc">
+          <ID>Sebest</ID>
+          <Name>Себестоимость</Name>
+          <Source dwd:design-time-name="8f77e0dc-c703-41df-a1a9-e6c9497f79cf">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="830736a1-ec60-4522-a2ea-50bc7e5cb8f7">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>Sebest</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e4cbd3e2-50f5-4d30-8449-5ff2a93f69b2">
+          <ID>Ves</ID>
+          <Name>Вес</Name>
+          <Source dwd:design-time-name="6a7e7ed0-c39c-4d91-a7e5-32cd8579ba64">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bb394ca4-73e5-4b30-9d54-fe7f232ba3dd">
+              <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+              <ColumnID>Ves</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="45cc0292-7d1b-4bda-b0e5-d932b11b89fe">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="94510092-e656-4b05-ae49-c0f432d36ad0">
+          <CubeDimensionID>ТоварСписком</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4fd58c44-ecd9-49c2-8534-0a22b984f768">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f70beb2b-5372-4c7c-a13d-3b8c1f9322c7">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ae8ccef6-a6e9-42a3-afab-93a356f7c01c">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="149da109-de6f-4bd4-b18f-0663b1f108f3">
+          <CubeDimensionID>Товар</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e6525446-3e98-49c0-a383-8679615e0a3d">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fabd8126-94a7-4a2a-ae60-06540a2d2e4b">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c3b703c-a3f9-4dc7-ad2c-7471e57a30e8">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="162d717b-1845-4d11-baa4-6691a67652db">
+          <CubeDimensionID>ДокРеализацияТоваров</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b4c9006c-5469-4af9-8ac4-d3cd00c15a5a">
+              <AttributeID>Doc Realiz Tovarov GUID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9da930a2-29fc-4533-bb30-b3ab031103f3">
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a7e6989d-eab6-442c-a8b4-9c747583a12e">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>DocRealizTovarovGUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="229201a0-67c4-4ef4-b840-672cbc8cbbef">
+          <CubeDimensionID>Регион</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="af97d923-7fc8-41f7-af08-8eabb92246a0">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="82f74c99-3ccf-45d6-928d-9e3c7654df6b">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="06989398-612d-40b6-9db1-69f27d7a334d">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3b7d3975-3015-4915-9ac2-290622189a3f">
+          <CubeDimensionID>Производитель</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6e8c53e5-5cdf-4271-a9fd-67d0d3438ee0">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a266b4dc-89e6-486c-8be6-fdbaf18af2f8">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2af0d01-bb8c-4393-be62-d7d350c1a6ec">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="74cb3049-004f-4a64-94cc-d574edb19514">
+          <CubeDimensionID>Отметка2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="feba8132-c042-4d4c-b627-ce1ba45ac8e5">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="159e788f-54e8-4aa4-bf3b-1202a5cb1565">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2a6086e-4885-4068-802e-04fe070c6763">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e606dd28-0930-493d-8511-17b894e8825f">
+          <CubeDimensionID>Организация</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5acf356d-193a-4cac-9f48-65f5ab7401d8">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4ba9ff3b-f6b7-4ea8-a314-79a019905584">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="414b3750-4f9b-4797-83fd-d3478be52b14">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>OrganizatsiyaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="31790e36-3dcc-4cfb-b161-b9ad0a4e2fea">
+          <CubeDimensionID>КлиентСписком</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="02e74c7e-b587-4479-b907-6283999719b9">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f21f6730-07d2-4e1e-8cf3-b8c7533f168b">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9726fd68-a7f5-485d-bdb0-462a28f313c4">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9fcc7638-28b3-4662-8e82-c4a572f53176">
+          <CubeDimensionID>Клиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="76788653-e115-4a5a-949f-7218a753ceef">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0307f494-9a63-4d78-b50d-2fa07a4680ca">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="52d2a6f9-68dc-4a2e-bc34-32d955c6e7f6">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7ac669b2-0646-4872-bf5e-515cd6beba49">
+          <CubeDimensionID>КатегорияДоставки</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b72bb720-6805-4998-a026-bc81b506b2c2">
+              <AttributeID>Kontragent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c30a1a1e-c475-4f27-8540-4997279edf96">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="536d58e4-d75c-4038-8d5e-dc95f78d0ea1">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="43084eac-93bc-418c-9505-a52ed125d20c">
+          <CubeDimensionID>Закладка</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="337a4a05-21e4-4c7d-a1a0-af731a6353ea">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d91d634a-11ce-4a09-9603-156a7fcb5a89">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="22011bda-c9e1-4cd3-9632-19861069a40a">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>ZakladkaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c566e267-42c7-4deb-9825-b4594e5e604d">
+          <CubeDimensionID>ГоловнойКлиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fb90d46a-b50b-4fd5-b88b-e42c6860200e">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a5997384-8a1e-4c81-b9ab-95ec97ae8caf">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="467b6850-de77-491b-823a-8524f181e96a">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b563a453-565e-42ce-bac6-2f6da8d14118">
+          <CubeDimensionID>Склад</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="07a38cfe-9f3c-4159-8e9b-e8b33104010f">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ДокРеализацияТоваров</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Sklad ID</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="44d8cba9-58ed-4db7-a9ea-9a5e7a2faf2a">
+          <CubeDimensionID>КлассифКатегория</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5c141f48-ffbc-4736-bc0e-af3630f6eb6f">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Товар</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Klassif Kategoriya ID</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="283665d8-91d5-4623-aa62-3d07feb26387">
+          <CubeDimensionID>КлассифГруппы</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ea872058-4475-4e62-ae1b-6722e0596330">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Товар</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Klassif Produkt Tovar ID</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="bd71fd9e-3b5b-4b3f-8790-b8ee76a1206d">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e8695170-6b6f-4b0d-a34c-ce99a8da6318">
+              <AttributeID>Data</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ДокРеализацияТоваров</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Data</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="2e226662-8928-4c2e-a888-9352abf6a4a4">
+          <CubeDimensionID>ГодНомНедели</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1202ae07-f12b-4b4e-b4a1-ddaae92f773d">
+              <AttributeID>Data</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ДокРеализацияТоваров</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Data</IntermediateGranularityAttributeID>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b4717e89-6f33-4fcc-beba-30d40824ae86">
+          <CubeDimensionID>B2B</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="664ca993-58a4-41a5-ad7b-4fad7f6f111e">
+              <AttributeID>Kontragent ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c703259d-71ec-41ea-ab40-80d6e602bfae">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1d578a60-e6b8-4808-96aa-0c44c774de86">
+                    <TableID>dbo_vwDocRealizTovarovSummaKolPoz_NEW</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="d82ae663-1b72-4331-9604-c0d0d8d0c5c3">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+</Cube>

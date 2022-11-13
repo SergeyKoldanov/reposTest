@@ -1,0 +1,600 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e13c0b6f-46f2-41e1-b750-25fe5fa73bf8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Комплекты</ID>
+  <Name>Комплекты</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="9" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="22728" y="11324" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwFirms" left="9985" top="7263" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3995" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00009b0f0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwFirms" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwGoods" left="6612" top="3994" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3307" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000eb0c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwGoods" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwSets" left="10647" top="4604" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3043" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e30b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwSets" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwSklady" left="13500" top="12500" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwSklady" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwCalendar" left="14166" top="2500" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwCalendar" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwSales2Years" left="0" top="0" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3625" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000290e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwSales2Years" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5000</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="f5273301-cc36-42d5-9a2f-283d8c315971">
+      <ID>Vw Firms</ID>
+      <Name>Vw Firms</Name>
+      <Translations>
+        <Translation dwd:design-time-name="3cd1254d-a4cd-4e12-a29d-56541648c864">
+          <Language>1049</Language>
+          <Caption>Клиент</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Firms</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9cdd230c-55fa-43be-b0df-9ab31fd46ec0">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f1676c6-bdb6-46c7-a72b-f22a25f45252">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="69e248ae-6f2e-4f52-a329-b7f53f93bbcb">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c6f28d7-e785-46d6-9b6d-1c7aed69a825">
+          <AttributeID>Golovnoj Kontrag ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5586cb82-fb0a-4ea0-ba45-2cca6ccc3e1b">
+          <AttributeID>Uzel</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="22b7f260-73f3-4de1-86a0-82b95ed9bb74">
+          <AttributeID>INN</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="65713a99-8f54-487b-94b6-eb3038e689f8">
+      <ID>Vw Firms list</ID>
+      <Name>Vw Firms list</Name>
+      <Translations>
+        <Translation dwd:design-time-name="c4dbd3ed-edd5-4a55-8e14-e499774d7982">
+          <Language>1049</Language>
+          <Caption>Клиентсписком</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Firms list</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b318ec1a-92ff-4a5e-8c43-3b813ad66923">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45b2d4ff-bac2-4a80-803b-ae30d97e0aa3">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3277b52-3af3-44dd-a6e5-52b0bc8bdcdb">
+          <AttributeID>Фирма</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ec2e939-2753-439a-81a9-449faa101965">
+          <AttributeID>INN</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="affb93fb-4e3e-4223-a5ee-5ea467dc0f5b">
+      <ID>Vw Goods</ID>
+      <Name>Vw Goods</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2222e3e2-d314-4bc1-8da2-bcbeefd32edb">
+          <Language>1049</Language>
+          <Caption>Товар</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Goods</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="47a88e17-32c4-424f-83c3-c303ce532bee">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3875c50e-a45e-4489-acad-aae8616f0189">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="6c4280e5-373d-47ae-aea4-7e4642e79823">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b92c2360-dd3e-4538-8104-44b84b581922">
+          <AttributeID>Производитель</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="52bf4d90-520d-4298-8c15-df26e62bf164">
+          <AttributeID>Отметка2</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="d803d90c-761c-4d7a-bd0d-27a23e4ec98e">
+          <AttributeID>Артикул</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6f496c20-258d-4e25-a003-08ee1d07618a">
+      <ID>Vw Goods list</ID>
+      <Name>Vw Goods list</Name>
+      <Translations>
+        <Translation dwd:design-time-name="256d410d-123b-4fae-a25f-1819e95370f9">
+          <Language>1049</Language>
+          <Caption>ТоварСписком</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Goods list</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c98abe6d-94cd-4f05-a27b-867dbe6b02a9">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f81feea-e699-4e9f-91d5-9982e39747cd">
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="1880145e-dc52-426c-b3c1-d5c657dd86b9">
+          <AttributeID>Производитель</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="1abd984e-42ce-4c18-8cfe-f111f19c87c3">
+          <AttributeID>Отметка2</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="1fc23671-6fcd-4c25-8804-80772b352427">
+          <AttributeID>Артикул</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c01de113-4c00-4d09-b80b-b087a26187de">
+      <ID>Vw Sets</ID>
+      <Name>Vw Sets</Name>
+      <Translations>
+        <Translation dwd:design-time-name="da3617ca-7e71-4c71-98b9-b396f855bb14">
+          <Language>1049</Language>
+          <Caption>Комплект</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Sets</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8c43b92b-2038-4499-835f-ec9169646f7f">
+          <AttributeID>Complect Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="03b3a946-ce7c-42b9-81e7-bef0f112785b">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="48039e30-b317-4725-b3da-7bb7d92bd1af">
+          <AttributeID>Item Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce1d4856-e192-4eb8-943b-b71991349627">
+          <AttributeID>Complect Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f3f9e967-0160-4cbf-a821-5051d355d5c5">
+      <ID>Vw Sklady</ID>
+      <Name>Vw Sklady</Name>
+      <Translations>
+        <Translation dwd:design-time-name="dd22d96f-8c49-49cc-8022-539309dffae4">
+          <Language>1049</Language>
+          <Caption>Склад</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Vw Sklady</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="205f5597-557e-42c1-8519-8a6c03b91942">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fa467639-b337-4689-9b98-e352dd590058">
+          <AttributeID>Parent ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="25782c9f-a02e-4a6c-9817-4901f4914caa">
+      <ID>ГодМесДень</ID>
+      <Name>ГодМесДень</Name>
+      <Translations>
+        <Translation dwd:design-time-name="47c570e8-1168-4922-905c-419affea28f0">
+          <Language>1049</Language>
+          <Caption>ГодМесяцДень</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>ГодМесДень</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2a0736d6-9bf9-4df9-a917-0c2d20219d67">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ee4007a-0985-4b4f-bc12-85fad9f66f7a">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4a1a1985-a29c-4154-9a28-a6b7671c21fc">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1c7f7ec3-af0e-460e-afdb-a20d758e7fa0">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="870dd600-62ea-491c-85e3-2bb86b2d5e8c">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="5bef930d-6017-473e-97f9-095cf9ca9baf">
+      <ID>ГоловнойКлиент</ID>
+      <Name>ГоловнойКлиент</Name>
+      <Translations>
+        <Translation dwd:design-time-name="e0539282-eaa7-40b2-80a2-2e6c01f3b077">
+          <Language>1049</Language>
+          <Caption>ГоловнойКлиент</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>ГоловнойКлиент</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e6a509fb-b88a-4b39-a705-d7ff62783fec">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e8e953c-081a-4008-a28c-542a0a6028f4">
+          <AttributeID>Golovnoj Kontrag Desc</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9fc37b19-421d-4e3b-9aaa-f51bc858a4e7">
+          <AttributeID>Golovnoj Kontrag Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="cf089b77-a7fe-463d-95e3-bfdc5210579b">
+      <ID>Vw Sales2 Years</ID>
+      <Name>Vw Sales2 Years</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Translations>
+        <Translation dwd:design-time-name="b5ad8f35-d25d-4ae6-af56-41ce44ce6993">
+          <Language>1049</Language>
+          <Caption>Продажи</Caption>
+        </Translation>
+      </Translations>
+      <Measures>
+        <Measure dwd:design-time-name="49a56935-f1c7-42df-b82b-a775127177b4">
+          <ID>Kol</ID>
+          <Name>Kol</Name>
+          <Source dwd:design-time-name="aae360ef-3b10-4500-a46f-4ed9f8215334">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9bdc12f0-4796-4fb3-8b73-9fab109bb1e1">
+              <TableID>dbo_vwSales2Years</TableID>
+              <ColumnID>Kol</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="d65c95c7-713c-43c7-91aa-e276ddc10043">
+              <Language>1049</Language>
+              <Caption>Кол-во</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="f8490fac-caf4-4090-ad3e-2a2d1581e2e7">
+          <ID>Sebest</ID>
+          <Name>Sebest</Name>
+          <Source dwd:design-time-name="159f8c46-929f-4e7d-b6b9-c09e25a978f9">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0464cd19-31db-47ca-b4c7-9418b5f2b3dc">
+              <TableID>dbo_vwSales2Years</TableID>
+              <ColumnID>Sebest</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="fdf0411c-4871-45d2-b767-a3526c9f6cb2">
+              <Language>1049</Language>
+              <Caption>Себестоимость</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+        <Measure dwd:design-time-name="c7bec60f-508d-4ece-94a8-2bd4acda1fb0">
+          <ID>Oborot</ID>
+          <Name>Oborot</Name>
+          <Source dwd:design-time-name="e17459fa-e311-430b-ae81-e6ae021499b7">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="df1b5b87-b93a-4bc0-8672-1f1367955ebd">
+              <TableID>dbo_vwSales2Years</TableID>
+              <ColumnID>Oborot</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="c88841a8-c4d9-45e7-ac15-21a883dd4dc1">
+              <Language>1049</Language>
+              <Caption>Оборот</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="14a51c5d-2072-40ba-a6b9-308284c6bb6b">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="515de4b3-30af-4ab6-942b-ffed331daecb">
+          <CubeDimensionID>Vw Firms</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ca28b44d-c311-448c-bf06-166284ee0c0f">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="295d0a9a-c117-4ec3-8476-31711a6b709f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1654b947-6d55-4841-8c29-5a0e94d1074b">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="92fe8a9d-9f8f-49ea-b7f3-0bfd313fa268">
+          <CubeDimensionID>Vw Firms list</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="63c0326e-f4db-41b5-a6e3-354f08e4c3f4">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e89d12e7-614b-43be-806b-4716595ddf2b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="97322480-87f0-4bb4-b6d6-d1f12361053d">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ae01da24-87bc-48ee-8dc5-48fdafe6f906">
+          <CubeDimensionID>Vw Goods</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5fbffa92-9dbb-4c7a-bb05-ebe7d6400246">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0fc945bb-b942-4ad0-b9f2-c5a027272c33">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d01bc678-07ec-4e25-b99e-e5fa7e2b987f">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eb75bf9a-c4ce-46d0-82e1-934e7ce199da">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="65fa3f80-6ecc-4f9c-86a3-ae053c306406">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="df8665ea-6be4-45b8-94af-8ea1858d57bb">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="98880596-5aa9-462f-ae5f-ea7bc7062c4a">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>pERIOD</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="54550340-bbd8-4929-9356-284e9ee07575">
+          <CubeDimensionID>ГоловнойКлиент</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="10c08559-386b-40b2-8ef8-7146d6c14977">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c921b205-8618-4aba-bf6c-93e0d3b13211">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5bec53cf-7e33-489c-adc3-caa5b7f9e5db">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>KontragentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e4429cf-a25f-4fd1-98d5-6164f29fe9a9">
+          <CubeDimensionID>Vw Sklady</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7b10ed17-ae2c-41d3-8a23-8390687398a2">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3724cf2e-71f6-46bb-8c60-835937b3f197">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="98dd28e6-3ec0-4576-a75a-5240225740fa">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>SkladID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7636fa71-11ad-4a71-bd51-b28b54541bb4">
+          <CubeDimensionID>Vw Goods list</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4ff3942a-0fa9-4caa-919d-b5480478947f">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cc98f2e4-0012-481c-9b19-b0f676e70894">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="26585b8c-bc63-4201-bbf0-493b2e9acfe5">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="9a1bdc3a-34f7-4191-b553-c5216452df3f">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d872ebb9-0172-4a19-a688-e69d6a8fd407">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cc76d557-d348-4f73-ac0f-0a8af1f095dd">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>NomenklaturaCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f9e0ebf4-3178-4264-ba1f-2bd8bee1d29e">
+          <CubeDimensionID>Vw Sets</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c96431e7-412d-4c15-848e-3e22b995f138">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5ce981c3-1df2-4fef-b54a-13723af9e47d">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="de0dbbed-0b5b-4fe5-b13a-ae2649dc8195">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>Komplect</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="9ea53c85-5b87-4801-85d6-b2d3d5a36c40">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c85fbffb-c1a0-4791-84ce-19a1cfe6cd27">
+                    <TableID>dbo_vwSales2Years</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="051934d0-c5e9-4f4d-bcba-d0c969c91110">
+    <DataSourceViewID>Relef</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "testPartitions", "testPartitions\testPartitions.dtproj", "{14235E4A-B96F-43EF-98E8-61849B538CC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14235E4A-B96F-43EF-98E8-61849B538CC8}.Development|Default.ActiveCfg = Development
+		{14235E4A-B96F-43EF-98E8-61849B538CC8}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {114C1238-7967-4EE2-83CC-E26FE71409A8}
+	EndGlobalSection
+EndGlobal

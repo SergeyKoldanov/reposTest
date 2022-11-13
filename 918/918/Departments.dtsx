@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/2/2021 3:23:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{522826FB-E726-462F-BA91-47BB054D1343}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Depr"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{B882E996-E7D0-487C-85B4-7A0071B82F75}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{443D5C21-6EDF-40D9-919D-11B0C1FC689C}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{976A5552-68DE-4913-A549-4F7E680671C9}"
+      DTS:ObjectName="10.50.0.89.Relef 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9FE39FB2-4664-4AF1-BC97-D18AFA256912}"
+      DTS:ObjectName="SQL-NODE-02\UT.RelefUTWork.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL-NODE-01;User ID=sa;Initial Catalog=RelefUTWork;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер SMTP-сеансов]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{6B4130CE-3B52-48FF-8874-A7FC861C5C04}"
+      DTS:ObjectName="Диспетчер SMTP-сеансов">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=post.relef.ru;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача &quot;Отправка почты&quot;"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Задача &quot;Отправка почты&quot;"
+      DTS:DTSID="{9EBC3E90-016D-40BA-8CA7-B3F43B7225E6}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача &quot;Отправка почты&quot;"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{6B4130CE-3B52-48FF-8874-A7FC861C5C04}"
+          SendMailTask:From="KoldanovSV.it@relef.ru"
+          SendMailTask:To="KoldanovSV.it@relef.ru"
+          SendMailTask:Subject="Обновление 9-18"
+          SendMailTask:MessageSource="При обновлении таблицы Departments произошел сбой" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение Departments"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{C29FFCA2-F935-439B-9364-E945ADA3A94F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение Departments"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение Departments\1С"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="1С"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+	_Code AS [Код подразделения], 
+    _Description AS [Наименование подразделения], 
+	_IDRRef AS [Ссылка подразделения], 
+	_ParentIDRref AS [Родитель],
+	CASE 
+		WHEN _Marked = 0x00 THEN 0
+		WHEN _Marked = 0x01 THEN 1
+	END AS [Пометка на удаление]
+FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference59] AS P WITH (NOLOCK)</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Departments\1С.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код подразделения]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код подразделения]"
+                      length="9"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код подразделения]"
+                      name="Код подразделения"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование подразделения]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование подразделения]"
+                      length="50"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование подразделения]"
+                      name="Наименование подразделения"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка подразделения]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Ссылка подразделения]"
+                      length="16"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка подразделения]"
+                      name="Ссылка подразделения"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Родитель]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Родитель]"
+                      length="16"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Родитель]"
+                      name="Родитель"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Пометка на удаление]"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      name="Пометка на удаление"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код подразделения]"
+                      dataType="wstr"
+                      length="9"
+                      name="Код подразделения" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование подразделения]"
+                      dataType="wstr"
+                      length="50"
+                      name="Наименование подразделения" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Ссылка подразделения]"
+                      dataType="bytes"
+                      length="16"
+                      name="Ссылка подразделения" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Родитель]"
+                      dataType="bytes"
+                      length="16"
+                      name="Родитель" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Пометка на удаление]"
+                      dataType="i4"
+                      name="Пометка на удаление" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код подразделения]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код подразделения]"
+                      name="Код подразделения" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование подразделения]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование подразделения]"
+                      name="Наименование подразделения" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Ссылка подразделения]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Ссылка подразделения]"
+                      name="Ссылка подразделения" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Родитель]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Родитель]"
+                      name="Родитель" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      name="Пометка на удаление" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение Departments\Таблица Departments"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Таблица Departments"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[Departments]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Departments\Таблица Departments.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код подразделения]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Код подразделения"
+                      externalMetadataColumnId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код подразделения]" />
+                    <inputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Наименование подразделения]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Наименование подразделения"
+                      externalMetadataColumnId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование подразделения]" />
+                    <inputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Ссылка подразделения]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="Ссылка подразделения"
+                      externalMetadataColumnId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Ref]"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка подразделения]" />
+                    <inputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Родитель]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="Родитель"
+                      externalMetadataColumnId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ParentRef]"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Родитель]" />
+                    <inputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      cachedDataType="i4"
+                      cachedName="Пометка на удаление"
+                      externalMetadataColumnId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsDeleted]"
+                      lineageId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Пометка на удаление]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="15"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="70"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Ref]"
+                      dataType="bytes"
+                      length="16"
+                      name="Ref" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ParentRef]"
+                      dataType="bytes"
+                      length="16"
+                      name="ParentRef" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Departments\Таблица Departments.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Departments\Таблица Departments.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Departments\Таблица Departments.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Departments\Таблица Departments.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение Departments.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Заполнение Departments\Таблица Departments.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Заполнение Departments\1С.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка таблицы Departments"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{CB767D81-BBE9-4792-A3B2-F26A90344B8D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка таблицы Departments"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{443D5C21-6EDF-40D9-919D-11B0C1FC689C}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Departments" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{6BC2E8BF-CFC0-4CAD-B060-DE715C917C6F}"
+      DTS:From="Package\Очистка таблицы Departments"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение Departments" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F6B8DC0E-1CD6-41A4-8475-B5FDB33BF591}"
+      DTS:From="Package\Заполнение Departments"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Задача &quot;Отправка почты&quot;"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Задача &quot;Отправка почты&quot;"
+          TopLeft="449,434" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Заполнение Departments"
+          TopLeft="356,294" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Очистка таблицы Departments"
+          TopLeft="356,149" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="471,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5,103"
+              Start="0,0"
+              End="-13.5,95.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5"
+                    Point2="0,51.5"
+                    Point3="-4,51.5" />
+                  <mssgle:LineSegment
+                    End="-9.5,51.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,51.5"
+                    Point2="-13.5,51.5"
+                    Point3="-13.5,55.5" />
+                  <mssgle:LineSegment
+                    End="-13.5,95.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="457.5,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95,98"
+              Start="0,0"
+              End="95,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45"
+                    Point2="0,49"
+                    Point3="4,49" />
+                  <mssgle:LineSegment
+                    End="91,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91,49"
+                    Point2="95,49"
+                    Point3="95,53" />
+                  <mssgle:LineSegment
+                    End="95,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="35.70578125,54,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение Departments">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Заполнение Departments\Таблица Departments"
+          TopLeft="348,307" />
+        <NodeLayout
+          Size="93,42"
+          Id="Package\Заполнение Departments\1С"
+          TopLeft="284,145" />
+        <EdgeLayout
+          Id="Package\Заполнение Departments.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="330.5,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110.5,120"
+              Start="0,0"
+              End="110.5,112.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56"
+                    Point2="0,60"
+                    Point3="4,60" />
+                  <mssgle:LineSegment
+                    End="106.5,60" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106.5,60"
+                    Point2="110.5,60"
+                    Point3="110.5,64" />
+                  <mssgle:LineSegment
+                    End="110.5,112.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Departments\1С">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Departments\Таблица Departments">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

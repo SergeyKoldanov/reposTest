@@ -1,0 +1,776 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/7/2021 1:26:07 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{7933961E-4C56-45A8-B759-E12CFC243744}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{6647D530-E31A-4A99-8D9E-883ECB6C55AC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{653D4071-ADF2-4045-BEBC-8B453BDD5826}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{18EC7E21-C7D6-42F2-96AC-0A7EF0D834B6}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;persistsecurityinfo=True;database=918ok;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArg9o0zW3Wk6fU7J4prd2+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACOO79GqCLQ0a6msHMmLpdVAAAAAASAAACgAAAAEAAAAHpcTT4pXam7PQCKAmkU0ZxIAAAA/RYXT2EZEAw84P7vSXgJUxrNVqCuVaFPNRfuhIjAWML+7XC9aWYsSxLtzikX6udyVVaEx66gXryFJcEB6uq9SGlpqS2PsPC4FAAAAKz90mns5v3abUw6BXSG3ylsbRs2</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{C4D84748-FE2B-467D-8DC2-602265B50594}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;database=918ok;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArg9o0zW3Wk6fU7J4prd2+wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACIJsWQRdXozplbiKiSTbUnAAAAAASAAACgAAAAEAAAAOJyvrSoV8tab+NjdFD6pH1IAAAAlfqr3uuzEAdPu4CvL/y7OKl8D1uQ7e8wm+TBh5OTrd1G0dZHDNsr2AncqSzHTmgMt15pl2CjRCwGuV11KF25E4nBAEQJ6jMrFAAAAFkWI58qf+Jhdj+BSy0Hu5CDVjJS</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер SMTP-сеансов]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{E45B3850-722C-48A6-AE24-7CC233966230}"
+      DTS:ObjectName="Диспетчер SMTP-сеансов">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=post.relef.ru;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача &quot;Отправка почты&quot;"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Задача &quot;Отправка почты&quot;"
+      DTS:DTSID="{B1A7CCEE-EC25-4B50-AF0F-F834AA132953}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача &quot;Отправка почты&quot;"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{E45B3850-722C-48A6-AE24-7CC233966230}"
+          SendMailTask:From="KoldanovSV.it@relef.ru"
+          SendMailTask:To="KoldanovSV.it@relef.ru"
+          SendMailTask:Subject="Обновление 9-18"
+          SendMailTask:MessageSource="При обновлении таблицы EndClients918 произошел сбой." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение EndClients918"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{2AB676CE-049B-4ABA-AEE4-061C33BDF750}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение EndClients918"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение EndClients918\9-18"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server.Корпорация Майкрософт (Microsoft Corporation). Microsoft SQL Server © Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support4"
+              description="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server."
+              name="9-18"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, используемую компонентом для извлечения данных."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT cast(rc_client.UF_XML_ID as char(50)) AS ГУИД,
+cast(rc_client.UF_NAME as char(170)) AS Наименование,
+rc_client.ID as Id,
+rc_client.UF_LEGAL_ENTITY as ПризнакЮрлица,
+cast(rc_client.UF_INN as char(15)) as ИНН,
+cast(rc_client.UF_ORGN as char(15)) as ОГРН,
+cast(rc_client.UF_KPP as char(15)) as КПП,
+rc_client.UF_SELECTED_SHOP as IDМагазина,
+cast(rc_client.UF_EMAIL as char(50)) as Email
+FROM rc_client;
+SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ ;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Значение 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли внешние столбцы с типом, отличным от строкового, в выходных столбцах неявно преобразовываться в строки."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Имя таблицы базы данных-источника."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Укажите режим получения данных о внешних столбцах"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение EndClients918\9-18.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+                  description="Диспетчер управляемых соединений"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET]"
+                  name="Вывод источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ГУИД]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ГУИД]"
+                      length="50"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ГУИД]"
+                      name="ГУИД"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Наименование]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Наименование]"
+                      length="170"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Наименование]"
+                      name="Наименование"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Id]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Id]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ПризнакЮрлица]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ПризнакЮрлица]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ПризнакЮрлица]"
+                      name="ПризнакЮрлица"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ИНН]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ИНН]"
+                      length="15"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ИНН]"
+                      name="ИНН"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ОГРН]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ОГРН]"
+                      length="15"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ОГРН]"
+                      name="ОГРН"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[КПП]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[КПП]"
+                      length="15"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[КПП]"
+                      name="КПП"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[IDМагазина]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[IDМагазина]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[IDМагазина]"
+                      name="IDМагазина"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Email]"
+                      length="50"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ГУИД]"
+                      dataType="wstr"
+                      length="50"
+                      name="ГУИД" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Наименование]"
+                      dataType="wstr"
+                      length="170"
+                      name="Наименование" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Id]"
+                      dataType="ui4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ПризнакЮрлица]"
+                      dataType="i4"
+                      name="ПризнакЮрлица" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ИНН]"
+                      dataType="wstr"
+                      length="15"
+                      name="ИНН" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ОГРН]"
+                      dataType="wstr"
+                      length="15"
+                      name="ОГРН" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[КПП]"
+                      dataType="wstr"
+                      length="15"
+                      name="КПП" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[IDМагазина]"
+                      dataType="i4"
+                      name="IDМагазина" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="Email" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ГУИД]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ГУИД]"
+                      name="ГУИД" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Наименование]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Наименование]"
+                      name="Наименование" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Id]"
+                      dataType="ui4"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ПризнакЮрлица]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ПризнакЮрлица]"
+                      name="ПризнакЮрлица" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ИНН]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ИНН]"
+                      name="ИНН" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ОГРН]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ОГРН]"
+                      name="ОГРН" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[КПП]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[КПП]"
+                      name="КПП" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[IDМагазина]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[IDМагазина]"
+                      name="IDМагазина" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение EndClients918\Таблица EndClients918"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Таблица EndClients918"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[EndClients918]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение EndClients918\Таблица EndClients918.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ПризнакЮрлица]"
+                      cachedDataType="i4"
+                      cachedName="ПризнакЮрлица"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsOrganization]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ПризнакЮрлица]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ИНН]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ИНН"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[INN]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ИНН]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ОГРН]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ОГРН"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[OGRN]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ОГРН]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[IDМагазина]"
+                      cachedDataType="i4"
+                      cachedName="IDМагазина"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ShopId]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[IDМагазина]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[КПП]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="КПП"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[KPP]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[КПП]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Email]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Наименование]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="Наименование"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Наименование]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГУИД]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ГУИД"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUID]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[ГУИД]" />
+                    <inputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Id]"
+                      cachedDataType="ui4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Id]"
+                      lineageId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="170"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsOrganization]"
+                      dataType="bool"
+                      name="IsOrganization" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[INN]"
+                      dataType="wstr"
+                      length="15"
+                      name="INN" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[OGRN]"
+                      dataType="wstr"
+                      length="15"
+                      name="OGRN" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[KPP]"
+                      dataType="wstr"
+                      length="15"
+                      name="KPP" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ShopId]"
+                      dataType="i4"
+                      name="ShopId" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[GUID]"
+                      dataType="wstr"
+                      length="50"
+                      name="GUID" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение EndClients918\Таблица EndClients918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение EndClients918\Таблица EndClients918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение EndClients918\Таблица EndClients918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение EndClients918\Таблица EndClients918.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение EndClients918.Paths[Вывод источника ADO NET]"
+              endId="Package\Заполнение EndClients918\Таблица EndClients918.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Вывод источника ADO NET"
+              startId="Package\Заполнение EndClients918\9-18.Outputs[Вывод источника ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка таблицы EndClients918"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{1E373B1D-317B-4598-A94A-2E90AB5A3560}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка таблицы EndClients918"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{653D4071-ADF2-4045-BEBC-8B453BDD5826}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE EndClients918" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{F6A5CB5A-0058-4D3E-A752-4F5F1060F993}"
+      DTS:From="Package\Очистка таблицы EndClients918"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение EndClients918" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{87AB4380-4C00-4068-AC57-F9D5C59CA0CB}"
+      DTS:From="Package\Заполнение EndClients918"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Задача &quot;Отправка почты&quot;"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Задача &quot;Отправка почты&quot;"
+          TopLeft="424,331" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Заполнение EndClients918"
+          TopLeft="422,219" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Очистка таблицы EndClients918"
+          TopLeft="273,74" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="390,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.5,103"
+              Start="0,0"
+              End="135.5,95.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5"
+                    Point2="0,51.5"
+                    Point3="4,51.5" />
+                  <mssgle:LineSegment
+                    End="131.5,51.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.5,51.5"
+                    Point2="135.5,51.5"
+                    Point3="135.5,55.5" />
+                  <mssgle:LineSegment
+                    End="135.5,95.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="526.5,261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-11.79421875,26.18017578125,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение EndClients918">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Заполнение EndClients918\Таблица EndClients918"
+          TopLeft="393,279" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Заполнение EndClients918\9-18"
+          TopLeft="435,116" />
+        <EdgeLayout
+          Id="Package\Заполнение EndClients918.Paths[Вывод источника ADO NET]"
+          TopLeft="487,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,121"
+              Start="0,0"
+              End="0,113.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,113.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение EndClients918\9-18">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение EndClients918\Таблица EndClients918">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

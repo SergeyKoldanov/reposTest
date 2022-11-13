@@ -1,0 +1,405 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Узел</ID>
+  <Name>Узел</Name>
+  <CreatedTimestamp>2011-03-18T06:56:02.313333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:42:07.883333Z</LastSchemaUpdate>
+  <LastProcessed>2022-01-18T04:15:13.24Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration>
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission>
+      <ID>DimensionPermission 7</ID>
+      <Name>DimensionPermission 7</Name>
+      <CreatedTimestamp>2018-10-16T07:13:08.266667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 9</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 9</ID>
+      <Name>DimensionPermission 9</Name>
+      <CreatedTimestamp>2019-03-27T09:14:33.443333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-08T13:02:55.06Z</LastSchemaUpdate>
+      <RoleID>Role 135</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>2019-06-11T07:28:59.283333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 53</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>2019-06-11T12:16:53.556667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 85</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 10</ID>
+      <Name>DimensionPermission 10</Name>
+      <CreatedTimestamp>2019-06-14T06:30:05.423333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 123</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>2020-02-26T09:09:24.8Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 362</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>2020-03-19T05:48:22.816667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 382</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>2020-07-22T12:28:57.963333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.93Z</LastSchemaUpdate>
+      <RoleID>Role 428</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <AllowedSet>{[Узел].[Узел].&amp;[СПБ], [Узел].[Узел].[All].UNKNOWNMEMBER}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 6</ID>
+      <Name>DimensionPermission 6</Name>
+      <CreatedTimestamp>2020-07-23T14:09:17.33Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 427</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <AllowedSet>{[Узел].[Узел].&amp;[СПБ], [Узел].[Узел].[All].UNKNOWNMEMBER}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 8</ID>
+      <Name>DimensionPermission 8</Name>
+      <CreatedTimestamp>2020-08-25T13:30:00.31Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 132</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <AllowedSet>{[Узел].[Узел].&amp;[СПБ], [Узел].[Узел].[All].UNKNOWNMEMBER}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 11</ID>
+      <Name>DimensionPermission 11</Name>
+      <CreatedTimestamp>2020-08-31T14:40:54.933333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 210</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <AllowedSet>{[Узел].[Узел].&amp;[НСК], [Узел].[Узел].&amp;[ЧЛБ], [Узел].[Узел].[All].UNKNOWNMEMBER}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 12</ID>
+      <Name>DimensionPermission 12</Name>
+      <CreatedTimestamp>2020-09-28T06:52:34.72Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 492</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <AllowedSet>{[Узел].[Узел].&amp;[ЧЛБ], [Узел].[Узел].[All].UNKNOWNMEMBER}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 13</ID>
+      <Name>DimensionPermission 13</Name>
+      <CreatedTimestamp>2020-09-28T07:02:04.503333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 476</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission>
+          <AttributeID>Uzel</AttributeID>
+          <AllowedSet>{[Узел].[Узел].&amp;[ЧЛБ], [Узел].[Узел].[All].UNKNOWNMEMBER}</AllowedSet>
+          <VisualTotals>1</VisualTotals>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 15</ID>
+      <Name>DimensionPermission 15</Name>
+      <CreatedTimestamp>2020-12-14T13:43:21.563333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 119</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 17</ID>
+      <Name>DimensionPermission 17</Name>
+      <CreatedTimestamp>2020-12-28T07:06:03.54Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 431</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 18</ID>
+      <Name>DimensionPermission 18</Name>
+      <CreatedTimestamp>2020-12-28T11:21:36.616667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 115</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 19</ID>
+      <Name>DimensionPermission 19</Name>
+      <CreatedTimestamp>2020-12-29T11:57:31.303333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 161</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 20</ID>
+      <Name>DimensionPermission 20</Name>
+      <CreatedTimestamp>2021-01-14T14:49:09.696667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 156</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 21</ID>
+      <Name>DimensionPermission 21</Name>
+      <CreatedTimestamp>2021-01-18T08:14:15.353333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 129</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 14</ID>
+      <Name>DimensionPermission 14</Name>
+      <CreatedTimestamp>2021-02-12T10:01:23.61Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 545</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 22</ID>
+      <Name>DimensionPermission 22</Name>
+      <CreatedTimestamp>2021-02-17T09:47:29.973333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.946667Z</LastSchemaUpdate>
+      <RoleID>Role 487</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 23</ID>
+      <Name>DimensionPermission 23</Name>
+      <CreatedTimestamp>2021-02-20T13:01:27.596667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 449</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 24</ID>
+      <Name>DimensionPermission 24</Name>
+      <CreatedTimestamp>2021-02-24T10:07:10.59Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 504</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 26</ID>
+      <Name>DimensionPermission 26</Name>
+      <CreatedTimestamp>2021-04-22T07:59:05.89Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 206</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 27</ID>
+      <Name>DimensionPermission 27</Name>
+      <CreatedTimestamp>2021-05-19T14:47:31.023333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 642</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 28</ID>
+      <Name>DimensionPermission 28</Name>
+      <CreatedTimestamp>2021-05-26T09:41:46.923333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 644</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 29</ID>
+      <Name>DimensionPermission 29</Name>
+      <CreatedTimestamp>2021-06-04T10:41:18.323333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 444</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 30</ID>
+      <Name>DimensionPermission 30</Name>
+      <CreatedTimestamp>2021-06-11T18:10:51.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 653</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 31</ID>
+      <Name>DimensionPermission 31</Name>
+      <CreatedTimestamp>2021-06-28T15:19:54.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 99</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 32</ID>
+      <Name>DimensionPermission 32</Name>
+      <CreatedTimestamp>2021-07-07T09:26:09.81Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 127</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 33</ID>
+      <Name>DimensionPermission 33</Name>
+      <CreatedTimestamp>2021-07-19T09:48:35.4Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 684</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 34</ID>
+      <Name>DimensionPermission 34</Name>
+      <CreatedTimestamp>2021-07-29T07:23:26.54Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.963333Z</LastSchemaUpdate>
+      <RoleID>Role 615</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 35</ID>
+      <Name>DimensionPermission 35</Name>
+      <CreatedTimestamp>2021-08-02T10:08:43.89Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.976667Z</LastSchemaUpdate>
+      <RoleID>Role 696</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 36</ID>
+      <Name>DimensionPermission 36</Name>
+      <CreatedTimestamp>2021-08-02T12:29:09.72Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:07.976667Z</LastSchemaUpdate>
+      <RoleID>Role 622</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>2022-01-12T09:40:12.603333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-12T09:40:12.603333Z</LastSchemaUpdate>
+      <RoleID>Role 554</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission>
+      <ID>DimensionPermission 16</ID>
+      <Name>DimensionPermission 16</Name>
+      <CreatedTimestamp>2022-01-13T13:32:27.716667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T13:32:27.716667Z</LastSchemaUpdate>
+      <RoleID>Role 364</RoleID>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute>
+      <ID>Uzel</ID>
+      <Name>Узел</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vwUzel</TableID>
+            <ColumnID>Uzel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn>
+        <DataType>WChar</DataType>
+        <DataSize>3</DataSize>
+        <Source xsi:type="ColumnBinding">
+          <TableID>dbo_vwUzel</TableID>
+          <ColumnID>Uzel</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

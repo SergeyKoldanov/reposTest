@@ -1,0 +1,111 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Диапазон Структура</ID>
+  <Name>Диапазон Структура</Name>
+  <CreatedTimestamp>2019-03-06T05:18:26.113333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:41:43.273333Z</LastSchemaUpdate>
+  <Description>Структура для диапазона A1B5 листа Лист1 книги Книга1</Description>
+  <LastProcessed>2019-03-06T05:18:29.303333Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>B</ID>
+      <Name>B</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Trimming>Left</Trimming>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>A</ID>
+      <Name>A</Name>
+      <IsKey>true</IsKey>
+      <Type>Date</Type>
+      <Content>Key Time</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Trimming>Left</Trimming>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel>
+      <ID>Прогноз Диапазон</ID>
+      <Name>Прогноз Диапазон</Name>
+      <CreatedTimestamp>2019-03-06T05:18:26.143333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:43.29Z</LastSchemaUpdate>
+      <Description>Модель Microsoft_Time_Series построенная в диапазоне A1B5</Description>
+      <LastProcessed>2019-03-06T05:18:29.3Z</LastProcessed>
+      <State>Processed</State>
+      <Algorithm>Microsoft_Time_Series</Algorithm>
+      <AlgorithmParameters>
+        <AlgorithmParameter>
+          <Name>MINIMUM_SERIES_VALUE</Name>
+          <Value xsi:type="xsd:double">-1E+308</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>MAXIMUM_SERIES_VALUE</Name>
+          <Value xsi:type="xsd:double">1E+308</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>MISSING_VALUE_SUBSTITUTION</Name>
+          <Value xsi:type="xsd:string">Previous</Value>
+        </AlgorithmParameter>
+      </AlgorithmParameters>
+      <Columns>
+        <Column>
+          <ID>B</ID>
+          <Name>B</Name>
+          <SourceColumnID>B</SourceColumnID>
+          <Usage>Predict</Usage>
+        </Column>
+        <Column>
+          <ID>A</ID>
+          <Name>A</Name>
+          <SourceColumnID>A</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+      <Language>1033</Language>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </MiningModel>
+  </MiningModels>
+  <MiningStructurePermissions>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission</ID>
+      <Name>MiningStructurePermission</Name>
+      <CreatedTimestamp>2021-01-18T12:09:38.363333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:43.29Z</LastSchemaUpdate>
+      <RoleID>Role 434</RoleID>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 1</ID>
+      <Name>MiningStructurePermission 1</Name>
+      <CreatedTimestamp>2021-02-12T09:23:11.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:43.303333Z</LastSchemaUpdate>
+      <RoleID>Role 56</RoleID>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 4</ID>
+      <Name>MiningStructurePermission 4</Name>
+      <CreatedTimestamp>2021-06-17T07:57:52.576667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:41:43.303333Z</LastSchemaUpdate>
+      <RoleID>Role 655</RoleID>
+    </MiningStructurePermission>
+  </MiningStructurePermissions>
+  <ErrorConfiguration>
+    <KeyErrorLimit>-1</KeyErrorLimit>
+    <KeyErrorAction>DiscardRecord</KeyErrorAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+  </ErrorConfiguration>
+</MiningStructure>

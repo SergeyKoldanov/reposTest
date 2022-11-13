@@ -1,0 +1,590 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ee8c2078-6a50-4883-ba76-5de9c4602681" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Приемка</ID>
+  <Name>Приемка</Name>
+  <CreatedTimestamp>2019-03-18T07:03:04.396667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-07-22T09:38:25.02Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-03-01T09:02:02.446667Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1049</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="7ee24ac8-8b42-4f35-9dbf-545aa132af5b">
+      <ID>ПриемкаСотрудник</ID>
+      <Name>ПриемкаСотрудник</Name>
+      <DimensionID>ПриемкаСотрудник</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5cbda34f-6014-4c22-b0ca-a09d34c5c41e">
+          <AttributeID>Сотрудник</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c1e98a76-eb6d-492f-8f82-273282ec6a2e">
+      <ID>ПриемкаТовар</ID>
+      <Name>ПриемкаТовар</Name>
+      <DimensionID>ПриемкаТовар</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="528f6ce8-c8c3-4bb3-8f75-007fe884b99a">
+          <AttributeID>Материал</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1b6bde6-14f6-4a62-8708-fcc48edaac3a">
+          <AttributeID>Материал 1</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyOptimizedState>NotOptimized</AttributeHierarchyOptimizedState>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d96a1efa-4449-43e9-a310-979caeaf32ea">
+      <ID>ГодМесДень</ID>
+      <Name>ГодМесДень</Name>
+      <DimensionID>ГодМесДень</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6f028d7f-83da-4b6f-bcd5-5ffdd12b06c1">
+          <AttributeID>Data</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c235f16-44b6-4926-8168-2db3b1f97130">
+          <AttributeID>God</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="4ac1e4c5-a9ec-4e5d-afaa-8a708c7349bd">
+          <AttributeID>Mes Name</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="454927a8-664b-4000-9133-d1d4883b39ea">
+          <AttributeID>Den</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="6604173f-aaa2-4e7a-be42-b8075982a647">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="30af60be-40a8-4260-8b1e-a51668a23734">
+      <ID>Vw WMS2 Priemka</ID>
+      <Name>Значения</Name>
+      <CreatedTimestamp>2019-03-18T07:03:04.4Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-07-22T09:38:25.27Z</LastSchemaUpdate>
+      <LastProcessed>2022-03-01T09:02:02.44Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7430a159-c008-4b2d-889c-6921ae919cc5">
+          <ID>Вес</ID>
+          <Name>Вес</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="cad0f6b6-3e77-4819-994e-2aa802eea7fc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e7cb4dd-6d56-4da5-8275-e35bbe1cb6e5">
+              <TableID>dbo_vw_WMS2Priemka</TableID>
+              <ColumnID>Вес</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6c17b4d8-da70-4e1a-a515-addcb9cd81a5">
+          <ID>Объем</ID>
+          <Name>Объем</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="25fd3214-ada5-4f9e-ba60-fc3a77f7663a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7d0b3278-22b9-46a8-83fa-edc473515cd6">
+              <TableID>dbo_vw_WMS2Priemka</TableID>
+              <ColumnID>Объем</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="88a49309-af03-465f-b92f-ffabdf26e041">
+          <ID>Кол-во Операций</ID>
+          <Name>Кол-во Операций</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="4abd363e-1843-41cd-a7e4-486707b9d375">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="db493205-2ec3-4dee-8bfe-24f1736b2771">
+              <TableID>dbo_vw_WMS2Priemka</TableID>
+              <ColumnID>Кол-во_x0020_операций</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6bb321ad-3cb8-43e5-b646-b7481759dc34">
+          <ID>Число Dlya Sred</ID>
+          <Name>ДляСред</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="f6f21c43-8d76-456a-b164-17679d28b24c">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fe363685-e624-4869-ac04-3ae06d10357e">
+              <TableID>dbo_vw_WMS2Priemka</TableID>
+              <ColumnID>DlyaSred</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>2185176</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8c1c0ea9-8065-4b99-8160-e8770745a55d">
+          <CubeDimensionID>ПриемкаСотрудник</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="80e37ddc-4850-48c1-ae8a-472398a62570">
+              <AttributeID>Сотрудник</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b9a9e080-e382-47c9-872c-f036459188c6">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b039bd47-7f8f-4393-91aa-9335dd1c6577">
+                    <TableID>dbo_vw_WMS2Priemka</TableID>
+                    <ColumnID>Сотрудник</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="623fffa4-fb65-4a22-abd1-7b06d2b1c9a5">
+          <CubeDimensionID>ПриемкаТовар</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="65265249-fa20-4ccd-8a7d-fbd3a47dbc25">
+              <AttributeID>Материал</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="13d51b58-9074-4de3-aced-cd68688ddf18">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="92e5168f-4da6-4aeb-891c-d58453c7abe1">
+                    <TableID>dbo_vw_WMS2Priemka</TableID>
+                    <ColumnID>Материал</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="ccc2fac5-c384-4bd2-a020-abb6066a73f2">
+              <AttributeID>Материал 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="53b691c1-2686-45b0-9602-d956fdee0d80">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1062945d-248f-40b8-85c7-8224842d91e8">
+                    <TableID>dbo_vw_WMS2Priemka</TableID>
+                    <ColumnID>Материал</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eb47b00e-0855-4444-a5e5-c81a03c8d38e">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="61f3bd4b-2c17-48ba-a910-bde3974f86a6">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0bf6af56-54fc-4897-b8c8-c5774949a28e">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1ef0cf69-1c12-4a54-9b06-e3469cfaa74f">
+                    <TableID>dbo_vw_WMS2Priemka</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="71a727d8-c77f-4d71-9b94-e591f6742f9d">
+              <AttributeID>God</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="49bcfcbe-1260-44a4-8cdb-075161d61ccf">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e26b2e60-3be9-452d-b810-04de3c520392">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>GodChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b26c3e5c-5dd6-4dba-b6d1-5d7eee8d9097">
+              <AttributeID>Mes Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7d14df8d-333a-4936-8318-88b1e4d0c903">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2ce7cf8-30b2-4a48-aa8e-e339d84f78c2">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>MesChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="a4b65225-1cf7-48fd-8198-364d14a3b276">
+              <AttributeID>Den</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fb065c0d-3f01-4629-a0fd-8d84679b5299">
+                  <DataType>WChar</DataType>
+                  <DataSize>8</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e791334f-47e2-4073-aa3e-18ac7a7ba851">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>DenChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="0601aa3b-502e-4645-80db-bb67dd890558">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="df76477b-56ae-4b38-a29f-4b5776a3842c" />
+      </ProactiveCaching>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="c21af132-eed9-410e-9faf-fe0547a34621">
+      <ID>Vw WMS2 Priemka SKU</ID>
+      <Name>SKU</Name>
+      <CreatedTimestamp>2019-03-18T07:07:37.336667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-07-22T09:38:25.3Z</LastSchemaUpdate>
+      <LastProcessed>2022-03-01T09:02:01.43Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5d68a0e2-af0d-45c7-b652-4977a1cc72b0">
+          <ID>SKU</ID>
+          <Name>SKU</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="544acd62-768e-4044-a6d1-aa81caf221ba">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="89eba469-8474-455a-ac2a-8a92afe6069d">
+              <TableID>dbo_vw_WMS2Priemka_SKU</TableID>
+              <ColumnID>SKU</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>773004</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ba097e39-f3cb-47a0-8d05-9764c45502f3">
+          <CubeDimensionID>ПриемкаСотрудник</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="27c68fc4-2480-40bd-905d-7cd0a66519f9">
+              <AttributeID>Сотрудник</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="38a220a4-3b81-4fe4-8ac2-f835ce3d2c10">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c79645e0-17b0-4aa5-a9b5-67fae3a2f238">
+                    <TableID>dbo_vw_WMS2Priemka_SKU</TableID>
+                    <ColumnID>Сотрудник</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6323f87d-09b3-4042-bb8a-2aa42f5df3e3">
+          <CubeDimensionID>ПриемкаТовар</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0a3622d1-3392-4a75-ad30-b25665da2028">
+              <AttributeID>Материал</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="055b0dc7-957e-4829-aa64-1dc7f5481533">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bbea7733-5258-4898-843c-b867fdb82bc4">
+                    <TableID>dbo_vw_WMS2Priemka_SKU</TableID>
+                    <ColumnID>Материал</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="c57a18c4-f4f7-485d-8c46-270f05ffcd1e">
+              <AttributeID>Материал 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8802dce2-58c9-4fae-9505-5374ce0072cb">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ea4d3e62-0cc2-429b-ba55-9044fe6487f4">
+                    <TableID>dbo_vw_WMS2Priemka_SKU</TableID>
+                    <ColumnID>Материал</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d9a463ed-74ff-4a2b-b9ca-371fbf53e826">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="90ee71db-11bb-4755-b5e3-f684ac7af48f">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cac6e907-414f-4ef7-8572-edabbc80b9ae">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e8475f9b-ee64-4658-9b4c-1eb68c996ca3">
+                    <TableID>dbo_vw_WMS2Priemka_SKU</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="b1e49c09-5ff4-4caf-9949-ce51ea390dd8">
+              <AttributeID>God</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dad53743-9e8e-4562-aef5-caf216bb55cc">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="609c9804-b4f5-4516-9676-2c5e9795ab05">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>GodChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="fa074c5c-679b-4c8b-981c-4d6f1ce87ab6">
+              <AttributeID>Mes Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="33541e73-44d7-454e-96d5-55632ccd72e1">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="32c73cfc-e19a-4f21-8711-4da0124f60ff">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>MesChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="1dd46dc1-155d-4f52-bac3-e57d31c8e896">
+              <AttributeID>Den</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="804d28af-3786-49b5-949c-c04343a64298">
+                  <DataType>WChar</DataType>
+                  <DataSize>8</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="caf9fcbf-4799-4fd3-b995-bb72eb0ffb7e">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>DenChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="96eca140-0687-42bb-b31a-43d8b095e932">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c98dd54e-a54b-4ea3-8828-eb0a64eb7c07" />
+      </ProactiveCaching>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="909c282f-c29d-4970-9715-47705e8e3233">
+      <ID>Vw WMS2 Priemka OC</ID>
+      <Name>ОС</Name>
+      <CreatedTimestamp>2019-03-18T07:10:27.016667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-07-22T09:38:25.316667Z</LastSchemaUpdate>
+      <LastProcessed>2022-03-01T09:02:01.5Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5dbc89d6-2308-476c-8236-53ae42e87d57">
+          <ID>Число ОС</ID>
+          <Name>ОС</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="65b22288-5ea9-4154-8541-2698c2f81767">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="31c211a0-0c01-4b1b-a07c-b98cfbcde8cc">
+              <TableID>dbo_vw_WMS2Priemka_OC</TableID>
+              <ColumnID>ОС</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>774753</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c12d6d1e-cc18-4252-bb00-841d0a8024b4">
+          <CubeDimensionID>ПриемкаТовар</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2f30e0ff-8a43-4a7f-9120-e8db871cc07c">
+              <AttributeID>Материал</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="405c00c8-c8ee-4616-ae0b-2672f09f0459">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6345075e-1aa0-4e95-b750-e0617fd6a6b4">
+                    <TableID>dbo_vw_WMS2Priemka_OC</TableID>
+                    <ColumnID>Материал</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="345903d2-88e0-41b4-9c66-8544567dfacb">
+              <AttributeID>Материал 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c8052f7d-2c0b-4df8-aa84-26130839ebd9">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a36c98a9-357c-44cd-88d9-2f6a4753217a">
+                    <TableID>dbo_vw_WMS2Priemka</TableID>
+                    <ColumnID>Материал</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b2af01f2-dc7b-4c36-980e-dd93d09ae9a6">
+          <CubeDimensionID>ПриемкаСотрудник</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7a1a0e70-69c4-4e4a-852c-7cae7ee48fec">
+              <AttributeID>Сотрудник</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a6d969b8-d987-4217-ae78-3a91236f0a3b">
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f5b698d5-dc4c-4ae6-9625-5bd55a278ca6">
+                    <TableID>dbo_vw_WMS2Priemka_OC</TableID>
+                    <ColumnID>Сотрудник</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="983506f4-5700-49c3-a107-3e330cae8820">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d79abd34-d1d7-4b57-8353-04c31e1257fe">
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="340701c1-a689-49c2-9754-015b9524a51e">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1b2e0c67-0f8e-4cff-9cda-c28560d23232">
+                    <TableID>dbo_vw_WMS2Priemka_OC</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="3efe4afc-7a29-4868-aa38-e50070c296cb">
+              <AttributeID>God</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6ca02f1b-a0fd-4b8a-b4c2-fbabc1f6acfe">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0fee2691-0778-4854-9f89-65fa67f02cbd">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>GodChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="44e82058-b30c-4ab5-9dfe-173b49517fa9">
+              <AttributeID>Mes Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="276a7144-fed4-423e-846c-1d9804449320">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5208db65-bb91-41b8-af02-0932609138af">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>MesChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="120225fd-f7a3-40fd-9a6e-84e06dfe258f">
+              <AttributeID>Den</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="02a0b1a7-58cf-4128-9f51-b0b4089c6575">
+                  <DataType>WChar</DataType>
+                  <DataSize>8</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="596af6ba-c804-4e09-a21c-09cf307eb777">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>DenChar</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="a41d3a6f-2d9e-49a1-a9f4-33497b39988b">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="5b8f310c-d872-41c4-9e64-bef7a7012742" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="c8729185-a1c0-4d9a-a624-bea1df3609bb">
+    <DataSourceViewID>WMSKZN</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="0b2cfe52-fa9b-4931-9cd9-25b6213c89b7">
+    <KeyNotFound>IgnoreError</KeyNotFound>
+  </ErrorConfiguration>
+  <ProactiveCaching dwd:design-time-name="302c1bbf-82fa-48b8-a8b4-969a6c0dc10d">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="721caca2-59e4-44fc-b9e7-1feabf4c1e8f" />
+  </ProactiveCaching>
+</Cube>

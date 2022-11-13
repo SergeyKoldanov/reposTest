@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "918auto", "918auto\918auto.dtproj", "{14277910-9541-4F3D-9FEA-E4193A0D38E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14277910-9541-4F3D-9FEA-E4193A0D38E1}.Development|Default.ActiveCfg = Development
+		{14277910-9541-4F3D-9FEA-E4193A0D38E1}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5D14BB5-C9DD-429F-BB2B-08C2339246F6}
+	EndGlobalSection
+EndGlobal

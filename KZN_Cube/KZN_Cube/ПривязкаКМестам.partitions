@@ -1,0 +1,33 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="89e97c40-ea02-47d3-9d5e-379d4d9ada5f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ПривязкаКМестам</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw WMS2 Privyazka K Mestam</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="07d497a1-ebf1-463d-b492-610d8fbaa32a">
+          <ID>Vw WMS2 Privyazka K Mestam</ID>
+          <Name>Vw WMS2 Privyazka K Mestam</Name>
+          <CreatedTimestamp>2020-03-10T12:46:01.743333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-22T08:38:41.906667Z</LastSchemaUpdate>
+          <LastProcessed>2022-03-02T07:09:23.376667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f355acd5-e7e7-409d-a06f-a65a8846552a">
+            <DataSourceViewID>WMSKZN</DataSourceViewID>
+            <TableID>dbo_vw_WMS2PrivyazkaKMestam</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="94750b3b-55d1-41cd-ac7c-aa04d86e29d2">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="fb98c465-cad8-49ab-bbf5-15ef48f23376" />
+          </ProactiveCaching>
+          <EstimatedSize>6499621</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,225 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="299ff468-69b5-4dcc-a955-a272155a07f1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Продажи клиентам 9-18</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw Order Items</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7eec4c1a-b2f2-40cc-9883-db8c2d570500">
+          <ID>Vw Order Items</ID>
+          <Name>Продажи прошлых лет</Name>
+          <CreatedTimestamp>2021-06-17T07:13:55.826667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.226667Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:05.493333Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="be4b54a7-dbb9-4edd-9743-5d24f1b6ff2e">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, [vwOrderItems].[CreateDate]) &lt; year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="adc4b8e7-84a6-4f09-9df4-e2b39710acf1">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="bc690c5c-922f-4d72-8c22-2bda62fed130" />
+          </ProactiveCaching>
+          <EstimatedSize>40912442</EstimatedSize>
+        </Partition>
+        <Partition dwd:design-time-name="99e1c2dc-6cac-4be7-89c6-3d0b583537f2">
+          <ID>Vw Order Items 1</ID>
+          <Name>Продажи текущего года</Name>
+          <CreatedTimestamp>2021-06-18T10:52:58.803333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.243333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:11.386667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="3766b52a-0e8a-4482-80f5-347db58fe5d2">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year,[vwOrderItems].[CreateDate]) = year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="5b21b582-baeb-43e0-a971-1bd6b152564f">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="66a6e510-ef50-4433-b87e-f89ef8594f4f" />
+          </ProactiveCaching>
+          <EstimatedSize>41658</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Order Items 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="584cbda3-f6e5-4536-9fa4-371fba7573eb">
+          <ID>Vw Order Items</ID>
+          <Name>Уникальные клиенты текущего года</Name>
+          <CreatedTimestamp>2021-06-17T07:23:38.736667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.243333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:11.4Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ad2c7c67-69c4-4ba2-8d08-b25948ef41ed">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, CreateDate) = year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="81c4cc19-3331-4aec-aea8-ffb0201780dc">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c9fcac58-7c0a-4814-a999-94a72b508cb5" />
+          </ProactiveCaching>
+          <EstimatedSize>35270</EstimatedSize>
+        </Partition>
+        <Partition dwd:design-time-name="a18b9a2c-32ce-48a0-82de-748df9b1a29f">
+          <ID>Vw Order Items 1</ID>
+          <Name>Уникальные клиенты прошлого года</Name>
+          <CreatedTimestamp>2021-06-18T11:20:49.316667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.243333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:05.506667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="8c5c08d0-4b86-4a3b-b476-dfeebffca66d">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, CreateDate) &lt; year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="208910cf-d093-42be-a7cb-01847dae5fe7">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="bf0d8ef1-eda9-4571-b52e-c1c586d23e65" />
+          </ProactiveCaching>
+          <EstimatedSize>43702280</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Order Items 2</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3b5521f5-b6da-4e58-be5a-e1fa61fb2059">
+          <ID>Vw Order Items</ID>
+          <Name>Уникальные товары текущего года</Name>
+          <CreatedTimestamp>2021-06-17T08:50:50.77Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.243333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:11.466667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="7e45a39c-97e1-48ce-8acb-a6c9cacb63d6">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, CreateDate) = year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="be58dd2b-f00b-450a-8697-596ae19afdb0">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="6b6d3f96-a036-4a8e-818b-4d66b7cdb70d" />
+          </ProactiveCaching>
+          <EstimatedSize>84386</EstimatedSize>
+        </Partition>
+        <Partition dwd:design-time-name="505aace7-baef-43dd-98ae-98632a4e1290">
+          <ID>Vw Order Items 1</ID>
+          <Name>Уникальные товары прошлого года</Name>
+          <CreatedTimestamp>2021-06-18T11:20:49.326667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.26Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:05.506667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="9baa4a42-f0f3-4958-81e7-e0b7117afc40">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, CreateDate) &lt; year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="a1c37c19-4597-4f7f-a63c-836c7fafe8a9">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="386af561-a4ea-4348-9a74-cde80b607e39" />
+          </ProactiveCaching>
+          <EstimatedSize>52808529</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Продажи</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3bb6c6d6-2c50-40e3-8ae8-684c67941ca8">
+          <ID>Vw Order Items</ID>
+          <Name>Уникальные заказы текущего года</Name>
+          <CreatedTimestamp>2021-06-17T14:35:43.866667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.26Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:11.4Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="69b41f4c-a081-44a4-a759-412ca804e2cd">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, CreateDate) = year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="ad367592-aae3-46db-9749-bcbd72a0b3a0">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="176d21ee-3ffd-4608-8129-130949f6b977" />
+          </ProactiveCaching>
+          <EstimatedSize>32088</EstimatedSize>
+        </Partition>
+        <Partition dwd:design-time-name="5eb3187c-a3e8-4e0d-bb5e-4b0583530fbd">
+          <ID>Vw Order Items 1</ID>
+          <Name>Уникальные заказы прошлого года</Name>
+          <CreatedTimestamp>2021-06-18T11:20:49.336667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-07-14T07:32:23.26Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-10T06:03:05.5Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="3f146c6b-7d1e-40c8-8c0b-35bf9bac4f2f">
+            <DataSourceID>Relef</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[vwOrderItems].[Id],[dbo].[vwOrderItems].[OrderId],[dbo].[vwOrderItems].[ClientId],[dbo].[vwOrderItems].[CreateDate],[dbo].[vwOrderItems].[ShopId],[dbo].[vwOrderItems].[Amount],[dbo].[vwOrderItems].[ItemGuid],[dbo].[vwOrderItems].[GUID],[dbo].[vwOrderItems].[Code],[dbo].[vwOrderItems].[Name],[dbo].[vwOrderItems].[ParentRef],[dbo].[vwOrderItems].[IsFolder],[dbo].[vwOrderItems].[Article],[dbo].[vwOrderItems].[Mark],[dbo].[vwOrderItems].[Manufacturer],[dbo].[vwOrderItems].[Class],[dbo].[vwOrderItems].[Group],[dbo].[vwOrderItems].[Categoty],[dbo].[vwOrderItems].[SubCategory],[dbo].[vwOrderItems].[TradeMark],[dbo].[vwOrderItems].[IsDeleted],[dbo].[vwOrderItems].[Direction],[dbo].[vwOrderItems].[Price],[dbo].[vwOrderItems].[Ref],Amount * Price AS [Sales]
+FROM [dbo].[vwOrderItems]
+WHERE datepart(year, CreateDate) &lt; year(getdate())</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="385b89c0-7f8f-42a4-b2a0-6862eb3f69c7">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d041343d-af5c-4496-89b7-ed35e681b26e" />
+          </ProactiveCaching>
+          <EstimatedSize>34361110</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

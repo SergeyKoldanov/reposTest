@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "lg_olap", "lg_olap\lg_olap.dtproj", "{4B68961E-04E6-4B53-83B3-13624D0434B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B68961E-04E6-4B53-83B3-13624D0434B2}.Development|Default.ActiveCfg = Development
+		{4B68961E-04E6-4B53-83B3-13624D0434B2}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {081FA871-521D-42FA-A1EB-AC436C33664A}
+	EndGlobalSection
+EndGlobal

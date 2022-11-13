@@ -1,0 +1,254 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="edff1902-2e67-482f-ac39-0ff7d7092b4e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Vw Tb Data</ID>
+  <Name>ГодМесДень</Name>
+  <CreatedTimestamp>2010-04-06T07:55:11Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:41:38.256667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2022-03-11T04:23:05.196667Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="47c58e42-18e0-435e-bced-e51ed3998b6e">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="b9be59fe-a5c5-44c5-8598-e10e47f1579b">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="99109a1e-3203-4eb1-940e-799ca7fb4bcb">
+      <ID>Data</ID>
+      <Name>Дата</Name>
+      <Type>Date</Type>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8eee9526-b28a-4888-ac2f-c2c2cca78fd6">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f1dad67-3ba2-418d-9f9f-638908d25b96">
+            <TableID>dbo_vwTbData</TableID>
+            <ColumnID>data</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c0be3e29-1662-4845-9386-7fa1a91f28b7">
+        <DataType>WChar</DataType>
+        <NullProcessing>ZeroOrBlank</NullProcessing>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="48074cc7-514b-4375-ba26-2cf682820007">
+          <TableID>dbo_vwTbData</TableID>
+          <ColumnID>data</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c2ce68b9-cb99-4255-9d70-19e8a715b13f">
+          <AttributeID>God</AttributeID>
+          <Name>Год</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b791ace2-13af-4634-869b-561bb3790508">
+          <AttributeID>Mes Name</AttributeID>
+          <Name>Месяц</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9abf1d0b-c71d-4659-a6ba-fe270352e08a">
+          <AttributeID>Den</AttributeID>
+          <Name>День</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="86e7d230-0549-4142-959a-dc22cbd6e0ce">
+          <AttributeID>Nom Nedeli</AttributeID>
+          <Name>НомНедели</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1114ed3-3fff-4838-94b0-bdd8f5d5a5f3">
+      <ID>God</ID>
+      <Name>Год</Name>
+      <Type>Years</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b9422710-4d6b-4680-a794-5d24cc158c64">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="edc05869-248f-4316-9bb5-1c16334e1d5c">
+            <TableID>dbo_vwTbData</TableID>
+            <ColumnID>God</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e39fcf8f-4689-4fe0-b5c0-0316dda68338">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="2f23e662-a032-4553-aee6-79b1d87c3373">
+          <TableID>dbo_vwTbData</TableID>
+          <ColumnID>God</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f7a9f6fa-b6ac-464c-b17f-517d6ecaa873">
+      <ID>Mes Name</ID>
+      <Name>Месяц</Name>
+      <Type>Months</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="422c4a19-f410-4d10-87f2-73de551e0a3e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="30e0bb7f-ebe8-49c6-a76f-11939f9d01f3">
+            <TableID>dbo_vwTbData</TableID>
+            <ColumnID>Mes</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e7e5d27b-eef8-40d6-8e3f-3b9df1ac03c0">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="eaf71a55-762b-4d12-921b-0b7b62392a40">
+          <TableID>dbo_vwTbData</TableID>
+          <ColumnID>MesName</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8914fda2-5724-4168-86c7-24b7568085c3">
+      <ID>Den</ID>
+      <Name>День</Name>
+      <Type>Days</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5e40ddc1-8c5b-48b4-9cfd-f429fb20e1e6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d5dfa6ac-7f9f-47bc-bc4b-a1776b16e8a5">
+            <TableID>dbo_vwTbData</TableID>
+            <ColumnID>Den</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a9adbe55-ccd3-47d9-9291-41ee1642f223">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0c302e0f-b35d-406e-b2be-c9c74a62dc32">
+          <TableID>dbo_vwTbData</TableID>
+          <ColumnID>Den</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2fdfe40a-a251-4498-9158-cbe5929eead2">
+      <ID>Nom Nedeli</ID>
+      <Name>НомНедели</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="00a98d28-ded1-49c9-bba8-70594b465a40">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="239a8017-d385-40bb-a93a-c2f604a56851">
+            <TableID>dbo_vwTbData</TableID>
+            <ColumnID>NomNedeli</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5009f1a6-0cb7-4d59-a7ff-9a8baa987162">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c54c0ee2-a6d1-485e-af88-dcc82c640d97">
+          <TableID>dbo_vwTbData</TableID>
+          <ColumnID>NomNedeli</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="57dfc119-c493-4aac-8e2a-996d5f9bdbdd">
+      <ID>Hierarchy</ID>
+      <Name>ГодМесДень</Name>
+      <Levels>
+        <Level dwd:design-time-name="cce8766e-6243-4621-bd62-120168468f71">
+          <ID>Год</ID>
+          <Name>Год</Name>
+          <SourceAttributeID>God</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="4577f7c6-5011-44bd-a5a8-15546d0a3111">
+          <ID>Месяц</ID>
+          <Name>Месяц</Name>
+          <SourceAttributeID>Mes Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1d49e1de-f2ab-4179-b905-8a49f940480b">
+          <ID>День</ID>
+          <Name>День</Name>
+          <SourceAttributeID>Den</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="6006a9e4-3b79-4d1e-9ba6-1d5bdc72ac57">
+      <ID>Иерархия</ID>
+      <Name>ГодНомНедели</Name>
+      <Levels>
+        <Level dwd:design-time-name="03159cbb-faae-46e9-938a-8152877ec586">
+          <ID>Год</ID>
+          <Name>Год</Name>
+          <SourceAttributeID>God</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6501553a-20e1-4b5d-95a5-04458972f17f">
+          <ID>НомНедели</ID>
+          <Name>НомНедели</Name>
+          <SourceAttributeID>Nom Nedeli</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ProactiveCaching dwd:design-time-name="f3625f48-9cd0-4df5-b0c6-779683201e32">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d7c6706e-5126-4f61-b8c9-c3c6e4441bbe" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

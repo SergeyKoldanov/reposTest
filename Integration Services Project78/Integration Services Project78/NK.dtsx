@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/6/2021 4:15:16 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{AC93721C-0873-4D7F-805E-45CCAA00B8D4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{BF0A63C5-0B9F-424E-93FF-8F8B13B79668}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.140.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FAAD5F19-937E-476B-ACA2-D936ABC95318}"
+      DTS:ObjectName="10.0.0.140.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.0.0.140;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.LG]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E878BE75-26F8-40C9-BA3A-7AC4337F608C}"
+      DTS:ObjectName="10.50.0.89.LG">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=LG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RZN-OLAP-01.DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6571E84C-4E7D-49C2-99BB-20AB71EDCFF9}"
+      DTS:ObjectName="RZN-OLAP-01.DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=RZN-OLAP-01;Initial Catalog=DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Truncate NK"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{2F0554D9-7E4E-4A8A-A97C-2B66AF705818}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate NK"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E878BE75-26F8-40C9-BA3A-7AC4337F608C}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE NK" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение NK"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{8BFC2A87-98DD-4165-A684-9261EE9BD40C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение NK"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение NK\DW"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="DW"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">WITH Month26 AS (
+SELECT 
+	   Code           AS [Код1с]
+      ,[Description]  AS [ГоловнойКлиент]
+      ,Summa        AS [Оборот]
+	  ,P.Period
+	  ,(
+           SELECT pol.[Description]
+           FROM   [RZN-OLAP].[dw].[dbo].hrSprPolzovateli pol(NOLOCK)
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent g(NOLOCK)
+                       ON  g.Menedzher = pol.IDRRef
+                           AND g.IDRRef = p.IDRRef
+       )              AS [МенеджерКлиента]
+      ,(
+           SELECT pod.[Description]
+           FROM   [RZN-OLAP].[dw].[dbo].hrSprPodrazdeleniya pod(NOLOCK)
+           WHERE  pod.id = PodrazdelenieID
+       )              AS [Подразделение]
+      ,(
+           SELECT r.[Description]
+           FROM   [RZN-OLAP].[dw].[dbo].hrSprRegiony r(NOLOCK)
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent gk(NOLOCK)
+                       ON  r.IDRRef = gk.Region
+           WHERE  gk.IDRRef = p.IDRRef
+       )              AS [Регион]
+FROM   (
+           SELECT k.Code
+                 ,k.IDRRef
+                 ,k.[Description]
+                 ,p.PodrazdelenieID
+                 ,isnull(SUM(p.Oborot),  0)  Summa
+				 ,DATEADD(DAY,1,EOMONTH(p.Period, -1)) as Period
+           FROM   [RZN-OLAP].[dw].[dbo].hrProdazhiTek p(NOLOCK)
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent ko(NOLOCK)
+                       ON  ko.id = p.KontragentID
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent k(NOLOCK)
+                       ON  k.IDRRef = ko.GolovnojKontrag
+                  JOIN [RZN-OLAP].[WORK].[dbo].tbKlientVGruppe kvg(NOLOCK)
+                       ON  kvg.KontragentID = k.ID
+                  JOIN [RZN-OLAP].[WORK].[dbo].tbTovarVGruppe AS tvg(NOLOCK)
+                       ON  tvg.NomenklaturaID = p.NomenklaturaID
+                           AND tvg.GruppaID IN (127071 -- Канцелярские товары
+                                               ,127072 -- Товары офисного назначения (ТОН)
+                                                )
+           WHERE  p.Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-27)) AND p.Period &lt;= dateadd(MONTH, -12, cast(getdate() as date))
+                  AND kvg.GruppaID IN ( 117267 -- B2B
+									  ,118905 -- Дистрибьюция
+									  ,118910 -- Сетевой отдел
+									  ,118908 -- Художественная дистрибьюция
+									  ,118906 -- Экспорт
+                                       )
+					
+           GROUP BY
+                  k.code
+                 ,k.IDRRef
+                 ,k.[Description]
+                 ,p.PodrazdelenieID
+				 ,DATEADD(DAY,1,EOMONTH(p.Period, -1))
+	) P
+),
+
+Obschet2020 AS (
+SELECT 
+	Код1с
+   ,ГоловнойКлиент
+   ,МенеджерКлиента
+   ,Подразделение
+   ,Регион
+   ,C.TradeDirection
+   ,(
+     SELECT isnull(SUM(T.Оборот), 0)
+     FROM Month26 T
+     WHERE T.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-13)) and Period &lt;= dateadd(MONTH, -12, cast(getdate() as date))
+     ) tec
+   ,(
+     SELECT isnull(SUM(H.Оборот), 0)
+     FROM Month26 H
+     WHERE H.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-25)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-14))
+     ) mec12
+   ,(
+     SELECT isnull(SUM(G.Оборот), 0)
+     FROM Month26 G
+     WHERE G.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-14)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-14))
+     ) pred
+   ,(
+     SELECT isnull(SUM(F.Оборот), 0)
+     FROM Month26 F
+     WHERE F.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-26)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-15))
+     ) pred12
+   ,(
+     SELECT isnull(SUM(C.Оборот), 0)
+     FROM Month26 C
+     WHERE C.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-15)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-15))
+     ) predpred
+   ,(
+     SELECT isnull(SUM(J.Оборот), 0)
+     FROM Month26 J
+     WHERE J.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-27)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -3)),EOMONTH(getdate(),-16))
+     ) predpred12
+FROM Month26 M left join ClientManager C ON M.Код1с = C.HeadClientCode
+group by 	Код1с
+   ,ГоловнойКлиент
+   ,МенеджерКлиента
+   ,Подразделение
+   ,Регион
+   ,C.TradeDirection
+)
+
+,Month14 AS (
+SELECT 
+	   Code           AS [Код1с]
+      ,[Description]  AS [ГоловнойКлиент]
+      ,Summa        AS [Оборот]
+	  ,P.Period
+	   ,(
+           SELECT pol.[Description]
+           FROM   [RZN-OLAP].[dw].[dbo].hrSprPolzovateli pol(NOLOCK)
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent g(NOLOCK)
+                       ON  g.Menedzher = pol.IDRRef
+                           AND g.IDRRef = p.IDRRef
+       )              AS [МенеджерКлиента]
+      ,(
+           SELECT pod.[Description]
+           FROM   [RZN-OLAP].[dw].[dbo].hrSprPodrazdeleniya pod(NOLOCK)
+           WHERE  pod.id = PodrazdelenieID
+       )              AS [Подразделение]
+      ,(
+           SELECT r.[Description]
+           FROM   [RZN-OLAP].[dw].[dbo].hrSprRegiony r(NOLOCK)
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent gk(NOLOCK)
+                       ON  r.IDRRef = gk.Region
+           WHERE  gk.IDRRef = p.IDRRef
+       )              AS [Регион]
+FROM   (
+           SELECT k.Code
+                 ,k.IDRRef
+                 ,k.[Description]
+                 ,p.PodrazdelenieID
+                 ,isnull(SUM(p.Oborot),  0)  Summa
+				 ,DATEADD(DAY,1,EOMONTH(p.Period, -1)) as Period
+           FROM   [RZN-OLAP].[dw].[dbo].hrProdazhiTek p(NOLOCK)
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent ko(NOLOCK)
+                       ON  ko.id = p.KontragentID
+                  JOIN [RZN-OLAP].[dw].[dbo].hrSprKontragent k(NOLOCK)
+                       ON  k.IDRRef = ko.GolovnojKontrag
+                  JOIN [RZN-OLAP].[WORK].[dbo].tbKlientVGruppe kvg(NOLOCK)
+                       ON  kvg.KontragentID = k.ID
+                  JOIN [RZN-OLAP].[WORK].[dbo].tbTovarVGruppe AS tvg(NOLOCK)
+                       ON  tvg.NomenklaturaID = p.NomenklaturaID
+                           AND tvg.GruppaID IN (127071 -- Канцелярские товары
+                                               ,127072 -- Товары офисного назначения (ТОН)
+                                                )
+           WHERE  p.Period &gt;=  DATEADD(DAY,1,EOMONTH(getdate(),-15)) AND p.Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE())),EOMONTH(getdate(),-1))
+                  AND kvg.GruppaID IN ( 117267 -- B2B
+									  ,118905 -- Дистрибьюция
+									  ,118910 -- Сетевой отдел
+									  ,118908 -- Художественная дистрибьюция
+									  ,118906 -- Экспорт
+                                       )
+					
+           GROUP BY
+                  k.code
+                 ,k.IDRRef
+                 ,k.[Description]
+                 ,p.PodrazdelenieID
+				 ,DATEADD(DAY,1,EOMONTH(p.Period, -1))
+	) P
+),
+
+Obschet AS (
+SELECT 
+	Код1с
+   ,ГоловнойКлиент
+   ,МенеджерКлиента
+   ,Подразделение
+   ,Регион
+   ,C.TradeDirection
+   ,(
+     SELECT isnull(SUM(T.Оборот), 0)
+     FROM Month14 T
+     WHERE T.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-1)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE())),EOMONTH(getdate(),-1))
+     ) tec
+   ,(
+     SELECT isnull(SUM(H.Оборот), 0)
+     FROM Month14 H
+     WHERE H.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-13)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-2))
+     ) mec12
+   ,(
+     SELECT isnull(SUM(G.Оборот), 0)
+     FROM Month14 G
+     WHERE G.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-2)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -1)),EOMONTH(getdate(),-2))
+     ) pred
+   ,(
+     SELECT isnull(SUM(F.Оборот), 0)
+     FROM Month14 F
+     WHERE F.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-14)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-3))
+     ) pred12
+   ,(
+     SELECT isnull(SUM(C.Оборот), 0)
+     FROM Month14 C
+     WHERE C.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-3)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -2)),EOMONTH(getdate(),-3))
+     ) predpred
+   ,(
+     SELECT isnull(SUM(J.Оборот), 0)
+     FROM Month14 J
+     WHERE J.Код1с = M.Код1с
+		AND Period &gt;= DATEADD(DAY,1,EOMONTH(getdate(),-15)) and Period &lt;= DATEADD(DAY,DAY(EOMONTH(GETDATE(), -3)),EOMONTH(getdate(),-4))
+     ) predpred12
+FROM Month14 M left join ClientManager C ON M.Код1с = C.HeadClientCode
+group by 	Код1с
+   ,ГоловнойКлиент
+   ,МенеджерКлиента
+   ,Подразделение
+   ,Регион
+   ,C.TradeDirection
+)
+
+
+SELECT cast('ФактПредыдущийГод' as nvarchar) as Тип, O.Код1с, O.ГоловнойКлиент, O.МенеджерКлиента
+   ,O.Подразделение
+   ,O.Регион, O.tec, O.TradeDirection
+FROM Obschet2020 O
+WHERE tec &gt;= 10000 and (
+	 mec12 = 0 
+	 or (pred &lt; 10000 and pred &gt; 0 and pred12 = 0) 
+	 or (predpred &lt; 10000 and predpred &gt; 0 and predpred12 = 0)
+	)
+
+	UNION ALL
+
+SELECT cast('ФактТекущийГод' as nvarchar) as Тип, O.Код1с, O.ГоловнойКлиент, O.МенеджерКлиента
+   ,O.Подразделение
+   ,O.Регион, O.tec, O.TradeDirection
+FROM Obschet O
+WHERE tec &gt;= 10000 and (
+	 mec12 = 0 
+	 or (pred &lt; 10000 and pred &gt; 0 and pred12 = 0) 
+	 or (predpred &lt; 10000 and predpred &gt; 0 and predpred12 = 0)
+	)</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение NK\DW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Тип]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Тип]"
+                      length="30"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Тип]"
+                      name="Тип"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код1с]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код1с]"
+                      length="6"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код1с]"
+                      name="Код1с"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКлиент]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКлиент]"
+                      length="100"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКлиент]"
+                      name="ГоловнойКлиент"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[МенеджерКлиента]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[МенеджерКлиента]"
+                      length="100"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[МенеджерКлиента]"
+                      name="МенеджерКлиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Подразделение]"
+                      length="50"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      name="Подразделение"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      length="150"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[tec]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[tec]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[tec]"
+                      name="tec"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      length="255"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      name="TradeDirection"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Тип]"
+                      dataType="wstr"
+                      length="30"
+                      name="Тип" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код1с]"
+                      dataType="wstr"
+                      length="6"
+                      name="Код1с" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГоловнойКлиент]"
+                      dataType="wstr"
+                      length="100"
+                      name="ГоловнойКлиент" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[МенеджерКлиента]"
+                      dataType="wstr"
+                      length="100"
+                      name="МенеджерКлиента" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Подразделение]"
+                      dataType="wstr"
+                      length="50"
+                      name="Подразделение" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      name="Регион" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[tec]"
+                      dataType="numeric"
+                      name="tec"
+                      precision="38"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      dataType="wstr"
+                      length="255"
+                      name="TradeDirection" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Тип]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Тип]"
+                      name="Тип" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код1с]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код1с]"
+                      name="Код1с" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКлиент]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГоловнойКлиент]"
+                      name="ГоловнойКлиент" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[МенеджерКлиента]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[МенеджерКлиента]"
+                      name="МенеджерКлиента" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Подразделение]"
+                      name="Подразделение" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[tec]"
+                      dataType="numeric"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[tec]"
+                      name="tec"
+                      precision="38"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      name="TradeDirection" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение NK\NK"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="NK"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[NK]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение NK\NK.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.LG]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.LG]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Тип]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Тип"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Тип]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код1с]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код1с"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код1с]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[ГоловнойКлиент]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГоловнойКлиент"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГоловнойКлиент]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[МенеджерКлиента]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="МенеджерКлиента"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientManager]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[МенеджерКлиента]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Подразделение]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Подразделение"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Подразделение]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Регион]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Регион"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[tec]"
+                      cachedDataType="numeric"
+                      cachedName="tec"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Sale]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[tec]" />
+                    <inputColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[TradeDirection]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TradeDirection"
+                      externalMetadataColumnId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      lineageId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;].Columns[TradeDirection]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="8"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClient]"
+                      dataType="wstr"
+                      length="100"
+                      name="HeadClient" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Sale]"
+                      dataType="numeric"
+                      name="Sale"
+                      precision="38"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ClientManager]"
+                      dataType="wstr"
+                      length="100"
+                      name="ClientManager" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Department]"
+                      dataType="wstr"
+                      length="50"
+                      name="Department" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="150"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[TradeDirection]"
+                      dataType="wstr"
+                      length="50"
+                      name="TradeDirection" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение NK\NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение NK\NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение NK\NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение NK\NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение NK\NK.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение NK.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Заполнение NK\NK.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Заполнение NK\DW.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{D6C89C55-7DED-4D7E-9AF7-A7389AEAE4D6}"
+      DTS:From="Package\Truncate NK"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение NK" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Truncate NK"
+          TopLeft="394,92" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Заполнение NK"
+          TopLeft="370,208" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="463.5,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.5,74"
+              Start="0,0"
+              End="-15.5,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="-4,37" />
+                  <mssgle:LineSegment
+                    End="-11.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.5,37"
+                    Point2="-15.5,37"
+                    Point3="-15.5,41" />
+                  <mssgle:LineSegment
+                    End="-15.5,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение NK">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="94,42"
+          Id="Package\Заполнение NK\NK"
+          TopLeft="388,200" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Заполнение NK\DW"
+          TopLeft="380,84" />
+        <EdgeLayout
+          Id="Package\Заполнение NK.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="432,126">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение NK\DW">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение NK\NK">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,33 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b08b32cd-d2cc-4321-a857-f2b4fea6b28c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>BG</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw BG Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="61a9277d-77e8-451e-8a60-f6d2ff5b50a1">
+          <ID>Vw BG Fact</ID>
+          <Name>Vw BG Fact</Name>
+          <CreatedTimestamp>2021-07-13T09:11:06.383333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-12-25T17:15:23.053333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-17T07:08:55.886667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="28f16b8b-3eb3-4afd-aee4-0eec3f0c38ca">
+            <DataSourceViewID>Relef</DataSourceViewID>
+            <TableID>dbo_vwBGFact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="6ade2e3a-05af-400d-ac06-d9e8d1758982">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="1a412502-e560-4595-9262-b0a7c79a7726" />
+          </ProactiveCaching>
+          <EstimatedSize>15723941</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

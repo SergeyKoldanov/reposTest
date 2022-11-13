@@ -1,0 +1,444 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8243a16f-7dd9-4c99-9c0e-119fa89794cc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>UprBuh</ID>
+  <Name>UprBuh</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="9" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="0" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23019" y="16880" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwUprBuh" left="2805" top="3889" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwUprBuh" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwUprDepartments" left="10949" top="6126" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwUprDepartments" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwUprEmployees" left="6661" top="4128" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwUprEmployees" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwUprFilial" left="10870" top="4135" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwUprFilial" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwUprDepartmentsHistory" left="13500" top="9534" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwUprDepartmentsHistory" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwUprAccounts" left="6513" top="7957" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwUprAccounts" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwArticles" left="9000" top="10359" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwArticles" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwCalendar" left="14166" top="2500" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vwCalendar" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>2805</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>2500</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="d3e01a9c-194c-47e1-abc7-120e7fc0de0a">
+      <ID>Employees</ID>
+      <Name>Employees</Name>
+      <Translations>
+        <Translation dwd:design-time-name="d9e73fd0-38f5-4a21-9494-b84a2a017a8b">
+          <Language>1049</Language>
+          <Caption>Сотрудник</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Employees</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3b4197ed-cf6b-4eee-a05f-590efb6956cf">
+          <AttributeID>Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d659a6b-fd2c-4882-aaf2-bdf9682666b2">
+          <AttributeID>Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="486389eb-9f62-4dc5-a64b-43c583772470">
+          <AttributeID>CFO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="860eea52-b34b-4411-840b-0db2be0d81c1">
+      <ID>Filial</ID>
+      <Name>Filial</Name>
+      <Translations>
+        <Translation dwd:design-time-name="6c1d274b-fae5-477a-b840-63eb7acfff3d">
+          <Language>1049</Language>
+          <Caption>Филиал</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Filial</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="362988ad-d30a-4241-8516-76f19f3f13e2">
+          <AttributeID>Filial</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e12d531c-d4fb-4fd0-bb6b-08bf082a779e">
+      <ID>DepartmentsHistory</ID>
+      <Name>DepartmentsHistory</Name>
+      <Translations>
+        <Translation dwd:design-time-name="066ff95d-878d-442d-ada1-09f8ccbedff1">
+          <Language>1049</Language>
+          <Caption>Подразделение</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>DepartmentsHistory</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7d6d660e-6bfb-4d98-a498-2c629d5b61d6">
+          <AttributeID>Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de5dfcc9-4925-4c7c-8b03-b16812d17b66">
+          <AttributeID>Parent</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5008576-c99a-4154-b731-1d3c33e6791d">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="05d2aaeb-2282-47fe-a407-e6b5e0cfd8b9">
+      <ID>Accounts</ID>
+      <Name>Accounts</Name>
+      <Translations>
+        <Translation dwd:design-time-name="7a62c1ac-fcf4-45f1-a39a-4f8a80fd95b9">
+          <Language>1049</Language>
+          <Caption>Счет</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Accounts</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c2b3bb8c-fe29-4cda-a808-2aeb57a05d8d">
+          <AttributeID>Account</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f2c0e2d5-f03f-4e46-8bbf-1f25ae72a220">
+      <ID>Articles</ID>
+      <Name>Articles</Name>
+      <Translations>
+        <Translation dwd:design-time-name="df754c8e-2d8f-4cb2-9ae4-015ff32f9a6a">
+          <Language>2073</Language>
+          <Caption>СтатьяЗатрат</Caption>
+        </Translation>
+        <Translation dwd:design-time-name="ae62d98a-0a8f-4f50-9a7e-c1332609784e">
+          <Language>1049</Language>
+          <Caption>Статья</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Articles</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d67a8ce6-b23a-4317-b195-a321da9dfc60">
+          <AttributeID>Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f7346a45-e692-41f5-9a33-5e289bc6784f">
+          <AttributeID>Parent Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="244a5fb2-18c6-4de3-840a-b6e6b97b0ebc">
+          <AttributeID>Description</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="0f8abb37-2644-4576-8163-123ed730e3e8">
+      <ID>Calendar</ID>
+      <Name>Calendar</Name>
+      <Translations>
+        <Translation dwd:design-time-name="8a5f737d-abed-4368-b42b-47669d7e695a">
+          <Language>1049</Language>
+          <Caption>ГМД</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>Calendar</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f4703f95-6c23-44d1-959a-987cc12216c0">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1360bba5-a11d-4d30-a74d-842087893344">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="38e3a931-fb52-4e1f-8153-5a63f6c1d0e0">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ebafe6d-95d3-42ba-8750-bdbdbd70f813">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="0365f46f-a463-47b9-b358-237ffcc0682b">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="f8fed739-520c-45bc-bfd4-8b67198779e0">
+      <ID>Vw Upr Buh</ID>
+      <Name>Vw Upr Buh</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Translations>
+        <Translation dwd:design-time-name="55669efb-5275-40e2-b6c2-06796b69c040">
+          <Language>1049</Language>
+          <Caption>Значения</Caption>
+        </Translation>
+      </Translations>
+      <Measures>
+        <Measure dwd:design-time-name="1ca00235-7883-4a42-b415-8051f385b1ed">
+          <ID>Summa</ID>
+          <Name>Summa</Name>
+          <Source dwd:design-time-name="d5f347e2-f66a-468e-a960-3a0a42c5032d">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e8ff4526-30ce-4b88-89bf-f2f969eeb180">
+              <TableID>dbo_vwUprBuh</TableID>
+              <ColumnID>Summa</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="2792d316-9636-4e79-8c3d-84c5962da08f">
+              <Language>1049</Language>
+              <Caption>Сумма</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ErrorConfiguration dwd:design-time-name="e078ce71-c90c-4e1f-ba53-bd95d8f5b088">
+        <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+        <KeyNotFound>IgnoreError</KeyNotFound>
+        <NullKeyNotAllowed>IgnoreError</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e1eeab2a-8ab2-416e-ac4a-adcab2cc7d71">
+          <CubeDimensionID>Employees</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d1eb9761-e8e7-464b-979b-cc19bb94fcae">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="253ee3cd-2ae0-43e7-98ee-baf3a317df21">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3373589d-a423-4e0d-97a2-e14d4b642162">
+                    <TableID>dbo_vwUprBuh</TableID>
+                    <ColumnID>sotr</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c2b08551-6340-440a-89dd-0ac36020a37f">
+          <CubeDimensionID>Filial</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5ed6c1e1-0320-419e-96b2-bbb24fd2fb32">
+              <AttributeID>Filial</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4733a21a-4990-4df1-9e2e-2be2843c1c82">
+                  <DataType>WChar</DataType>
+                  <DataSize>11</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6c93a9df-871a-44ae-9043-6382a76f9bb8">
+                    <TableID>dbo_vwUprBuh</TableID>
+                    <ColumnID>Filial</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f2a1dae4-9a37-437a-983d-465e2f4863e9">
+          <CubeDimensionID>DepartmentsHistory</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cceebdee-cdfa-45aa-91ed-56e54d0749bc">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="362f5203-73bb-4951-bbe7-714ac1a66f26">
+                  <DataType>WChar</DataType>
+                  <DataSize>15</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="aea1fc0c-21fd-44ae-92d9-4abc8694d3ec">
+                    <TableID>dbo_vwUprBuh</TableID>
+                    <ColumnID>tsfo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3c1a2578-fb7c-496e-9142-2dbbf0ca80ce">
+          <CubeDimensionID>Accounts</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0ab6bdd6-9f00-418c-b9ee-5a63b9c8abe2">
+              <AttributeID>Account</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="634f6533-73b9-4053-9746-a8da109004ab">
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e87be580-fff3-4099-a295-7a63dddc3986">
+                    <TableID>dbo_vwUprBuh</TableID>
+                    <ColumnID>Account</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5586f627-db90-4271-9e6e-93aa94fdb838">
+          <CubeDimensionID>Articles</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="76b6e84a-377d-440a-908a-5f082ed462eb">
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dee89501-4702-407a-a706-bad442e04f35">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="707eb6eb-8cf6-4d17-9632-43ed4751b49d">
+                    <TableID>dbo_vwUprBuh</TableID>
+                    <ColumnID>stat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5e0d8982-2ca3-4a51-b078-20c490f70bd3">
+          <CubeDimensionID>Calendar</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bfe0fa44-462e-4c9a-8cde-61aded5cd376">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e814bfb2-e67b-40d0-bd59-3372561172a6">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="98dba5d1-fadf-42a1-9397-d9f53da50bff">
+                    <TableID>dbo_vwUprBuh</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="8b6edbac-5f67-4157-96f9-ea3de1c29b00">
+    <DataSourceViewID>Relef</DataSourceViewID>
+  </Source>
+</Cube>

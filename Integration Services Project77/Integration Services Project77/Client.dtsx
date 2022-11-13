@@ -1,0 +1,920 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/2/2021 4:02:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{4AFFEAA5-2C4E-4D97-B20A-00C78DCC30D2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{B1618C55-F121-43A7-9810-9947B78412FC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{96CCD583-0261-4FAA-82C0-8DD9E1850F52}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{01532B3D-4D66-4A67-B48D-7F2752140769}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;persistsecurityinfo=True;database=918ok;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL-NODE-02\UT.RelefUTWork.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{59D6F6BA-A2DC-491D-8990-18C59D4E900D}"
+      DTS:ObjectName="SQL-NODE-02\UT.RelefUTWork.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL-NODE-01;User ID=sa;Initial Catalog=RelefUTWork;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер SMTP-сеансов]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{9D49E4BB-1E23-4716-BE75-CFC57FAA6ACB}"
+      DTS:ObjectName="Диспетчер SMTP-сеансов">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=post.relef.ru;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Задача &quot;Отправка почты&quot;"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Задача &quot;Отправка почты&quot;"
+      DTS:DTSID="{9F26FBCF-9B58-4A37-83FF-6DAD1C23F17B}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача &quot;Отправка почты&quot;"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{9D49E4BB-1E23-4716-BE75-CFC57FAA6ACB}"
+          SendMailTask:From="KoldanovSV.it@relef.ru"
+          SendMailTask:To="KoldanovSV.it@relef.ru"
+          SendMailTask:Subject="Обновление 9-18"
+          SendMailTask:MessageSource="При обновлении таблицы Client произошел сбой." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Заполнение Clients"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{5487F731-5C5D-4F44-838C-F0E1AB59BA24}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Заполнение Clients"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Заполнение Clients\1C"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="1C"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+	Kontr._Code AS [Код клиента], 
+	Kontr._Description AS [Наименование клиента],
+	KontrG._Code AS [Код головного клиента],
+	KontrG._Description AS [Наименование головного клиента],
+	Kontr._IDRRef AS [Ссылка на клиента],
+	Kontr._ParentIDRRef AS [Ссылка на родителя],
+	SegmV._Description AS [Характеристика],
+	Region._Description AS [Регион],
+	Country._Description AS [Страна],
+	Users._Description AS [Основной менеджер покупателя],
+	CASE
+		WHEN Kontr._Folder = 0x00 THEN 1
+		WHEN Kontr._Folder = 0x01 THEN 0
+	END AS [Это группа],
+	CASE
+		WHEN Kontr._Marked = 0x00 THEN 0
+		WHEN Kontr._Marked = 0x01 THEN 1
+	END AS [Пометка на удаление]
+FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] AS Kontr WITH (NOLOCK)
+	LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference47] AS KontrG WITH (NOLOCK)
+		ON KontrG._IDRRef = Kontr._Fld638RRef
+	LEFT JOIN (SELECT *
+			   FROM [SQL-NODE-01].[RelefUTWork].[dbo].[_InfoRg25409] WITH (NOLOCK)
+			   WHERE _Fld25413RRef = 0x80C230E1715C531711E91E7C60562488) AS RegSegm
+		ON Kontr._IDRRef = RegSegm._Fld25410RRef
+	LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference25400] AS SegmV WITH (NOLOCK)
+		ON RegSegm._Fld25414_RRRef = SegmV._IDRRef
+	LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference66] AS Region WITH (NOLOCK)
+		ON Kontr._Fld660RRef = Region._IDRRef
+	LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference60] AS Users WITH (NOLOCK)
+		ON Kontr._Fld651RRef = Users._IDRRef
+	LEFT JOIN [SQL-NODE-01].[RelefUTWork].[dbo].[_Reference44] AS Country WITH (NOLOCK)
+		ON Kontr._Fld19058RRef = Country._IDRRef</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Clients\1C.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код клиента]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код клиента]"
+                      length="6"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код клиента]"
+                      name="Код клиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование клиента]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование клиента]"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование клиента]"
+                      name="Наименование клиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код головного клиента]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код головного клиента]"
+                      length="6"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код головного клиента]"
+                      name="Код головного клиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование головного клиента]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование головного клиента]"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование головного клиента]"
+                      name="Наименование головного клиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка на клиента]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Ссылка на клиента]"
+                      length="16"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка на клиента]"
+                      name="Ссылка на клиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка на родителя]"
+                      dataType="bytes"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Ссылка на родителя]"
+                      length="16"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка на родителя]"
+                      name="Ссылка на родителя"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Характеристика]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Характеристика]"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Характеристика]"
+                      name="Характеристика"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      length="150"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Страна]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Страна]"
+                      length="60"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Страна]"
+                      name="Страна"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Основной менеджер покупателя]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Основной менеджер покупателя]"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Основной менеджер покупателя]"
+                      name="Основной менеджер покупателя"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Это группа]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Это группа]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Это группа]"
+                      name="Это группа"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Пометка на удаление]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      name="Пометка на удаление"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код клиента]"
+                      dataType="wstr"
+                      length="6"
+                      name="Код клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование клиента]"
+                      dataType="wstr"
+                      length="100"
+                      name="Наименование клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код головного клиента]"
+                      dataType="wstr"
+                      length="6"
+                      name="Код головного клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Наименование головного клиента]"
+                      dataType="wstr"
+                      length="100"
+                      name="Наименование головного клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Ссылка на клиента]"
+                      dataType="bytes"
+                      length="16"
+                      name="Ссылка на клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Ссылка на родителя]"
+                      dataType="bytes"
+                      length="16"
+                      name="Ссылка на родителя" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Характеристика]"
+                      dataType="wstr"
+                      length="100"
+                      name="Характеристика" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      name="Регион" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Страна]"
+                      dataType="wstr"
+                      length="60"
+                      name="Страна" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Основной менеджер покупателя]"
+                      dataType="wstr"
+                      length="100"
+                      name="Основной менеджер покупателя" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Это группа]"
+                      dataType="i4"
+                      name="Это группа" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Пометка на удаление]"
+                      dataType="i4"
+                      name="Пометка на удаление" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код клиента]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код клиента]"
+                      name="Код клиента" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование клиента]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование клиента]"
+                      name="Наименование клиента" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код головного клиента]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код головного клиента]"
+                      name="Код головного клиента" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование головного клиента]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Наименование головного клиента]"
+                      name="Наименование головного клиента" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Ссылка на клиента]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Ссылка на клиента]"
+                      name="Ссылка на клиента" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Ссылка на родителя]"
+                      dataType="bytes"
+                      length="16"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Ссылка на родителя]"
+                      name="Ссылка на родителя" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Характеристика]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Характеристика]"
+                      name="Характеристика" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Регион]"
+                      name="Регион" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Страна]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Страна]"
+                      name="Страна" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Основной менеджер покупателя]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Основной менеджер покупателя]"
+                      name="Основной менеджер покупателя" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Это группа]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Это группа]"
+                      name="Это группа" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      name="Пометка на удаление" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Заполнение Clients\Таблица Clients"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Таблица Clients"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[Clients]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Заполнение Clients\Таблица Clients.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код клиента]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код клиента"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код клиента]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Наименование клиента]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Наименование клиента"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование клиента]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Код головного клиента]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Код головного клиента"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientId]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код головного клиента]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Наименование головного клиента]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Наименование головного клиента"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientName]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Наименование головного клиента]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Ссылка на клиента]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="Ссылка на клиента"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Ref]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка на клиента]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Ссылка на родителя]"
+                      cachedDataType="bytes"
+                      cachedLength="16"
+                      cachedName="Ссылка на родителя"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ParentRef]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Ссылка на родителя]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Характеристика]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Характеристика"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Segment]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Характеристика]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Регион]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Регион"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Регион]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Страна]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Страна"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Country]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Страна]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Основной менеджер покупателя]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Основной менеджер покупателя"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MainSalesManager]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Основной менеджер покупателя]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Пометка на удаление]"
+                      cachedDataType="i4"
+                      cachedName="Пометка на удаление"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsDeleted]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Пометка на удаление]" />
+                    <inputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Это группа]"
+                      cachedDataType="i4"
+                      cachedName="Это группа"
+                      externalMetadataColumnId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsFolder]"
+                      lineageId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Это группа]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="6"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientId]"
+                      dataType="wstr"
+                      length="6"
+                      name="HeadClientId" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[HeadClientName]"
+                      dataType="wstr"
+                      length="120"
+                      name="HeadClientName" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Ref]"
+                      dataType="bytes"
+                      length="16"
+                      name="Ref" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[ParentRef]"
+                      dataType="bytes"
+                      length="16"
+                      name="ParentRef" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Segment]"
+                      dataType="wstr"
+                      length="100"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="150"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="60"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[MainSalesManager]"
+                      dataType="wstr"
+                      length="100"
+                      name="MainSalesManager" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsRetailNet]"
+                      dataType="bool"
+                      name="IsRetailNet" />
+                    <externalMetadataColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[IsFolder]"
+                      dataType="bool"
+                      name="IsFolder" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Заполнение Clients\Таблица Clients.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Clients\Таблица Clients.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Заполнение Clients\Таблица Clients.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Заполнение Clients\Таблица Clients.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Заполнение Clients.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Заполнение Clients\Таблица Clients.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Заполнение Clients\1C.Outputs[Выход источника &quot;OLE DB&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Очистка таблицы Clients"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{85BF6941-ADB6-495A-BDC2-D247BA436147}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Очистка таблицы Clients"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{96CCD583-0261-4FAA-82C0-8DD9E1850F52}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Clients" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{0C8C089D-9DD9-4322-980D-05B436B76E19}"
+      DTS:From="Package\Очистка таблицы Clients"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\Заполнение Clients" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{AA3D1326-C551-4D26-BB58-6BBA76F1EBFB}"
+      DTS:From="Package\Заполнение Clients"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Задача &quot;Отправка почты&quot;"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Задача &quot;Отправка почты&quot;"
+          TopLeft="423,393" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Заполнение Clients"
+          TopLeft="370,263" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Очистка таблицы Clients"
+          TopLeft="357,105" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="457.25,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,116"
+              Start="0,0"
+              End="0,108.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,108.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="457,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,88"
+              Start="0,0"
+              End="69.5,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="65.5,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,44"
+                    Point2="69.5,44"
+                    Point3="69.5,48" />
+                  <mssgle:LineSegment
+                    End="69.5,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.95578125,49,23.5884375,10.1396484375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Заполнение Clients">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Заполнение Clients\Таблица Clients"
+          TopLeft="427,259" />
+        <NodeLayout
+          Size="93,42"
+          Id="Package\Заполнение Clients\1C"
+          TopLeft="352,111" />
+        <EdgeLayout
+          Id="Package\Заполнение Clients.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="398.5,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107,106"
+              Start="0,0"
+              End="107,98.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49"
+                    Point2="0,53"
+                    Point3="4,53" />
+                  <mssgle:LineSegment
+                    End="103,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="103,53"
+                    Point2="107,53"
+                    Point3="107,57" />
+                  <mssgle:LineSegment
+                    End="107,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Clients\1C">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Заполнение Clients\Таблица Clients">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,3075 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/6/2021 1:52:11 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RZN-40000026"
+  DTS:CreatorName="MAIN\koldanov.sv"
+  DTS:DTSID="{3BE81FE5-CF0C-43C7-ADF1-5F119A778376}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{F9F06BEC-A07C-49F3-AFE8-29018ACBD46F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[1.xlsx]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{D60075B4-677A-43CE-A769-4CA3202A59E7}"
+      DTS:ObjectName="1.xlsx">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="\\10.50.0.110\общая папка\Loginom\918\1.xlsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.0.89.Relef]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{63DB01C5-6455-4566-B179-B48C6417BB23}"
+      DTS:ObjectName="10.50.0.89.Relef">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.50.0.89;Initial Catalog=Relef;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{B3ECA3CC-BE18-4FC3-B482-A5CB68998BB3}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;database=918ok;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{C961F86F-CDE6-4A4E-ABB5-ECF0CFBBD9E2}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;database=918ok;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1 1]"
+      DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
+      DTS:DTSID="{7B53A901-A859-4399-80AD-BDE778F0ED17}"
+      DTS:ObjectName="10.50.2.150.918ok.olap918ok1 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=10.50.2.150;user id=olap918ok;persistsecurityinfo=True;database=918ok;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzZqS7RiIzUCYH1fTBoH7HQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAuATV4Ts3ILvvEsjQ4F7ZnAAAAAASAAACgAAAAEAAAAMYnixsZXx6W0coaTknZjIdIAAAAcc0dMhWLbrZiTKLU1py1JPuxvB4qgtw8viQU2g4CrD3CDYhmFFdOBNU7qJd16ld5hVrUfi40UrLWV5d9qADbomC0F5qXgy8bFAAAAC955B6xIIsrY3wS0lyCv31ozFUQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GFK.xlsx]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{4C707912-A6B6-4DC9-90CA-1B657348F2DB}"
+      DTS:ObjectName="GFK.xlsx">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="\\10.50.0.110\общая папка\Loginom\918\GFK.xlsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GFK.xlsx 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C48F6F5C-6F9E-4A8B-ACE7-C772A8481D29}"
+      DTS:ObjectName="GFK.xlsx 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="\\10.50.0.110\общая папка\Loginom\GFK.xlsx" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер SMTP-сеансов]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{D0797322-266D-46C3-8159-38580B24C494}"
+      DTS:ObjectName="Диспетчер SMTP-сеансов">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=post.relef.ru;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2A0F4111-D311-4057-8809-148A259E0D1F}"
+      DTS:ObjectName="Диспетчер соединений Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\общая папка\Loginom\918\GFK.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2CCBD108-8E66-4807-AB9C-7C7D67D78082}"
+      DTS:ObjectName="Диспетчер соединений Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\общая папка\Loginom\918\1.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9F424878-1946-4DE9-A0A2-D794E84E8F83}"
+      DTS:ObjectName="Диспетчер соединений Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\общая папка\Loginom\918\GFK.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Диспетчер соединений Excel 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{4CA5652D-8FE7-4DC9-82D6-CB8C02F4AC2C}"
+      DTS:ObjectName="Диспетчер соединений Excel 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\10.50.0.110\общая папка\Loginom\GFK.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4194182D-7D12-4887-8637-63909F396C48}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CREATE EXCEL TABLE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{39791E65-82FB-41AA-B046-C52B5A731D28}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CREATE EXCEL TABLE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4CA5652D-8FE7-4DC9-82D6-CB8C02F4AC2C}"
+          SQLTask:SqlStatementSource="CREATE TABLE `Отчет` (&#xA;    `Клиент` NVARCHAR(170),&#xA;    `ID клиента` INT,&#xA;    `ID магазина партнера` INT,&#xA;    `Партнер` NVARCHAR(100),&#xA;    `Код партнера` INT,&#xA;    `Юр_ адрес партнера` NVARCHAR(200),&#xA;    `Price` DOUBLE PRECISION,&#xA;    `Quantity` INT,&#xA;    `Total` DOUBLE PRECISION,&#xA;    `Код товара` NVARCHAR(10),&#xA;    `НаименованиеТовара` NVARCHAR(170),&#xA;    `АртикулТовара` NVARCHAR(50),&#xA;    `КлассТовара` NVARCHAR(100),&#xA;    `ГруппаТовара` NVARCHAR(100),&#xA;    `КатегорияТовара` NVARCHAR(100),&#xA;    `ПодкатегорияТовара` NVARCHAR(100),&#xA;    `ТорговаяМарка` NVARCHAR(100),&#xA;    `ПроизводительТовара` NVARCHAR(70)&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Задача выражения"
+      DTS:CreationName="Microsoft.ExpressionTask"
+      DTS:Description="Задача выражения"
+      DTS:DTSID="{c0210f76-d0b5-494d-bc48-9dfc649bfe70}"
+      DTS:ExecutableType="Microsoft.ExpressionTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Задача выражения"
+      DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExpressionTask
+          Expression="@[User::Variable] =&quot;Отчет по продажам конечным клиентам для GFK обновлен за период с &quot; + (DT_WSTR, 25) DATEADD(&quot;dd&quot;, DATEDIFF(&quot;dd&quot;,(DT_DBTIMESTAMP) 0, GETDATE())/7*7-5, (DT_DBTIMESTAMP) 0)  + &quot; по &quot; + LEFT((DT_WSTR, 25) DATEADD(&quot;dd&quot;, DATEDIFF(&quot;dd&quot;,(DT_DBTIMESTAMP) 0, GETDATE())/7*7+1, (DT_DBTIMESTAMP) 0), 10) + &quot; 23:59:59&quot; + &quot;, ознакомиться с ним можно по пути: &quot; +&quot;\\&quot; + &quot;\\10.50.0.110\\общая папка\\Loginom\\918&quot;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Отправка почты &quot;Успех&quot;"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Задача &quot;Отправка почты&quot;"
+      DTS:DTSID="{24897ea8-6dd6-40f0-ad44-b663d9338581}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Отправка почты &quot;Успех&quot;"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{D0797322-266D-46C3-8159-38580B24C494}"
+          SendMailTask:From="KoldanovSV.it@relef.ru"
+          SendMailTask:To="IvashovaNS.BI@relef.ru"
+          SendMailTask:Subject="Отчет GFK"
+          SendMailTask:MessageSourceType="Variable"
+          SendMailTask:MessageSource="User::Variable" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Отчет GFK"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{9cfcbb0a-24fd-46de-a66e-ddc13c43ec90}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Отчет GFK"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Отчет GFK\9-18"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server.Корпорация Майкрософт (Microsoft Corporation). Microsoft SQL Server © Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support4"
+              description="Потребляет данные из SQL Server, OLE DB, ODBC или Oracle с помощью соответствующего поставщика данных .NET. Используйте инструкцию Transact-SQL для определения результирующего набора. Пример: извлечение данных из SQL Server с помощью поставщика данных .NET Framework для SQL Server."
+              name="9-18"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Задает инструкцию SQL, используемую компонентом для извлечения данных."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED ;
+SET SQL_BIG_SELECTS = 1;
+SELECT rc_shop.ID,
+rc_shop_trade_point_address.UF_ADDRESS AS Address
+FROM rc_shop left join rc_shop_trade_point 
+on rc_shop.ID = rc_shop_trade_point.UF_SHOP
+left join rc_shop_trade_point_address on rc_shop_trade_point.ID = rc_shop_trade_point_address.UF_TRADEPOINT
+WHERE rc_shop_trade_point.UF_NAME LIKE "Основная информация"
+order by rc_shop.ID asc;
+SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Значение 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли внешние столбцы с типом, отличным от строкового, в выходных столбцах неявно преобразовываться в строки."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Имя таблицы базы данных-источника."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Укажите режим получения данных о внешних столбцах"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Отчет GFK\9-18.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.2.150.918ok.olap918ok1 1]"
+                  description="Диспетчер управляемых соединений"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET]"
+                  name="Вывод источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[ID]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ID]"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[Address]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Address]"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[ID]"
+                      dataType="ui4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].ExternalColumns[Address]"
+                      dataType="nText"
+                      name="Address" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ID]"
+                      dataType="ui4"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Address]"
+                      dataType="nText"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[Address]"
+                      name="Address" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод ошибок источника ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Relef"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Источник &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;7"
+              description="Источник &quot;OLE DB&quot;"
+              name="Relef"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT C.[Name] AS Клиент
+	  ,C.Id AS [ID клиента]
+	  ,S.Id AS [ID магазина партнера]
+	  ,P.Name AS [Партнер]
+	  ,P.Id AS [Код партнера]
+	  ,P.OrgAddress AS [Юр. адрес партнера]
+	  ,O.Price
+	  ,O.Amount AS Quantity
+	  ,SUM(O.Amount * O.Price) AS Total
+	  ,I.Code AS [Код товара]
+	  ,I.[Name] AS [НаименованиеТовара]
+	  ,I.Article AS [АртикулТовара]
+	  ,I.Class AS [КлассТовара]
+	  ,I.[Group] AS [ГруппаТовара]
+	  ,I.Categoty AS [КатегорияТовара]
+	  ,I.SubCategory AS [ПодкатегорияТовара]
+	  ,I.TradeMark AS [ТорговаяМарка]
+	  ,I.Manufacturer AS [ПроизводительТовара]
+	  
+FROM EndClients918 AS C
+	LEFT JOIN Orders918 AS O
+		ON C.Id = O.ClientId
+	LEFT JOIN [dbo].[Items] I
+		ON O.ItemGuid = cast([dbo].[BinaryToGUID](Ref) as char(36))
+	LEFT JOIN Shops918 AS S
+		ON O.ShopId = S.Id
+	LEFT JOIN Partners918 AS P
+		ON S.PartnerId = P.Id
+WHERE CreateDate BETWEEN DATEADD(DAY, DATEDIFF(DAY,0, GETDATE())/7*7-7,0)
+and DATEADD(DAY, DATEDIFF(DAY,0, GETDATE())/7*7-1,0) and O.[Status] like 'Исполнен' and I.Code is not null and I.Code not like ''
+GROUP BY 
+		C.[Name]
+	   ,C.Id
+	   ,Price
+	   ,Amount
+	   ,I.Code
+	   ,I.[Name]
+	   ,I.Article
+	   ,I.Class
+	   ,I.[Group]
+	   ,I.Categoty
+	   ,I.Manufacturer
+	   ,I.SubCategory
+	   ,I.TradeMark
+	   ,S.Id
+	   ,P.Id
+	   ,P.[Name]
+	   ,P.OrgAddress
+ORDER BY S.Id ASC</property>
+                <property
+                  dataType="System.String"
+                  description="Переменная, содержащая команду SQL для выполнения."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Сопоставления между параметрами в команде SQL и переменными."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Отчет GFK\Relef.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.50.0.89.Relef]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;]"
+                  name="Выход источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Клиент]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Клиент]"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Клиент]"
+                      name="Клиент"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ID клиента]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ID клиента]"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ID клиента]"
+                      name="ID клиента"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ID магазина партнера]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ID магазина партнера]"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ID магазина партнера]"
+                      name="ID магазина партнера"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Партнер]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Партнер]"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Партнер]"
+                      name="Партнер"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код партнера]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код партнера]"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код партнера]"
+                      name="Код партнера"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Юр. адрес партнера]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Юр. адрес партнера]"
+                      length="200"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Юр. адрес партнера]"
+                      name="Юр. адрес партнера"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Total]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Total]"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Total]"
+                      name="Total"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код товара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код товара]"
+                      length="10"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код товара]"
+                      name="Код товара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[НаименованиеТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[НаименованиеТовара]"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[НаименованиеТовара]"
+                      name="НаименованиеТовара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[АртикулТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[АртикулТовара]"
+                      length="50"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[АртикулТовара]"
+                      name="АртикулТовара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[КлассТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[КлассТовара]"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[КлассТовара]"
+                      name="КлассТовара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГруппаТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГруппаТовара]"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГруппаТовара]"
+                      name="ГруппаТовара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[КатегорияТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[КатегорияТовара]"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[КатегорияТовара]"
+                      name="КатегорияТовара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ПодкатегорияТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ПодкатегорияТовара]"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ПодкатегорияТовара]"
+                      name="ПодкатегорияТовара"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ТорговаяМарка]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ТорговаяМарка]"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ТорговаяМарка]"
+                      name="ТорговаяМарка"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ПроизводительТовара]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ПроизводительТовара]"
+                      length="70"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ПроизводительТовара]"
+                      name="ПроизводительТовара"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Клиент]"
+                      dataType="wstr"
+                      length="170"
+                      name="Клиент" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ID клиента]"
+                      dataType="i4"
+                      name="ID клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ID магазина партнера]"
+                      dataType="i4"
+                      name="ID магазина партнера" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Партнер]"
+                      dataType="wstr"
+                      length="100"
+                      name="Партнер" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код партнера]"
+                      dataType="i4"
+                      name="Код партнера" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Юр. адрес партнера]"
+                      dataType="wstr"
+                      length="200"
+                      name="Юр. адрес партнера" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      dataType="r8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Total]"
+                      dataType="r8"
+                      name="Total" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[Код товара]"
+                      dataType="wstr"
+                      length="10"
+                      name="Код товара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[НаименованиеТовара]"
+                      dataType="wstr"
+                      length="170"
+                      name="НаименованиеТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[АртикулТовара]"
+                      dataType="wstr"
+                      length="50"
+                      name="АртикулТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[КлассТовара]"
+                      dataType="wstr"
+                      length="100"
+                      name="КлассТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ГруппаТовара]"
+                      dataType="wstr"
+                      length="100"
+                      name="ГруппаТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[КатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      name="КатегорияТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ПодкатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      name="ПодкатегорияТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ТорговаяМарка]"
+                      dataType="wstr"
+                      length="100"
+                      name="ТорговаяМарка" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].ExternalColumns[ПроизводительТовара]"
+                      dataType="wstr"
+                      length="70"
+                      name="ПроизводительТовара" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;OLE DB&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Клиент]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Клиент]"
+                      name="Клиент" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ID клиента]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ID клиента]"
+                      name="ID клиента" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ID магазина партнера]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ID магазина партнера]"
+                      name="ID магазина партнера" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Партнер]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Партнер]"
+                      name="Партнер" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код партнера]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код партнера]"
+                      name="Код партнера" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Юр. адрес партнера]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Юр. адрес партнера]"
+                      name="Юр. адрес партнера" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Price]"
+                      name="Price" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Quantity]"
+                      name="Quantity" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Total]"
+                      dataType="r8"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Total]"
+                      name="Total" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код товара]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[Код товара]"
+                      name="Код товара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[НаименованиеТовара]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[НаименованиеТовара]"
+                      name="НаименованиеТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[АртикулТовара]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[АртикулТовара]"
+                      name="АртикулТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[КлассТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[КлассТовара]"
+                      name="КлассТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГруппаТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ГруппаТовара]"
+                      name="ГруппаТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[КатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[КатегорияТовара]"
+                      name="КатегорияТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ПодкатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ПодкатегорияТовара]"
+                      name="ПодкатегорияТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ТорговаяМарка]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ТорговаяМарка]"
+                      name="ТорговаяМарка" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ПроизводительТовара]"
+                      dataType="wstr"
+                      length="70"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ПроизводительТовара]"
+                      name="ПроизводительТовара" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Вывод ошибок источника &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Назначение &quot;Excel&quot;"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Назначение &quot;Excel&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Назначение &quot;Excel&quot;"
+              name="Назначение &quot;Excel&quot;"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">Отчет$</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Диспетчер соединений Excel 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Диспетчер соединений Excel 3]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;Excel&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Клиент]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="Клиент"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Клиент]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Клиент]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[ID клиента]"
+                      cachedDataType="i4"
+                      cachedName="ID клиента"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ID клиента]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ID клиента]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[ID магазина партнера]"
+                      cachedDataType="i4"
+                      cachedName="ID магазина партнера"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ID магазина партнера]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ID магазина партнера]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Партнер]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Партнер"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Партнер]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Партнер]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Код партнера]"
+                      cachedDataType="i4"
+                      cachedName="Код партнера"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код партнера]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код партнера]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Quantity]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Код товара]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Код товара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код товара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код товара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[НаименованиеТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="НаименованиеТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[НаименованиеТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[НаименованиеТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[АртикулТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="АртикулТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[АртикулТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[АртикулТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[КлассТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="КлассТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[КлассТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[КлассТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[ГруппаТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГруппаТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ГруппаТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГруппаТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[КатегорияТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="КатегорияТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[КатегорияТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[КатегорияТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[ПодкатегорияТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ПодкатегорияТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ПодкатегорияТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ПодкатегорияТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[ТорговаяМарка]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ТорговаяМарка"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ТорговаяМарка]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ТорговаяМарка]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[ПроизводительТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="ПроизводительТовара"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ПроизводительТовара]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ПроизводительТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Юр. адрес партнера]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Юр. адрес партнера"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Юр_ адрес партнера]"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Юр. адрес партнера]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Копия Price]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Копия Price"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Price]"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Price]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].Columns[Копия Total]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Копия Total"
+                      externalMetadataColumnId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Total]"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Total]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Клиент]"
+                      dataType="wstr"
+                      length="255"
+                      name="Клиент" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ID клиента]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID клиента" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ID магазина партнера]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID магазина партнера" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Партнер]"
+                      dataType="wstr"
+                      length="255"
+                      name="Партнер" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код партнера]"
+                      dataType="wstr"
+                      length="255"
+                      name="Код партнера" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Юр_ адрес партнера]"
+                      dataType="wstr"
+                      length="255"
+                      name="Юр_ адрес партнера" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Price]"
+                      dataType="wstr"
+                      length="255"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Quantity]"
+                      dataType="wstr"
+                      length="255"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Total]"
+                      dataType="wstr"
+                      length="255"
+                      name="Total" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[Код товара]"
+                      dataType="wstr"
+                      length="255"
+                      name="Код товара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[НаименованиеТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="НаименованиеТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[АртикулТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="АртикулТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[КлассТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="КлассТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ГруппаТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="ГруппаТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[КатегорияТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="КатегорияТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ПодкатегорияТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="ПодкатегорияТовара" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ТорговаяМарка]"
+                      dataType="wstr"
+                      length="255"
+                      name="ТорговаяМарка" />
+                    <externalMetadataColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;].ExternalColumns[ПроизводительТовара]"
+                      dataType="wstr"
+                      length="255"
+                      name="ПроизводительТовара" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;Excel&quot;"
+                  synchronousInputId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Outputs[Вывод ошибок назначения &quot;Excel&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Преобразование данных"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Преобразование данных;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Преобразование данных"
+              name="Преобразование данных"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Преобразование данных.Inputs[Входные данные преобразования данных]"
+                  name="Входные данные преобразования данных">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Преобразование данных.Inputs[Входные данные преобразования данных].Columns[ID]"
+                      cachedDataType="ui4"
+                      cachedName="ID"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные преобразования данных]"
+                  exclusionGroup="1"
+                  name="Выходные данные преобразования данных"
+                  synchronousInputId="Package\Отчет GFK\Преобразование данных.Inputs[Входные данные преобразования данных]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные преобразования данных].Columns[Копия ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные преобразования данных].Columns[Копия ID]"
+                      name="Копия ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные ошибок преобразования данных]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Выходные данные ошибок преобразования данных"
+                  synchronousInputId="Package\Отчет GFK\Преобразование данных.Inputs[Входные данные преобразования данных]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Преобразование данных 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Преобразование данных;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Преобразование данных"
+              name="Преобразование данных 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Преобразование данных 1.Inputs[Входные данные преобразования данных]"
+                  name="Входные данные преобразования данных">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Преобразование данных 1.Inputs[Входные данные преобразования данных].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Преобразование данных 1.Inputs[Входные данные преобразования данных].Columns[Total]"
+                      cachedDataType="r8"
+                      cachedName="Total"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Total]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных]"
+                  exclusionGroup="1"
+                  name="Выходные данные преобразования данных"
+                  synchronousInputId="Package\Отчет GFK\Преобразование данных 1.Inputs[Входные данные преобразования данных]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Price]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Price]"
+                      name="Копия Price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Price]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Total]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Total]"
+                      name="Копия Total"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает входной столбец, служащий источником данных для преобразования."
+                          name="SourceInputColumnLineageID">#{Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Total]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные ошибок преобразования данных]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Выходные данные ошибок преобразования данных"
+                  synchronousInputId="Package\Отчет GFK\Преобразование данных 1.Inputs[Входные данные преобразования данных]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные ошибок преобразования данных].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Производный столбец"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Производный столбец;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;0"
+              description="Создает новые значения столбцов путем применения выражений к входным столбцам преобразования. Создает новые столбцы или перезаписывает существующие. Пример: объединение значений столбцов &quot;first name&quot; и &quot;last name&quot; и создание столбца &quot;full name&quot;."
+              name="Производный столбец"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Производный столбец.Inputs[Вход производного столбца]"
+                  description="Ввод преобразования &quot;Производный столбец&quot;"
+                  name="Вход производного столбца">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Производный столбец.Inputs[Вход производного столбца].Columns[Копия Price]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Копия Price"
+                      errorOrTruncationOperation="Вычисление"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Price]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Выражение производного столбца"
+                          name="Expression">[REPLACE](#{Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Price]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Понятное выражение производного столбца"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE([Копия Price],".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Производный столбец.Inputs[Вход производного столбца].Columns[Копия Total]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Копия Total"
+                      errorOrTruncationOperation="Вычисление"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Total]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Выражение производного столбца"
+                          name="Expression">[REPLACE](#{Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных].Columns[Копия Total]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Понятное выражение производного столбца"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE([Копия Total],".",",")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Производный столбец.Outputs[Выход производного столбца]"
+                  description="Выход по умолчанию преобразования &quot;Производный столбец&quot;"
+                  exclusionGroup="1"
+                  name="Выход производного столбца"
+                  synchronousInputId="Package\Отчет GFK\Производный столбец.Inputs[Вход производного столбца]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Отчет GFK\Производный столбец.Outputs[Вывод ошибок производного столбца]"
+                  description="Вывод ошибок преобразования &quot;Производный столбец&quot;"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок производного столбца"
+                  synchronousInputId="Package\Отчет GFK\Производный столбец.Inputs[Вход производного столбца]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Отчет GFK\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Производный столбец.Outputs[Вывод ошибок производного столбца].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Соединение слиянием"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Соединение слиянием;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Объедините два отсортированных потока данных в один с помощью соединения FULL, LEFT или INNER. Это преобразование рекомендуется использовать в случаях, когда потоки данных могут быть отсортированы по источникам."
+              name="Соединение слиянием"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает тип выполняемого соединения."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает количество столбцов в ключе упорядочивания."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, считаются ли значения NULL эквивалентными значениями."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает запрошенное максимальное число буферов на вход перед блокированием."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием]"
+                  hasSideEffects="true"
+                  name="Левый вход соединения слиянием">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ID магазина партнера]"
+                      cachedDataType="i4"
+                      cachedName="ID магазина партнера"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ID магазина партнера]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Клиент]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="Клиент"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Клиент]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ID клиента]"
+                      cachedDataType="i4"
+                      cachedName="ID клиента"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ID клиента]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Партнер]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Партнер"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Партнер]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Код партнера]"
+                      cachedDataType="i4"
+                      cachedName="Код партнера"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Код партнера]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Юр. адрес партнера]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Юр. адрес партнера"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Юр. адрес партнера]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Total]"
+                      cachedDataType="r8"
+                      cachedName="Total"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Total]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Код товара]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Код товара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Код товара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[НаименованиеТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="НаименованиеТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[НаименованиеТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[АртикулТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="АртикулТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[АртикулТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[КлассТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="КлассТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[КлассТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГруппаТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГруппаТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ГруппаТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[КатегорияТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="КатегорияТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[КатегорияТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ПодкатегорияТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ПодкатегорияТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ПодкатегорияТовара]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ТорговаяМарка]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ТорговаяМарка"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ТорговаяМарка]" />
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ПроизводительТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="ПроизводительТовара"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ПроизводительТовара]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Отчет GFK\Соединение слиянием.Inputs[Правый вход соединения слиянием]"
+                  hasSideEffects="true"
+                  name="Правый вход соединения слиянием">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Inputs[Правый вход соединения слиянием].Columns[Копия ID]"
+                      cachedDataType="i4"
+                      cachedName="Копия ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки].Columns[Копия ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием]"
+                  isSorted="true"
+                  name="Выход соединения слиянием">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Клиент]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Клиент]"
+                      name="Клиент">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Клиент]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ID клиента]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ID клиента]"
+                      name="ID клиента">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ID клиента]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ID магазина партнера]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ID магазина партнера]"
+                      name="ID магазина партнера"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ID магазина партнера]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Партнер]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Партнер]"
+                      name="Партнер">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Партнер]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код партнера]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код партнера]"
+                      name="Код партнера">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Код партнера]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Юр. адрес партнера]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Юр. адрес партнера]"
+                      name="Юр. адрес партнера">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Юр. адрес партнера]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Price]"
+                      name="Price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Quantity]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Quantity]"
+                      name="Quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Total]"
+                      dataType="r8"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Total]"
+                      name="Total">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Total]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код товара]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[Код товара]"
+                      name="Код товара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[Код товара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[НаименованиеТовара]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[НаименованиеТовара]"
+                      name="НаименованиеТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[НаименованиеТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[АртикулТовара]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[АртикулТовара]"
+                      name="АртикулТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[АртикулТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[КлассТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[КлассТовара]"
+                      name="КлассТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[КлассТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГруппаТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ГруппаТовара]"
+                      name="ГруппаТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ГруппаТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[КатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[КатегорияТовара]"
+                      name="КатегорияТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[КатегорияТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ПодкатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ПодкатегорияТовара]"
+                      name="ПодкатегорияТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ПодкатегорияТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ТорговаяМарка]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ТорговаяМарка]"
+                      name="ТорговаяМарка">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ТорговаяМарка]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ПроизводительТовара]"
+                      dataType="wstr"
+                      length="70"
+                      lineageId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием].Columns[ПроизводительТовара]"
+                      name="ПроизводительТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Входной столбец, связанный с этим выходным столбцом"
+                          name="InputColumnID">#{Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием].Columns[ПроизводительТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Сортировка"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Сортировка;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Сортирует входные данные по возрастанию или убыванию, если выполнить сортировку в источнике нельзя. Пример: сортировка данных продаж по полю &quot;customer id&quot; перед записью в неструктурированный файл и передачей в другой отдел. Примечание. Это преобразование не рекомендуется применять к большим потокам данных."
+              name="Сортировка"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, удаляет ли преобразование &quot;Сортировка&quot; строки с повторяющимися значениями сортировки."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает максимальное число потоков, используемых для сортировки."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки]"
+                  name="Вход сортировки">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Клиент]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="Клиент"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Клиент]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[ID клиента]"
+                      cachedDataType="i4"
+                      cachedName="ID клиента"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ID клиента]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[ID магазина партнера]"
+                      cachedDataType="i4"
+                      cachedName="ID магазина партнера"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ID магазина партнера]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Партнер]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Партнер"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Партнер]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Код партнера]"
+                      cachedDataType="i4"
+                      cachedName="Код партнера"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код партнера]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Юр. адрес партнера]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Юр. адрес партнера"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Юр. адрес партнера]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Price]"
+                      cachedDataType="r8"
+                      cachedName="Price"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Price]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Quantity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Total]"
+                      cachedDataType="r8"
+                      cachedName="Total"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Total]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[Код товара]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Код товара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[Код товара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[НаименованиеТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="170"
+                      cachedName="НаименованиеТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[НаименованиеТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[АртикулТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="АртикулТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[АртикулТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[КлассТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="КлассТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[КлассТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[ГруппаТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ГруппаТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ГруппаТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[КатегорияТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="КатегорияТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[КатегорияТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[ПодкатегорияТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ПодкатегорияТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ПодкатегорияТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[ТорговаяМарка]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="ТорговаяМарка"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ТорговаяМарка]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки].Columns[ПроизводительТовара]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="ПроизводительТовара"
+                      lineageId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;].Columns[ПроизводительТовара]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки]"
+                  isSorted="true"
+                  name="Выход сортировки">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Клиент]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Клиент]"
+                      name="Клиент">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Клиент]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ID клиента]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ID клиента]"
+                      name="ID клиента">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[ID клиента]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ID магазина партнера]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ID магазина партнера]"
+                      name="ID магазина партнера"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[ID магазина партнера]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Партнер]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Партнер]"
+                      name="Партнер">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Партнер]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Код партнера]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Код партнера]"
+                      name="Код партнера">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Код партнера]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Юр. адрес партнера]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Юр. адрес партнера]"
+                      name="Юр. адрес партнера">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Юр. адрес партнера]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Price]"
+                      dataType="r8"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Price]"
+                      name="Price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Quantity]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Quantity]"
+                      name="Quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Total]"
+                      dataType="r8"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Total]"
+                      name="Total">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Total]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Код товара]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[Код товара]"
+                      name="Код товара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[Код товара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[НаименованиеТовара]"
+                      dataType="wstr"
+                      length="170"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[НаименованиеТовара]"
+                      name="НаименованиеТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[НаименованиеТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[АртикулТовара]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[АртикулТовара]"
+                      name="АртикулТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[АртикулТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[КлассТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[КлассТовара]"
+                      name="КлассТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[КлассТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ГруппаТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ГруппаТовара]"
+                      name="ГруппаТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[ГруппаТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[КатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[КатегорияТовара]"
+                      name="КатегорияТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[КатегорияТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ПодкатегорияТовара]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ПодкатегорияТовара]"
+                      name="ПодкатегорияТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[ПодкатегорияТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ТорговаяМарка]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ТорговаяМарка]"
+                      name="ТорговаяМарка">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[ТорговаяМарка]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ПроизводительТовара]"
+                      dataType="wstr"
+                      length="70"
+                      lineageId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки].Columns[ПроизводительТовара]"
+                      name="ПроизводительТовара">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Relef.Outputs[Выход источника "OLE DB"].Columns[ПроизводительТовара]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Отчет GFK\Сортировка 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Сортировка;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Сортирует входные данные по возрастанию или убыванию, если выполнить сортировку в источнике нельзя. Пример: сортировка данных продаж по полю &quot;customer id&quot; перед записью в неструктурированный файл и передачей в другой отдел. Примечание. Это преобразование не рекомендуется применять к большим потокам данных."
+              name="Сортировка 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, удаляет ли преобразование &quot;Сортировка&quot; строки с повторяющимися значениями сортировки."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает максимальное число потоков, используемых для сортировки."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Отчет GFK\Сортировка 1.Inputs[Вход сортировки]"
+                  name="Вход сортировки">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка 1.Inputs[Вход сортировки].Columns[Address]"
+                      cachedDataType="nText"
+                      cachedName="Address"
+                      lineageId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[Address]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Отчет GFK\Сортировка 1.Inputs[Вход сортировки].Columns[Копия ID]"
+                      cachedDataType="i4"
+                      cachedName="Копия ID"
+                      lineageId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные преобразования данных].Columns[Копия ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Задает параметры сравнения символьных данных."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Указывает порядок сортировки столбца."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки]"
+                  isSorted="true"
+                  name="Выход сортировки">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки].Columns[Address]"
+                      dataType="nText"
+                      lineageId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки].Columns[Address]"
+                      name="Address">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET].Columns[Address]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки].Columns[Копия ID]"
+                      dataType="i4"
+                      lineageId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки].Columns[Копия ID]"
+                      name="Копия ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Указывает идентификатор журнала обращений и преобразований входного столбца, связанного с этим выходным столбцом."
+                          name="SortColumnId">#{Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные преобразования данных].Columns[Копия ID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Отчет GFK.Paths[Вывод источника ADO NET]"
+              endId="Package\Отчет GFK\Преобразование данных.Inputs[Входные данные преобразования данных]"
+              name="Вывод источника ADO NET"
+              startId="Package\Отчет GFK\9-18.Outputs[Вывод источника ADO NET]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выход источника &quot;OLE DB&quot;]"
+              endId="Package\Отчет GFK\Сортировка.Inputs[Вход сортировки]"
+              name="Выход источника &quot;OLE DB&quot;"
+              startId="Package\Отчет GFK\Relef.Outputs[Выход источника &quot;OLE DB&quot;]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выход производного столбца]"
+              endId="Package\Отчет GFK\Назначение &quot;Excel&quot;.Inputs[Вход назначения &quot;Excel&quot;]"
+              name="Выход производного столбца"
+              startId="Package\Отчет GFK\Производный столбец.Outputs[Выход производного столбца]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выход соединения слиянием]"
+              endId="Package\Отчет GFK\Преобразование данных 1.Inputs[Входные данные преобразования данных]"
+              name="Выход соединения слиянием"
+              startId="Package\Отчет GFK\Соединение слиянием.Outputs[Выход соединения слиянием]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выход сортировки]"
+              endId="Package\Отчет GFK\Соединение слиянием.Inputs[Левый вход соединения слиянием]"
+              name="Выход сортировки"
+              startId="Package\Отчет GFK\Сортировка.Outputs[Выход сортировки]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выход сортировки1]"
+              endId="Package\Отчет GFK\Соединение слиянием.Inputs[Правый вход соединения слиянием]"
+              name="Выход сортировки"
+              startId="Package\Отчет GFK\Сортировка 1.Outputs[Выход сортировки]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выходные данные преобразования данных]"
+              endId="Package\Отчет GFK\Сортировка 1.Inputs[Вход сортировки]"
+              name="Выходные данные преобразования данных"
+              startId="Package\Отчет GFK\Преобразование данных.Outputs[Выходные данные преобразования данных]" />
+            <path
+              refId="Package\Отчет GFK.Paths[Выходные данные преобразования данных1]"
+              endId="Package\Отчет GFK\Производный столбец.Inputs[Вход производного столбца]"
+              name="Выходные данные преобразования данных"
+              startId="Package\Отчет GFK\Преобразование данных 1.Outputs[Выходные данные преобразования данных]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Удалить файл Excel"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="Задача &quot;Файловая система&quot;"
+      DTS:DTSID="{7265F512-725C-43E2-B2FC-C8D66B8EF023}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Удалить файл Excel"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="DeleteFile"
+          TaskSourcePath="{C48F6F5C-6F9E-4A8B-ACE7-C772A8481D29}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение]"
+      DTS:CreationName=""
+      DTS:DTSID="{76A4C27D-1AC1-4118-A376-170DE9530D94}"
+      DTS:From="Package\Удалить файл Excel"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение"
+      DTS:To="Package\CREATE EXCEL TABLE" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{d1a703e1-5c9c-4b13-a2f3-c049b42a884e}"
+      DTS:From="Package\Задача выражения"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 1"
+      DTS:To="Package\Отправка почты &quot;Успех&quot;" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{54317870-9b77-48ed-84ec-a0b912ea755b}"
+      DTS:From="Package\Отчет GFK"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 2"
+      DTS:To="Package\Задача выражения" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Ограничение 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{280B4F94-7646-4D40-B541-D1CD0CEDD7D2}"
+      DTS:From="Package\CREATE EXCEL TABLE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Ограничение 3"
+      DTS:To="Package\Отчет GFK" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--В данном разделе CDATA содержатся сведения о макете пакета. В данном разделе содержатся сведения о координатах (x,y), ширине и высоте.-->
+<!--В случае возникновения ошибки при редактировании этого раздела вручную его можно удалить. -->
+<!--Пакет можно загрузить обычным образом, но прежние сведения о макете будут утеряны, и конструктор автоматически перераспределит элементы в области конструктора.-->
+<Objects
+  Version="8">
+  <!--Все приведенные ниже узлы будут содержать свойства, не влияющие на поведение среды выполнения.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\CREATE EXCEL TABLE"
+          TopLeft="107,96" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Задача выражения"
+          TopLeft="104,257" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Отправка почты &quot;Успех&quot;"
+          TopLeft="87,340" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Отчет GFK"
+          TopLeft="129,182" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Удалить файл Excel"
+          TopLeft="105,17" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение]"
+          TopLeft="196.5,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 1]"
+          TopLeft="189.25,299">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 2]"
+          TopLeft="193,224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Ограничение 3]"
+          TopLeft="197.25,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Отчет GFK">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Отчет GFK\Соединение слиянием"
+          TopLeft="188,231" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Отчет GFK\Сортировка"
+          TopLeft="266,150" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Отчет GFK\Сортировка 1"
+          TopLeft="452,258" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Отчет GFK\Преобразование данных"
+          TopLeft="426,175" />
+        <NodeLayout
+          Size="105,42"
+          Id="Package\Отчет GFK\Relef"
+          TopLeft="244,64" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Отчет GFK\9-18"
+          TopLeft="471,62" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Отчет GFK\Назначение &quot;Excel&quot;"
+          TopLeft="370,458" />
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выходные данные преобразования данных]"
+          TopLeft="525.75,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выход сортировки1]"
+          TopLeft="452,279">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-74,-27"
+              Start="0,0"
+              End="-66.5,-27">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-33,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33,0"
+                    Point2="-37,0"
+                    Point3="-37,-4" />
+                  <mssgle:LineSegment
+                    End="-37,-23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-37,-23"
+                    Point2="-37,-27"
+                    Point3="-41,-27" />
+                  <mssgle:LineSegment
+                    End="-66.5,-27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выход сортировки]"
+          TopLeft="335,192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52,39"
+              Start="0,0"
+              End="-52,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="-4,19.5" />
+                  <mssgle:LineSegment
+                    End="-48,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48,19.5"
+                    Point2="-52,19.5"
+                    Point3="-52,23.5" />
+                  <mssgle:LineSegment
+                    End="-52,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выход источника &quot;OLE DB&quot;]"
+          TopLeft="296.5,106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.5,44"
+              Start="0,0"
+              End="38.5,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="34.5,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.5,22"
+                    Point2="38.5,22"
+                    Point3="38.5,26" />
+                  <mssgle:LineSegment
+                    End="38.5,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Вывод источника ADO NET]"
+          TopLeft="524.5,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71"
+              Start="0,0"
+              End="0,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Отчет GFK\Преобразование данных 1"
+          TopLeft="191,309" />
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выход соединения слиянием]"
+          TopLeft="283,273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,36"
+              Start="0,0"
+              End="12.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="8.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,18"
+                    Point2="12.5,18"
+                    Point3="12.5,22" />
+                  <mssgle:LineSegment
+                    End="12.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Отчет GFK\Производный столбец"
+          TopLeft="203,369" />
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выходные данные преобразования данных1]"
+          TopLeft="191,330">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12,60"
+              Start="0,0"
+              End="4.5,60">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,56" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,56"
+                    Point2="-22.5,60"
+                    Point3="-18.5,60" />
+                  <mssgle:LineSegment
+                    End="4.5,60" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Отчет GFK.Paths[Выход производного столбца]"
+          TopLeft="297,411">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.5,47"
+              Start="0,0"
+              End="160.5,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="156.5,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="156.5,23.5"
+                    Point2="160.5,23.5"
+                    Point3="160.5,27.5" />
+                  <mssgle:LineSegment
+                    End="160.5,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Отчет GFK\Relef">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Отчет GFK\9-18">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Отчет GFK\Назначение &quot;Excel&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

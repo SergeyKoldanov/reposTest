@@ -1,0 +1,3940 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>НаличиеБерлинго</ID>
+  <Name>НаличиеБерлинго</Name>
+  <CreatedTimestamp>2012-11-23T11:23:36.02Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T10:07:17.553333Z</LastSchemaUpdate>
+  <LastProcessed>2022-01-18T04:16:24.563333Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension>
+      <ID>ГодМесДень</ID>
+      <Name>ГодМесДень</Name>
+      <DimensionID>Vw Tb Data</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Data</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>God</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Mes Name</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Den</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Nom Nedeli</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy>
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension>
+      <ID>МенОтЗак2</ID>
+      <Name>МенОтЗак2</Name>
+      <DimensionID>МенОтЗак2</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Nomenklatura ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Men Ot Zak2</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>Отметка2</ID>
+      <Name>Отметка2</Name>
+      <DimensionID>Отметка2</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Отметка2</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>ТоварСписком</ID>
+      <Name>ТоварСписком</Name>
+      <DimensionID>ТоварСписком</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Code</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Отметка2</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>V Matritse</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Производитель</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Артикул</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>МенедОтЗак</ID>
+      <Name>МенедОтЗак</Name>
+      <DimensionID>МенедОтЗак</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Менед От Зак</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>ТоварПланирКВыводу</ID>
+      <Name>ТоварПланирКВыводу</Name>
+      <DimensionID>ТоварПланирКВыводу</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>Nomenklatura ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Planir K Vyvodu FL</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension>
+      <ID>Производитель</ID>
+      <Name>Производитель</Name>
+      <DimensionID>Производитель</DimensionID>
+      <Attributes>
+        <Attribute>
+          <AttributeID>ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute>
+          <AttributeID>Производитель</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <CubePermissions>
+    <CubePermission>
+      <ID>CubePermission</ID>
+      <Name>CubePermission</Name>
+      <CreatedTimestamp>2012-11-27T08:37:32.546667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 1</ID>
+      <Name>CubePermission 1</Name>
+      <CreatedTimestamp>2013-08-07T08:24:34.59Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 16</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 2</ID>
+      <Name>CubePermission 2</Name>
+      <CreatedTimestamp>2014-07-24T08:13:50.56Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 15</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 3</ID>
+      <Name>CubePermission 3</Name>
+      <CreatedTimestamp>2016-03-21T09:29:28.796667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 35</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 9</ID>
+      <Name>CubePermission 9</Name>
+      <CreatedTimestamp>2017-07-20T11:52:38.873333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 70</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 16</ID>
+      <Name>CubePermission 16</Name>
+      <CreatedTimestamp>2018-08-29T07:46:53.18Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 111</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 17</ID>
+      <Name>CubePermission 17</Name>
+      <CreatedTimestamp>2018-08-29T08:06:02.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <RoleID>Role 112</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 6</ID>
+      <Name>CubePermission 6</Name>
+      <CreatedTimestamp>2019-06-11T07:35:08.133333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 53</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 11</ID>
+      <Name>CubePermission 11</Name>
+      <CreatedTimestamp>2019-06-11T08:41:19.313333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 74</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 12</ID>
+      <Name>CubePermission 12</Name>
+      <CreatedTimestamp>2019-06-11T08:57:22.14Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 75</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 21</ID>
+      <Name>CubePermission 21</Name>
+      <CreatedTimestamp>2019-06-13T07:09:19.196667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 86</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 26</ID>
+      <Name>CubePermission 26</Name>
+      <CreatedTimestamp>2019-06-14T07:06:09.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 123</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 28</ID>
+      <Name>CubePermission 28</Name>
+      <CreatedTimestamp>2019-06-14T07:35:01.41Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 131</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 31</ID>
+      <Name>CubePermission 31</Name>
+      <CreatedTimestamp>2019-06-17T08:41:10.66Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 177</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 34</ID>
+      <Name>CubePermission 34</Name>
+      <CreatedTimestamp>2019-06-17T11:48:56.713333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 185</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 35</ID>
+      <Name>CubePermission 35</Name>
+      <CreatedTimestamp>2019-06-17T11:52:22.283333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 186</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 40</ID>
+      <Name>CubePermission 40</Name>
+      <CreatedTimestamp>2019-06-17T12:50:07.076667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.786667Z</LastSchemaUpdate>
+      <RoleID>Role 201</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 42</ID>
+      <Name>CubePermission 42</Name>
+      <CreatedTimestamp>2019-06-17T12:55:32.373333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 203</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 44</ID>
+      <Name>CubePermission 44</Name>
+      <CreatedTimestamp>2019-06-18T07:16:17.593333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 206</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 46</ID>
+      <Name>CubePermission 46</Name>
+      <CreatedTimestamp>2019-06-18T07:17:36.386667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 208</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 47</ID>
+      <Name>CubePermission 47</Name>
+      <CreatedTimestamp>2019-06-18T07:18:00.34Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 209</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 49</ID>
+      <Name>CubePermission 49</Name>
+      <CreatedTimestamp>2019-06-18T08:54:25.163333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 236</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 51</ID>
+      <Name>CubePermission 51</Name>
+      <CreatedTimestamp>2019-06-18T08:55:13.606667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 238</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 52</ID>
+      <Name>CubePermission 52</Name>
+      <CreatedTimestamp>2019-06-18T08:57:00.343333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 239</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 53</ID>
+      <Name>CubePermission 53</Name>
+      <CreatedTimestamp>2019-06-18T08:57:45.296667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 240</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 54</ID>
+      <Name>CubePermission 54</Name>
+      <CreatedTimestamp>2019-06-18T08:58:35.23Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 241</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 55</ID>
+      <Name>CubePermission 55</Name>
+      <CreatedTimestamp>2019-06-18T08:59:04.803333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.803333Z</LastSchemaUpdate>
+      <RoleID>Role 242</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 5</ID>
+      <Name>CubePermission 5</Name>
+      <CreatedTimestamp>2019-11-22T08:07:03.703333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 184</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 15</ID>
+      <Name>CubePermission 15</Name>
+      <CreatedTimestamp>2019-12-16T07:51:33.44Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 327</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 8</ID>
+      <Name>CubePermission 8</Name>
+      <CreatedTimestamp>2020-01-09T09:23:20.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 344</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 20</ID>
+      <Name>CubePermission 20</Name>
+      <CreatedTimestamp>2020-02-28T07:25:18.763333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 366</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 22</ID>
+      <Name>CubePermission 22</Name>
+      <CreatedTimestamp>2020-02-28T07:26:35.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 367</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 23</ID>
+      <Name>CubePermission 23</Name>
+      <CreatedTimestamp>2020-02-28T07:35:36.883333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 300</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 24</ID>
+      <Name>CubePermission 24</Name>
+      <CreatedTimestamp>2020-02-28T07:39:44.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 301</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 27</ID>
+      <Name>CubePermission 27</Name>
+      <CreatedTimestamp>2020-02-28T07:43:55.35Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 368</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 29</ID>
+      <Name>CubePermission 29</Name>
+      <CreatedTimestamp>2020-02-28T07:45:47.12Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 369</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 32</ID>
+      <Name>CubePermission 32</Name>
+      <CreatedTimestamp>2020-03-04T07:32:20.53Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.816667Z</LastSchemaUpdate>
+      <RoleID>Role 371</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 19</ID>
+      <Name>CubePermission 19</Name>
+      <CreatedTimestamp>2020-09-11T13:44:26.376667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 474</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 33</ID>
+      <Name>CubePermission 33</Name>
+      <CreatedTimestamp>2020-10-01T09:18:47.53Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 497</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 37</ID>
+      <Name>CubePermission 37</Name>
+      <CreatedTimestamp>2020-12-14T11:24:54.86Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 174</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 50</ID>
+      <Name>CubePermission 50</Name>
+      <CreatedTimestamp>2020-12-14T13:43:20.736667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 119</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 56</ID>
+      <Name>CubePermission 56</Name>
+      <CreatedTimestamp>2020-12-14T14:54:27.553333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 140</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 58</ID>
+      <Name>CubePermission 58</Name>
+      <CreatedTimestamp>2020-12-17T14:53:15.023333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 389</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 59</ID>
+      <Name>CubePermission 59</Name>
+      <CreatedTimestamp>2020-12-18T07:51:32.82Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 137</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 60</ID>
+      <Name>CubePermission 60</Name>
+      <CreatedTimestamp>2020-12-18T12:43:44.603333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 494</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 61</ID>
+      <Name>CubePermission 61</Name>
+      <CreatedTimestamp>2020-12-22T10:52:28.793333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 504</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 62</ID>
+      <Name>CubePermission 62</Name>
+      <CreatedTimestamp>2020-12-23T13:41:53.926667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.833333Z</LastSchemaUpdate>
+      <RoleID>Role 212</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 63</ID>
+      <Name>CubePermission 63</Name>
+      <CreatedTimestamp>2020-12-24T06:51:04.396667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 217</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 65</ID>
+      <Name>CubePermission 65</Name>
+      <CreatedTimestamp>2020-12-25T13:46:36.853333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 115</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 67</ID>
+      <Name>CubePermission 67</Name>
+      <CreatedTimestamp>2020-12-28T07:05:31.133333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 431</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 68</ID>
+      <Name>CubePermission 68</Name>
+      <CreatedTimestamp>2020-12-29T11:17:49.196667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 161</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 69</ID>
+      <Name>CubePermission 69</Name>
+      <CreatedTimestamp>2020-12-29T12:54:25.136667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 255</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 71</ID>
+      <Name>CubePermission 71</Name>
+      <CreatedTimestamp>2021-01-11T14:58:43.666667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 159</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 72</ID>
+      <Name>CubePermission 72</Name>
+      <CreatedTimestamp>2021-01-12T06:51:19.813333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 275</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 73</ID>
+      <Name>CubePermission 73</Name>
+      <CreatedTimestamp>2021-01-12T11:30:58.83Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 280</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 74</ID>
+      <Name>CubePermission 74</Name>
+      <CreatedTimestamp>2021-01-12T11:38:47.006667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.85Z</LastSchemaUpdate>
+      <RoleID>Role 294</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 75</ID>
+      <Name>CubePermission 75</Name>
+      <CreatedTimestamp>2021-01-13T06:35:49.853333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 519</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 76</ID>
+      <Name>CubePermission 76</Name>
+      <CreatedTimestamp>2021-01-13T06:56:41.85Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 386</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 77</ID>
+      <Name>CubePermission 77</Name>
+      <CreatedTimestamp>2021-01-13T08:06:00.133333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 310</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 78</ID>
+      <Name>CubePermission 78</Name>
+      <CreatedTimestamp>2021-01-13T09:33:02.55Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 353</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 79</ID>
+      <Name>CubePermission 79</Name>
+      <CreatedTimestamp>2021-01-13T13:57:10.84Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 19</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 80</ID>
+      <Name>CubePermission 80</Name>
+      <CreatedTimestamp>2021-01-13T14:14:45.063333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 355</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 81</ID>
+      <Name>CubePermission 81</Name>
+      <CreatedTimestamp>2021-01-14T06:22:00.136667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 363</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 82</ID>
+      <Name>CubePermission 82</Name>
+      <CreatedTimestamp>2021-01-14T08:33:14.913333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 384</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 83</ID>
+      <Name>CubePermission 83</Name>
+      <CreatedTimestamp>2021-01-14T09:03:18.933333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 395</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 84</ID>
+      <Name>CubePermission 84</Name>
+      <CreatedTimestamp>2021-01-14T14:41:42.843333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.863333Z</LastSchemaUpdate>
+      <RoleID>Role 156</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 85</ID>
+      <Name>CubePermission 85</Name>
+      <CreatedTimestamp>2021-01-14T15:14:40.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 407</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 86</ID>
+      <Name>CubePermission 86</Name>
+      <CreatedTimestamp>2021-01-15T07:26:10.213333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 129</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 88</ID>
+      <Name>CubePermission 88</Name>
+      <CreatedTimestamp>2021-01-18T12:09:17.246667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 434</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 89</ID>
+      <Name>CubePermission 89</Name>
+      <CreatedTimestamp>2021-01-20T11:25:44.913333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 467</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 90</ID>
+      <Name>CubePermission 90</Name>
+      <CreatedTimestamp>2021-01-20T14:22:22.413333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 447</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 92</ID>
+      <Name>CubePermission 92</Name>
+      <CreatedTimestamp>2021-01-21T14:08:40.3Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 379</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 93</ID>
+      <Name>CubePermission 93</Name>
+      <CreatedTimestamp>2021-01-25T08:14:18.893333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 394</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 94</ID>
+      <Name>CubePermission 94</Name>
+      <CreatedTimestamp>2021-01-25T11:43:20.496667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 429</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 95</ID>
+      <Name>CubePermission 95</Name>
+      <CreatedTimestamp>2021-01-26T09:28:43.84Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 516</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 98</ID>
+      <Name>CubePermission 98</Name>
+      <CreatedTimestamp>2021-01-29T11:49:27.18Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.88Z</LastSchemaUpdate>
+      <RoleID>Role 532</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 99</ID>
+      <Name>CubePermission 99</Name>
+      <CreatedTimestamp>2021-02-01T13:52:35.113333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 533</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 100</ID>
+      <Name>CubePermission 100</Name>
+      <CreatedTimestamp>2021-02-02T08:46:35.976667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 432</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 101</ID>
+      <Name>CubePermission 101</Name>
+      <CreatedTimestamp>2021-02-03T06:27:46.866667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 534</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 102</ID>
+      <Name>CubePermission 102</Name>
+      <CreatedTimestamp>2021-02-03T07:47:36.183333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 535</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 103</ID>
+      <Name>CubePermission 103</Name>
+      <CreatedTimestamp>2021-02-03T08:14:36.646667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 536</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 104</ID>
+      <Name>CubePermission 104</Name>
+      <CreatedTimestamp>2021-02-04T06:47:42.173333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 37</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 105</ID>
+      <Name>CubePermission 105</Name>
+      <CreatedTimestamp>2021-02-04T09:59:44.52Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 537</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 106</ID>
+      <Name>CubePermission 106</Name>
+      <CreatedTimestamp>2021-02-04T11:10:28.836667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 538</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 107</ID>
+      <Name>CubePermission 107</Name>
+      <CreatedTimestamp>2021-02-04T13:26:49.56Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 65</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 108</ID>
+      <Name>CubePermission 108</Name>
+      <CreatedTimestamp>2021-02-04T13:53:07.16Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.896667Z</LastSchemaUpdate>
+      <RoleID>Role 316</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 110</ID>
+      <Name>CubePermission 110</Name>
+      <CreatedTimestamp>2021-02-05T09:49:10.603333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 539</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 111</ID>
+      <Name>CubePermission 111</Name>
+      <CreatedTimestamp>2021-02-05T10:31:04.216667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 540</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 112</ID>
+      <Name>CubePermission 112</Name>
+      <CreatedTimestamp>2021-02-05T14:35:38.256667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 445</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 113</ID>
+      <Name>CubePermission 113</Name>
+      <CreatedTimestamp>2021-02-08T11:26:43.466667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 541</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 114</ID>
+      <Name>CubePermission 114</Name>
+      <CreatedTimestamp>2021-02-09T11:27:23.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 93</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 115</ID>
+      <Name>CubePermission 115</Name>
+      <CreatedTimestamp>2021-02-09T11:41:05.923333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 79</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 117</ID>
+      <Name>CubePermission 117</Name>
+      <CreatedTimestamp>2021-02-10T13:15:38.61Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 542</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 118</ID>
+      <Name>CubePermission 118</Name>
+      <CreatedTimestamp>2021-02-11T08:47:42.263333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 543</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 119</ID>
+      <Name>CubePermission 119</Name>
+      <CreatedTimestamp>2021-02-11T13:48:31.583333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 544</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 4</ID>
+      <Name>CubePermission 4</Name>
+      <CreatedTimestamp>2021-02-12T09:13:48.466667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 56</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 120</ID>
+      <Name>CubePermission 120</Name>
+      <CreatedTimestamp>2021-02-12T09:57:13.38Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.913333Z</LastSchemaUpdate>
+      <RoleID>Role 545</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 121</ID>
+      <Name>CubePermission 121</Name>
+      <CreatedTimestamp>2021-02-12T12:27:17.25Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 546</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 122</ID>
+      <Name>CubePermission 122</Name>
+      <CreatedTimestamp>2021-02-12T12:42:37.193333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 547</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 123</ID>
+      <Name>CubePermission 123</Name>
+      <CreatedTimestamp>2021-02-12T12:57:23.593333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 548</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 124</ID>
+      <Name>CubePermission 124</Name>
+      <CreatedTimestamp>2021-02-15T11:42:23.003333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 549</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 125</ID>
+      <Name>CubePermission 125</Name>
+      <CreatedTimestamp>2021-02-15T11:53:44.213333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 464</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 126</ID>
+      <Name>CubePermission 126</Name>
+      <CreatedTimestamp>2021-02-15T12:46:14.05Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 550</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 128</ID>
+      <Name>CubePermission 128</Name>
+      <CreatedTimestamp>2021-02-17T08:07:14.026667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 487</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 129</ID>
+      <Name>CubePermission 129</Name>
+      <CreatedTimestamp>2021-02-17T11:31:14.633333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 552</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 130</ID>
+      <Name>CubePermission 130</Name>
+      <CreatedTimestamp>2021-02-18T08:59:56.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 88</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 131</ID>
+      <Name>CubePermission 131</Name>
+      <CreatedTimestamp>2021-02-18T11:28:18.106667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.926667Z</LastSchemaUpdate>
+      <RoleID>Role 88</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 132</ID>
+      <Name>CubePermission 132</Name>
+      <CreatedTimestamp>2021-02-19T09:20:56.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 554</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 133</ID>
+      <Name>CubePermission 133</Name>
+      <CreatedTimestamp>2021-02-19T13:01:41.96Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 555</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 134</ID>
+      <Name>CubePermission 134</Name>
+      <CreatedTimestamp>2021-02-20T10:47:23.793333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 556</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 135</ID>
+      <Name>CubePermission 135</Name>
+      <CreatedTimestamp>2021-02-20T12:59:04.006667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 449</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 137</ID>
+      <Name>CubePermission 137</Name>
+      <CreatedTimestamp>2021-02-24T11:01:22.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 149</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 138</ID>
+      <Name>CubePermission 138</Name>
+      <CreatedTimestamp>2021-02-24T13:48:33.013333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 553</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 140</ID>
+      <Name>CubePermission 140</Name>
+      <CreatedTimestamp>2021-02-26T12:58:28.073333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 558</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 141</ID>
+      <Name>CubePermission 141</Name>
+      <CreatedTimestamp>2021-02-26T13:13:06.496667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 559</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 142</ID>
+      <Name>CubePermission 142</Name>
+      <CreatedTimestamp>2021-02-26T13:19:30.173333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 560</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 143</ID>
+      <Name>CubePermission 143</Name>
+      <CreatedTimestamp>2021-02-26T13:26:54.646667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.943333Z</LastSchemaUpdate>
+      <RoleID>Role 561</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 144</ID>
+      <Name>CubePermission 144</Name>
+      <CreatedTimestamp>2021-02-26T13:47:42.56Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 482</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 146</ID>
+      <Name>CubePermission 146</Name>
+      <CreatedTimestamp>2021-03-02T11:08:18.286667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 87</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 147</ID>
+      <Name>CubePermission 147</Name>
+      <CreatedTimestamp>2021-03-02T14:42:02.066667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 563</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 148</ID>
+      <Name>CubePermission 148</Name>
+      <CreatedTimestamp>2021-03-09T14:38:49.85Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 564</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 149</ID>
+      <Name>CubePermission 149</Name>
+      <CreatedTimestamp>2021-03-09T14:40:50.316667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 565</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 150</ID>
+      <Name>CubePermission 150</Name>
+      <CreatedTimestamp>2021-03-10T12:21:59.956667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 377</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 151</ID>
+      <Name>CubePermission 151</Name>
+      <CreatedTimestamp>2021-03-10T12:56:49.51Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 566</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 152</ID>
+      <Name>CubePermission 152</Name>
+      <CreatedTimestamp>2021-03-11T07:15:44.463333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 567</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 153</ID>
+      <Name>CubePermission 153</Name>
+      <CreatedTimestamp>2021-03-11T07:22:12.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 568</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 154</ID>
+      <Name>CubePermission 154</Name>
+      <CreatedTimestamp>2021-03-11T07:55:47.753333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.96Z</LastSchemaUpdate>
+      <RoleID>Role 569</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 155</ID>
+      <Name>CubePermission 155</Name>
+      <CreatedTimestamp>2021-03-11T11:40:00.586667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 570</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 157</ID>
+      <Name>CubePermission 157</Name>
+      <CreatedTimestamp>2021-03-11T11:53:07.953333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 572</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 158</ID>
+      <Name>CubePermission 158</Name>
+      <CreatedTimestamp>2021-03-11T11:54:49.92Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 422</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 159</ID>
+      <Name>CubePermission 159</Name>
+      <CreatedTimestamp>2021-03-11T11:56:48.343333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 573</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 160</ID>
+      <Name>CubePermission 160</Name>
+      <CreatedTimestamp>2021-03-11T13:58:20.563333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 385</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 161</ID>
+      <Name>CubePermission 161</Name>
+      <CreatedTimestamp>2021-03-12T12:21:15.106667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 55</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 162</ID>
+      <Name>CubePermission 162</Name>
+      <CreatedTimestamp>2021-03-12T12:28:52.78Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 574</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 163</ID>
+      <Name>CubePermission 163</Name>
+      <CreatedTimestamp>2021-03-15T08:32:01.486667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 575</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 164</ID>
+      <Name>CubePermission 164</Name>
+      <CreatedTimestamp>2021-03-16T07:30:27.173333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 340</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 166</ID>
+      <Name>CubePermission 166</Name>
+      <CreatedTimestamp>2021-03-16T09:44:07.613333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.973333Z</LastSchemaUpdate>
+      <RoleID>Role 578</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 167</ID>
+      <Name>CubePermission 167</Name>
+      <CreatedTimestamp>2021-03-16T09:51:38.666667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 579</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 169</ID>
+      <Name>CubePermission 169</Name>
+      <CreatedTimestamp>2021-03-16T10:33:46.33Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 581</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 170</ID>
+      <Name>CubePermission 170</Name>
+      <CreatedTimestamp>2021-03-16T10:40:17.853333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 582</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 171</ID>
+      <Name>CubePermission 171</Name>
+      <CreatedTimestamp>2021-03-16T10:57:40.906667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 583</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 172</ID>
+      <Name>CubePermission 172</Name>
+      <CreatedTimestamp>2021-03-16T11:28:06.286667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 584</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 173</ID>
+      <Name>CubePermission 173</Name>
+      <CreatedTimestamp>2021-03-16T14:48:44.65Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 153</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 175</ID>
+      <Name>CubePermission 175</Name>
+      <CreatedTimestamp>2021-03-17T14:39:18.013333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 586</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 176</ID>
+      <Name>CubePermission 176</Name>
+      <CreatedTimestamp>2021-03-18T08:51:21.646667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 587</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 178</ID>
+      <Name>CubePermission 178</Name>
+      <CreatedTimestamp>2021-03-22T12:16:33.496667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 588</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 179</ID>
+      <Name>CubePermission 179</Name>
+      <CreatedTimestamp>2021-03-22T14:18:57.693333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.99Z</LastSchemaUpdate>
+      <RoleID>Role 589</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 180</ID>
+      <Name>CubePermission 180</Name>
+      <CreatedTimestamp>2021-03-24T12:25:52.17Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 590</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 181</ID>
+      <Name>CubePermission 181</Name>
+      <CreatedTimestamp>2021-03-24T12:40:26.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 591</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 182</ID>
+      <Name>CubePermission 182</Name>
+      <CreatedTimestamp>2021-03-25T07:56:59.58Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 421</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 183</ID>
+      <Name>CubePermission 183</Name>
+      <CreatedTimestamp>2021-03-25T12:31:58.556667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 592</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 184</ID>
+      <Name>CubePermission 184</Name>
+      <CreatedTimestamp>2021-03-25T12:41:29.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 593</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 185</ID>
+      <Name>CubePermission 185</Name>
+      <CreatedTimestamp>2021-03-26T08:42:11.893333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 594</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 186</ID>
+      <Name>CubePermission 186</Name>
+      <CreatedTimestamp>2021-03-26T13:14:57.066667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 595</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 145</ID>
+      <Name>CubePermission 145</Name>
+      <CreatedTimestamp>2021-03-29T11:14:47.906667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 562</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 187</ID>
+      <Name>CubePermission 187</Name>
+      <CreatedTimestamp>2021-03-29T12:13:35.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 596</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 188</ID>
+      <Name>CubePermission 188</Name>
+      <CreatedTimestamp>2021-03-30T08:37:53.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.006667Z</LastSchemaUpdate>
+      <RoleID>Role 502</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 189</ID>
+      <Name>CubePermission 189</Name>
+      <CreatedTimestamp>2021-03-30T13:23:01.506667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 597</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 190</ID>
+      <Name>CubePermission 190</Name>
+      <CreatedTimestamp>2021-03-30T14:10:22.053333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 191</ID>
+      <Name>CubePermission 191</Name>
+      <CreatedTimestamp>2021-04-01T12:26:06.076667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 598</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 192</ID>
+      <Name>CubePermission 192</Name>
+      <CreatedTimestamp>2021-04-06T11:54:33.85Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 117</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 193</ID>
+      <Name>CubePermission 193</Name>
+      <CreatedTimestamp>2021-04-06T13:52:16.82Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 507</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 194</ID>
+      <Name>CubePermission 194</Name>
+      <CreatedTimestamp>2021-04-07T12:13:56.69Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 599</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 195</ID>
+      <Name>CubePermission 195</Name>
+      <CreatedTimestamp>2021-04-07T13:43:43.116667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 600</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 196</ID>
+      <Name>CubePermission 196</Name>
+      <CreatedTimestamp>2021-04-09T07:41:57.836667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 601</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 197</ID>
+      <Name>CubePermission 197</Name>
+      <CreatedTimestamp>2021-04-09T12:50:41.473333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 324</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 198</ID>
+      <Name>CubePermission 198</Name>
+      <CreatedTimestamp>2021-04-09T12:52:26.59Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.023333Z</LastSchemaUpdate>
+      <RoleID>Role 602</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 199</ID>
+      <Name>CubePermission 199</Name>
+      <CreatedTimestamp>2021-04-09T13:38:55.343333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 460</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 200</ID>
+      <Name>CubePermission 200</Name>
+      <CreatedTimestamp>2021-04-09T14:33:13.726667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 603</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 201</ID>
+      <Name>CubePermission 201</Name>
+      <CreatedTimestamp>2021-04-13T08:30:56.256667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 21</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 202</ID>
+      <Name>CubePermission 202</Name>
+      <CreatedTimestamp>2021-04-13T12:56:58.16Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 605</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 204</ID>
+      <Name>CubePermission 204</Name>
+      <CreatedTimestamp>2021-04-14T13:31:34.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 382</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 205</ID>
+      <Name>CubePermission 205</Name>
+      <CreatedTimestamp>2021-04-14T14:28:48.826667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 607</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 209</ID>
+      <Name>CubePermission 209</Name>
+      <CreatedTimestamp>2021-04-16T08:55:51.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 610</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 210</ID>
+      <Name>CubePermission 210</Name>
+      <CreatedTimestamp>2021-04-16T14:15:06.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 461</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 211</ID>
+      <Name>CubePermission 211</Name>
+      <CreatedTimestamp>2021-04-16T14:28:43.576667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.036667Z</LastSchemaUpdate>
+      <RoleID>Role 611</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 213</ID>
+      <Name>CubePermission 213</Name>
+      <CreatedTimestamp>2021-04-16T14:33:24.78Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 613</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 214</ID>
+      <Name>CubePermission 214</Name>
+      <CreatedTimestamp>2021-04-16T14:36:34.946667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 614</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 215</ID>
+      <Name>CubePermission 215</Name>
+      <CreatedTimestamp>2021-04-19T09:03:04.283333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 66</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 216</ID>
+      <Name>CubePermission 216</Name>
+      <CreatedTimestamp>2021-04-19T10:00:49.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 615</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 217</ID>
+      <Name>CubePermission 217</Name>
+      <CreatedTimestamp>2021-04-19T11:21:17.7Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 616</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 218</ID>
+      <Name>CubePermission 218</Name>
+      <CreatedTimestamp>2021-04-19T15:08:06.753333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 477</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 219</ID>
+      <Name>CubePermission 219</Name>
+      <CreatedTimestamp>2021-04-22T09:36:52.716667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 116</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 220</ID>
+      <Name>CubePermission 220</Name>
+      <CreatedTimestamp>2021-04-23T09:41:16.28Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 617</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 221</ID>
+      <Name>CubePermission 221</Name>
+      <CreatedTimestamp>2021-04-26T09:54:35.856667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 618</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 222</ID>
+      <Name>CubePermission 222</Name>
+      <CreatedTimestamp>2021-04-26T11:31:49.87Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.053333Z</LastSchemaUpdate>
+      <RoleID>Role 619</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 223</ID>
+      <Name>CubePermission 223</Name>
+      <CreatedTimestamp>2021-04-28T11:52:09.576667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 426</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 224</ID>
+      <Name>CubePermission 224</Name>
+      <CreatedTimestamp>2021-04-30T12:56:48.746667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 620</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 226</ID>
+      <Name>CubePermission 226</Name>
+      <CreatedTimestamp>2021-05-04T14:41:02.69Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 96</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 225</ID>
+      <Name>CubePermission 225</Name>
+      <CreatedTimestamp>2021-05-05T09:28:16.743333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 621</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 227</ID>
+      <Name>CubePermission 227</Name>
+      <CreatedTimestamp>2021-05-06T12:22:49.686667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 490</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 228</ID>
+      <Name>CubePermission 228</Name>
+      <CreatedTimestamp>2021-05-11T12:57:55.526667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 622</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 229</ID>
+      <Name>CubePermission 229</Name>
+      <CreatedTimestamp>2021-05-11T14:32:19.52Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 623</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 230</ID>
+      <Name>CubePermission 230</Name>
+      <CreatedTimestamp>2021-05-11T19:06:55.613333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.066667Z</LastSchemaUpdate>
+      <RoleID>Role 624</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 231</ID>
+      <Name>CubePermission 231</Name>
+      <CreatedTimestamp>2021-05-11T19:11:39.79Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 625</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 232</ID>
+      <Name>CubePermission 232</Name>
+      <CreatedTimestamp>2021-05-11T19:35:11.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 342</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 233</ID>
+      <Name>CubePermission 233</Name>
+      <CreatedTimestamp>2021-05-11T19:46:56.26Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 626</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 234</ID>
+      <Name>CubePermission 234</Name>
+      <CreatedTimestamp>2021-05-12T20:04:41.933333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 627</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 235</ID>
+      <Name>CubePermission 235</Name>
+      <CreatedTimestamp>2021-05-13T18:40:52.056667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 628</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 236</ID>
+      <Name>CubePermission 236</Name>
+      <CreatedTimestamp>2021-05-13T18:49:56.803333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 629</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 237</ID>
+      <Name>CubePermission 237</Name>
+      <CreatedTimestamp>2021-05-13T18:59:49.6Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 630</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 238</ID>
+      <Name>CubePermission 238</Name>
+      <CreatedTimestamp>2021-05-14T11:01:46.9Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 631</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 239</ID>
+      <Name>CubePermission 239</Name>
+      <CreatedTimestamp>2021-05-14T11:35:19.733333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 632</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 240</ID>
+      <Name>CubePermission 240</Name>
+      <CreatedTimestamp>2021-05-14T11:55:16.066667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.083333Z</LastSchemaUpdate>
+      <RoleID>Role 633</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 241</ID>
+      <Name>CubePermission 241</Name>
+      <CreatedTimestamp>2021-05-14T12:09:41.176667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 634</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 242</ID>
+      <Name>CubePermission 242</Name>
+      <CreatedTimestamp>2021-05-14T12:14:46.363333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 635</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 243</ID>
+      <Name>CubePermission 243</Name>
+      <CreatedTimestamp>2021-05-17T13:47:45.516667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 322</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 244</ID>
+      <Name>CubePermission 244</Name>
+      <CreatedTimestamp>2021-05-18T14:31:25.656667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 636</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 247</ID>
+      <Name>CubePermission 247</Name>
+      <CreatedTimestamp>2021-05-19T13:44:09.226667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 639</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 248</ID>
+      <Name>CubePermission 248</Name>
+      <CreatedTimestamp>2021-05-19T13:51:31.513333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 523</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 249</ID>
+      <Name>CubePermission 249</Name>
+      <CreatedTimestamp>2021-05-19T13:58:19.246667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 640</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 251</ID>
+      <Name>CubePermission 251</Name>
+      <CreatedTimestamp>2021-05-19T14:47:01.49Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 642</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 252</ID>
+      <Name>CubePermission 252</Name>
+      <CreatedTimestamp>2021-05-20T08:52:33.876667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 643</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 253</ID>
+      <Name>CubePermission 253</Name>
+      <CreatedTimestamp>2021-05-21T07:27:23.8Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.1Z</LastSchemaUpdate>
+      <RoleID>Role 644</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 254</ID>
+      <Name>CubePermission 254</Name>
+      <CreatedTimestamp>2021-05-21T08:13:13.973333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 645</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 255</ID>
+      <Name>CubePermission 255</Name>
+      <CreatedTimestamp>2021-05-25T15:19:46.986667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 499</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 256</ID>
+      <Name>CubePermission 256</Name>
+      <CreatedTimestamp>2021-05-26T07:08:28.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 139</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 246</ID>
+      <Name>CubePermission 246</Name>
+      <CreatedTimestamp>2021-05-26T14:20:56.55Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 638</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 257</ID>
+      <Name>CubePermission 257</Name>
+      <CreatedTimestamp>2021-05-26T15:28:01.71Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 646</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 258</ID>
+      <Name>CubePermission 258</Name>
+      <CreatedTimestamp>2021-05-27T14:01:41.493333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 511</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 259</ID>
+      <Name>CubePermission 259</Name>
+      <CreatedTimestamp>2021-05-28T09:20:04.11Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 647</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 261</ID>
+      <Name>CubePermission 261</Name>
+      <CreatedTimestamp>2021-06-01T14:00:32.483333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 648</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 262</ID>
+      <Name>CubePermission 262</Name>
+      <CreatedTimestamp>2021-06-01T14:05:38.053333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.113333Z</LastSchemaUpdate>
+      <RoleID>Role 649</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 263</ID>
+      <Name>CubePermission 263</Name>
+      <CreatedTimestamp>2021-06-02T11:23:53.56Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 650</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 260</ID>
+      <Name>CubePermission 260</Name>
+      <CreatedTimestamp>2021-06-02T12:50:22.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 526</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 264</ID>
+      <Name>CubePermission 264</Name>
+      <CreatedTimestamp>2021-06-03T07:02:59.663333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 651</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 245</ID>
+      <Name>CubePermission 245</Name>
+      <CreatedTimestamp>2021-06-04T10:15:13.61Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 444</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 265</ID>
+      <Name>CubePermission 265</Name>
+      <CreatedTimestamp>2021-06-08T08:54:26.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 637</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 266</ID>
+      <Name>CubePermission 266</Name>
+      <CreatedTimestamp>2021-06-09T12:50:28.48Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 652</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 267</ID>
+      <Name>CubePermission 267</Name>
+      <CreatedTimestamp>2021-06-11T18:10:09.986667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 653</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 268</ID>
+      <Name>CubePermission 268</Name>
+      <CreatedTimestamp>2021-06-15T08:01:41.01Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 654</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 269</ID>
+      <Name>CubePermission 269</Name>
+      <CreatedTimestamp>2021-06-17T07:57:33.076667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 655</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 10</ID>
+      <Name>CubePermission 10</Name>
+      <CreatedTimestamp>2021-06-17T12:17:21.093333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.13Z</LastSchemaUpdate>
+      <RoleID>Role 72</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 270</ID>
+      <Name>CubePermission 270</Name>
+      <CreatedTimestamp>2021-06-18T12:00:37.333333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 656</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 271</ID>
+      <Name>CubePermission 271</Name>
+      <CreatedTimestamp>2021-06-18T12:05:49.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 657</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 272</ID>
+      <Name>CubePermission 272</Name>
+      <CreatedTimestamp>2021-06-22T10:05:50.113333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 658</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 273</ID>
+      <Name>CubePermission 273</Name>
+      <CreatedTimestamp>2021-06-22T11:34:22.513333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 659</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 274</ID>
+      <Name>CubePermission 274</Name>
+      <CreatedTimestamp>2021-06-23T09:52:17.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 660</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 275</ID>
+      <Name>CubePermission 275</Name>
+      <CreatedTimestamp>2021-06-23T10:02:46.943333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 661</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 276</ID>
+      <Name>CubePermission 276</Name>
+      <CreatedTimestamp>2021-06-23T11:00:02.566667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 662</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 277</ID>
+      <Name>CubePermission 277</Name>
+      <CreatedTimestamp>2021-06-23T11:18:16.43Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 663</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 278</ID>
+      <Name>CubePermission 278</Name>
+      <CreatedTimestamp>2021-06-24T07:58:31.08Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 664</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 279</ID>
+      <Name>CubePermission 279</Name>
+      <CreatedTimestamp>2021-06-28T10:14:45.063333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.146667Z</LastSchemaUpdate>
+      <RoleID>Role 496</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 280</ID>
+      <Name>CubePermission 280</Name>
+      <CreatedTimestamp>2021-06-28T11:03:54.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 665</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 281</ID>
+      <Name>CubePermission 281</Name>
+      <CreatedTimestamp>2021-06-28T15:15:18.396667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 99</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 282</ID>
+      <Name>CubePermission 282</Name>
+      <CreatedTimestamp>2021-07-01T08:17:09.356667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 666</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 283</ID>
+      <Name>CubePermission 283</Name>
+      <CreatedTimestamp>2021-07-02T11:13:20.286667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 667</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 284</ID>
+      <Name>CubePermission 284</Name>
+      <CreatedTimestamp>2021-07-02T11:25:41.606667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 668</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 285</ID>
+      <Name>CubePermission 285</Name>
+      <CreatedTimestamp>2021-07-02T11:52:32.916667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 669</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 286</ID>
+      <Name>CubePermission 286</Name>
+      <CreatedTimestamp>2021-07-07T07:20:21.05Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 670</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 287</ID>
+      <Name>CubePermission 287</Name>
+      <CreatedTimestamp>2021-07-07T10:53:11.296667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 375</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 288</ID>
+      <Name>CubePermission 288</Name>
+      <CreatedTimestamp>2021-07-08T08:28:52.133333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.163333Z</LastSchemaUpdate>
+      <RoleID>Role 671</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 289</ID>
+      <Name>CubePermission 289</Name>
+      <CreatedTimestamp>2021-07-09T08:35:02.216667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 456</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 290</ID>
+      <Name>CubePermission 290</Name>
+      <CreatedTimestamp>2021-07-12T07:54:43.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 672</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 291</ID>
+      <Name>CubePermission 291</Name>
+      <CreatedTimestamp>2021-07-12T14:55:24.236667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 515</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 292</ID>
+      <Name>CubePermission 292</Name>
+      <CreatedTimestamp>2021-07-13T10:45:59.47Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 673</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 293</ID>
+      <Name>CubePermission 293</Name>
+      <CreatedTimestamp>2021-07-13T20:02:55.43Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 674</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 294</ID>
+      <Name>CubePermission 294</Name>
+      <CreatedTimestamp>2021-07-13T20:11:05.92Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 675</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 297</ID>
+      <Name>CubePermission 297</Name>
+      <CreatedTimestamp>2021-07-14T10:40:29.106667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 678</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 298</ID>
+      <Name>CubePermission 298</Name>
+      <CreatedTimestamp>2021-07-14T10:44:47.016667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 679</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 299</ID>
+      <Name>CubePermission 299</Name>
+      <CreatedTimestamp>2021-07-15T11:36:44.586667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 680</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 300</ID>
+      <Name>CubePermission 300</Name>
+      <CreatedTimestamp>2021-07-15T14:31:19.716667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.176667Z</LastSchemaUpdate>
+      <RoleID>Role 681</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 127</ID>
+      <Name>CubePermission 127</Name>
+      <CreatedTimestamp>2021-07-16T12:34:41.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 39</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 301</ID>
+      <Name>CubePermission 301</Name>
+      <CreatedTimestamp>2021-07-19T08:59:42.29Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 498</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 302</ID>
+      <Name>CubePermission 302</Name>
+      <CreatedTimestamp>2021-07-19T09:46:35.246667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 684</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 303</ID>
+      <Name>CubePermission 303</Name>
+      <CreatedTimestamp>2021-07-19T13:51:14.64Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 685</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 304</ID>
+      <Name>CubePermission 304</Name>
+      <CreatedTimestamp>2021-07-22T13:47:19.51Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 687</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 305</ID>
+      <Name>CubePermission 305</Name>
+      <CreatedTimestamp>2021-07-28T14:23:35.606667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 690</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 306</ID>
+      <Name>CubePermission 306</Name>
+      <CreatedTimestamp>2021-07-29T08:25:35.653333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 691</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 307</ID>
+      <Name>CubePermission 307</Name>
+      <CreatedTimestamp>2021-07-29T08:49:45.586667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 692</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 308</ID>
+      <Name>CubePermission 308</Name>
+      <CreatedTimestamp>2021-07-29T10:23:26.68Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.193333Z</LastSchemaUpdate>
+      <RoleID>Role 693</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 309</ID>
+      <Name>CubePermission 309</Name>
+      <CreatedTimestamp>2021-07-29T13:15:02.843333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 388</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 310</ID>
+      <Name>CubePermission 310</Name>
+      <CreatedTimestamp>2021-07-30T14:01:05.383333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 694</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 311</ID>
+      <Name>CubePermission 311</Name>
+      <CreatedTimestamp>2021-08-02T07:19:48.146667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 695</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 312</ID>
+      <Name>CubePermission 312</Name>
+      <CreatedTimestamp>2021-08-02T10:07:53.573333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 696</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 313</ID>
+      <Name>CubePermission 313</Name>
+      <CreatedTimestamp>2021-08-03T09:03:58.34Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 697</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 314</ID>
+      <Name>CubePermission 314</Name>
+      <CreatedTimestamp>2021-08-03T13:04:28.18Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 698</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 315</ID>
+      <Name>CubePermission 315</Name>
+      <CreatedTimestamp>2021-08-03T13:54:24.726667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 699</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 316</ID>
+      <Name>CubePermission 316</Name>
+      <CreatedTimestamp>2021-08-03T14:14:20.49Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 418</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 317</ID>
+      <Name>CubePermission 317</Name>
+      <CreatedTimestamp>2021-08-03T14:24:39.736667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 700</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 318</ID>
+      <Name>CubePermission 318</Name>
+      <CreatedTimestamp>2021-08-04T07:44:06.2Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.21Z</LastSchemaUpdate>
+      <RoleID>Role 210</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 7</ID>
+      <Name>CubePermission 7</Name>
+      <CreatedTimestamp>2021-08-09T10:54:47.386667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 41</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 14</ID>
+      <Name>CubePermission 14</Name>
+      <CreatedTimestamp>2021-08-10T07:51:22.523333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 54</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 25</ID>
+      <Name>CubePermission 25</Name>
+      <CreatedTimestamp>2021-08-10T10:16:07.296667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 69</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 30</ID>
+      <Name>CubePermission 30</Name>
+      <CreatedTimestamp>2021-08-10T11:12:04.683333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 77</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 38</ID>
+      <Name>CubePermission 38</Name>
+      <CreatedTimestamp>2021-08-17T10:44:36.81Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 81</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 39</ID>
+      <Name>CubePermission 39</Name>
+      <CreatedTimestamp>2021-08-17T12:32:39.453333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 84</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 41</ID>
+      <Name>CubePermission 41</Name>
+      <CreatedTimestamp>2021-08-17T14:23:51.096667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 95</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 43</ID>
+      <Name>CubePermission 43</Name>
+      <CreatedTimestamp>2021-08-19T08:51:28.376667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 100</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 48</ID>
+      <Name>CubePermission 48</Name>
+      <CreatedTimestamp>2021-08-19T09:36:04.623333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.223333Z</LastSchemaUpdate>
+      <RoleID>Role 103</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 57</ID>
+      <Name>CubePermission 57</Name>
+      <CreatedTimestamp>2021-08-19T14:26:58.323333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 136</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 64</ID>
+      <Name>CubePermission 64</Name>
+      <CreatedTimestamp>2021-08-23T09:42:17.5Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 142</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 66</ID>
+      <Name>CubePermission 66</Name>
+      <CreatedTimestamp>2021-08-23T13:04:43.126667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 143</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 87</ID>
+      <Name>CubePermission 87</Name>
+      <CreatedTimestamp>2021-08-24T12:48:50.53Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 145</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 96</ID>
+      <Name>CubePermission 96</Name>
+      <CreatedTimestamp>2021-08-26T07:08:00.173333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 45</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 109</ID>
+      <Name>CubePermission 109</Name>
+      <CreatedTimestamp>2021-08-26T08:44:57.626667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 148</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 136</ID>
+      <Name>CubePermission 136</Name>
+      <CreatedTimestamp>2021-08-27T08:17:22.51Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 277</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 116</ID>
+      <Name>CubePermission 116</Name>
+      <CreatedTimestamp>2021-08-30T09:01:31.806667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 152</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 139</ID>
+      <Name>CubePermission 139</Name>
+      <CreatedTimestamp>2021-08-30T10:17:47.18Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.24Z</LastSchemaUpdate>
+      <RoleID>Role 155</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 156</ID>
+      <Name>CubePermission 156</Name>
+      <CreatedTimestamp>2021-08-30T12:13:16.546667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 336</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 168</ID>
+      <Name>CubePermission 168</Name>
+      <CreatedTimestamp>2021-08-30T12:46:57.843333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 311</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 174</ID>
+      <Name>CubePermission 174</Name>
+      <CreatedTimestamp>2021-08-30T13:10:44.226667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 168</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 203</ID>
+      <Name>CubePermission 203</Name>
+      <CreatedTimestamp>2021-08-31T10:09:08.73Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 173</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 207</ID>
+      <Name>CubePermission 207</Name>
+      <CreatedTimestamp>2021-09-01T07:12:28.713333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 450</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 208</ID>
+      <Name>CubePermission 208</Name>
+      <CreatedTimestamp>2021-09-01T07:51:40.23Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 176</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 250</ID>
+      <Name>CubePermission 250</Name>
+      <CreatedTimestamp>2021-09-02T11:36:14.73Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 182</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 320</ID>
+      <Name>CubePermission 320</Name>
+      <CreatedTimestamp>2021-09-06T09:24:52.52Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 188</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 321</ID>
+      <Name>CubePermission 321</Name>
+      <CreatedTimestamp>2021-09-07T09:43:32.426667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.256667Z</LastSchemaUpdate>
+      <RoleID>Role 71</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 322</ID>
+      <Name>CubePermission 322</Name>
+      <CreatedTimestamp>2021-09-07T13:40:54.776667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 195</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 323</ID>
+      <Name>CubePermission 323</Name>
+      <CreatedTimestamp>2021-09-08T13:12:42.913333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 198</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 324</ID>
+      <Name>CubePermission 324</Name>
+      <CreatedTimestamp>2021-09-08T14:33:35.186667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 199</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 325</ID>
+      <Name>CubePermission 325</Name>
+      <CreatedTimestamp>2021-09-09T10:31:19.22Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 200</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 326</ID>
+      <Name>CubePermission 326</Name>
+      <CreatedTimestamp>2021-09-09T14:36:09.323333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 205</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 327</ID>
+      <Name>CubePermission 327</Name>
+      <CreatedTimestamp>2021-09-10T11:56:18.076667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 211</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 328</ID>
+      <Name>CubePermission 328</Name>
+      <CreatedTimestamp>2021-09-15T07:50:16.273333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:18.273333Z</LastSchemaUpdate>
+      <RoleID>Role 213</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 13</ID>
+      <Name>CubePermission 13</Name>
+      <CreatedTimestamp>2021-09-20T10:58:05.913333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-20T10:58:05.913333Z</LastSchemaUpdate>
+      <RoleID>Role 27</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 18</ID>
+      <Name>CubePermission 18</Name>
+      <CreatedTimestamp>2021-09-20T17:48:22.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-20T17:48:22.156667Z</LastSchemaUpdate>
+      <RoleID>Role 33</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 36</ID>
+      <Name>CubePermission 36</Name>
+      <CreatedTimestamp>2021-09-20T18:06:40.683333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-20T18:17:47Z</LastSchemaUpdate>
+      <RoleID>Role 38</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 45</ID>
+      <Name>CubePermission 45</Name>
+      <CreatedTimestamp>2021-09-21T07:53:34.403333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-21T07:53:34.403333Z</LastSchemaUpdate>
+      <RoleID>Role 290</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 70</ID>
+      <Name>CubePermission 70</Name>
+      <CreatedTimestamp>2021-09-21T10:06:30.843333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-21T10:06:30.843333Z</LastSchemaUpdate>
+      <RoleID>Role 44</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 91</ID>
+      <Name>CubePermission 91</Name>
+      <CreatedTimestamp>2021-09-21T13:55:42.653333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-21T13:55:42.653333Z</LastSchemaUpdate>
+      <RoleID>Role 46</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 97</ID>
+      <Name>CubePermission 97</Name>
+      <CreatedTimestamp>2021-09-22T09:47:17.236667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-22T09:47:17.236667Z</LastSchemaUpdate>
+      <RoleID>Role 68</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 177</ID>
+      <Name>CubePermission 177</Name>
+      <CreatedTimestamp>2021-09-22T13:50:51.41Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-22T13:50:51.41Z</LastSchemaUpdate>
+      <RoleID>Role 80</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 206</ID>
+      <Name>CubePermission 206</Name>
+      <CreatedTimestamp>2021-09-23T09:08:43.473333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-23T09:08:43.473333Z</LastSchemaUpdate>
+      <RoleID>Role 114</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 295</ID>
+      <Name>CubePermission 295</Name>
+      <CreatedTimestamp>2021-09-24T08:49:11.19Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-24T08:49:11.19Z</LastSchemaUpdate>
+      <RoleID>Role 141</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 296</ID>
+      <Name>CubePermission 296</Name>
+      <CreatedTimestamp>2021-09-24T09:00:18.543333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-24T09:00:18.543333Z</LastSchemaUpdate>
+      <RoleID>Role 146</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 319</ID>
+      <Name>CubePermission 319</Name>
+      <CreatedTimestamp>2021-09-29T08:45:24.593333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-29T08:45:24.593333Z</LastSchemaUpdate>
+      <RoleID>Role 163</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 329</ID>
+      <Name>CubePermission 329</Name>
+      <CreatedTimestamp>2021-09-30T13:53:41.15Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-30T13:53:41.15Z</LastSchemaUpdate>
+      <RoleID>Role 187</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 330</ID>
+      <Name>CubePermission 330</Name>
+      <CreatedTimestamp>2021-10-01T08:16:44.073333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-01T08:16:44.073333Z</LastSchemaUpdate>
+      <RoleID>Role 101</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 331</ID>
+      <Name>CubePermission 331</Name>
+      <CreatedTimestamp>2021-10-01T13:20:12.746667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-01T13:20:12.746667Z</LastSchemaUpdate>
+      <RoleID>Role 207</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 332</ID>
+      <Name>CubePermission 332</Name>
+      <CreatedTimestamp>2021-10-04T06:47:35.506667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-04T06:47:35.506667Z</LastSchemaUpdate>
+      <RoleID>Role 215</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 333</ID>
+      <Name>CubePermission 333</Name>
+      <CreatedTimestamp>2021-10-04T12:22:59.43Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-04T12:22:59.43Z</LastSchemaUpdate>
+      <RoleID>Role 223</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 334</ID>
+      <Name>CubePermission 334</Name>
+      <CreatedTimestamp>2021-10-04T13:21:05.39Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-04T13:21:05.39Z</LastSchemaUpdate>
+      <RoleID>Role 298</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 335</ID>
+      <Name>CubePermission 335</Name>
+      <CreatedTimestamp>2021-10-05T12:19:35.11Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-05T12:19:35.11Z</LastSchemaUpdate>
+      <RoleID>Role 224</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 336</ID>
+      <Name>CubePermission 336</Name>
+      <CreatedTimestamp>2021-10-06T08:37:56.583333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-06T08:37:56.583333Z</LastSchemaUpdate>
+      <RoleID>Role 196</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 337</ID>
+      <Name>CubePermission 337</Name>
+      <CreatedTimestamp>2021-10-07T08:46:23.416667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-07T08:46:23.416667Z</LastSchemaUpdate>
+      <RoleID>Role 226</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 338</ID>
+      <Name>CubePermission 338</Name>
+      <CreatedTimestamp>2021-10-08T08:25:28.633333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-08T08:25:28.633333Z</LastSchemaUpdate>
+      <RoleID>Role 227</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 339</ID>
+      <Name>CubePermission 339</Name>
+      <CreatedTimestamp>2021-10-12T08:39:52.183333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-12T08:39:53.2Z</LastSchemaUpdate>
+      <RoleID>Role 232</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 340</ID>
+      <Name>CubePermission 340</Name>
+      <CreatedTimestamp>2021-10-12T13:19:00.506667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-12T13:19:00.506667Z</LastSchemaUpdate>
+      <RoleID>Role 233</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 341</ID>
+      <Name>CubePermission 341</Name>
+      <CreatedTimestamp>2021-10-13T08:38:29.303333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-13T08:38:29.303333Z</LastSchemaUpdate>
+      <RoleID>Role 234</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 342</ID>
+      <Name>CubePermission 342</Name>
+      <CreatedTimestamp>2021-10-13T09:56:16.866667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-13T09:56:16.866667Z</LastSchemaUpdate>
+      <RoleID>Role 64</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 343</ID>
+      <Name>CubePermission 343</Name>
+      <CreatedTimestamp>2021-10-13T13:32:29.016667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-13T13:32:29.016667Z</LastSchemaUpdate>
+      <RoleID>Role 235</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 344</ID>
+      <Name>CubePermission 344</Name>
+      <CreatedTimestamp>2021-10-14T09:53:46.11Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-14T09:53:46.11Z</LastSchemaUpdate>
+      <RoleID>Role 237</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 345</ID>
+      <Name>CubePermission 345</Name>
+      <CreatedTimestamp>2021-10-14T14:41:00.286667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-14T14:41:00.286667Z</LastSchemaUpdate>
+      <RoleID>Role 243</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 346</ID>
+      <Name>CubePermission 346</Name>
+      <CreatedTimestamp>2021-10-18T14:35:43.363333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-18T14:35:43.363333Z</LastSchemaUpdate>
+      <RoleID>Role 245</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 347</ID>
+      <Name>CubePermission 347</Name>
+      <CreatedTimestamp>2021-10-19T09:41:02.753333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-19T09:41:02.753333Z</LastSchemaUpdate>
+      <RoleID>Role 246</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 348</ID>
+      <Name>CubePermission 348</Name>
+      <CreatedTimestamp>2021-10-19T12:07:33.33Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-19T12:07:33.33Z</LastSchemaUpdate>
+      <RoleID>Role 247</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 349</ID>
+      <Name>CubePermission 349</Name>
+      <CreatedTimestamp>2021-10-19T13:29:04.166667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-19T13:29:04.166667Z</LastSchemaUpdate>
+      <RoleID>Role 248</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 350</ID>
+      <Name>CubePermission 350</Name>
+      <CreatedTimestamp>2021-10-20T08:01:55.55Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-20T08:01:55.55Z</LastSchemaUpdate>
+      <RoleID>Role 249</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 351</ID>
+      <Name>CubePermission 351</Name>
+      <CreatedTimestamp>2021-10-21T09:57:45.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-21T09:57:45.156667Z</LastSchemaUpdate>
+      <RoleID>Role 250</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 352</ID>
+      <Name>CubePermission 352</Name>
+      <CreatedTimestamp>2021-10-21T14:12:44.973333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-21T14:12:44.973333Z</LastSchemaUpdate>
+      <RoleID>Role 251</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 353</ID>
+      <Name>CubePermission 353</Name>
+      <CreatedTimestamp>2021-10-22T09:05:52.85Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-22T09:05:52.85Z</LastSchemaUpdate>
+      <RoleID>Role 253</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 354</ID>
+      <Name>CubePermission 354</Name>
+      <CreatedTimestamp>2021-10-25T10:32:25.636667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-25T10:32:25.636667Z</LastSchemaUpdate>
+      <RoleID>Role 254</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 355</ID>
+      <Name>CubePermission 355</Name>
+      <CreatedTimestamp>2021-10-26T07:38:58.756667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-26T08:53:04.293333Z</LastSchemaUpdate>
+      <RoleID>Role 256</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 356</ID>
+      <Name>CubePermission 356</Name>
+      <CreatedTimestamp>2021-10-26T10:37:24.796667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-26T10:37:24.796667Z</LastSchemaUpdate>
+      <RoleID>Role 257</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 357</ID>
+      <Name>CubePermission 357</Name>
+      <CreatedTimestamp>2021-10-26T14:37:07.446667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-26T14:37:07.446667Z</LastSchemaUpdate>
+      <RoleID>Role 258</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 358</ID>
+      <Name>CubePermission 358</Name>
+      <CreatedTimestamp>2021-10-27T14:19:06.476667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-27T14:19:06.476667Z</LastSchemaUpdate>
+      <RoleID>Role 259</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 359</ID>
+      <Name>CubePermission 359</Name>
+      <CreatedTimestamp>2021-10-28T08:43:34.936667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-28T08:43:34.936667Z</LastSchemaUpdate>
+      <RoleID>Role 260</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 360</ID>
+      <Name>CubePermission 360</Name>
+      <CreatedTimestamp>2021-10-28T09:02:18.43Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-28T09:02:18.43Z</LastSchemaUpdate>
+      <RoleID>Role 189</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 361</ID>
+      <Name>CubePermission 361</Name>
+      <CreatedTimestamp>2021-10-28T09:46:44.413333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-10-28T09:47:09.893333Z</LastSchemaUpdate>
+      <RoleID>Role 261</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 362</ID>
+      <Name>CubePermission 362</Name>
+      <CreatedTimestamp>2021-11-02T08:41:06.263333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-02T08:41:06.263333Z</LastSchemaUpdate>
+      <RoleID>Role 527</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 363</ID>
+      <Name>CubePermission 363</Name>
+      <CreatedTimestamp>2021-11-02T09:02:11.98Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-02T09:02:11.98Z</LastSchemaUpdate>
+      <RoleID>Role 262</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 364</ID>
+      <Name>CubePermission 364</Name>
+      <CreatedTimestamp>2021-11-08T09:02:48.9Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-08T09:02:48.9Z</LastSchemaUpdate>
+      <RoleID>Role 204</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 365</ID>
+      <Name>CubePermission 365</Name>
+      <CreatedTimestamp>2021-11-08T12:48:47.79Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-08T12:48:47.79Z</LastSchemaUpdate>
+      <RoleID>Role 263</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 366</ID>
+      <Name>CubePermission 366</Name>
+      <CreatedTimestamp>2021-11-09T11:00:55.96Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-09T11:00:55.96Z</LastSchemaUpdate>
+      <RoleID>Role 264</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 367</ID>
+      <Name>CubePermission 367</Name>
+      <CreatedTimestamp>2021-11-10T08:57:57.726667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-10T09:08:26.533333Z</LastSchemaUpdate>
+      <RoleID>Role 265</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 368</ID>
+      <Name>CubePermission 368</Name>
+      <CreatedTimestamp>2021-11-10T09:08:26.143333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-10T09:08:26.143333Z</LastSchemaUpdate>
+      <RoleID>Role 266</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 369</ID>
+      <Name>CubePermission 369</Name>
+      <CreatedTimestamp>2021-11-10T10:48:20.656667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-10T10:48:20.656667Z</LastSchemaUpdate>
+      <RoleID>Role 268</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 371</ID>
+      <Name>CubePermission 371</Name>
+      <CreatedTimestamp>2021-11-15T10:21:38.3Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-15T10:21:38.3Z</LastSchemaUpdate>
+      <RoleID>Role 271</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 372</ID>
+      <Name>CubePermission 372</Name>
+      <CreatedTimestamp>2021-11-16T08:09:31.206667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-16T08:09:31.206667Z</LastSchemaUpdate>
+      <RoleID>Role 273</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 374</ID>
+      <Name>CubePermission 374</Name>
+      <CreatedTimestamp>2021-11-16T11:52:43.413333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-16T12:08:16.683333Z</LastSchemaUpdate>
+      <RoleID>Role 278</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 375</ID>
+      <Name>CubePermission 375</Name>
+      <CreatedTimestamp>2021-11-16T12:03:04.473333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-16T12:03:04.473333Z</LastSchemaUpdate>
+      <RoleID>Role 281</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 373</ID>
+      <Name>CubePermission 373</Name>
+      <CreatedTimestamp>2021-11-17T07:12:51.42Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-17T07:12:51.42Z</LastSchemaUpdate>
+      <RoleID>Role 276</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 376</ID>
+      <Name>CubePermission 376</Name>
+      <CreatedTimestamp>2021-11-18T07:30:03.67Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-18T07:30:03.67Z</LastSchemaUpdate>
+      <RoleID>Role 282</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 377</ID>
+      <Name>CubePermission 377</Name>
+      <CreatedTimestamp>2021-11-18T13:55:54.086667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-18T13:55:54.086667Z</LastSchemaUpdate>
+      <RoleID>Role 283</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 379</ID>
+      <Name>CubePermission 379</Name>
+      <CreatedTimestamp>2021-11-22T09:22:52.783333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-22T09:22:52.783333Z</LastSchemaUpdate>
+      <RoleID>Role 376</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 378</ID>
+      <Name>CubePermission 378</Name>
+      <CreatedTimestamp>2021-11-26T07:59:40.27Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-26T07:59:40.27Z</LastSchemaUpdate>
+      <RoleID>Role 285</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 380</ID>
+      <Name>CubePermission 380</Name>
+      <CreatedTimestamp>2021-11-29T10:12:52.236667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-29T10:12:52.236667Z</LastSchemaUpdate>
+      <RoleID>Role 287</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 381</ID>
+      <Name>CubePermission 381</Name>
+      <CreatedTimestamp>2021-11-29T13:21:23.53Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-11-29T13:21:23.53Z</LastSchemaUpdate>
+      <RoleID>Role 138</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 382</ID>
+      <Name>CubePermission 382</Name>
+      <CreatedTimestamp>2021-12-01T10:51:57.713333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-01T10:51:57.713333Z</LastSchemaUpdate>
+      <RoleID>Role 291</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 383</ID>
+      <Name>CubePermission 383</Name>
+      <CreatedTimestamp>2021-12-02T09:41:52.813333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-02T09:42:01.046667Z</LastSchemaUpdate>
+      <RoleID>Role 295</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 384</ID>
+      <Name>CubePermission 384</Name>
+      <CreatedTimestamp>2021-12-02T11:21:12.533333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-02T11:21:12.533333Z</LastSchemaUpdate>
+      <RoleID>Role 297</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 385</ID>
+      <Name>CubePermission 385</Name>
+      <CreatedTimestamp>2021-12-03T14:46:35.466667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-03T14:46:35.466667Z</LastSchemaUpdate>
+      <RoleID>Role 303</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 386</ID>
+      <Name>CubePermission 386</Name>
+      <CreatedTimestamp>2021-12-07T10:26:39.64Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-07T10:26:39.64Z</LastSchemaUpdate>
+      <RoleID>Role 306</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 387</ID>
+      <Name>CubePermission 387</Name>
+      <CreatedTimestamp>2021-12-07T12:14:16.33Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-07T12:14:16.33Z</LastSchemaUpdate>
+      <RoleID>Role 308</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 388</ID>
+      <Name>CubePermission 388</Name>
+      <CreatedTimestamp>2021-12-08T06:43:43.003333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-08T06:43:43.003333Z</LastSchemaUpdate>
+      <RoleID>Role 312</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 389</ID>
+      <Name>CubePermission 389</Name>
+      <CreatedTimestamp>2021-12-08T06:59:25.263333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-08T06:59:25.263333Z</LastSchemaUpdate>
+      <RoleID>Role 135</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 390</ID>
+      <Name>CubePermission 390</Name>
+      <CreatedTimestamp>2021-12-09T07:56:25.823333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-09T07:56:25.823333Z</LastSchemaUpdate>
+      <RoleID>Role 313</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 391</ID>
+      <Name>CubePermission 391</Name>
+      <CreatedTimestamp>2021-12-13T12:14:50.61Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-13T12:14:50.61Z</LastSchemaUpdate>
+      <RoleID>Role 164</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 392</ID>
+      <Name>CubePermission 392</Name>
+      <CreatedTimestamp>2021-12-14T13:07:56.89Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-14T13:07:56.89Z</LastSchemaUpdate>
+      <RoleID>Role 317</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 393</ID>
+      <Name>CubePermission 393</Name>
+      <CreatedTimestamp>2021-12-21T07:19:52.11Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-21T07:19:52.11Z</LastSchemaUpdate>
+      <RoleID>Role 320</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 394</ID>
+      <Name>CubePermission 394</Name>
+      <CreatedTimestamp>2021-12-22T13:14:45.843333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-22T13:14:45.843333Z</LastSchemaUpdate>
+      <RoleID>Role 325</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 395</ID>
+      <Name>CubePermission 395</Name>
+      <CreatedTimestamp>2021-12-23T06:40:52.07Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-23T06:40:52.07Z</LastSchemaUpdate>
+      <RoleID>Role 34</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 396</ID>
+      <Name>CubePermission 396</Name>
+      <CreatedTimestamp>2021-12-23T08:40:38.18Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-23T08:40:38.18Z</LastSchemaUpdate>
+      <RoleID>Role 323</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 397</ID>
+      <Name>CubePermission 397</Name>
+      <CreatedTimestamp>2021-12-27T07:03:25.913333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-27T07:03:25.913333Z</LastSchemaUpdate>
+      <RoleID>Role 329</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 398</ID>
+      <Name>CubePermission 398</Name>
+      <CreatedTimestamp>2021-12-27T14:37:25.263333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-27T14:37:25.263333Z</LastSchemaUpdate>
+      <RoleID>Role 330</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 399</ID>
+      <Name>CubePermission 399</Name>
+      <CreatedTimestamp>2021-12-28T13:05:50.67Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-28T13:05:50.67Z</LastSchemaUpdate>
+      <RoleID>Role 331</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 400</ID>
+      <Name>CubePermission 400</Name>
+      <CreatedTimestamp>2021-12-29T14:22:42.943333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-29T14:22:42.943333Z</LastSchemaUpdate>
+      <RoleID>Role 334</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 401</ID>
+      <Name>CubePermission 401</Name>
+      <CreatedTimestamp>2021-12-30T08:22:42.636667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-12-30T08:22:42.636667Z</LastSchemaUpdate>
+      <RoleID>Role 345</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 402</ID>
+      <Name>CubePermission 402</Name>
+      <CreatedTimestamp>2022-01-10T11:25:42.036667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-10T11:25:42.036667Z</LastSchemaUpdate>
+      <RoleID>Role 350</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 403</ID>
+      <Name>CubePermission 403</Name>
+      <CreatedTimestamp>2022-01-11T08:25:16.86Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-11T08:25:16.86Z</LastSchemaUpdate>
+      <RoleID>Role 351</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 370</ID>
+      <Name>CubePermission 370</Name>
+      <CreatedTimestamp>2022-01-11T10:00:33.936667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-11T10:00:33.936667Z</LastSchemaUpdate>
+      <RoleID>Role 270</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 165</ID>
+      <Name>CubePermission 165</Name>
+      <CreatedTimestamp>2022-01-12T06:49:16.81Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-12T06:49:16.81Z</LastSchemaUpdate>
+      <RoleID>Role 352</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 404</ID>
+      <Name>CubePermission 404</Name>
+      <CreatedTimestamp>2022-01-12T10:36:51.673333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-12T10:36:51.673333Z</LastSchemaUpdate>
+      <RoleID>Role 354</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 405</ID>
+      <Name>CubePermission 405</Name>
+      <CreatedTimestamp>2022-01-13T10:30:28.24Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T10:30:28.24Z</LastSchemaUpdate>
+      <RoleID>Role 357</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 212</ID>
+      <Name>CubePermission 212</Name>
+      <CreatedTimestamp>2022-01-13T12:42:23.49Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T12:42:23.49Z</LastSchemaUpdate>
+      <RoleID>Role 361</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 406</ID>
+      <Name>CubePermission 406</Name>
+      <CreatedTimestamp>2022-01-13T13:15:36.55Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T13:18:45.913333Z</LastSchemaUpdate>
+      <RoleID>Role 364</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 407</ID>
+      <Name>CubePermission 407</Name>
+      <CreatedTimestamp>2022-01-13T14:24:08.386667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T14:24:08.386667Z</LastSchemaUpdate>
+      <RoleID>Role 365</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 408</ID>
+      <Name>CubePermission 408</Name>
+      <CreatedTimestamp>2022-01-13T14:39:58.436667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-13T14:39:58.436667Z</LastSchemaUpdate>
+      <RoleID>Role 495</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 409</ID>
+      <Name>CubePermission 409</Name>
+      <CreatedTimestamp>2022-01-14T12:57:44.796667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-14T12:57:44.796667Z</LastSchemaUpdate>
+      <RoleID>Role 372</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 410</ID>
+      <Name>CubePermission 410</Name>
+      <CreatedTimestamp>2022-01-17T13:30:32.413333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-17T13:30:32.413333Z</LastSchemaUpdate>
+      <RoleID>Role 465</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+    <CubePermission>
+      <ID>CubePermission 411</ID>
+      <Name>CubePermission 411</Name>
+      <CreatedTimestamp>2022-01-17T13:36:06.043333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2022-01-17T13:36:06.043333Z</LastSchemaUpdate>
+      <RoleID>Role 374</RoleID>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+  </CubePermissions>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw Nalich Berlingo</ID>
+      <Name>Значения</Name>
+      <CreatedTimestamp>2012-11-23T11:23:36.03Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.756667Z</LastSchemaUpdate>
+      <LastProcessed>2022-01-18T04:16:24.563333Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure>
+          <ID>Norma</ID>
+          <Name>Норма</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+              <ColumnID>Norma</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Ost</ID>
+          <Name>Остаток</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+              <ColumnID>Ost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>FL</ID>
+          <Name>Фл</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+              <ColumnID>FL</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>FL2</ID>
+          <Name>ФлРез</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+              <ColumnID>FL2</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Rez</ID>
+          <Name>Резерв</Name>
+          <DataType>Double</DataType>
+          <Source>
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+              <ColumnID>Rez</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>FLOST</ID>
+          <Name>ФлОст</Name>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+              <ColumnID>FLOST</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure>
+          <ID>Число Vw Nalich Berlingo</ID>
+          <Name>КолПоз</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source>
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding">
+              <TableID>dbo_vwNalichBerlingo</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>12401260</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>ГодМесДень</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Data</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>Data</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>God</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>God</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Mes Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>Mes</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Den</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>Den</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Nom Nedeli</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwTbData</TableID>
+                    <ColumnID>NomNedeli</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>МенОтЗак2</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Nomenklatura ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Men Ot Zak2</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwMenOtZak2</TableID>
+                    <ColumnID>MenOtZak2</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Отметка2</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Отметка2</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>Отметка2</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>ТоварСписком</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>Code</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Отметка2</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>6</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>Отметка2</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>V Matritse</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>VMatritse</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Производитель</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>Производитель</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Артикул</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>25</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>Артикул</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>МенедОтЗак</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Менед От Зак</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>МенедОтЗак</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>ТоварПланирКВыводу</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Nomenklatura ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Planir K Vyvodu FL</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>3</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNomenklaturaPlanirKVyvodu</TableID>
+                    <ColumnID>PlanirKVyvoduFL</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension">
+          <CubeDimensionID>Производитель</CubeDimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_vwNalichBerlingo</TableID>
+                    <ColumnID>NomenklaturaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Производитель</AttributeID>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>WChar</DataType>
+                  <DataSize>100</DataSize>
+                  <Source xsi:type="ColumnBinding">
+                    <TableID>dbo_goods</TableID>
+                    <ColumnID>Производитель</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions>
+        <Partition>
+          <ID>Vw Nalich Berlingo</ID>
+          <Name>Vw Nalich Berlingo</Name>
+          <CreatedTimestamp>2012-11-23T11:23:36.036667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+          <LastProcessed>2022-01-18T04:16:24.56Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>WORK</DataSourceViewID>
+            <TableID>dbo_vwNalichBerlingo</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+          <EstimatedSize>12401260</EstimatedSize>
+        </Partition>
+      </Partitions>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source>
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript>
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>2012-11-27T07:22:16.783333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T10:07:17.773333Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+Команда CALCULATE управляет статистическими выражениями над листовыми ячейками в кубе.
+Удаление или изменение команды CALCULATE приведет к изменению данных, содержащихся в кубе.
+Эту команду следует изменять только в том случае, если способ статистической обработки куба задается вручную.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Наличие]
+ AS [Measures].[Фл]/[Measures].[КолПоз], 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <ErrorConfiguration>
+    <KeyErrorLimitAction>StopLogging</KeyErrorLimitAction>
+    <KeyNotFound>IgnoreError</KeyNotFound>
+  </ErrorConfiguration>
+  <ProactiveCaching>
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" />
+  </ProactiveCaching>
+</Cube>

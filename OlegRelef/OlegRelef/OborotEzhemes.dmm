@@ -1,0 +1,175 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>OborotEzhemes</ID>
+  <Name>OborotEzhemes</Name>
+  <CreatedTimestamp>2012-10-01T05:16:59.946667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2021-09-19T07:42:22.87Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_vwPrognozOborotEzhemes</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2021-07-19T09:37:59.276667Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding">
+    <DataSourceViewID>WORK</DataSourceViewID>
+  </Source>
+  <Language>1033</Language>
+  <Collation>Cyrillic_General_CI_AS</Collation>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>Data</ID>
+      <Name>Data</Name>
+      <IsKey>true</IsKey>
+      <Type>Date</Type>
+      <Content>Key Time</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vwPrognozOborotEzhemes</TableID>
+            <ColumnID>data</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>Kol</ID>
+      <Name>Kol</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vwPrognozOborotEzhemes</TableID>
+            <ColumnID>Kol</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn">
+      <ID>Nomenklatura ID</ID>
+      <Name>Nomenklatura ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn>
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding">
+            <TableID>dbo_vwPrognozOborotEzhemes</TableID>
+            <ColumnID>NomenklaturaID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel>
+      <ID>OborotEzhemes</ID>
+      <Name>OborotEzhemes</Name>
+      <CreatedTimestamp>2012-10-01T05:17:00.443333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:22.87Z</LastSchemaUpdate>
+      <LastProcessed>2021-07-19T09:37:59.276667Z</LastProcessed>
+      <State>Processed</State>
+      <Algorithm>Microsoft_Time_Series</Algorithm>
+      <AlgorithmParameters>
+        <AlgorithmParameter>
+          <Name>AUTO_DETECT_PERIODICITY</Name>
+          <Value xsi:type="xsd:double">0</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>FORECAST_METHOD</Name>
+          <Value xsi:type="xsd:string">ARTXP</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>MINIMUM_SUPPORT</Name>
+          <Value xsi:type="xsd:int">50</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>MISSING_VALUE_SUBSTITUTION</Name>
+          <Value xsi:type="xsd:string">0</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>PERIODICITY_HINT</Name>
+          <Value xsi:type="xsd:string">{12}</Value>
+        </AlgorithmParameter>
+      </AlgorithmParameters>
+      <Columns>
+        <Column>
+          <ID>Data</ID>
+          <Name>Data</Name>
+          <SourceColumnID>Data</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column>
+          <ID>Kol</ID>
+          <Name>Kol</Name>
+          <SourceColumnID>Kol</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column>
+          <ID>Nomenklatura ID</ID>
+          <Name>Nomenklatura ID</Name>
+          <SourceColumnID>Nomenklatura ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+      <MiningModelPermissions>
+        <MiningModelPermission>
+          <ID>MiningModelPermission</ID>
+          <Name>MiningModelPermission</Name>
+          <CreatedTimestamp>2018-10-10T11:35:37.553333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2021-09-19T07:42:22.886667Z</LastSchemaUpdate>
+          <RoleID>Role 116</RoleID>
+          <Read>Allowed</Read>
+          <AllowBrowsing>false</AllowBrowsing>
+        </MiningModelPermission>
+      </MiningModelPermissions>
+      <Language>1033</Language>
+      <Collation>Cyrillic_General_CI_AS</Collation>
+    </MiningModel>
+  </MiningModels>
+  <MiningStructurePermissions>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission</ID>
+      <Name>MiningStructurePermission</Name>
+      <CreatedTimestamp>2018-10-10T11:35:37.553333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:22.886667Z</LastSchemaUpdate>
+      <RoleID>Role 116</RoleID>
+      <Process>true</Process>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 1</ID>
+      <Name>MiningStructurePermission 1</Name>
+      <CreatedTimestamp>2021-01-18T12:09:37.953333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:22.886667Z</LastSchemaUpdate>
+      <RoleID>Role 434</RoleID>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 2</ID>
+      <Name>MiningStructurePermission 2</Name>
+      <CreatedTimestamp>2021-02-12T09:23:11.156667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:22.886667Z</LastSchemaUpdate>
+      <RoleID>Role 56</RoleID>
+    </MiningStructurePermission>
+    <MiningStructurePermission>
+      <ID>MiningStructurePermission 5</ID>
+      <Name>MiningStructurePermission 5</Name>
+      <CreatedTimestamp>2021-06-17T07:57:51.96Z</CreatedTimestamp>
+      <LastSchemaUpdate>2021-09-19T07:42:22.886667Z</LastSchemaUpdate>
+      <RoleID>Role 655</RoleID>
+    </MiningStructurePermission>
+  </MiningStructurePermissions>
+</MiningStructure>

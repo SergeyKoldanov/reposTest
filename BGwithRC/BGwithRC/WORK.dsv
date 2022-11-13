@@ -1,0 +1,348 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0677d009-54ff-4cda-bb46-0799e244bacc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>WORK</ID>
+  <Name>WORK</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="9" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="184" scrolltop="-6266" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="24289" y="17489" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwTbData" left="1187" top="1072" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3149" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00004d0c000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vwTbData" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BGWithRC_Remains" left="7972" top="1994" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_BGWithRC_Remains" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BGWithRC_Sales" left="4636" top="1057" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_BGWithRC_Sales" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGClass" left="8049" top="171" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vwBGClass" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGGruppa" left="11446" top="2088" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vwBGGruppa" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGCategoriya" left="11340" top="4559" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vwBGCategoriya" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vwBGPodgruppa" left="11438" top="158" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_vwBGPodgruppa" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>184</DiagramViewPortLeft>
+            <DiagramViewPortTop>-6266</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>WORK</DataSourceID>
+  <Schema>
+    <xs:schema id="WORK" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="WORK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a175e6c0-7a5a-433d-8af3-8e95930aaab2">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_vwTbData" msprop:design-time-name="f3e4fffc-ded4-4bd7-8b0d-1c108b69d9cf" msprop:FriendlyName="vwTbData" msprop:DbSchemaName="dbo" msprop:DbTableName="vwTbData" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="data" msprop:design-time-name="f3768edf-1461-4cb7-9beb-9071234477fc" msprop:DbColumnName="data" msprop:FriendlyName="data" type="xs:dateTime" />
+                  <xs:element name="God" msprop:design-time-name="d671dbbb-07c4-4d36-9faf-c2419b1a90d1" msprop:DbColumnName="God" msprop:FriendlyName="God" type="xs:int" minOccurs="0" />
+                  <xs:element name="Mes" msprop:design-time-name="3aafd2d8-22c7-4b46-be0b-28d232b82b6e" msprop:DbColumnName="Mes" msprop:FriendlyName="Mes" type="xs:int" minOccurs="0" />
+                  <xs:element name="MesName" msprop:design-time-name="308c91d7-f9c9-4389-85d0-6058af96ff73" msprop:DbColumnName="MesName" msprop:FriendlyName="MesName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Den" msprop:design-time-name="eab88b57-d286-425f-8c0c-79696447a9c4" msprop:DbColumnName="Den" msprop:FriendlyName="Den" type="xs:int" minOccurs="0" />
+                  <xs:element name="NomNedeli" msdata:ReadOnly="true" msprop:design-time-name="9f48a7ef-b420-43e1-9208-fa9dd91cbc01" msprop:DbColumnName="NomNedeli" msprop:FriendlyName="NomNedeli" type="xs:int" minOccurs="0" />
+                  <xs:element name="NomDnya" msdata:ReadOnly="true" msprop:design-time-name="5c9ffb89-8c9f-4208-b236-6e0468649ab2" msprop:DbColumnName="NomDnya" msprop:FriendlyName="NomDnya" type="xs:int" minOccurs="0" />
+                  <xs:element name="DenChar" msdata:ReadOnly="true" msprop:design-time-name="71ac184a-8326-4654-b37f-5f2f82291396" msprop:DbColumnName="DenChar" msprop:FriendlyName="DenChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MesChar" msdata:ReadOnly="true" msprop:design-time-name="039ed5ed-2d43-4e59-ada8-3556f859dad3" msprop:DbColumnName="MesChar" msprop:FriendlyName="MesChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GodChar" msdata:ReadOnly="true" msprop:design-time-name="ede144c4-2de8-4226-971d-091f5a77d005" msprop:DbColumnName="GodChar" msprop:FriendlyName="GodChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NomNedeliChar" msdata:ReadOnly="true" msprop:design-time-name="89883bbe-65e8-4f65-8620-429da7d1f5c2" msprop:DbColumnName="NomNedeliChar" msprop:FriendlyName="NomNedeliChar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DenNedeli" msdata:ReadOnly="true" msprop:design-time-name="5d55a0b8-da9d-4ffd-8af7-e1fc9ebeb90f" msprop:DbColumnName="DenNedeli" msprop:FriendlyName="DenNedeli" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_BGWithRC_Remains" msprop:design-time-name="44074bf8-e617-4b3b-9c26-2f15e37c1d23" msprop:FriendlyName="BGWithRC_Remains" msprop:DbSchemaName="dbo" msprop:DbTableName="BGWithRC_Remains" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="data" msprop:design-time-name="034b2c28-3269-44f5-a094-689cfef8f6f2" msprop:DbColumnName="data" msprop:FriendlyName="data" type="xs:dateTime" />
+                  <xs:element name="cat" msprop:design-time-name="2bb402f0-6e1f-489d-beaf-adeb7b9cfb2e" msprop:DbColumnName="cat" msprop:FriendlyName="cat" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="class" msprop:design-time-name="af26761b-ed97-4034-b5b6-6e900ac69460" msprop:DbColumnName="class" msprop:FriendlyName="class" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level_x0020_02" msprop:design-time-name="898a1a11-cb74-48d1-bfd9-c21919e2d600" msprop:DbColumnName="level 02" msprop:FriendlyName="level 02" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level_x0020_03" msprop:design-time-name="c06b8cce-8441-48ca-ac8c-8d43b42f7726" msprop:DbColumnName="level 03" msprop:FriendlyName="level 03" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OstKol" msprop:design-time-name="03384e76-865d-4cae-b94a-fcb84a1fdd7b" msprop:DbColumnName="OstKol" msprop:FriendlyName="OstKol" type="xs:double" minOccurs="0" />
+                  <xs:element name="OstRub" msprop:design-time-name="523d5473-8374-4d95-8dbc-e575b30dc495" msprop:DbColumnName="OstRub" msprop:FriendlyName="OstRub" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_BGWithRC_Sales" msprop:design-time-name="5e975464-f3df-4471-96e6-d6ff5f7a00a3" msprop:FriendlyName="BGWithRC_Sales" msprop:DbSchemaName="dbo" msprop:DbTableName="BGWithRC_Sales" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="kol" msprop:design-time-name="93ec901a-9ff9-462a-b433-78a7bc12fde1" msprop:DbColumnName="kol" msprop:FriendlyName="kol" type="xs:double" minOccurs="0" />
+                  <xs:element name="oborot" msprop:design-time-name="5006bd24-3eca-4037-922a-71f2723158cd" msprop:DbColumnName="oborot" msprop:FriendlyName="oborot" type="xs:double" minOccurs="0" />
+                  <xs:element name="Period" msprop:design-time-name="c0c333e6-a66c-4e9f-b8af-ec68d1b3d969" msprop:DbColumnName="Period" msprop:FriendlyName="Period" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="cat" msprop:design-time-name="2fb41f5c-f65e-4cfc-9163-a25377768ff8" msprop:DbColumnName="cat" msprop:FriendlyName="cat" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="class" msprop:design-time-name="ada8f8ff-6f70-4355-bdea-5eeb411f50a6" msprop:DbColumnName="class" msprop:FriendlyName="class" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level_x0020_02" msprop:design-time-name="b8285ff2-bacb-4293-bc97-d652a2220d84" msprop:DbColumnName="level 02" msprop:FriendlyName="level 02" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level_x0020_03" msprop:design-time-name="76dbd4cf-dbd0-404e-860d-df684326e34f" msprop:DbColumnName="level 03" msprop:FriendlyName="level 03" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="client" msprop:design-time-name="964844eb-a60a-4ec0-ba3a-38e27ea19560" msprop:DbColumnName="client" msprop:FriendlyName="client" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="direction" msprop:design-time-name="0498b1d8-136a-4e5e-bfd9-06202a9e1090" msprop:DbColumnName="direction" msprop:FriendlyName="direction" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="company" msprop:design-time-name="3238fa28-d7e8-4249-9739-55a6340955a4" msprop:DbColumnName="company" msprop:FriendlyName="company" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vwBGClass" msprop:design-time-name="4347fd74-8710-4e93-ab4e-a83b35b585ca" msprop:DbTableName="vwBGClass" msprop:FriendlyName="vwBGClass" msprop:DbSchemaName="dbo" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="class" msprop:design-time-name="c530365f-d1c2-4dac-8532-9e79eda57dd3" msprop:DbColumnName="class" msprop:FriendlyName="class" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vwBGGruppa" msprop:design-time-name="32cb6c52-e78d-4a88-a217-60b30b6e0743" msprop:DbTableName="vwBGGruppa" msprop:FriendlyName="vwBGGruppa" msprop:DbSchemaName="dbo" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="level_x0020_02" msprop:design-time-name="3d24f4e2-81c6-4295-bdd8-e2fe22d75ff7" msprop:DbColumnName="level 02" msprop:FriendlyName="level 02" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vwBGCategoriya" msprop:design-time-name="296ead72-0415-4ae6-a3ca-c9e8a82636ab" msprop:DbTableName="vwBGCategoriya" msprop:FriendlyName="vwBGCategoriya" msprop:DbSchemaName="dbo" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="cat" msprop:design-time-name="68cd6749-0ff0-46f9-8bd9-7cd07830b949" msprop:DbColumnName="cat" msprop:FriendlyName="cat" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vwBGPodgruppa" msprop:design-time-name="a56f99b7-d631-40bc-a3cb-6ce99761210f" msprop:DbTableName="vwBGPodgruppa" msprop:FriendlyName="vwBGPodgruppa" msprop:DbSchemaName="dbo" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="level_x0020_03" msprop:design-time-name="186037ef-9cd9-4a58-95fe-44eab544ebcd" msprop:DbColumnName="level 03" msprop:FriendlyName="level 03" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_vwTbData" />
+          <xs:field xpath="data" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <WORK xmlns="" />
+  </Schema>
+</DataSourceView>
